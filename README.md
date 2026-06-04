@@ -1,6 +1,5 @@
-# locustharvest.github.io
+# Locust Harvest: From Plagues To Profit
 "From Plagues to Profit — Amplifying Stories That Inspire the World."
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
