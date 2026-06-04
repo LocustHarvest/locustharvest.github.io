@@ -1,10 +1,10 @@
 # Locust Harvest: From Plagues To Profit
-"From Plagues to Profit — Amplifying Stories That Inspire the World."
+"From Plagues To Profit — Amplifying Stories That Display The World."
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Locust Harvest — From Plagues to Profit</title>
+<title>Locust Harvest — From Plagues To Profit</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -884,9 +884,9 @@
   <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
   <h1 class="hero-title">
     From Plagues<br>
-    <em>to Profit.</em>
+    <em>To Profit.</em>
   </h1>
-  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling and precision strategy.</p>
+  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
   <div class="hero-actions">
     <a href="#platform" class="btn-primary">Explore the Platform</a>
     <a href="#contact" class="btn-ghost">Get in touch →</a>
@@ -900,7 +900,7 @@
 <section class="about" id="about">
   <div class="about-visual reveal">
     <div class="about-visual-box">
-      <div class="about-motto">From<br>Plagues<br>to Profit</div>
+      <div class="about-motto">From<br>Plagues<br>To Profit</div>
     </div>
     <div class="about-visual-accent"></div>
     <div class="about-visual-accent2"></div>
@@ -954,7 +954,7 @@
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
     </div>
   </div>
-  <p class="philosophy-quote reveal">"Only someone who is not being manipulated can see manipulation."</p>
+  <p class="philosophy-quote reveal">"From Plagues To Profit."</p>
 </section>
 
 <!-- PLATFORM -->
