@@ -1,5 +1,4 @@
-From Plagues To Profit"
-"From Plagues To Profit — Amplifying Stories That Display The World."
+#"From Plagues To Profit — Amplifying Stories That Display The World."
 <html lang="en">
 <head>
 <meta charset="UTF-8">
