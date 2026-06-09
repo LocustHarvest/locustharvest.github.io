@@ -1033,11 +1033,11 @@
   <h2 class="section-title reveal">Find Us <em>Everywhere</em></h2>
   <div class="social-grid">
 
-    <a href="https://www.youtube.com/@Plagues2Profit" target="_blank" rel="noopener noreferrer"
-       class="social-handle reveal" aria-label="Plagues2Profit on YouTube">
+    <a href="https://www.youtube.com/@Plague2Profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal" aria-label="Plague2Profit on YouTube">
       <span class="handle-icon" aria-hidden="true">▶</span>
       <div class="handle-platform">YouTube</div>
-      <div class="handle-name">@Plagues2Profit</div>
+      <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video stories, interviews, and platform content.</p>
     </a>
 
@@ -1112,7 +1112,7 @@
   </div>
   <div class="footer-right">
     © 2026 Locust Harvest (Pty) Ltd<br>
-    "From Plagues to Profit"
+    "From Plague to Profit"
   </div>
 </footer>
 
