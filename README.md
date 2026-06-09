@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Locust Harvest — From Plagues to Profit</title>
+<title>Locust Harvest — From Plague to Profit</title>
 
 <p align="center">
   <img src="logo.png" alt="Logo" width="200"/>
