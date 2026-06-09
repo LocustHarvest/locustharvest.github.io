@@ -1057,11 +1057,11 @@
       <p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p>
     </a>
 
-    <a href="https://x.com/Plagues2Profit" target="_blank" rel="noopener noreferrer"
-       class="social-handle reveal reveal-delay-3" aria-label="Plagues2Profit on X (Twitter)">
+    <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on X (Twitter)">
       <span class="handle-icon" aria-hidden="true">✕</span>
       <div class="handle-platform">X (Twitter)</div>
-      <div class="handle-name">@Plagues2Profit</div>
+      <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Strategy insights, news, and platform updates.</p>
     </a>
 
