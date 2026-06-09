@@ -1066,10 +1066,10 @@
     </a>
 
     <a href="https://www.facebook.com/photo/?fbid=122101807005352097&set=a.122101807095352097" target="_blank" rel="noopener noreferrer"
-       class="social-handle reveal reveal-delay-1" aria-label="Plagues2Profit on Facebook">
+       class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Facebook">
       <span class="handle-icon" aria-hidden="true">◇</span>
       <div class="handle-platform">Facebook</div>
-      <div class="handle-name">Plagues2Profit</div>
+      <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Community updates and story features.</p>
     </a>
 
