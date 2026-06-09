@@ -9,8 +9,8 @@
 </p>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Locust Harvest (Pty) Ltd transforms disruption into opportunity through premium digital storytelling and precision strategy. Share your story of rising from adversity to triumph.">
-<meta name="keywords" content="Locust Harvest, From Plagues to Profit, storytelling platform, resilience stories, strategy, South Africa">
+<meta name="description" content="Locust Harvest (Pty) Ltd transforms disruption into opportunity through premium digital storytelling. Share your story of rising from adversity to triumph.">
+<meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.locustharvest.com/">
@@ -18,14 +18,14 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.locustharvest.com/">
-<meta property="og:title" content="Locust Harvest — From Plagues to Profit">
-<meta property="og:description" content="Transforming disruption into opportunity through the power of human storytelling and precision strategy.">
+<meta property="og:title" content="Locust Harvest — From Plague to Profit">
+<meta property="og:description" content="Transforming disruption into opportunity through the power of human storytelling.">
 <meta property="og:site_name" content="Locust Harvest">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Locust Harvest — From Plagues to Profit">
-<meta name="twitter:description" content="Transforming disruption into opportunity through the power of human storytelling and precision strategy.">
+<meta name="twitter:title" content="Locust Harvest — From Plague to Profit">
+<meta name="twitter:description" content="Transforming disruption into opportunity through the power of human storytelling.">
 <meta name="twitter:site" content="@Plagues2Profit">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -814,7 +814,7 @@
     From Plagues<br>
     <em>to Profit.</em>
   </h1>
-  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling and precision strategy.</p>
+  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
   <div class="hero-actions">
     <a href="#platform" class="btn-primary">Explore the Platform</a>
     <a href="#contact" class="btn-ghost">Get in touch →</a>
@@ -834,7 +834,7 @@
   <div class="about-content">
     <p class="section-label reveal">Company Overview</p>
     <div class="gold-divider reveal" aria-hidden="true"></div>
-    <h2 class="section-title reveal" id="about-heading">Where Resilience Meets <em>Precision</em></h2>
+    <h2 class="section-title reveal" id="about-heading">Where Resilience Meets <em>Transformation</em></h2>
     <p class="section-body reveal">LOCUST HARVEST (PTY) LTD is an innovative strategy-driven company built on a powerful dual mandate: transforming disruption into opportunity, and capturing the most extraordinary human stories of resilience that the world has to offer.</p>
     <p class="section-body reveal" style="margin-top:1.5rem;">Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
   </div>
@@ -864,7 +864,7 @@
     <div class="cycle-item reveal reveal-delay-2" role="listitem">
       <div class="cycle-num" aria-hidden="true">03</div>
       <div class="cycle-name">Distribution</div>
-      <p class="cycle-desc">Movement toward a defined and recognisable direction — the signal becomes clear.</p>
+      <p class="cycle-desc">Movement toward a defined and recognisable direction — when everything becomes clear.</p>
       <div class="cycle-connector" aria-hidden="true"></div>
     </div>
     <div class="cycle-item reveal reveal-delay-3" role="listitem">
@@ -879,7 +879,7 @@
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
     </div>
   </div>
-  <blockquote class="philosophy-quote reveal">"From Plagues To Profit."</blockquote>
+  <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
 </section>
 
 <!-- PLATFORM -->
@@ -888,7 +888,7 @@
     <p class="section-label reveal">The Platform</p>
     <div class="gold-divider reveal" aria-hidden="true"></div>
     <h2 class="section-title reveal" id="platform-heading">A Global <em>Storytelling</em> Ecosystem</h2>
-    <p class="section-body reveal">At the heart of Locust Harvest is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
+    <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
     <p class="section-body reveal" style="margin-top:1.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
   </div>
   <div class="platform-cards">
@@ -898,7 +898,7 @@
     </div>
     <div class="pcard reveal reveal-delay-1">
       <div class="pcard-title">Upfront Payment</div>
-      <p class="pcard-text">Story owners receive a negotiated once-off payment at the time of story submission and publication.</p>
+      <p class="pcard-text">Story owners receive a once-off payment at the time of story submission and publication.</p>
     </div>
     <div class="pcard reveal reveal-delay-2">
       <div class="pcard-title">Revenue Share</div>
@@ -919,7 +919,7 @@
       <div class="gold-divider reveal" aria-hidden="true"></div>
       <h2 class="section-title reveal" id="services-heading">What We <em>Offer</em></h2>
     </div>
-    <p class="section-body reveal">Structured services that combine the power of human narrative with precision analytical frameworks — delivering insight, impact, and opportunity.</p>
+    <p class="section-body reveal">Structured services that combine the power of human narratives — delivering insight, impact, and opportunity.</p>
   </div>
   <div class="services-grid">
     <div class="service-item reveal">
