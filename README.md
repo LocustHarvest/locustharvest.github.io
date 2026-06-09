@@ -1,9 +1,30 @@
-"From Plagues To Profit — Amplifying Stories That Display Resilience To The World."
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Locust Harvest — From Plagues To Profit</title>
+<title>Locust Harvest — From Plagues to Profit</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Locust Harvest (Pty) Ltd transforms disruption into opportunity through premium digital storytelling and precision strategy. Share your story of rising from adversity to triumph.">
+<meta name="keywords" content="Locust Harvest, From Plagues to Profit, storytelling platform, resilience stories, strategy, South Africa">
+<meta name="author" content="Locust Harvest (Pty) Ltd">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.locustharvest.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.locustharvest.com/">
+<meta property="og:title" content="Locust Harvest — From Plagues to Profit">
+<meta property="og:description" content="Transforming disruption into opportunity through the power of human storytelling and precision strategy.">
+<meta property="og:site_name" content="Locust Harvest">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Locust Harvest — From Plagues to Profit">
+<meta name="twitter:description" content="Transforming disruption into opportunity through the power of human storytelling and precision strategy.">
+<meta name="twitter:site" content="@Plagues2Profit">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,7 +56,6 @@
     cursor: default;
   }
 
-  /* ── GRAIN OVERLAY ── */
   body::before {
     content: '';
     position: fixed;
@@ -54,7 +74,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4rem;
+    padding: 0.75rem 4rem;
     background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
     transition: background 0.4s;
   }
@@ -65,18 +85,17 @@
   }
 
   .nav-logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 1.25rem;
-    letter-spacing: 0.08em;
-    color: var(--gold);
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
-  .nav-logo span {
-    color: var(--cream);
-    font-style: italic;
-    font-weight: 400;
+  .nav-logo img {
+    height: 64px;
+    width: auto;
+    display: block;
+    /* remove white background */
+    mix-blend-mode: lighten;
   }
 
   .nav-links {
@@ -118,7 +137,6 @@
       linear-gradient(175deg, #0A0804 0%, #1A1208 50%, #0D0B06 100%);
   }
 
-  /* Locust silhouette pattern */
   .hero-bg::after {
     content: '';
     position: absolute;
@@ -257,7 +275,6 @@
     margin-bottom: 1.5rem;
   }
 
-  /* ── SECTION BASE ── */
   section { position: relative; }
 
   .section-label {
@@ -279,10 +296,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .section-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .section-title em { font-style: italic; color: var(--gold); }
 
   .section-body {
     font-size: 1rem;
@@ -291,7 +305,7 @@
     max-width: 540px;
   }
 
-  /* ── ABOUT / OVERVIEW ── */
+  /* ── ABOUT ── */
   .about {
     padding: 8rem 4rem;
     display: grid;
@@ -350,24 +364,20 @@
 
   .about-visual-accent {
     position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 120px;
-    height: 120px;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
     border: 2px solid rgba(201,168,76,0.2);
   }
 
   .about-visual-accent2 {
     position: absolute;
-    bottom: -20px;
-    left: -20px;
-    width: 80px;
-    height: 80px;
+    bottom: -20px; left: -20px;
+    width: 80px; height: 80px;
     background: var(--red-ember);
     opacity: 0.4;
   }
 
-  /* ── CYCLE / PHILOSOPHY ── */
+  /* ── PHILOSOPHY ── */
   .philosophy {
     padding: 8rem 4rem;
     background: var(--black);
@@ -394,10 +404,7 @@
   }
 
   .cycle-item:last-child { border-right: none; }
-
-  .cycle-item:hover {
-    background: rgba(201,168,76,0.04);
-  }
+  .cycle-item:hover { background: rgba(201,168,76,0.04); }
 
   .cycle-num {
     font-family: 'Playfair Display', serif;
@@ -421,18 +428,12 @@
     margin-bottom: 0.75rem;
   }
 
-  .cycle-desc {
-    font-size: 0.85rem;
-    line-height: 1.65;
-    color: var(--ash);
-  }
+  .cycle-desc { font-size: 0.85rem; line-height: 1.65; color: var(--ash); }
 
   .cycle-connector {
     position: absolute;
-    top: 50%;
-    right: -1px;
-    width: 12px;
-    height: 12px;
+    top: 50%; right: -1px;
+    width: 12px; height: 12px;
     border-radius: 50%;
     background: var(--gold-dim);
     transform: translate(50%, -50%);
@@ -463,11 +464,7 @@
     align-items: start;
   }
 
-  .platform-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+  .platform-cards { display: flex; flex-direction: column; gap: 1.5rem; }
 
   .pcard {
     background: var(--dark2);
@@ -502,17 +499,10 @@
     margin-bottom: 0.75rem;
   }
 
-  .pcard-text {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--mist);
-  }
+  .pcard-text { font-size: 0.9rem; line-height: 1.7; color: var(--mist); }
 
   /* ── SERVICES ── */
-  .services {
-    padding: 8rem 4rem;
-    background: var(--black);
-  }
+  .services { padding: 8rem 4rem; background: var(--black); }
 
   .services-header {
     display: grid;
@@ -529,21 +519,13 @@
     background: rgba(201,168,76,0.1);
   }
 
-  .service-item {
-    background: var(--black);
-    padding: 3rem 2.5rem;
-    transition: background 0.4s;
-  }
-
+  .service-item { background: var(--black); padding: 3rem 2.5rem; transition: background 0.4s; }
   .service-item:hover { background: var(--dark); }
 
   .service-icon {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border: 1px solid var(--gold-dim);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     margin-bottom: 1.5rem;
     color: var(--gold);
     font-size: 1.1rem;
@@ -559,24 +541,12 @@
     margin-bottom: 0.75rem;
   }
 
-  .service-text {
-    font-size: 0.85rem;
-    line-height: 1.7;
-    color: var(--ash);
-  }
+  .service-text { font-size: 0.85rem; line-height: 1.7; color: var(--ash); }
 
   /* ── VALUES ── */
-  .values {
-    padding: 8rem 4rem;
-    background: var(--dark2);
-    text-align: center;
-  }
+  .values { padding: 8rem 4rem; background: var(--dark2); text-align: center; }
 
-  .values-header {
-    max-width: 500px;
-    margin: 0 auto 5rem;
-  }
-
+  .values-header { max-width: 500px; margin: 0 auto 5rem; }
   .values-header .gold-divider { margin: 0 auto 1.5rem; }
 
   .values-grid {
@@ -587,8 +557,6 @@
     margin: 0 auto;
   }
 
-  .value-item {}
-
   .value-word {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -597,21 +565,13 @@
     margin-bottom: 0.75rem;
   }
 
-  .value-def {
-    font-size: 0.85rem;
-    line-height: 1.7;
-    color: var(--ash);
-  }
+  .value-def { font-size: 0.85rem; line-height: 1.7; color: var(--ash); }
 
   /* ── OBJECTIVES ── */
-  .objectives {
-    padding: 8rem 4rem;
-    background: var(--black);
-  }
+  .objectives { padding: 8rem 4rem; background: var(--black); }
 
   .obj-tabs {
     display: flex;
-    gap: 0;
     border-bottom: 1px solid rgba(201,168,76,0.15);
     margin-bottom: 3rem;
   }
@@ -629,26 +589,14 @@
     margin-bottom: -1px;
     transition: color 0.3s, border-color 0.3s;
     background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-top: none; border-left: none; border-right: none;
   }
 
-  .obj-tab.active {
-    color: var(--gold);
-    border-bottom-color: var(--gold);
-  }
-
+  .obj-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
   .obj-panel { display: none; }
   .obj-panel.active { display: block; }
 
-  .obj-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 700px;
-  }
+  .obj-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; max-width: 700px; }
 
   .obj-list li {
     display: flex;
@@ -668,10 +616,7 @@
   }
 
   /* ── SOCIAL ── */
-  .social {
-    padding: 8rem 4rem;
-    background: var(--dark);
-  }
+  .social { padding: 8rem 4rem; background: var(--dark); }
 
   .social-grid {
     display: grid;
@@ -684,12 +629,31 @@
     background: var(--dark3);
     border: 1px solid rgba(201,168,76,0.08);
     padding: 2rem;
-    transition: border-color 0.3s, background 0.3s;
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    text-decoration: none;
+    display: block;
   }
 
   .social-handle:hover {
-    border-color: rgba(201,168,76,0.25);
-    background: rgba(201,168,76,0.03);
+    border-color: rgba(201,168,76,0.35);
+    background: rgba(201,168,76,0.04);
+    transform: translateY(-4px);
+  }
+
+  .handle-platform {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin-bottom: 0.5rem;
+  }
+
+  .handle-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    display: block;
   }
 
   .handle-name {
@@ -700,11 +664,7 @@
     margin-bottom: 0.5rem;
   }
 
-  .handle-desc {
-    font-size: 0.82rem;
-    line-height: 1.6;
-    color: var(--ash);
-  }
+  .handle-desc { font-size: 0.82rem; line-height: 1.6; color: var(--ash); }
 
   /* ── CTA ── */
   .cta {
@@ -720,8 +680,7 @@
     position: absolute;
     top: -200px; left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
+    width: 600px; height: 600px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
     pointer-events: none;
@@ -736,18 +695,13 @@
     margin-bottom: 1.5rem;
   }
 
-  .cta-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .cta-title em { font-style: italic; color: var(--gold); }
 
   .cta-sub {
     font-size: 1.05rem;
     color: var(--mist);
-    margin-bottom: 3rem;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 3rem;
   }
 
   .cta-contact {
@@ -780,55 +734,20 @@
     border-top: 1px solid rgba(201,168,76,0.1);
   }
 
-  .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--gold);
-  }
-
-  .footer-reg {
-    font-size: 0.72rem;
-    color: var(--ash);
-    letter-spacing: 0.05em;
-    margin-top: 0.25rem;
-  }
-
-  .footer-right {
-    font-size: 0.72rem;
-    color: var(--ash);
-    text-align: right;
-    letter-spacing: 0.05em;
-  }
+  .footer-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+  .footer-reg { font-size: 0.72rem; color: var(--ash); letter-spacing: 0.05em; margin-top: 0.25rem; }
+  .footer-right { font-size: 0.72rem; color: var(--ash); text-align: right; letter-spacing: 0.05em; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  @keyframes lineGrow {
-    from { transform: scaleY(0); }
-    to   { transform: scaleY(1); }
-  }
-
-  /* Scroll-reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
@@ -837,7 +756,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
-    nav { padding: 1.5rem 2rem; }
+    nav { padding: 0.75rem 2rem; }
     .hero { padding: 0 2rem 5rem; }
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
     .about-visual { height: 300px; }
@@ -852,22 +771,29 @@
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
     .nav-links { display: none; }
+    .nav-logo img { height: 52px; }
   }
 
   @media (max-width: 640px) {
     .cycle-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .values-grid { grid-template-columns: 1fr; }
-    .social-grid { grid-template-columns: 1fr; }
+    .social-grid { grid-template-columns: 1fr 1fr; }
     .services-header { gap: 2rem; }
+  }
+
+  @media (max-width: 400px) {
+    .social-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">LOCUST <span>HARVEST</span></a>
+<nav id="nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Locust Harvest home">
+    <img src="logo.png" alt="Locust Harvest — From Plagues to Profit" height="64">
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
@@ -878,93 +804,89 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
   <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
   <h1 class="hero-title">
     From Plagues<br>
-    <em>To Profit.</em>
+    <em>to Profit.</em>
   </h1>
-  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
+  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling and precision strategy.</p>
   <div class="hero-actions">
     <a href="#platform" class="btn-primary">Explore the Platform</a>
     <a href="#contact" class="btn-ghost">Get in touch →</a>
   </div>
-  <div class="hero-scroll-line">
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about" id="about" aria-labelledby="about-heading">
   <div class="about-visual reveal">
-    <div class="about-visual-box">
-      <div class="about-motto">From<br>Plagues<br>To Profit</div>
+    <div class="about-visual-box" aria-label="From Plagues to Profit brand motto">
+      <div class="about-motto">From<br>Plagues<br>to Profit</div>
     </div>
-    <div class="about-visual-accent"></div>
-    <div class="about-visual-accent2"></div>
+    <div class="about-visual-accent" aria-hidden="true"></div>
+    <div class="about-visual-accent2" aria-hidden="true"></div>
   </div>
   <div class="about-content">
     <p class="section-label reveal">Company Overview</p>
-    <div class="gold-divider reveal"></div>
-    <h2 class="section-title reveal">Where Resilience Meets <em>Precision</em></h2>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="about-heading">Where Resilience Meets <em>Precision</em></h2>
     <p class="section-body reveal">LOCUST HARVEST (PTY) LTD is an innovative strategy-driven company built on a powerful dual mandate: transforming disruption into opportunity, and capturing the most extraordinary human stories of resilience that the world has to offer.</p>
-    <br>
-    <p class="section-body reveal" style="margin-top:1rem;">Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
+    <p class="section-body reveal" style="margin-top:1.5rem;">Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
   </div>
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="philosophy" id="philosophy">
+<section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
   <div class="philosophy-header">
     <p class="section-label reveal">Strategic Philosophy</p>
-    <div class="gold-divider reveal"></div>
-    <h2 class="section-title reveal">The Five <em>Phases</em> of Every Environment</h2>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="philosophy-heading">The Five <em>Phases</em> of Every Environment</h2>
     <p class="section-body reveal">Every environment — personal, financial, or societal — moves through identifiable phases. Understanding them allows for strategic positioning rather than reactive decision-making.</p>
   </div>
-  <div class="cycle-grid">
-    <div class="cycle-item reveal">
-      <div class="cycle-num">01</div>
+  <div class="cycle-grid" role="list" aria-label="Five phases of the Locust Harvest cycle">
+    <div class="cycle-item reveal" role="listitem">
+      <div class="cycle-num" aria-hidden="true">01</div>
       <div class="cycle-name">Accumulation</div>
       <p class="cycle-desc">The preparation phase where underlying conditions are forming beneath the surface, unseen by most.</p>
-      <div class="cycle-connector"></div>
+      <div class="cycle-connector" aria-hidden="true"></div>
     </div>
-    <div class="cycle-item reveal reveal-delay-1">
-      <div class="cycle-num">02</div>
+    <div class="cycle-item reveal reveal-delay-1" role="listitem">
+      <div class="cycle-num" aria-hidden="true">02</div>
       <div class="cycle-name">Manipulation</div>
       <p class="cycle-desc">A period where behaviour may appear misleading, uncertain, or designed to confuse and misdirect.</p>
-      <div class="cycle-connector"></div>
+      <div class="cycle-connector" aria-hidden="true"></div>
     </div>
-    <div class="cycle-item reveal reveal-delay-2">
-      <div class="cycle-num">03</div>
+    <div class="cycle-item reveal reveal-delay-2" role="listitem">
+      <div class="cycle-num" aria-hidden="true">03</div>
       <div class="cycle-name">Distribution</div>
       <p class="cycle-desc">Movement toward a defined and recognisable direction — the signal becomes clear.</p>
-      <div class="cycle-connector"></div>
+      <div class="cycle-connector" aria-hidden="true"></div>
     </div>
-    <div class="cycle-item reveal reveal-delay-3">
-      <div class="cycle-num">04</div>
+    <div class="cycle-item reveal reveal-delay-3" role="listitem">
+      <div class="cycle-num" aria-hidden="true">04</div>
       <div class="cycle-name">Devastation</div>
       <p class="cycle-desc">A significant disruptive event or outcome — the lowest point of the cycle. The plague arrives.</p>
-      <div class="cycle-connector"></div>
+      <div class="cycle-connector" aria-hidden="true"></div>
     </div>
-    <div class="cycle-item reveal reveal-delay-4">
-      <div class="cycle-num">05</div>
+    <div class="cycle-item reveal reveal-delay-4" role="listitem">
+      <div class="cycle-num" aria-hidden="true">05</div>
       <div class="cycle-name">Restoration</div>
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
     </div>
   </div>
-  <p class="philosophy-quote reveal">"From Plagues To Profit."</p>
+  <blockquote class="philosophy-quote reveal">"Only someone who is not being manipulated can see manipulation."</blockquote>
 </section>
 
 <!-- PLATFORM -->
-<section class="platform" id="platform">
+<section class="platform" id="platform" aria-labelledby="platform-heading">
   <div>
     <p class="section-label reveal">The Platform</p>
-    <div class="gold-divider reveal"></div>
-    <h2 class="section-title reveal">A Global <em>Storytelling</em> Ecosystem</h2>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="platform-heading">A Global <em>Storytelling</em> Ecosystem</h2>
     <p class="section-body reveal">At the heart of Locust Harvest is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
-    <br>
-    <p class="section-body reveal" style="margin-top:1rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
+    <p class="section-body reveal" style="margin-top:1.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
   </div>
   <div class="platform-cards">
     <div class="pcard reveal">
@@ -987,55 +909,55 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
+<section class="services" id="services" aria-labelledby="services-heading">
   <div class="services-header">
     <div>
       <p class="section-label reveal">Products & Services</p>
-      <div class="gold-divider reveal"></div>
-      <h2 class="section-title reveal">What We <em>Offer</em></h2>
+      <div class="gold-divider reveal" aria-hidden="true"></div>
+      <h2 class="section-title reveal" id="services-heading">What We <em>Offer</em></h2>
     </div>
     <p class="section-body reveal">Structured services that combine the power of human narrative with precision analytical frameworks — delivering insight, impact, and opportunity.</p>
   </div>
   <div class="services-grid">
     <div class="service-item reveal">
-      <div class="service-icon">◈</div>
-      <div class="service-name">Storytelling Platform</div>
+      <div class="service-icon" aria-hidden="true">◈</div>
+      <h3 class="service-name">Storytelling Platform</h3>
       <p class="service-text">Global "From Plague to Profit" digital story platform with story acquisition, curation, production and multi-platform distribution.</p>
     </div>
     <div class="service-item reveal reveal-delay-1">
-      <div class="service-icon">◎</div>
-      <div class="service-name">Pattern Analysis</div>
+      <div class="service-icon" aria-hidden="true">◎</div>
+      <h3 class="service-name">Pattern Analysis</h3>
       <p class="service-text">Strategic identification of behavioural structures and directional tendencies across dynamic environments.</p>
     </div>
     <div class="service-item reveal reveal-delay-2">
-      <div class="service-icon">◇</div>
-      <div class="service-name">Opportunity Timing</div>
+      <div class="service-icon" aria-hidden="true">◇</div>
+      <h3 class="service-name">Opportunity Timing</h3>
       <p class="service-text">Methods to determine favourable timing for decisions — the difference between reactive and strategic positioning.</p>
     </div>
     <div class="service-item reveal reveal-delay-3">
-      <div class="service-icon">▲</div>
-      <div class="service-name">Analytical Methods</div>
+      <div class="service-icon" aria-hidden="true">▲</div>
+      <h3 class="service-name">Analytical Methods</h3>
       <p class="service-text">Structured rule-based approaches to interpreting change and building reliable decision frameworks.</p>
     </div>
     <div class="service-item reveal reveal-delay-4">
-      <div class="service-icon">✦</div>
-      <div class="service-name">Educational Resources</div>
+      <div class="service-icon" aria-hidden="true">✦</div>
+      <h3 class="service-name">Educational Resources</h3>
       <p class="service-text">Principles of structured analytical observation — training and resources to sharpen strategic thinking.</p>
     </div>
     <div class="service-item reveal reveal-delay-5">
-      <div class="service-icon">⟡</div>
-      <div class="service-name">Research & Development</div>
+      <div class="service-icon" aria-hidden="true">⟡</div>
+      <h3 class="service-name">Research & Development</h3>
       <p class="service-text">Continuous improvement of methodologies and development of proprietary analytical and pattern recognition technologies.</p>
     </div>
   </div>
 </section>
 
 <!-- VALUES -->
-<section class="values" id="values">
+<section class="values" id="values" aria-labelledby="values-heading">
   <div class="values-header">
     <p class="section-label">Core Values</p>
-    <div class="gold-divider"></div>
-    <h2 class="section-title">Built on <em>Principle</em></h2>
+    <div class="gold-divider" aria-hidden="true"></div>
+    <h2 class="section-title" id="values-heading">Built on <em>Principle</em></h2>
   </div>
   <div class="values-grid">
     <div class="value-item reveal">
@@ -1066,16 +988,16 @@
 </section>
 
 <!-- OBJECTIVES -->
-<section class="objectives" id="objectives">
+<section class="objectives" id="objectives" aria-labelledby="objectives-heading">
   <p class="section-label reveal">Business Objectives</p>
-  <div class="gold-divider reveal"></div>
-  <h2 class="section-title reveal" style="max-width:600px;">The Road <em>Ahead</em></h2>
-  <div class="obj-tabs reveal">
-    <button class="obj-tab active" onclick="showTab('short')">Short-Term</button>
-    <button class="obj-tab" onclick="showTab('medium')">Medium-Term</button>
-    <button class="obj-tab" onclick="showTab('long')">Long-Term</button>
+  <div class="gold-divider reveal" aria-hidden="true"></div>
+  <h2 class="section-title reveal" id="objectives-heading" style="max-width:600px;">The Road <em>Ahead</em></h2>
+  <div class="obj-tabs reveal" role="tablist" aria-label="Business objectives timeline">
+    <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
+    <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
+    <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
   </div>
-  <div class="obj-panel active" id="tab-short">
+  <div class="obj-panel active" id="tab-short" role="tabpanel">
     <ul class="obj-list">
       <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
       <li>Begin acquiring and publishing inspirational story content from global contributors</li>
@@ -1083,7 +1005,7 @@
       <li>Build strong brand identity and social media presence across all channels</li>
     </ul>
   </div>
-  <div class="obj-panel" id="tab-medium">
+  <div class="obj-panel" id="tab-medium" role="tabpanel">
     <ul class="obj-list">
       <li>Expand platform reach and grow audience across all channels</li>
       <li>Develop automated story submission and curation tools</li>
@@ -1091,7 +1013,7 @@
       <li>Increase monetisation and story owner revenue sharing</li>
     </ul>
   </div>
-  <div class="obj-panel" id="tab-long">
+  <div class="obj-panel" id="tab-long" role="tabpanel">
     <ul class="obj-list">
       <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
       <li>Develop proprietary analytical and pattern recognition technologies</li>
@@ -1102,39 +1024,80 @@
 </section>
 
 <!-- SOCIAL -->
-<section class="social" id="social">
+<section class="social" id="social" aria-labelledby="social-heading">
   <p class="section-label reveal">Digital Presence</p>
-  <div class="gold-divider reveal"></div>
+  <div class="gold-divider reveal" aria-hidden="true"></div>
   <h2 class="section-title reveal">Find Us <em>Everywhere</em></h2>
   <div class="social-grid">
-    <div class="social-handle reveal">
-      <div class="handle-name">@LocustHarvest</div>
-      <p class="handle-desc">Primary brand account — company news, platform updates, and strategy content.</p>
-    </div>
-    <div class="social-handle reveal reveal-delay-1">
-      <div class="handle-name">@FromPlaguesToProfit</div>
-      <p class="handle-desc">Storytelling and inspiration — featuring story owner narratives and testimonials.</p>
-    </div>
-    <div class="social-handle reveal reveal-delay-2">
+
+    <a href="https://www.youtube.com/@Plagues2Profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal" aria-label="Plagues2Profit on YouTube">
+      <span class="handle-icon" aria-hidden="true">▶</span>
+      <div class="handle-platform">YouTube</div>
       <div class="handle-name">@Plagues2Profit</div>
-      <p class="handle-desc">Short-form content, highlights, and viral inspiration stories for every platform.</p>
-    </div>
-    <div class="social-handle reveal reveal-delay-3">
-      <div class="handle-name">@AgainstAllOdds</div>
-      <p class="handle-desc">Mixed content celebrating stories of resilience from around the world.</p>
-    </div>
+      <p class="handle-desc">Video stories, interviews, and platform content.</p>
+    </a>
+
+    <a href="https://www.instagram.com/plagues2profit/" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-1" aria-label="Plagues2Profit on Instagram">
+      <span class="handle-icon" aria-hidden="true">◎</span>
+      <div class="handle-platform">Instagram</div>
+      <div class="handle-name">@plagues2profit</div>
+      <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
+    </a>
+
+    <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-2" aria-label="Plagues2Profit on TikTok">
+      <span class="handle-icon" aria-hidden="true">◈</span>
+      <div class="handle-platform">TikTok</div>
+      <div class="handle-name">@plagues2profit</div>
+      <p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p>
+    </a>
+
+    <a href="https://x.com/Plagues2Profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-3" aria-label="Plagues2Profit on X (Twitter)">
+      <span class="handle-icon" aria-hidden="true">✕</span>
+      <div class="handle-platform">X (Twitter)</div>
+      <div class="handle-name">@Plagues2Profit</div>
+      <p class="handle-desc">Strategy insights, news, and platform updates.</p>
+    </a>
+
+    <a href="https://www.facebook.com/photo/?fbid=122101807005352097&set=a.122101807095352097" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-1" aria-label="Plagues2Profit on Facebook">
+      <span class="handle-icon" aria-hidden="true">◇</span>
+      <div class="handle-platform">Facebook</div>
+      <div class="handle-name">Plagues2Profit</div>
+      <p class="handle-desc">Community updates and story features.</p>
+    </a>
+
+    <a href="https://t.me/Plague2Profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit Telegram channel">
+      <span class="handle-icon" aria-hidden="true">✦</span>
+      <div class="handle-platform">Telegram</div>
+      <div class="handle-name">Plague2Profit</div>
+      <p class="handle-desc">Direct updates and community discussions via Telegram.</p>
+    </a>
+
+    <a href="https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-3" aria-label="Follow Plagues2Profit on WhatsApp">
+      <span class="handle-icon" aria-hidden="true">⟡</span>
+      <div class="handle-platform">WhatsApp Channel</div>
+      <div class="handle-name">Plague2Profit</div>
+      <p class="handle-desc">Follow our WhatsApp channel for story drops and announcements.</p>
+    </a>
+
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta" id="contact">
-  <h2 class="cta-title reveal">Your Plague Is<br><em>Your Profit</em></h2>
+<section class="cta" id="contact" aria-labelledby="contact-heading">
+  <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
   <p class="cta-sub reveal">Have a story to tell? A strategy to build? Get in touch with the Locust Harvest team today.</p>
-  <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal">sydneytayiya@locustharvest.com</a>
+  <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal" aria-label="Email Locust Harvest">sydneytayiya@locustharvest.com</a>
   <div class="cta-contact reveal">
-    <a href="tel:+27713641561">+27 71 364 1561</a>
-    <a href="tel:+27627418656">+27 62 741 8656</a>
-    <a href="https://www.locustharvest.com" target="_blank">www.locustharvest.com</a>
+    <a href="tel:+27713641561" aria-label="Call +27 71 364 1561">+27 71 364 1561</a>
+    <a href="tel:+27627418656" aria-label="Call +27 62 741 8656">+27 62 741 8656</a>
+    <a href="https://www.locustharvest.com" aria-label="Visit locustharvest.com">www.locustharvest.com</a>
   </div>
 </section>
 
@@ -1151,13 +1114,11 @@
 </footer>
 
 <script>
-  // Nav scroll effect
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1169,12 +1130,15 @@
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
 
-  // Objective tabs
-  function showTab(id) {
-    document.querySelectorAll('.obj-tab').forEach(t => t.classList.remove('active'));
+  function showTab(id, event) {
+    document.querySelectorAll('.obj-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
     document.querySelectorAll('.obj-panel').forEach(p => p.classList.remove('active'));
     document.getElementById('tab-' + id).classList.add('active');
     event.target.classList.add('active');
+    event.target.setAttribute('aria-selected', 'true');
   }
 </script>
 </body>
