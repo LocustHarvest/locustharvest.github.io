@@ -875,7 +875,7 @@
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
     </div>
   </div>
-  <blockquote class="philosophy-quote reveal">"Only someone who is not being manipulated can see manipulation."</blockquote>
+  <blockquote class="philosophy-quote reveal">"From Plagues To Profit."</blockquote>
 </section>
 
 <!-- PLATFORM -->
