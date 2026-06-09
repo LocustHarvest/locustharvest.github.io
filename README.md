@@ -1049,11 +1049,11 @@
       <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
     </a>
 
-    <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer"
-       class="social-handle reveal reveal-delay-2" aria-label="Plagues2Profit on TikTok">
+    <a href="https://www.tiktok.com/@plague2profit" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit on TikTok">
       <span class="handle-icon" aria-hidden="true">◈</span>
       <div class="handle-platform">TikTok</div>
-      <div class="handle-name">@plagues2profit</div>
+      <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p>
     </a>
 
