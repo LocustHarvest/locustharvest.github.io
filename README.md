@@ -1041,11 +1041,11 @@
       <p class="handle-desc">Video stories, interviews, and platform content.</p>
     </a>
 
-    <a href="https://www.instagram.com/plagues2profit/" target="_blank" rel="noopener noreferrer"
-       class="social-handle reveal reveal-delay-1" aria-label="Plagues2Profit on Instagram">
+    <a href="https://www.instagram.com/plague2profit/" target="_blank" rel="noopener noreferrer"
+       class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Instagram">
       <span class="handle-icon" aria-hidden="true">◎</span>
       <div class="handle-platform">Instagram</div>
-      <div class="handle-name">@plagues2profit</div>
+      <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
     </a>
 
