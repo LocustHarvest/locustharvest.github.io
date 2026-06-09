@@ -4,6 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Locust Harvest — From Plagues to Profit</title>
 
+<p align="center">
+  <img src="logo.png" alt="Logo" width="200"/>
+</p>
+
 <!-- SEO Meta Tags -->
 <meta name="description" content="Locust Harvest (Pty) Ltd transforms disruption into opportunity through premium digital storytelling and precision strategy. Share your story of rising from adversity to triumph.">
 <meta name="keywords" content="Locust Harvest, From Plagues to Profit, storytelling platform, resilience stories, strategy, South Africa">
