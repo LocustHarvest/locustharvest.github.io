@@ -1095,7 +1095,7 @@
 <!-- CTA -->
 <section class="cta" id="contact" aria-labelledby="contact-heading">
   <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
-  <p class="cta-sub reveal">Have a story to tell? A strategy to build? Get in touch with the Locust Harvest team today.</p>
+  <p class="cta-sub reveal">Have a story to tell? Get in touch with the Locust Harvest team today.</p>
   <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal" aria-label="Email Locust Harvest">sydneytayiya@locustharvest.com</a>
   <div class="cta-contact reveal">
     <a href="tel:+27713641561" aria-label="Call +27 71 364 1561">+27 71 364 1561</a>
