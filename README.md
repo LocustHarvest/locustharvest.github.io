@@ -877,7 +877,8 @@
       <div class="cycle-num" aria-hidden="true">05</div>
       <div class="cycle-name">Restoration</div>
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
-    
+    </div>
+  </div>
   <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
 </section>
 
