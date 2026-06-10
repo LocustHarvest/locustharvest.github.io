@@ -795,7 +795,7 @@
 <!-- NAV -->
 <nav id="nav" aria-label="Main navigation">
   <a href="#" class="nav-logo" aria-label="Locust Harvest home">
-    <img src="logo.png" alt="Locust Harvest — From Plagues to Profit" height="64">
+    <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="64">
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -879,7 +879,7 @@
       <p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
     </div>
   </div>
-  <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
+  <blockquote >"From Plague To Profit."</blockquote>
 </section>
 
 <!-- PLATFORM -->
