@@ -1033,7 +1033,7 @@
   <h2 class="section-title reveal">Find Us <em>Everywhere</em></h2>
   <div class="social-grid">
 
-    <a href="https://www.youtube.com/@Plague2Profit" target="_blank" rel="noopener noreferrer"
+    <a href="https://www.youtube.com/@Plague2Profit?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal" aria-label="Plague2Profit on YouTube">
       <span class="handle-icon" aria-hidden="true">▶</span>
       <div class="handle-platform">YouTube</div>
