@@ -1049,7 +1049,7 @@
       <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
     </a>
 
-    <a href="https://www.tiktok.com/@plague2profit" target="_blank" rel="noopener noreferrer"
+    <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit on TikTok">
       <span class="handle-icon" aria-hidden="true">◈</span>
       <div class="handle-platform">TikTok</div>
