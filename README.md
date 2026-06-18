@@ -623,7 +623,7 @@
 
   .social-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
     margin-top: 4rem;
   }
@@ -1089,6 +1089,14 @@
       <p class="handle-desc">Follow our WhatsApp channel for story drops and announcements.</p>
     </a>
 
+    <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener noreferrer"
+    class="social-handle reveal reveal-delay-4" aria-label="Plague2Profit on Rumble">
+    <span class="handle-icon" aria-hidden="true">▶</span>
+    <div class="handle-platform">Rumble</div>
+    <div class="handle-name">@Plague2Profit</div>
+    <p class="handle-desc">Video platform — long and short-form stories of resilience, devastation and restoration for global audiences.</p>
+   </a>
+    
   </div>
 </section>
 
