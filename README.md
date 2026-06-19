@@ -71,16 +71,16 @@
 
   /* ── NAV ── */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 4rem;
-    background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
-    transition: background 0.4s;
-  }
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0.75rem 4rem;
+  background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
+  transition: background 0.4s;
+}
 
   nav.scrolled {
     background: rgba(10,8,4,0.97);
@@ -88,9 +88,7 @@
   }
 
   .nav-logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+    text-decoration: none;                    display: flex; align-items: center;       justify-self: center;
   }
 
   .nav-logo img {
@@ -102,9 +100,8 @@
   }
 
   .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
+    display: flex; gap: 2.5rem;
+    list-style: none; justify-self: end;
   }
 
   .nav-links a {
