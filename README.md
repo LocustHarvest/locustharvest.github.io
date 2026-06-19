@@ -155,6 +155,23 @@
     pointer-events: none;
   }
 
+.hero-summary {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--mist);
+  max-width: 680px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.1s forwards;
+}
+
+.hero-handle {
+  color: var(--gold);
+  font-weight: 500;
+}
+
   .hero-eyebrow {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 500;
