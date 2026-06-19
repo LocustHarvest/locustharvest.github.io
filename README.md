@@ -811,7 +811,7 @@
     From Plagues<br>
     <em>to Profit.</em>
   </h1>
-  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
+  <p class="hero-sub">LOCUST HARVEST (PTY) LTD transforms disruption into opportunity and captures the world's most extraordinary stories of resilience — combining analytical precision with the raw power of human storytelling to help individuals and organisations rise from challenge to triumph.</p>
   <div class="hero-actions">
     <a href="#platform" class="btn-primary">Explore the Platform</a>
     <a href="#contact" class="btn-ghost">Get in touch →</a>
