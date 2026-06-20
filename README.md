@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="Locust Harvest — From Plague to Profit">
 <meta name="twitter:description" content="Transforming disruption into opportunity through the power of human storytelling.">
 <meta name="twitter:site" content="@Plagues2Profit">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -211,7 +211,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
   .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; }
   .social-handle:hover { border-color: rgba(201,168,76,0.35); background: rgba(201,168,76,0.04); transform: translateY(-4px); }
   .handle-platform { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.5rem; }
-  .handle-icon { font-size: 1.4rem; margin-bottom: 0.75rem; display: block; }
+  .handle-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; color: var(--gold); }
   .handle-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
   .handle-desc { font-size: 0.82rem; line-height: 1.6; color: var(--ash); text-align: justify; text-justify: inter-word; }
   .cta { padding: 8rem 4rem; background: var(--dark3); text-align: center; position: relative; overflow: hidden; }
@@ -481,7 +481,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://www.youtube.com/@Plague2Profit?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal" aria-label="Plague2Profit on YouTube">
-      <span class="handle-icon" aria-hidden="true">▶</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
       <div class="handle-platform">YouTube</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video stories, interviews, and platform content.</p>
@@ -489,7 +489,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://www.instagram.com/plague2profit/" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Instagram">
-      <span class="handle-icon" aria-hidden="true">◎</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
       <div class="handle-platform">Instagram</div>
       <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
@@ -497,7 +497,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit on TikTok">
-      <span class="handle-icon" aria-hidden="true">◈</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
       <div class="handle-platform">TikTok</div>
       <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p>
@@ -505,7 +505,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on X Twitter">
-      <span class="handle-icon" aria-hidden="true">✕</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></span>
       <div class="handle-platform">X (Twitter)</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Strategy insights, news, and platform updates.</p>
@@ -513,7 +513,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://www.facebook.com/photo/?fbid=122101807005352097&set=a.122101807095352097" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-4" aria-label="Plague2Profit on Facebook">
-      <span class="handle-icon" aria-hidden="true">◇</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-facebook"></i></span>
       <div class="handle-platform">Facebook</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Community updates and story features.</p>
@@ -521,7 +521,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://t.me/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit Telegram channel">
-      <span class="handle-icon" aria-hidden="true">✦</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-telegram"></i></span>
       <div class="handle-platform">Telegram</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Direct updates and community discussions via Telegram.</p>
@@ -529,7 +529,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-2" aria-label="Follow Plague2Profit on WhatsApp">
-      <span class="handle-icon" aria-hidden="true">⟡</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
       <div class="handle-platform">WhatsApp Channel</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Follow our WhatsApp channel for story drops and announcements.</p>
@@ -537,7 +537,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on Rumble">
-      <span class="handle-icon" aria-hidden="true">▶</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-rumble"></i></span>
       <div class="handle-platform">Rumble</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video platform — long and short-form stories of resilience, devastation and restoration for global audiences.</p>
