@@ -252,7 +252,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
     .nav-links { display: none; }
-    .nav-logo img { height: 52px; }
+    .nav-logo img { height: 92px; }
   }
   @media (max-width: 640px) {
     .cycle-grid { grid-template-columns: 1fr; }
