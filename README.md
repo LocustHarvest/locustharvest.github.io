@@ -174,7 +174,7 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
   .cycle-desc { font-size: 0.85rem; line-height: 1.65; color: var(--ash); text-align: justify; text-justify: inter-word; }
   .cycle-connector { position: absolute; top: 50%; right: -1px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold-dim); transform: translate(50%, -50%); z-index: 2; }
   .cycle-item:last-child .cycle-connector { display: none; }
- .philosophy-quote { margin: 4rem 0 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); border-left: none; border-right: none; }
+ .philosophy-quote { margin: 4rem 0 0 0 !important; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); border-left: none !important; border-right: none !important; }
   .platform { padding: 8rem 4rem; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
   .platform-cards { display: flex; flex-direction: column; gap: 1.5rem; }
   .pcard { background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
