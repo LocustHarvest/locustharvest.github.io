@@ -537,7 +537,11 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
     <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on Rumble">
-      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-rumble"></i></span>
+      <span class="handle-icon" aria-hidden="true">
+  <svg width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;">
+    <path d="M396.7 169.6c0-29.7-16.9-46.4-46.7-46.4h-26.4v92.8h26.4c29.8 0 46.7-16.7 46.7-46.4zM256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 16 256 16zm94.7 297.6c-6.4 9.6-15.2 17.1-25.9 22.1l36.3 60.5h-55.4l-30.1-51.2h-22.1v51.2h-49.3V123.2h75.7c26.6 0 47.9 6.5 63.1 19.3 15.3 12.9 22.9 31 22.9 54.1 0 26.3-9.7 45.9-29.2 59.6 6.5 4.3 12 9.9 16.1 16.6 4.1 6.8 6.2 14.2 6.2 22.4 0 8.7-2.5 17-7.3 24.4z"/>
+  </svg>
+</span>
       <div class="handle-platform">Rumble</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video platform — long and short-form stories of resilience, devastation and restoration for global audiences.</p>
