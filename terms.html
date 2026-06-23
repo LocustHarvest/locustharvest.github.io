@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Locust Harvest (Pty) Ltd</title>
+<meta name="description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.locustharvest.com/terms.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #7A6330;
+    --black: #0A0804; --dark: #110E07; --dark2: #1A1610; --dark3: #241F14;
+    --ash: #6B6358; --mist: #AFA89E; --cream: #F0EBE0; --white: #FAF8F3;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black); color: var(--cream);
+    font-family: 'Barlow', sans-serif; font-weight: 300;
+    overflow-x: hidden; line-height: 1.75;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.75rem 4rem;
+    background: rgba(10,8,4,0.97);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo img { height: 64px; width: auto; display: block; }
+  .nav-home {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--mist); text-decoration: none; transition: color 0.3s;
+  }
+  .nav-home:hover { color: var(--gold); }
+
+  /* HERO */
+  .terms-hero {
+    padding: 10rem 4rem 4rem;
+    background: linear-gradient(175deg, #0A0804 0%, #1A1208 60%, #0D0B06 100%);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+  .terms-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
+    font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .terms-title {
+    font-family: 'Playfair Display', serif; font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .terms-title em { font-style: italic; color: var(--gold); }
+  .terms-meta {
+    font-size: 0.85rem; color: var(--ash); margin-top: 1.5rem;
+    font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.1em;
+  }
+  .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1.5rem 0; }
+
+  /* LAYOUT */
+  .terms-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+  }
+
+  /* SIDEBAR TOC */
+  .toc {
+    position: sticky; top: 6rem;
+    align-self: start;
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 2rem;
+  }
+  .toc-title {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.25rem;
+  }
+  .toc ol { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; counter-reset: toc; }
+  .toc ol li { counter-increment: toc; }
+  .toc ol li a {
+    font-family: 'Barlow', sans-serif; font-size: 0.82rem;
+    color: var(--ash); text-decoration: none; transition: color 0.3s;
+    display: flex; gap: 0.5rem; align-items: baseline;
+  }
+  .toc ol li a::before {
+    content: counter(toc);
+    font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem;
+    color: var(--gold-dim); flex-shrink: 0; min-width: 16px;
+  }
+  .toc ol li a:hover { color: var(--gold); }
+
+  /* CONTENT */
+  .terms-content { max-width: 740px; }
+
+  .clause {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+  .clause:last-child { border-bottom: none; }
+
+  .clause-num {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
+    font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+  }
+  .clause h2 {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--white);
+    margin-bottom: 1.25rem; line-height: 1.2;
+  }
+  .clause p {
+    font-size: 0.95rem; line-height: 1.8; color: var(--mist);
+    margin-bottom: 1rem; text-align: justify; text-justify: inter-word;
+  }
+  .clause ul, .clause ol {
+    margin: 1rem 0 1rem 1.5rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .clause li {
+    font-size: 0.95rem; line-height: 1.75; color: var(--mist);
+    text-align: justify; text-justify: inter-word;
+  }
+  .clause strong { color: var(--cream); font-weight: 500; }
+
+  .highlight-box {
+    background: var(--dark2);
+    border-left: 3px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: var(--mist);
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+  .footer-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+  .footer-reg { font-size: 0.72rem; color: var(--ash); letter-spacing: 0.05em; margin-top: 0.25rem; }
+  .footer-links { display: flex; gap: 2rem; align-items: center; }
+  .footer-links a { font-size: 0.75rem; color: var(--ash); text-decoration: none; letter-spacing: 0.08em; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    nav { padding: 0.75rem 2rem; }
+    .terms-hero { padding: 9rem 2rem 3rem; }
+    .terms-layout { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 2rem; }
+    .toc { position: static; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2rem; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  @media (max-width: 640px) {
+    .nav-logo img { height: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Locust Harvest">
+  </a>
+  <a href="index.html" class="nav-home">← Back to Home</a>
+</nav>
+
+<div class="terms-hero">
+  <p class="terms-eyebrow">Legal · Locust Harvest (Pty) Ltd</p>
+  <h1 class="terms-title">Terms &amp; <em>Conditions</em></h1>
+  <div class="gold-divider"></div>
+  <p class="terms-meta">Effective Date: June 2026 &nbsp;|&nbsp; Jurisdiction: Republic of South Africa &nbsp;|&nbsp; Reg No: 2026/392620/07</p>
+</div>
+
+<div class="terms-layout">
+
+  <!-- SIDEBAR TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#definitions">Definitions</a></li>
+      <li><a href="#platform">Platform Use</a></li>
+      <li><a href="#story-submission">Story Submission</a></li>
+      <li><a href="#ownership">Intellectual Property</a></li>
+      <li><a href="#revenue">Revenue Share & Payment</a></li>
+      <li><a href="#content">Content Standards</a></li>
+      <li><a href="#copyright">Copyright & Fair Use</a></li>
+      <li><a href="#privacy">Privacy & Data</a></li>
+      <li><a href="#liability">Liability & Disclaimer</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#governing">Governing Law</a></li>
+      <li><a href="#amendments">Amendments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="terms-content">
+
+    <div class="highlight-box">
+      Please read these Terms and Conditions carefully before using the Locust Harvest platform or submitting any content. By accessing our platform, submitting a story, or engaging with our services, you agree to be bound by these Terms. If you do not agree, please do not use our services.
+    </div>
+
+    <!-- 1 -->
+    <div class="clause" id="acceptance">
+      <div class="clause-num">Clause 01</div>
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing, browsing, or using any part of the Locust Harvest platform — including but not limited to the website at <strong>www.locustharvest.com</strong>, social media channels, and any associated digital platforms — you confirm that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+      <p>These Terms apply to all visitors, story owners, contributors, partners, and any other persons who interact with Locust Harvest (Pty) Ltd (Registration No. 2026/392620/07), hereinafter referred to as <strong>"Locust Harvest"</strong>, <strong>"we"</strong>, <strong>"us"</strong>, or <strong>"the Company"</strong>.</p>
+      <p>Use of our platform by persons under the age of 18 is not permitted without the express consent of a parent or legal guardian, who shall be bound by these Terms on the minor's behalf.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="clause" id="definitions">
+      <div class="clause-num">Clause 02</div>
+      <h2>Definitions</h2>
+      <p>For the purposes of these Terms and Conditions, the following definitions apply:</p>
+      <ul>
+        <li><strong>"Platform"</strong> — refers to the Locust Harvest website, social media pages, streaming channels, and any digital environment operated by Locust Harvest (Pty) Ltd.</li>
+        <li><strong>"Story Owner"</strong> — refers to any individual or entity who submits personal narrative content to Locust Harvest for publication or distribution.</li>
+        <li><strong>"Content"</strong> — refers to any story, video, audio, image, text, or other material submitted to or published on the Platform.</li>
+        <li><strong>"Revenue Share Agreement"</strong> — refers to the separately negotiated written agreement between Locust Harvest and a Story Owner governing the sharing of income generated from their Content.</li>
+        <li><strong>"Upfront Payment"</strong> — refers to a once-off negotiated payment made to a Story Owner upon acceptance and publication of their Content.</li>
+        <li><strong>"User"</strong> — refers to any person who accesses or uses the Platform in any capacity.</li>
+        <li><strong>"From Plague to Profit"</strong> — refers to the proprietary brand, storytelling framework, and content theme owned by Locust Harvest (Pty) Ltd.</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="clause" id="platform">
+      <div class="clause-num">Clause 03</div>
+      <h2>Platform Use</h2>
+      <p>Locust Harvest grants you a limited, non-exclusive, non-transferable, revocable licence to access and use the Platform solely for lawful personal or commercial purposes consistent with these Terms.</p>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Platform for any unlawful, fraudulent, or harmful purpose</li>
+        <li>Reproduce, duplicate, copy, sell, or exploit any portion of the Platform without express written permission from Locust Harvest</li>
+        <li>Interfere with or disrupt the integrity or performance of the Platform</li>
+        <li>Attempt to gain unauthorised access to any system or data connected to the Platform</li>
+        <li>Use automated tools, bots, scrapers, or similar technology to extract data from the Platform</li>
+        <li>Impersonate Locust Harvest, its directors, employees, or any other person</li>
+        <li>Post or transmit any content that is defamatory, obscene, offensive, or in violation of any applicable law</li>
+      </ul>
+      <p>Locust Harvest reserves the right to suspend or terminate access to the Platform for any User who violates these Terms, without notice and without liability.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="clause" id="story-submission">
+      <div class="clause-num">Clause 04</div>
+      <h2>Story Submission</h2>
+      <p>Story Owners who submit content to Locust Harvest confirm and warrant that:</p>
+      <ul>
+        <li>The story submitted is their own authentic, true, and personal account</li>
+        <li>They are the rightful owner of the content and have full authority to submit it</li>
+        <li>The content does not infringe any third-party intellectual property, privacy, or other rights</li>
+        <li>The content does not contain false, misleading, defamatory, or unlawful material</li>
+        <li>They have obtained all necessary consents from any third parties mentioned or depicted in the story</li>
+        <li>They are at least 18 years of age, or have obtained parental/guardian consent</li>
+      </ul>
+      <p>Locust Harvest reserves the right to accept, reject, edit, or decline any submission at its sole discretion without providing reasons. Submission of a story does not guarantee publication.</p>
+      <p>Upon submission, Story Owners grant Locust Harvest a licence to review, assess, curate, and where accepted, publish and distribute the content in accordance with the agreed participation model (Upfront Payment or Revenue Share).</p>
+      <div class="highlight-box">
+        All story submissions must be factually true. Fabricated, fictionalised, or materially embellished content submitted as true is a breach of these Terms and may result in immediate removal, forfeiture of payment, and potential legal action.
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="clause" id="ownership">
+      <div class="clause-num">Clause 05</div>
+      <h2>Intellectual Property</h2>
+      <p>All content, branding, trademarks, trade names, logos, graphics, software, and other intellectual property on the Platform — including but not limited to <strong>"From Plagues to Profit"</strong>, <strong>"Locust Harvest"</strong>, <strong>"@Plague2Profit"</strong>, <strong>"@LocustHarvest"</strong>, and associated visual identities — are the exclusive property of Locust Harvest (Pty) Ltd and are protected under South African and international intellectual property laws.</p>
+      <p>Story Owners retain ownership of their original personal story. However, by entering into a participation agreement with Locust Harvest, Story Owners grant the Company a <strong>non-exclusive, royalty-bearing (or royalty-free, depending on the agreed model), worldwide, perpetual licence</strong> to publish, distribute, adapt, promote, and monetise their content across all Locust Harvest platforms and channels.</p>
+      <p>Nothing in these Terms transfers ownership of a Story Owner's personal narrative to Locust Harvest. The licence granted is for publication and distribution purposes only.</p>
+      <p>Locust Harvest's own brand assets, frameworks, analytical methodologies, and platform architecture may not be reproduced, imitated, or used without express written consent.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="clause" id="revenue">
+      <div class="clause-num">Clause 06</div>
+      <h2>Revenue Share &amp; Payment</h2>
+      <p>Story Owners may participate in one of two compensation models, as agreed in writing prior to publication:</p>
+      <ul>
+        <li><strong>Upfront Payment:</strong> A once-off negotiated payment made to the Story Owner at the time of story submission and publication. Once paid, Locust Harvest retains the right to monetise the content across all platforms without further revenue obligation to the Story Owner.</li>
+        <li><strong>Revenue Share:</strong> The Story Owner receives an agreed percentage of net revenue generated from their story across all monetised Locust Harvest platforms. The specific percentage, payment schedule, and reporting obligations will be set out in a separate written Revenue Share Agreement.</li>
+      </ul>
+      <p>All payment terms, amounts, and schedules are governed by the individual written agreement between Locust Harvest and the Story Owner. These Terms do not constitute a payment guarantee or commitment absent a signed agreement.</p>
+      <p>Locust Harvest will make all reasonable efforts to ensure timely and accurate payments in accordance with signed agreements. Disputes regarding payments must be raised in writing within 30 days of the relevant payment date.</p>
+      <p>All payments are subject to applicable South African tax law. Story Owners are responsible for declaring and paying any taxes arising from payments received from Locust Harvest.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="clause" id="content">
+      <div class="clause-num">Clause 07</div>
+      <h2>Content Standards</h2>
+      <p>All content submitted to or published on the Locust Harvest Platform must meet the following standards:</p>
+      <ul>
+        <li>Content must be <strong>authentic and truthful</strong> — Locust Harvest is a platform for real stories of real people</li>
+        <li>Content must be <strong>inspirational and constructive</strong> in nature, consistent with the "From Plague to Profit" theme</li>
+        <li>Content must not contain hate speech, discrimination, or material that degrades individuals based on race, gender, religion, sexual orientation, disability, or any other protected characteristic</li>
+        <li>Content must not contain explicit sexual material, graphic violence, or content that exploits or endangers minors</li>
+        <li>Content must not promote illegal activities, substances, or organisations</li>
+        <li>Content must not contain personal information of third parties without their explicit written consent</li>
+      </ul>
+      <p>Locust Harvest reserves the right to remove any content that, in its reasonable opinion, violates these standards — at any time and without prior notice — regardless of whether the content has been paid for.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="clause" id="copyright">
+      <div class="clause-num">Clause 08</div>
+      <h2>Copyright &amp; Fair Use</h2>
+      <p>Locust Harvest respects the intellectual property rights of others and expects all Users and Story Owners to do the same.</p>
+      <p>When Locust Harvest references, summarises, or links to third-party content (such as news articles, published reports, or media) as part of its storytelling or commentary activities, it does so in accordance with South African copyright law — specifically the fair dealing provisions of the <strong>Copyright Act 98 of 1978</strong> — which permits limited use for the purposes of commentary, criticism, and reporting on current events, provided sufficient acknowledgement of the source is given.</p>
+      <p>Locust Harvest does not reproduce substantial portions of third-party copyrighted works without permission. All third-party content referenced on the Platform is accompanied by attribution and a link to the original source.</p>
+      <p>If you believe that your copyright has been infringed on any Locust Harvest platform, please contact us immediately at <strong>sydneytayiya@locustharvest.com</strong> with full details of the claimed infringement. We will investigate and respond within 14 business days.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="clause" id="privacy">
+      <div class="clause-num">Clause 09</div>
+      <h2>Privacy &amp; Data</h2>
+      <p>Locust Harvest is committed to protecting the personal information of all Users and Story Owners in accordance with the <strong>Protection of Personal Information Act 4 of 2013 (POPIA)</strong> of the Republic of South Africa.</p>
+      <p>Personal information collected by Locust Harvest — including names, contact details, story content, and payment information — will be used solely for the purposes of operating the Platform, administering story participation agreements, processing payments, and communicating with Users.</p>
+      <p>Locust Harvest will not sell, rent, or share personal information with third parties for marketing purposes without explicit consent.</p>
+      <p>Story Owners who participate in the Revenue Share or Upfront Payment model consent to their name, likeness, and story being published and distributed across Locust Harvest's platforms as agreed. Any request to withdraw consent after publication must be made in writing and is subject to the terms of the signed participation agreement.</p>
+      <p>Users may request access to, correction of, or deletion of their personal information by contacting <strong>sydneytayiya@locustharvest.com</strong>.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="clause" id="liability">
+      <div class="clause-num">Clause 10</div>
+      <h2>Liability &amp; Disclaimer</h2>
+      <p>The Locust Harvest Platform is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis. While we strive to ensure the Platform is accurate, reliable, and continuously available, we make no warranties or representations — express or implied — regarding the Platform's operation, availability, or the accuracy of any content published thereon.</p>
+      <p>To the maximum extent permitted by South African law, Locust Harvest shall not be liable for:</p>
+      <ul>
+        <li>Any indirect, incidental, special, consequential, or punitive damages arising from your use of the Platform</li>
+        <li>Loss of revenue, profits, data, or business arising from Platform downtime or content removal</li>
+        <li>Any inaccuracies in Story Owner content that the Story Owner has warranted to be true</li>
+        <li>Third-party content linked to or referenced from our Platform</li>
+        <li>Any unauthorised access to or alteration of your data</li>
+      </ul>
+      <p>The stories, experiences, and outcomes shared on the Platform are individual and unique. Locust Harvest does not guarantee that any person following advice or strategies mentioned in published stories will achieve similar results.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="clause" id="termination">
+      <div class="clause-num">Clause 11</div>
+      <h2>Termination</h2>
+      <p>Locust Harvest reserves the right to terminate or suspend any User's access to the Platform at any time, with or without notice, for conduct that violates these Terms or is otherwise harmful to the Company, its Story Owners, or other Users.</p>
+      <p>Story Owners who wish to withdraw their content from the Platform must submit a written request to <strong>sydneytayiya@locustharvest.com</strong>. Withdrawal requests are subject to the terms of any signed participation agreement, including any upfront payment already made. Content that has already been published and distributed may not be fully retrievable from all platforms.</p>
+      <p>Upon termination, all licences granted to you under these Terms will immediately cease. Provisions that by their nature should survive termination — including intellectual property, liability, and governing law clauses — shall do so.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="clause" id="governing">
+      <div class="clause-num">Clause 12</div>
+      <h2>Governing Law</h2>
+      <p>These Terms and Conditions are governed by and construed in accordance with the laws of the <strong>Republic of South Africa</strong>. Any disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the South African courts.</p>
+      <p>In the event of a dispute, the parties agree to first attempt to resolve the matter through good-faith negotiation. If negotiation fails within 30 days, either party may refer the matter to mediation before initiating formal legal proceedings.</p>
+      <p>Nothing in this clause limits Locust Harvest's right to seek urgent or interim relief from a court of competent jurisdiction.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="clause" id="amendments">
+      <div class="clause-num">Clause 13</div>
+      <h2>Amendments</h2>
+      <p>Locust Harvest reserves the right to update, amend, or replace these Terms and Conditions at any time. The most current version will always be available at <strong>www.locustharvest.com/terms.html</strong>.</p>
+      <p>Continued use of the Platform following any amendment constitutes acceptance of the updated Terms. Where amendments materially affect Story Owners with active participation agreements, Locust Harvest will endeavour to provide reasonable notice via email or platform notification.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="clause" id="contact">
+      <div class="clause-num">Clause 14</div>
+      <h2>Contact Us</h2>
+      <p>For any questions, concerns, or legal notices relating to these Terms and Conditions, please contact:</p>
+      <div class="highlight-box">
+        <strong>Locust Harvest (Pty) Ltd</strong><br>
+        Executive Director: Sydney Tayiya<br>
+        Email: sydneytayiya@locustharvest.com<br>
+        Phone: +27 71 364 1561 | +27 62 741 8656<br>
+        Website: www.locustharvest.com<br>
+        Registration No: 2026/392620/07 | Tax No: 9050539320
+      </div>
+      <p>We aim to respond to all legal and compliance enquiries within <strong>5 business days</strong>.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LOCUST HARVEST</div>
+    <div class="footer-reg">Reg No: 2026/392620/07 · Tax No: 9050539320</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="mailto:sydneytayiya@locustharvest.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
