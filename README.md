@@ -21,7 +21,8 @@
 <meta name="twitter:title" content="Locust Harvest — From Plague to Profit">
 <meta name="twitter:description" content="Transforming disruption into opportunity through the power of human storytelling.">
 <meta name="twitter:site" content="@Plagues2Profit">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -37,21 +38,19 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: center; align-items: center;
-    padding: 0.75rem 4rem;
-    background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
-    transition: background 0.4s;
-  }
-  nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
-  .nav-logo { text-decoration: none; display: flex; align-items: center; }
-  .nav-logo img { height: 64px; width: auto; display: block; }
-  .nav-links {
-    position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
-    display: flex; gap: 2.5rem; list-style: none;
-  }
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.75rem 4rem;
+  background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
+  transition: background 0.4s;
+}
+nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+.nav-logo { text-decoration: none; display: flex; align-items: center; }
+.nav-logo img { height: 128px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none;
+   }
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.8rem;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.2rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
     text-decoration: none; transition: color 0.3s;
   }
@@ -99,18 +98,18 @@
     color: var(--mist); max-width: 520px; line-height: 1.6; margin-bottom: 3rem;
     opacity: 0; animation: fadeUp 1s 0.7s forwards;
   }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 1.25rem 1.5rem; align-items: center; opacity: 0; animation: fadeUp 1s 0.9s forwards; }
+  .hero-actions { display: flex; gap: 1.5rem; align-items: center; opacity: 0; animation: fadeUp 1s 0.9s forwards; }
   .btn-primary {
     font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem;
     letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--black);
     border: none; padding: 1rem 2.5rem; cursor: pointer; text-decoration: none;
-    display: inline-block; white-space: nowrap; transition: background 0.3s, transform 0.2s;
+    display: inline-block; transition: background 0.3s, transform 0.2s;
   }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
   .btn-ghost {
     font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.78rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); text-decoration: none;
-    border-bottom: 1px solid var(--stone); padding-bottom: 2px; white-space: nowrap; transition: color 0.3s, border-color 0.3s;
+    border-bottom: 1px solid var(--stone); padding-bottom: 2px; transition: color 0.3s, border-color 0.3s;
   }
   .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
   .hero-scroll-line {
@@ -176,7 +175,7 @@
   .cycle-desc { font-size: 0.85rem; line-height: 1.65; color: var(--ash); text-align: justify; text-justify: inter-word; }
   .cycle-connector { position: absolute; top: 50%; right: -1px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold-dim); transform: translate(50%, -50%); z-index: 2; }
   .cycle-item:last-child .cycle-connector { display: none; }
-  .philosophy-quote { margin-top: 4rem; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
+ .philosophy-quote { margin: 4rem 0 0 0 !important; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); border-left: none !important; border-right: none !important; }
   .platform { padding: 8rem 4rem; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
   .platform-cards { display: flex; flex-direction: column; gap: 1.5rem; }
   .pcard { background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
@@ -209,11 +208,11 @@
   .obj-list li { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1rem; line-height: 1.65; color: var(--mist); text-align: justify; text-justify: inter-word; }
   .obj-list li::before { content: '▶'; font-size: 0.55rem; color: var(--gold); margin-top: 0.5em; flex-shrink: 0; }
   .social { padding: 8rem 4rem; background: var(--dark); }
-  .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin-top: 4rem; }
+  .social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
   .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; }
   .social-handle:hover { border-color: rgba(201,168,76,0.35); background: rgba(201,168,76,0.04); transform: translateY(-4px); }
   .handle-platform { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.5rem; }
-  .handle-icon { font-size: 1.4rem; margin-bottom: 0.75rem; display: block; }
+  .handle-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; color: var(--gold); }
   .handle-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
   .handle-desc { font-size: 0.82rem; line-height: 1.6; color: var(--ash); text-align: justify; text-justify: inter-word; }
   .cta { padding: 8rem 4rem; background: var(--dark3); text-align: center; position: relative; overflow: hidden; }
@@ -254,7 +253,8 @@
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
     .nav-links { display: none; }
-    .nav-logo img { height: 42px; }
+     nav {justify-content: flex-end; }
+     .nav-logo img { height: 92px; }
   }
   @media (max-width: 640px) {
     .cycle-grid { grid-template-columns: 1fr; }
@@ -264,122 +264,6 @@
     .services-header { gap: 2rem; }
   }
   @media (max-width: 400px) { .social-grid { grid-template-columns: 1fr; } }
-  /* ── STORY BUTTON ── */
-  .btn-story {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem;
-    letter-spacing: 0.2em; text-transform: uppercase; background: transparent;
-    color: var(--gold); border: 1px solid var(--gold); padding: 1rem 2rem;
-    cursor: pointer; white-space: nowrap; transition: background 0.3s, color 0.3s;
-  }
-  .btn-story:hover { background: var(--gold); color: var(--black); }
-
-  /* ── MODAL OVERLAY ── */
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 9000;
-    background: rgba(5,4,2,0.88); backdrop-filter: blur(6px);
-    align-items: center; justify-content: center; padding: 1rem;
-  }
-  .modal-overlay.active { display: flex; }
-
-  .modal-box {
-    background: var(--dark2); border: 1px solid rgba(201,168,76,0.2);
-    width: 100%; max-width: 780px; max-height: 90vh; overflow-y: auto;
-    position: relative; padding: 3rem;
-    animation: fadeUp 0.4s ease;
-  }
-
-  .modal-close {
-    position: absolute; top: 1.25rem; right: 1.5rem;
-    background: none; border: none; color: var(--ash); font-size: 1.1rem;
-    cursor: pointer; transition: color 0.3s; line-height: 1;
-  }
-  .modal-close:hover { color: var(--gold); }
-
-  .modal-header { margin-bottom: 2rem; }
-  .modal-eyebrow {
-    font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
-    letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-  .modal-title {
-    font-family: 'Playfair Display', serif; font-weight: 900;
-    font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--white); line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-  .modal-title em { font-style: italic; color: var(--gold); }
-  .modal-sub { font-size: 0.95rem; color: var(--mist); }
-
-  /* ── FRAMEWORK ── */
-  .framework-section {
-    background: var(--dark3); border: 1px solid rgba(201,168,76,0.1);
-    padding: 1.75rem; margin-bottom: 2rem;
-  }
-  .framework-label {
-    font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
-    letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dim);
-    margin-bottom: 1.25rem;
-  }
-  .framework-grid {
-    display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem;
-  }
-  .framework-step {
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    padding: 0.75rem 0.5rem;
-    border-right: 1px solid rgba(201,168,76,0.1);
-  }
-  .framework-step:last-child { border-right: none; }
-  .step-num {
-    font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900;
-    color: rgba(201,168,76,0.15); line-height: 1; margin-bottom: 0.5rem;
-  }
-  .step-pair { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
-  .step-top {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.72rem;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream);
-  }
-  .step-divider { font-size: 0.65rem; color: var(--gold); }
-  .step-bottom {
-    font-family: 'Barlow', sans-serif; font-size: 0.72rem; font-style: italic;
-    color: var(--gold); font-weight: 400;
-  }
-
-  /* ── T&C ── */
-  .tc-section { margin-bottom: 2rem; }
-  .tc-label {
-    display: flex; gap: 1rem; align-items: flex-start; cursor: pointer;
-  }
-  .tc-label input[type="checkbox"] { display: none; }
-  .tc-custom-check {
-    width: 20px; height: 20px; min-width: 20px;
-    border: 1px solid var(--gold-dim); background: var(--dark3);
-    display: flex; align-items: center; justify-content: center;
-    margin-top: 2px; transition: background 0.3s;
-  }
-  .tc-label input:checked + .tc-custom-check { background: var(--gold); }
-  .tc-label input:checked + .tc-custom-check::after {
-    content: '✓'; font-size: 0.75rem; color: var(--black); font-weight: 700;
-  }
-  .tc-text { font-size: 0.85rem; line-height: 1.65; color: var(--mist); }
-  .tc-text a { color: var(--gold); text-decoration: underline; }
-
-  /* ── SUBMIT ── */
-  .modal-footer { text-align: center; }
-  .btn-submit {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.82rem;
-    letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold);
-    color: var(--black); border: none; padding: 1.1rem 3rem; cursor: pointer;
-    transition: background 0.3s, transform 0.2s; width: 100%; margin-bottom: 1rem;
-  }
-  .btn-submit:hover:not(:disabled) { background: var(--gold-light); transform: translateY(-2px); }
-  .btn-submit:disabled { background: var(--stone); color: var(--ash); cursor: not-allowed; opacity: 0.5; }
-  .modal-note { font-size: 0.75rem; color: var(--ash); line-height: 1.6; }
-
-  @media (max-width: 640px) {
-    .modal-box { padding: 2rem 1.5rem; }
-    .framework-grid { grid-template-columns: repeat(3, 1fr); }
-    .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
-    .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
-  }
 </style>
 </head>
 <body>
@@ -399,9 +283,6 @@
 
 <section class="hero" id="home" aria-label="Hero">
   <div class="hero-bg" aria-hidden="true"></div>
-  <div class="story-cta-top">
-    <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story with Locust Harvest</button>
-  </div>
   <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
   <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
   <h1 class="hero-title">From Plagues<br><em>to Profit.</em></h1>
@@ -412,97 +293,6 @@
   </div>
   <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
 </section>
-
-<!-- ── STORY SUBMISSION MODAL ── -->
-<div id="storyModal" class="modal-overlay" onclick="closeOnOverlay(event)">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeStoryForm()" aria-label="Close">✕</button>
-
-    <!-- Header -->
-    <div class="modal-header">
-      <p class="modal-eyebrow">Locust Harvest · Story Submission</p>
-      <h2 class="modal-title">Share Your <em>Story</em></h2>
-      <p class="modal-sub">Every plague has a profit. We want to hear yours.</p>
-    </div>
-
-    <!-- Combined Framework -->
-    <div class="framework-section">
-      <p class="framework-label">The Locust Harvest Storytelling Framework</p>
-      <div class="framework-grid">
-        <div class="framework-step">
-          <div class="step-num">01</div>
-          <div class="step-pair">
-            <span class="step-top">Pain</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Plague</span>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="step-num">02</div>
-          <div class="step-pair">
-            <span class="step-top">Struggle</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Problem</span>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="step-num">03</div>
-          <div class="step-pair">
-            <span class="step-top">Turning Point</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Person</span>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="step-num">04</div>
-          <div class="step-pair">
-            <span class="step-top">Transformation</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Profit</span>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="step-num">05</div>
-          <div class="step-pair">
-            <span class="step-top">Impact</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Lesson</span>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="step-num">06</div>
-          <div class="step-pair">
-            <span class="step-top">Legacy</span>
-            <span class="step-divider">↓</span>
-            <span class="step-bottom">The Legacy</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- T&C Acceptance -->
-    <div class="tc-section">
-      <label class="tc-label">
-        <input type="checkbox" id="tcCheckbox" onchange="toggleSubmit()">
-        <span class="tc-custom-check"></span>
-        <span class="tc-text">
-          I have read and agree to the
-          <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
-          of Locust Harvest (Pty) Ltd, including the story submission, intellectual property, and revenue share clauses.
-        </span>
-      </label>
-    </div>
-
-    <!-- Submit Button -->
-    <div class="modal-footer">
-      <button class="btn-submit" id="submitBtn" disabled onclick="goToForm()">
-        Proceed to Story Submission →
-      </button>
-      <p class="modal-note">You will be redirected to our secure Google Form. Your submission goes directly to sydneytayiya@locustharvest.com</p>
-    </div>
-
-  </div>
-</div>
 
 <section class="about" id="about" aria-labelledby="about-heading">
   <div class="about-visual reveal">
@@ -692,7 +482,7 @@
 
     <a href="https://www.youtube.com/@Plague2Profit?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal" aria-label="Plague2Profit on YouTube">
-      <span class="handle-icon" aria-hidden="true">▶</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
       <div class="handle-platform">YouTube</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video stories, interviews, and platform content.</p>
@@ -700,7 +490,7 @@
 
     <a href="https://www.instagram.com/plague2profit/" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Instagram">
-      <span class="handle-icon" aria-hidden="true">◎</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
       <div class="handle-platform">Instagram</div>
       <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p>
@@ -708,7 +498,7 @@
 
     <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit on TikTok">
-      <span class="handle-icon" aria-hidden="true">◈</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
       <div class="handle-platform">TikTok</div>
       <div class="handle-name">@plague2profit</div>
       <p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p>
@@ -716,7 +506,7 @@
 
     <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on X Twitter">
-      <span class="handle-icon" aria-hidden="true">✕</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></span>
       <div class="handle-platform">X (Twitter)</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Strategy insights, news, and platform updates.</p>
@@ -724,7 +514,7 @@
 
     <a href="https://www.facebook.com/photo/?fbid=122101807005352097&set=a.122101807095352097" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-4" aria-label="Plague2Profit on Facebook">
-      <span class="handle-icon" aria-hidden="true">◇</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-facebook"></i></span>
       <div class="handle-platform">Facebook</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Community updates and story features.</p>
@@ -732,7 +522,7 @@
 
     <a href="https://t.me/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit Telegram channel">
-      <span class="handle-icon" aria-hidden="true">✦</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-telegram"></i></span>
       <div class="handle-platform">Telegram</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Direct updates and community discussions via Telegram.</p>
@@ -740,7 +530,7 @@
 
     <a href="https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-2" aria-label="Follow Plague2Profit on WhatsApp">
-      <span class="handle-icon" aria-hidden="true">⟡</span>
+      <span class="handle-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
       <div class="handle-platform">WhatsApp Channel</div>
       <div class="handle-name">Plague2Profit</div>
       <p class="handle-desc">Follow our WhatsApp channel for story drops and announcements.</p>
@@ -748,7 +538,11 @@
 
     <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener noreferrer"
        class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on Rumble">
-      <span class="handle-icon" aria-hidden="true">▶</span>
+      <span class="handle-icon" aria-hidden="true">
+    <svg width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;">
+    <path d="M396.7 169.6c0-29.7-16.9-46.4-46.7-46.4h-26.4v92.8h26.4c29.8 0 46.7-16.7 46.7-46.4zM256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 16 256 16zm94.7 297.6c-6.4 9.6-15.2 17.1-25.9 22.1l36.3 60.5h-55.4l-30.1-51.2h-22.1v51.2h-49.3V123.2h75.7c26.6 0 47.9 6.5 63.1 19.3 15.3 12.9 22.9 31 22.9 54.1 0 26.3-9.7 45.9-29.2 59.6 6.5 4.3 12 9.9 16.1 16.6 4.1 6.8 6.2 14.2 6.2 22.4 0 8.7-2.5 17-7.3 24.4z"/>
+    </svg>
+    </span>
       <div class="handle-platform">Rumble</div>
       <div class="handle-name">@Plague2Profit</div>
       <p class="handle-desc">Video platform — long and short-form stories of resilience, devastation and restoration for global audiences.</p>
@@ -775,8 +569,7 @@
   </div>
   <div class="footer-right">
     &copy; 2026 Locust Harvest (Pty) Ltd<br>
-    "From Plague to Profit"<br>
-    <a href="terms.html" style="font-size:0.72rem; color:var(--ash); text-decoration:none; letter-spacing:0.05em; transition:color 0.3s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#6B6358'">Terms &amp; Conditions</a>
+    "From Plague to Profit"
   </div>
 </footer>
 
@@ -799,26 +592,6 @@
     event.target.classList.add('active');
     event.target.setAttribute('aria-selected', 'true');
   }
-  function openStoryForm() {
-    document.getElementById('storyModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeStoryForm() {
-    document.getElementById('storyModal').classList.remove('active');
-    document.body.style.overflow = '';
-    document.getElementById('tcCheckbox').checked = false;
-    document.getElementById('submitBtn').disabled = true;
-  }
-  function closeOnOverlay(e) {
-    if (e.target === document.getElementById('storyModal')) closeStoryForm();
-  }
-  function toggleSubmit() {
-    document.getElementById('submitBtn').disabled = !document.getElementById('tcCheckbox').checked;
-  }
-  function goToForm() {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdD6aRXmYMC2ufr29b95Tc2iSotSHk0euhj8_TqpcE7sykA9Q/viewform', '_blank');
-  }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeStoryForm(); });
 </script>
 </body>
 </html>
