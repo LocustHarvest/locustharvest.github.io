@@ -569,7 +569,8 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
   </div>
   <div class="footer-right">
     &copy; 2026 Locust Harvest (Pty) Ltd<br>
-    "From Plague to Profit"
+    "From Plague to Profit"<br>
+    <a href="terms.html" style="font-size:0.72rem; color:var(--ash); text-decoration:none; letter-spacing:0.05em; transition:color 0.3s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#6B6358'">Terms &amp; Conditions</a>
   </div>
 </footer>
 
