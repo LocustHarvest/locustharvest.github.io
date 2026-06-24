@@ -32,7 +32,14 @@
     --cream: #F0EBE0; --white: #FAF8F3; --red-ember: #8B2E0A;
   }
   html { scroll-behavior: smooth; }
-  body { background: var(--black); color: var(--cream); font-family: 'Barlow', sans-serif; font-weight: 300; overflow-x: hidden; }
+  body { 
+  background: var(--black); 
+  color: var(--cream); 
+  font-family: 'Barlow', sans-serif; 
+  font-weight: 300; 
+  font-size: 14px;
+  overflow-x: hidden; 
+}
   body::before {
     content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.35;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
