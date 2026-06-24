@@ -355,7 +355,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
     .nav-links { display: none; }
-    .nav-logo img { height: 92px; }
+    .nav-logo img { height: 120px; }
     .framework-grid { grid-template-columns: repeat(3, 1fr); }
     .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
