@@ -494,7 +494,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
         <span class="tc-custom-check"></span>
         <span class="tc-text">
           I have read and agree to the
-          <a href="terms.html" target="_blank">Terms &amp; Conditions Apply</a>
+          <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
           of Locust Harvest (Pty) Ltd, including the story submission, intellectual property, and revenue share clauses.
         </span>
       </label>
