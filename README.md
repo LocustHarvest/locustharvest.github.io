@@ -56,7 +56,7 @@
   .nav-logo img { height: 128px; width: auto; display: block; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.2rem;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.9rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
     text-decoration: none; transition: color 0.3s;
   }
