@@ -402,7 +402,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
 
   <!-- SHARE YOUR STORY BUTTON -->
   <div class="story-cta-top">
-    <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story with Locust Harvest</button>
+    <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
   </div>
 
   <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
