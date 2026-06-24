@@ -54,7 +54,14 @@
   nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
   .nav-logo img { height: 135px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links { 
+  display: flex; 
+  align-items: center;
+  gap: 2.5rem; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
   .nav-links a {
    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.0rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
