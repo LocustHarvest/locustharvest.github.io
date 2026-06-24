@@ -80,6 +80,7 @@
     margin-bottom: 2.5rem; opacity: 0;
     animation: fadeUp 1s 0.05s forwards;
     position: relative; z-index: 1;
+    text-align: center;
   }
   .btn-story {
     font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.88rem;
