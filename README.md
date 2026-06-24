@@ -473,7 +473,7 @@
       <button class="btn-submit" id="submitBtn" disabled onclick="goToForm()">
         Proceed to Story Submission →
       </button>
-      <p class="modal-note">You will be redirected to our secure Google Form. Your submission goes directly to sydneytayiya@locustharvest.com</p>
+      <p class="modal-note">You will be redirected to our secure Google Form. Your submission goes directly to harvestlocust@gmail.com</p>
     </div>
   </div>
 </div>
