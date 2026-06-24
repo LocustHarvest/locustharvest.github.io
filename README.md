@@ -67,7 +67,10 @@
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
     text-decoration: none; transition: color 0.3s;
   }
-  .nav-links a: hover { color: var(--gold); }
+ .nav-links li:first-child {
+  transform: translateY(2px);
+}
+  .nav-links a:hover { color: var(--gold); }
   .hero {
    position: relative; min-height: 100vh; display: flex; flex-direction: column;
     justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden;
