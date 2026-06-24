@@ -53,16 +53,16 @@
   }
   nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
-  .nav-logo img { height: 128px; width: auto; display: block; }
+  .nav-logo img { height: 135px; width: auto; display: block; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.0rem;
+   font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.0rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
     text-decoration: none; transition: color 0.3s;
   }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a: hover { color: var(--gold); }
   .hero {
-    position: relative; min-height: 100vh; display: flex; flex-direction: column;
+   position: relative; min-height: 100vh; display: flex; flex-direction: column;
     justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden;
   }
   .hero-bg {
