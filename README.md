@@ -368,6 +368,16 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
     .services-header { gap: 2rem; }
     .modal-box { padding: 2rem 1.5rem; }
     .framework-grid { grid-template-columns: repeat(2, 1fr); }
+    body {
+  font-size: 13px;
+}
+
+.hero-summary {
+  font-size: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
   }
   @media (max-width: 400px) { .social-grid { grid-template-columns: 1fr; } }
 </style>
