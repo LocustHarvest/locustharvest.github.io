@@ -191,7 +191,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
   }
   .hero-title {
     font-family: 'Playfair Display', serif; font-weight: 900;
-     font-size: clamp(3rem, 7vw, 6rem); line-height: 0.92; letter-spacing: -0.02em;
+     font-size: clamp(3rem, 7vw, 6rem); line-height: 0.95; letter-spacing: -0.02em;
     color: var(--white); margin-bottom: 0.3em; opacity: 0; animation: fadeUp 1s 0.5s forwards;
   }
   .hero-title em { font-style: italic; color: var(--gold); display: block; }
