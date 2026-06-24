@@ -238,7 +238,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
     font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; color: var(--white); margin-bottom: 1.5rem;
   }
   .section-title em { font-style: italic; color: var(--gold); }
-  .section-body { font-size: 1rem; line-height: 1.75; color: var(--mist); max-width: 540px; text-align: justify; text-justify: inter-word; }
+  .section-body { font-size: 0.9rem; line-height: 1.65; color: var(--mist); max-width: 540px; text-align: justify; text-justify: inter-word; }
   .about {
     padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr;
     gap: 6rem; align-items: center; background: var(--dark);
