@@ -235,7 +235,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
   }
   .section-title {
     font-family: 'Playfair Display', serif; font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; color: var(--white); margin-bottom: 1.5rem;
+    font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.15; color: var(--white); margin-bottom: 1.2rem;
   }
   .section-title em { font-style: italic; color: var(--gold); }
   .section-body { font-size: 0.9rem; line-height: 1.65; color: var(--mist); max-width: 540px; text-align: justify; text-justify: inter-word; }
