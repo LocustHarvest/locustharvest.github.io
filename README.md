@@ -283,6 +283,9 @@ nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,
 
 <section class="hero" id="home" aria-label="Hero">
   <div class="hero-bg" aria-hidden="true"></div>
+ <div class="story-cta-top">
+    <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story with Locust Harvest</button>
+  </div>
   <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
   <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
   <h1 class="hero-title">From Plagues<br><em>to Profit.</em></h1>
