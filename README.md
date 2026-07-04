@@ -8,6 +8,43 @@
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.locustharvest.com/">
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Locust Harvest (Pty) Ltd",
+  "alternateName": "Locust Harvest",
+  "url": "https://www.locustharvest.com",
+  "logo": "https://www.locustharvest.com/logo.png",
+  "description": "Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation — turning challenges into opportunities.",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Sydney Tayiya"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+27-71-364-1561",
+    "contactType": "customer service",
+    "email": "sydneytayiya@locustharvest.com",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@Plague2Profit",
+    "https://www.instagram.com/plague2profit/",
+    "https://www.tiktok.com/@plagues2profit",
+    "https://x.com/Plague2Profit",
+    "https://t.me/Plague2Profit",
+    "https://rumble.com/user/Plague2Profit",
+    "https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j"
+  ],
+  "slogan": "From Plagues to Profit"
+}
+</script>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
