@@ -8,6 +8,7 @@
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="google-site-verification" content="o1-Eg9BfoNziduddiN-_Cv-nHghy8YcpCzjkYEd8Lyg">
 <link rel="canonical" href="https://www.locustharvest.com/">
  <script type="application/ld+json">
 {
