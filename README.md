@@ -7,6 +7,7 @@
 <meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="canonical" href="https://www.locustharvest.com/">
  <script type="application/ld+json">
 {
