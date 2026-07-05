@@ -130,7 +130,73 @@
       radial-gradient(1px 1px at 30% 60%, rgba(201,168,76,0.2) 0%, transparent 100%),
       radial-gradient(1px 1px at 55% 70%, rgba(201,168,76,0.15) 0%, transparent 100%);
   }
-
+/* ── HERO MEDIA ROW ── */
+  .hero-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 1s 0.08s forwards;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-media-box {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.15);
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-media-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .hero-media-label {
+    position: absolute;
+    top: 0; left: 0;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    z-index: 2;
+  }
+  .adsense-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--ash);
+    text-align: center;
+    padding: 1rem;
+  }
+  .adsense-placeholder span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+  .adsense-placeholder p {
+    font-size: 0.75rem;
+    color: var(--ash);
+    line-height: 1.5;
+  }
+  @media (max-width: 640px) {
+    .hero-media { grid-template-columns: 1fr; }
+  }
   /* ── STORY BUTTON ── */
   .story-cta-top {
     margin-bottom: 2.5rem; opacity: 0;
