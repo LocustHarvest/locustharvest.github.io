@@ -519,6 +519,9 @@
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
   }
   @media (max-width: 640px) {
+  .hero-media {
+    grid-template-columns: 1fr;
+}
     .cycle-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .values-grid { grid-template-columns: 1fr; }
