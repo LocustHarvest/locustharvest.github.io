@@ -514,31 +514,7 @@ font-size: clamp(1rem, 1.8vw, 1.4rem);
 
 <section class="hero" id="home" aria-label="Hero">
   <div class="hero-bg" aria-hidden="true"></div>
-<!-- MEDIA ROW -->
-  <div class="hero-media">
 
-    <!-- LEFT BOX: Latest YouTube Video -->
-    <div class="hero-media-box">
-      <div class="hero-media-label">Latest Story</div>
-      <iframe
-        src="https://www.youtube.com/embed?listType=user_uploads&list=Plague2Profit&index=1&autoplay=0"
-        title="Latest Plague2Profit video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- RIGHT BOX: Google AdSense (placeholder until approved) -->
-    <div class="hero-media-box">
-      <div class="hero-media-label">Advertisement</div>
-      <div class="adsense-placeholder">
-        <span>✦ Advertise Here ✦</span>
-        <p>Premium ad space on the Locust Harvest platform. Powered by Google AdSense.</p>
-        <!-- REPLACE THIS COMMENT WITH YOUR ADSENSE CODE ONCE APPROVED -->
-      </div>
-    </div>
-
-  </div>
   <!-- SHARE YOUR STORY BUTTON -->
   <div class="story-cta-top">
     <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
