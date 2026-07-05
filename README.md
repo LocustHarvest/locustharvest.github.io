@@ -292,9 +292,7 @@
 
   .hero-summary {
     font-family: 'Barlow', sans-serif; font-weight: 300;
-    .hero-summary {
-font-size: clamp(1rem, 1.8vw, 1.4rem);
-}
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
     max-width: 900px; margin-bottom: 3rem; text-align: justify; text-justify: inter-word;
     opacity: 0; animation: fadeUp 1s 0.1s forwards;
   }
