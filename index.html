@@ -131,10 +131,10 @@
       radial-gradient(1px 1px at 55% 70%, rgba(201,168,76,0.15) 0%, transparent 100%);
   }
 
-  /* ===== HERO MEDIA ROW (FIXED) ===== */
+  /* ===== HERO MEDIA ROW ===== */
   .hero-media {
     display: grid;
-    grid-template-columns: 2fr 1fr;  /* YouTube wider, AdSense smaller */
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
     position: relative;
@@ -145,25 +145,39 @@
   .hero-media-box {
     background: var(--dark2);
     border: 1px solid rgba(201,168,76,0.15);
-    padding: 1rem;
+    padding: 0;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .hero-media-label {
     font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--gold);
-    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
     font-size: 0.65rem;
+    background: rgba(0,0,0,0.3);
+    flex-shrink: 0;
+    z-index: 2;
   }
-  .hero-media iframe {
+  #video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    flex: 1;
+    padding: 0.25rem;
+    background: rgba(0,0,0,0.2);
+  }
+  #video-grid iframe {
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 100%;
     border: none;
     display: block;
+    aspect-ratio: 16 / 9;
   }
   .adsense-placeholder {
-    min-height: 315px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,6 +186,8 @@
     color: var(--mist);
     border: 1px dashed rgba(201,168,76,0.25);
     padding: 1.5rem;
+    min-height: 200px;
+    flex: 1;
   }
   .adsense-placeholder span {
     color: var(--gold);
@@ -279,6 +295,7 @@
   .btn-submit:disabled { background: var(--stone); color: var(--ash); cursor: not-allowed; opacity: 0.5; }
   .modal-note { font-size: 0.75rem; color: var(--ash); line-height: 1.6; }
 
+  /* ===== HERO TYPOGRAPHY ===== */
   .hero-summary {
     font-family: 'Barlow', sans-serif; font-weight: 300;
     font-size: clamp(1rem, 1.8vw, 1.4rem);
@@ -341,6 +358,8 @@
   }
   .section-title em { font-style: italic; color: var(--gold); }
   .section-body { font-size: 0.9rem; line-height: 1.65; color: var(--mist); max-width: 540px; text-align: justify; text-justify: inter-word; }
+
+  /* ===== ABOUT ===== */
   .about {
     padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr;
     gap: 6rem; align-items: center; background: var(--dark);
@@ -367,6 +386,8 @@
   }
   .about-visual-accent { position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; border: 2px solid rgba(201,168,76,0.2); }
   .about-visual-accent2 { position: absolute; bottom: -20px; left: -20px; width: 80px; height: 80px; background: var(--red-ember); opacity: 0.4; }
+
+  /* ===== PHILOSOPHY ===== */
   .philosophy { padding: 8rem 4rem; background: var(--black); overflow: hidden; }
   .philosophy-header { max-width: 600px; margin-bottom: 5rem; }
   .cycle-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid rgba(201,168,76,0.12); }
@@ -380,6 +401,8 @@
   .cycle-connector { position: absolute; top: 50%; right: -1px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold-dim); transform: translate(50%, -50%); z-index: 2; }
   .cycle-item:last-child .cycle-connector { display: none; }
   .philosophy-quote { margin: 4rem 0 0 0 !important; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); border-left: none !important; border-right: none !important; }
+
+  /* ===== PLATFORM ===== */
   .platform { padding: 8rem 4rem; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
   .platform-cards { display: flex; flex-direction: column; gap: 1.5rem; }
   .pcard { background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
@@ -388,6 +411,8 @@
   .pcard:hover { transform: translateX(6px); border-color: rgba(201,168,76,0.3); }
   .pcard-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
   .pcard-text { font-size: 0.9rem; line-height: 1.7; color: var(--mist); text-align: justify; text-justify: inter-word; }
+
+  /* ===== SERVICES ===== */
   .services { padding: 8rem 4rem; background: var(--black); }
   .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 5rem; }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(201,168,76,0.1); }
@@ -396,12 +421,16 @@
   .service-icon { width: 40px; height: 40px; border: 1px solid var(--gold-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--gold); font-size: 1.1rem; }
   .service-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
   .service-text { font-size: 0.85rem; line-height: 1.7; color: var(--ash); text-align: justify; text-justify: inter-word; }
+
+  /* ===== VALUES ===== */
   .values { padding: 8rem 4rem; background: var(--dark2); text-align: center; }
   .values-header { max-width: 500px; margin: 0 auto 5rem; }
   .values-header .gold-divider { margin: 0 auto 1.5rem; }
   .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 900px; margin: 0 auto; }
   .value-word { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--gold); margin-bottom: 0.75rem; }
   .value-def { font-size: 0.85rem; line-height: 1.7; color: var(--ash); text-align: justify; text-justify: inter-word; }
+
+  /* ===== OBJECTIVES ===== */
   .objectives { padding: 8rem 4rem; background: var(--black); }
   .obj-tabs { display: flex; border-bottom: 1px solid rgba(201,168,76,0.15); margin-bottom: 3rem; }
   .obj-tab { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2rem; cursor: pointer; color: var(--ash); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.3s, border-color 0.3s; background: none; border-top: none; border-left: none; border-right: none; }
@@ -411,6 +440,8 @@
   .obj-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; max-width: 700px; }
   .obj-list li { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1rem; line-height: 1.65; color: var(--mist); text-align: justify; text-justify: inter-word; }
   .obj-list li::before { content: '▶'; font-size: 0.55rem; color: var(--gold); margin-top: 0.5em; flex-shrink: 0; }
+
+  /* ===== SOCIAL ===== */
   .social { padding: 8rem 4rem; background: var(--dark); }
   .social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
   .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; }
@@ -419,6 +450,8 @@
   .handle-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; color: var(--gold); }
   .handle-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
   .handle-desc { font-size: 0.82rem; line-height: 1.6; color: var(--ash); text-align: justify; text-justify: inter-word; }
+
+  /* ===== CTA ===== */
   .cta { padding: 8rem 4rem; background: var(--dark3); text-align: center; position: relative; overflow: hidden; }
   .cta::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%); pointer-events: none; }
   .cta-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
@@ -427,10 +460,14 @@
   .cta-contact { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; margin-top: 3rem; }
   .cta-contact a { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--ash); text-decoration: none; transition: color 0.3s; }
   .cta-contact a:hover { color: var(--gold); }
+
+  /* ===== FOOTER ===== */
   footer { background: var(--black); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.1); }
   .footer-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
   .footer-reg { font-size: 0.72rem; color: var(--ash); letter-spacing: 0.05em; margin-top: 0.25rem; }
   .footer-right { font-size: 0.72rem; color: var(--ash); text-align: right; letter-spacing: 0.05em; }
+
+  /* ===== ANIMATIONS ===== */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -446,7 +483,7 @@
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; justify-content: flex-end; }
     .hero { padding: 7rem 2rem 5rem; }
-    .hero-media { grid-template-columns: 1fr 1fr; }
+    .hero-media { grid-template-columns: 1fr; }
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
     .about-visual { height: 300px; }
     .cycle-grid { grid-template-columns: 1fr 1fr; }
@@ -464,6 +501,9 @@
     .framework-grid { grid-template-columns: repeat(3, 1fr); }
     .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
+    #video-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   @media (max-width: 640px) {
     .hero-media { grid-template-columns: 1fr; }
@@ -477,6 +517,9 @@
     body { font-size: 13px; }
     .hero-summary { font-size: 1rem; }
     .hero-title { font-size: 3rem; }
+    #video-grid {
+      grid-template-columns: 1fr;
+    }
   }
   @media (max-width: 400px) { .social-grid { grid-template-columns: 1fr; } }
 </style>
@@ -500,29 +543,25 @@
   <div class="hero-bg" aria-hidden="true"></div>
 
   <!-- ===== MEDIA ROW ===== -->
-<div class="hero-media">
-  <!-- LEFT: YouTube -->
-  <div class="hero-media-box">
-    <div class="hero-media-label">Latest Story</div>
-    <iframe
-  id="latest-video"
-  src=""
-  title="Plague2Profit latest video"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-  </div>
+  <div class="hero-media">
+    <!-- LEFT: YouTube 3-video grid -->
+    <div class="hero-media-box">
+      <div class="hero-media-label">Latest Stories</div>
+      <div id="video-grid">
+        <!-- Videos will load here automatically -->
+      </div>
+    </div>
 
-  <!-- RIGHT: AdSense placeholder -->
-  <div class="hero-media-box">
-    <div class="hero-media-label">Advertisement</div>
-    <div class="adsense-placeholder">
-      <span>✦ Advertise Here ✦</span>
-      <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
-      <!-- Replace this entire div with your actual AdSense code once approved -->
+    <!-- RIGHT: AdSense placeholder -->
+    <div class="hero-media-box">
+      <div class="hero-media-label">Advertisement</div>
+      <div class="adsense-placeholder">
+        <span>✦ Advertise Here ✦</span>
+        <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
+        <!-- Replace this entire div with your actual AdSense code once approved -->
+      </div>
     </div>
   </div>
-</div>
 
   <!-- SHARE YOUR STORY BUTTON -->
   <div class="story-cta-top">
@@ -540,7 +579,7 @@
   <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
 </section>
 
-<!-- ===== STORY SUBMISSION MODAL (unchanged) ===== -->
+<!-- STORY SUBMISSION MODAL -->
 <div id="storyModal" class="modal-overlay" onclick="closeOnOverlay(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeStoryForm()" aria-label="Close">✕</button>
@@ -926,8 +965,10 @@
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeStoryForm(); });
 </script>
-  <script>
-  // Auto-update YouTube video to the latest upload
+
+<!-- Auto-load 3 latest videos from your channel -->
+<script>
+  // Auto-load 3 latest videos from your channel
   const channelId = 'UCpewb2Z-6vofGw7MmZfVPjA';
   const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 
@@ -939,24 +980,55 @@
     .then(xmlText => {
       const parser = new DOMParser();
       const xml = parser.parseFromString(xmlText, 'text/xml');
-      const entry = xml.querySelector('entry');
-      if (entry) {
-        // Find the video ID
-        const videoId = entry.querySelector('yt\\:videoId, videoId')?.textContent;
-        if (videoId) {
-          const iframe = document.getElementById('latest-video');
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
-          console.log('✅ Latest video loaded:', videoId);
-        }
+      const entries = xml.querySelectorAll('entry');
+      
+      const videoGrid = document.getElementById('video-grid');
+      videoGrid.innerHTML = ''; // Clear loading text
+      
+      // Get the first 3 videos
+      const videosToShow = Math.min(entries.length, 3);
+      
+      if (videosToShow === 0) {
+        videoGrid.innerHTML = '<p style="color:var(--ash);text-align:center;grid-column:1/-1;">No videos yet</p>';
+        return;
       }
+      
+      entries.forEach((entry, index) => {
+        if (index >= 3) return; // Only show 3
+        const videoId = entry.querySelector('yt\\:videoId, videoId')?.textContent;
+        const title = entry.querySelector('title')?.textContent || 'Video';
+        
+        if (videoId) {
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=${index === 0 ? '1' : '0'}&mute=1`;
+          iframe.title = title;
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.border = 'none';
+          iframe.style.aspectRatio = '16/9';
+          videoGrid.appendChild(iframe);
+        }
+      });
     })
     .catch(error => {
-      console.warn('⚠️ Could not fetch latest video, using fallback.', error);
-      // Fallback: your known working video
-      const iframe = document.getElementById('latest-video');
-      iframe.src = 'https://www.youtube.com/embed/yeONlR3NOOc?autoplay=1&mute=1&rel=0';
+      console.warn('⚠️ Could not fetch videos, using fallback.', error);
+      const videoGrid = document.getElementById('video-grid');
+      const fallbackIds = ['yeONlR3NOOc', 'yeONlR3NOOc', 'yeONlR3NOOc']; // replace with your own fallback IDs
+      videoGrid.innerHTML = '';
+      fallbackIds.forEach(id => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=0&mute=1`;
+        iframe.allowFullscreen = true;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.style.aspectRatio = '16/9';
+        videoGrid.appendChild(iframe);
+      });
     });
 </script>
-  
+
 </body>
 </html>
