@@ -926,5 +926,36 @@
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeStoryForm(); });
 </script>
+  <script>
+  // Auto-update YouTube video to the latest upload
+  const channelId = 'UCpewb2Z-6vofGw7MmZfVPjA';
+  const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+  fetch(rssUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('RSS feed not available');
+      return response.text();
+    })
+    .then(xmlText => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(xmlText, 'text/xml');
+      const entry = xml.querySelector('entry');
+      if (entry) {
+        // Find the video ID
+        const videoId = entry.querySelector('yt\\:videoId, videoId')?.textContent;
+        if (videoId) {
+          const iframe = document.getElementById('latest-video');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0`;
+          console.log('✅ Latest video loaded:', videoId);
+        }
+      }
+    })
+    .catch(error => {
+      console.warn('⚠️ Could not fetch latest video, using fallback.', error);
+      // Fallback: your known working video
+      const iframe = document.getElementById('latest-video');
+      iframe.src = 'https://www.youtube.com/embed/yeONlR3NOOc?autoplay=1&mute=1&rel=0';
+    });
+</script>
 </body>
 </html>
