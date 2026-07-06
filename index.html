@@ -162,17 +162,10 @@
     flex-shrink: 0;
     z-index: 2;
   }
-  #video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.25rem;
-    flex: 1;
-    padding: 0.25rem;
-    background: rgba(0,0,0,0.2);
-  }
-  #video-grid iframe {
+  .hero-media-box iframe {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 200px;
     border: none;
     display: block;
     aspect-ratio: 16 / 9;
@@ -501,9 +494,6 @@
     .framework-grid { grid-template-columns: repeat(3, 1fr); }
     .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
-    #video-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
   @media (max-width: 640px) {
     .hero-media { grid-template-columns: 1fr; }
@@ -517,9 +507,6 @@
     body { font-size: 13px; }
     .hero-summary { font-size: 1rem; }
     .hero-title { font-size: 3rem; }
-    #video-grid {
-      grid-template-columns: 1fr;
-    }
   }
   @media (max-width: 400px) { .social-grid { grid-template-columns: 1fr; } }
 </style>
@@ -544,12 +531,15 @@
 
   <!-- ===== MEDIA ROW ===== -->
   <div class="hero-media">
-    <!-- LEFT: YouTube 3-video grid -->
+    <!-- LEFT: YouTube (single video) -->
     <div class="hero-media-box">
-      <div class="hero-media-label">Latest Stories</div>
-      <div id="video-grid">
-        <!-- Videos will load here automatically -->
-      </div>
+      <div class="hero-media-label">Latest Story</div>
+      <iframe
+        src="https://www.youtube.com/embed/yeONlR3NOOc?autoplay=1&mute=1&rel=0"
+        title="Plague2Profit video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <!-- RIGHT: AdSense placeholder -->
@@ -579,7 +569,7 @@
   <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
 </section>
 
-<!-- STORY SUBMISSION MODAL -->
+<!-- ===== STORY SUBMISSION MODAL (unchanged) ===== -->
 <div id="storyModal" class="modal-overlay" onclick="closeOnOverlay(event)">
   <div class="modal-box">
     <button class="modal-close" onclick="closeStoryForm()" aria-label="Close">✕</button>
@@ -964,70 +954,6 @@
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSdD6aRXmYMC2ufr29b95Tc2iSotSHk0euhj8_TqpcE7sykA9Q/viewform', '_blank');
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeStoryForm(); });
-</script>
-
-<!-- Auto-load 3 latest videos from your channel -->
-<script>
-  // Auto-load 3 latest videos from your channel
-  const channelId = 'UCpewb2Z-6vofGw7MmZfVPjA';
-  const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-
-  fetch(rssUrl)
-    .then(response => {
-      if (!response.ok) throw new Error('RSS feed not available');
-      return response.text();
-    })
-    .then(xmlText => {
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(xmlText, 'text/xml');
-      const entries = xml.querySelectorAll('entry');
-      
-      const videoGrid = document.getElementById('video-grid');
-      videoGrid.innerHTML = ''; // Clear loading text
-      
-      // Get the first 3 videos
-      const videosToShow = Math.min(entries.length, 3);
-      
-      if (videosToShow === 0) {
-        videoGrid.innerHTML = '<p style="color:var(--ash);text-align:center;grid-column:1/-1;">No videos yet</p>';
-        return;
-      }
-      
-      entries.forEach((entry, index) => {
-        if (index >= 3) return; // Only show 3
-        const videoId = entry.querySelector('yt\\:videoId, videoId')?.textContent;
-        const title = entry.querySelector('title')?.textContent || 'Video';
-        
-        if (videoId) {
-          const iframe = document.createElement('iframe');
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=${index === 0 ? '1' : '0'}&mute=1`;
-          iframe.title = title;
-          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-          iframe.allowFullscreen = true;
-          iframe.style.width = '100%';
-          iframe.style.height = '100%';
-          iframe.style.border = 'none';
-          iframe.style.aspectRatio = '16/9';
-          videoGrid.appendChild(iframe);
-        }
-      });
-    })
-    .catch(error => {
-      console.warn('⚠️ Could not fetch videos, using fallback.', error);
-      const videoGrid = document.getElementById('video-grid');
-      const fallbackIds = ['yeONlR3NOOc', 'yeONlR3NOOc', 'yeONlR3NOOc']; // replace with your own fallback IDs
-      videoGrid.innerHTML = '';
-      fallbackIds.forEach(id => {
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=0&mute=1`;
-        iframe.allowFullscreen = true;
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.border = 'none';
-        iframe.style.aspectRatio = '16/9';
-        videoGrid.appendChild(iframe);
-      });
-    });
 </script>
 
 </body>
