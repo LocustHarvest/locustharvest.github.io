@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /terms.html
+Sitemap: https://www.locustharvest.com/sitemap.xml
