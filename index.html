@@ -113,6 +113,19 @@
   .nav-links li:first-child { transform: translateY(2px); }
   .nav-links a:hover { color: var(--gold); }
 
+  /* ---- Hamburger button (hidden on desktop) ---- */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+  }
+  .hamburger:hover { color: var(--gold-light); }
+
   .hero {
     position: relative; min-height: 100vh; display: flex; flex-direction: column;
     justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden;
@@ -475,9 +488,9 @@
   .reveal-delay-4 { transition-delay: 0.4s; }
   .reveal-delay-5 { transition-delay: 0.5s; }
 
-  /* ===== RESPONSIVE ===== */
+  /* ===== RESPONSIVE (with hamburger) ===== */
   @media (max-width: 1024px) {
-    nav { padding: 0.75rem 2rem; justify-content: flex-end; }
+    nav { padding: 0.75rem 2rem; }
     .hero { padding: 7rem 2rem 5rem; }
     .hero-media { grid-template-columns: 1fr; }
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
@@ -492,12 +505,47 @@
     .social-grid { grid-template-columns: repeat(3, 1fr); }
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
-    .nav-links { display: none; }
     .nav-logo img { height: 120px; }
     .framework-grid { grid-template-columns: repeat(3, 1fr); }
     .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
+
+    /* ---- Show hamburger, hide nav links ---- */
+    .hamburger {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      padding: 1.5rem 2rem;
+      gap: 1.2rem;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      align-items: stretch;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links li {
+      transform: none;
+    }
+    .nav-links a {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.05);
+      display: block;
+      text-align: center;
+    }
+    .nav-links li:last-child a {
+      border-bottom: none;
+    }
   }
+
   @media (max-width: 640px) {
     .hero-media { grid-template-columns: 1fr; }
     .cycle-grid { grid-template-columns: 1fr; }
@@ -518,9 +566,15 @@
 
 <nav id="nav" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Locust Harvest home">
-  <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
-</a>
-  <ul class="nav-links">
+    <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
+  </a>
+
+  <!-- Hamburger Button -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="/about.html">About Us</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#platform">Platform</a></li>
@@ -964,6 +1018,12 @@
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSdD6aRXmYMC2ufr29b95Tc2iSotSHk0euhj8_TqpcE7sykA9Q/viewform', '_blank');
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeStoryForm(); });
+
+  // Hamburger toggle
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open');
+  }
 </script>
 
 </body>
