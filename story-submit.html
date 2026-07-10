@@ -185,6 +185,56 @@
     min-height: 180px;
     resize: vertical;
   }
+
+  /* ===== TERMS CHECKBOX STYLING ===== */
+  .checkbox-group {
+    margin: 1.5rem 0 1.5rem 0;
+  }
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+  }
+  .checkbox-label input[type="checkbox"] {
+    display: none;
+  }
+  .custom-check {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid var(--gold-dim);
+    background: var(--dark3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .checkbox-label input:checked + .custom-check {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .checkbox-label input:checked + .custom-check::after {
+    content: '✓';
+    font-size: 0.75rem;
+    color: var(--black);
+    font-weight: 700;
+  }
+  .checkbox-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--mist);
+  }
+  .checkbox-text a {
+    color: var(--gold);
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  .checkbox-text a:hover {
+    color: var(--gold-light);
+  }
+
   .btn-submit-form {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
@@ -196,12 +246,24 @@
     border: none;
     padding: 1rem 2.5rem;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, opacity 0.3s;
   }
-  .btn-submit-form:hover {
+  .btn-submit-form:hover:not(:disabled) {
     background: var(--gold-light);
     transform: translateY(-2px);
   }
+  .btn-submit-form:disabled {
+    background: var(--stone);
+    color: var(--ash);
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+  }
+  .btn-submit-form:disabled:hover {
+    background: var(--stone);
+    transform: none;
+  }
+
   .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem 0 2rem; }
   .small-note {
     font-size: 0.75rem;
@@ -211,7 +273,7 @@
   .small-note a { color: var(--gold); text-decoration: none; }
   .small-note a:hover { text-decoration: underline; }
 
-  /* ===== SOCIAL SHORTCUTS (matching Contact Us page) ===== */
+  /* ===== SOCIAL SHORTCUTS ===== */
   .social-section {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -272,6 +334,7 @@
     .page-title { font-size: 2.5rem; }
     .social-links { gap: 1rem; }
     .social-links a { font-size: 1.5rem; }
+    .checkbox-text { font-size: 0.8rem; }
   }
 </style>
 </head>
@@ -326,12 +389,29 @@
         <label for="story">Your Story</label>
         <textarea id="story" name="story" placeholder="Tell us about your journey — the challenge, the turning point, the triumph..." required></textarea>
       </div>
-      <button type="submit" class="btn-submit-form">Submit Story →</button>
+
+      <!-- ✅ TERMS & CONDITIONS CHECKBOX -->
+      <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="termsCheckbox" onchange="toggleStorySubmit()">
+          <span class="custom-check"></span>
+          <span class="checkbox-text">
+            I have read and agree to the
+            <a href="/terms.html" target="_blank">Terms &amp; Conditions</a>
+            of Locust Harvest (Pty) Ltd.
+          </span>
+        </label>
+      </div>
+
+      <!-- ✅ SUBMIT BUTTON (disabled by default) -->
+      <button type="submit" class="btn-submit-form" id="submitStoryBtn" disabled>
+        Submit Story →
+      </button>
     </form>
 
     <p class="small-note">By submitting, you agree to our <a href="/terms.html">Terms &amp; Conditions</a>.</p>
 
-    <!-- ===== ✅ SOCIAL SHORTCUTS (matching Contact Us page) ===== -->
+    <!-- ===== SOCIAL SHORTCUTS ===== -->
     <div class="social-section">
       <h3>Connect With Us</h3>
       <div class="social-links">
@@ -363,6 +443,20 @@
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ✅ Toggle submit button based on checkbox
+  function toggleStorySubmit() {
+    const checkbox = document.getElementById('termsCheckbox');
+    const btn = document.getElementById('submitStoryBtn');
+    btn.disabled = !checkbox.checked;
+  }
+
+  // Also ensure the button starts disabled if the checkbox is unchecked (it is, by default)
+  // But just in case, we call it on load.
+  window.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('submitStoryBtn');
+    btn.disabled = true;
   });
 </script>
 </body>
