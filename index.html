@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ✅ FIXED: Title under 70 characters (59 chars) -->
 <title>Locust Harvest — From Plague to Profit | Resilience Stories</title>
 <meta name="description" content="Locust Harvest (Pty) Ltd — Stories of resilience, entrepreneurship, and transformation. From Plague to Profit.">
 <meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
@@ -13,7 +12,6 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta name="google-site-verification" content="o1-Eg9BfoNziduddiN-_Cv-nHghy8YcpCzjkYEd8Lyg">
 <link rel="canonical" href="https://www.locustharvest.com/">
-<!-- ✅ FIXED: Valid JSON-LD (no extra wrapper) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +53,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<!-- ✅ FIXED: og:title shortened (59 chars) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.locustharvest.com/">
 <meta property="og:title" content="Locust Harvest — From Plague to Profit | Resilience Stories">
@@ -108,12 +105,20 @@
     margin: 0;
     padding: 0;
   }
+  /* ✅ FIXED: Consistent line-height, padding, and display for perfect vertical alignment */
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.0rem;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
-    text-decoration: none; transition: color 0.3s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    line-height: 1.2;
+    padding: 0.5rem 0;
   }
-  .nav-links li:first-child { transform: translateY(2px); }
   .nav-links a:hover { color: var(--gold); }
 
   /* ---- Hamburger button (hidden on desktop) ---- */
@@ -131,7 +136,7 @@
 
   .hero {
     position: relative; min-height: 100vh; display: flex; flex-direction: column;
-    justify-content: center; padding: 8rem 4rem 3rem; /* ✅ REDUCED from 6rem to 3rem */
+    justify-content: center; padding: 8rem 4rem 3rem;
     overflow: hidden;
   }
   .hero-bg {
@@ -151,12 +156,11 @@
       radial-gradient(1px 1px at 55% 70%, rgba(201,168,76,0.15) 0%, transparent 100%);
   }
 
-  /* ===== HERO MEDIA ROW ===== */
   .hero-media {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-bottom: 0.5rem;  /* ✅ REDUCED from 1rem to 0.5rem */
+    margin-bottom: 0.5rem;
     position: relative;
     z-index: 2;
     opacity: 0;
@@ -185,7 +189,7 @@
   .hero-media-box iframe {
     width: 100%;
     flex: 1;
-    min-height: 200px;  /* ✅ Kept at 200px — FULL SIZE */
+    min-height: 200px;
     border: none;
     display: block;
     aspect-ratio: 16 / 9;
@@ -199,7 +203,7 @@
     color: var(--mist);
     border: 1px dashed rgba(201,168,76,0.25);
     padding: 1.5rem;
-    min-height: 200px;  /* ✅ Kept at 200px — FULL SIZE */
+    min-height: 200px;
     flex: 1;
   }
   .adsense-placeholder span {
@@ -215,9 +219,8 @@
     line-height: 1.5;
   }
 
-  /* ===== STORY BUTTON ===== */
   .story-cta-top {
-    margin-bottom: 0.5rem;  /* ✅ REDUCED from 2.5rem to 0.5rem */
+    margin-bottom: 0.5rem;
     opacity: 0;
     animation: fadeUp 1s 0.05s forwards;
     position: relative; z-index: 1;
@@ -231,7 +234,6 @@
   }
   .btn-story:hover { background: var(--gold); color: var(--black); }
 
-  /* ===== HERO TYPOGRAPHY ===== */
   .hero-summary {
     font-family: 'Barlow', sans-serif; font-weight: 300;
     font-size: clamp(1rem, 1.8vw, 1.4rem);
@@ -295,7 +297,6 @@
   .section-title em { font-style: italic; color: var(--gold); }
   .section-body { font-size: 0.9rem; line-height: 1.65; color: var(--mist); max-width: 540px; text-align: justify; text-justify: inter-word; }
 
-  /* ===== ABOUT ===== */
   .about {
     padding: 8rem 4rem; display: grid; grid-template-columns: 1fr 1fr;
     gap: 6rem; align-items: center; background: var(--dark);
@@ -323,7 +324,6 @@
   .about-visual-accent { position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; border: 2px solid rgba(201,168,76,0.2); }
   .about-visual-accent2 { position: absolute; bottom: -20px; left: -20px; width: 80px; height: 80px; background: var(--red-ember); opacity: 0.4; }
 
-  /* ===== PHILOSOPHY ===== */
   .philosophy { padding: 8rem 4rem; background: var(--black); overflow: hidden; }
   .philosophy-header { max-width: 600px; margin-bottom: 5rem; }
   .cycle-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid rgba(201,168,76,0.12); }
@@ -338,7 +338,6 @@
   .cycle-item:last-child .cycle-connector { display: none; }
   .philosophy-quote { margin: 4rem 0 0 0 !important; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold-dim); text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); border-left: none !important; border-right: none !important; }
 
-  /* ===== PLATFORM ===== */
   .platform { padding: 8rem 4rem; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
   .platform-cards { display: flex; flex-direction: column; gap: 1.5rem; }
   .pcard { background: var(--dark2); border: 1px solid rgba(201,168,76,0.1); padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
@@ -348,7 +347,6 @@
   .pcard-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
   .pcard-text { font-size: 0.9rem; line-height: 1.7; color: var(--mist); text-align: justify; text-justify: inter-word; }
 
-  /* ===== SERVICES ===== */
   .services { padding: 8rem 4rem; background: var(--black); }
   .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 5rem; }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(201,168,76,0.1); }
@@ -358,7 +356,6 @@
   .service-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
   .service-text { font-size: 0.85rem; line-height: 1.7; color: var(--ash); text-align: justify; text-justify: inter-word; }
 
-  /* ===== VALUES ===== */
   .values { padding: 8rem 4rem; background: var(--dark2); text-align: center; }
   .values-header { max-width: 500px; margin: 0 auto 5rem; }
   .values-header .gold-divider { margin: 0 auto 1.5rem; }
@@ -366,7 +363,6 @@
   .value-word { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--gold); margin-bottom: 0.75rem; }
   .value-def { font-size: 0.85rem; line-height: 1.7; color: var(--ash); text-align: justify; text-justify: inter-word; }
 
-  /* ===== OBJECTIVES ===== */
   .objectives { padding: 8rem 4rem; background: var(--black); }
   .obj-tabs { display: flex; border-bottom: 1px solid rgba(201,168,76,0.15); margin-bottom: 3rem; }
   .obj-tab { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2rem; cursor: pointer; color: var(--ash); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.3s, border-color 0.3s; background: none; border-top: none; border-left: none; border-right: none; }
@@ -377,7 +373,6 @@
   .obj-list li { display: flex; align-items: flex-start; gap: 1.25rem; font-size: 1rem; line-height: 1.65; color: var(--mist); text-align: justify; text-justify: inter-word; }
   .obj-list li::before { content: '▶'; font-size: 0.55rem; color: var(--gold); margin-top: 0.5em; flex-shrink: 0; }
 
-  /* ===== SOCIAL ===== */
   .social { padding: 8rem 4rem; background: var(--dark); }
   .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 4rem; }
   .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; }
@@ -387,7 +382,6 @@
   .handle-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
   .handle-desc { font-size: 0.82rem; line-height: 1.6; color: var(--ash); text-align: justify; text-justify: inter-word; }
 
-  /* ===== CTA ===== */
   .cta { padding: 8rem 4rem; background: var(--dark3); text-align: center; position: relative; overflow: hidden; }
   .cta::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%); pointer-events: none; }
   .cta-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
@@ -397,13 +391,11 @@
   .cta-contact a { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--ash); text-decoration: none; transition: color 0.3s; }
   .cta-contact a:hover { color: var(--gold); }
 
-  /* ===== FOOTER ===== */
   footer { background: var(--black); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.1); }
   .footer-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
   .footer-reg { font-size: 0.72rem; color: var(--ash); letter-spacing: 0.05em; margin-top: 0.25rem; }
   .footer-right { font-size: 0.72rem; color: var(--ash); text-align: right; letter-spacing: 0.05em; }
 
-  /* ===== ANIMATIONS ===== */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -415,12 +407,11 @@
   .reveal-delay-4 { transition-delay: 0.4s; }
   .reveal-delay-5 { transition-delay: 0.5s; }
 
-  /* ===== RESPONSIVE (with hamburger) ===== */
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; }
-    .hero { padding: 7rem 2rem 3rem; }  /* ✅ REDUCED bottom padding from 5rem to 3rem */
-    .hero-media { grid-template-columns: 1fr; margin-bottom: 0.5rem; } /* ✅ Added margin-bottom: 0.5rem for mobile */
-    .story-cta-top { margin-bottom: 0.5rem; } /* ✅ Added for mobile */
+    .hero { padding: 7rem 2rem 3rem; }
+    .hero-media { grid-template-columns: 1fr; margin-bottom: 0.5rem; }
+    .story-cta-top { margin-bottom: 0.5rem; }
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
     .about-visual { height: 300px; }
     .cycle-grid { grid-template-columns: 1fr 1fr; }
@@ -438,7 +429,6 @@
     .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
     .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
 
-    /* ---- Show hamburger, hide nav links ---- */
     .hamburger {
       display: block;
     }
@@ -496,13 +486,11 @@
     <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
   </a>
 
-  <!-- Hamburger Button -->
   <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
     ☰
   </button>
 
   <ul class="nav-links" id="navLinks">
-    <!-- ★ HOME link added as first item ★ -->
     <li><a href="/">Home</a></li>
     <li><a href="/about.html">About Us</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
@@ -516,9 +504,7 @@
 <section class="hero" id="home" aria-label="Hero">
   <div class="hero-bg" aria-hidden="true"></div>
 
-  <!-- ===== MEDIA ROW ===== -->
   <div class="hero-media">
-    <!-- LEFT: YouTube (single video) -->
     <div class="hero-media-box">
       <div class="hero-media-label">Latest Story</div>
       <iframe
@@ -529,18 +515,15 @@
       </iframe>
     </div>
 
-    <!-- RIGHT: AdSense placeholder -->
     <div class="hero-media-box">
       <div class="hero-media-label">Advertisement</div>
       <div class="adsense-placeholder">
         <span>✦ Advertise Here ✦</span>
         <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
-        <!-- Replace this entire div with your actual AdSense code once approved -->
       </div>
     </div>
   </div>
 
-  <!-- ✅ SHARE YOUR STORY BUTTON (opens in new tab) -->
   <div class="story-cta-top">
     <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
   </div>
@@ -556,7 +539,6 @@
   <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
 </section>
 
-<!-- ===== ABOUT SECTION ===== -->
 <section class="about" id="about" aria-labelledby="about-heading">
   <div class="about-visual reveal">
     <div class="about-visual-box">
@@ -574,7 +556,6 @@
   </div>
 </section>
 
-<!-- ===== PHILOSOPHY SECTION ===== -->
 <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
   <div class="philosophy-header">
     <p class="section-label reveal">Strategic Philosophy</p>
@@ -616,7 +597,6 @@
   <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
 </section>
 
-<!-- ===== PLATFORM SECTION ===== -->
 <section class="platform" id="platform" aria-labelledby="platform-heading">
   <div>
     <p class="section-label reveal">The Platform</p>
@@ -645,7 +625,6 @@
   </div>
 </section>
 
-<!-- ===== SERVICES SECTION ===== -->
 <section class="services" id="services" aria-labelledby="services-heading">
   <div class="services-header">
     <div>
@@ -689,7 +668,6 @@
   </div>
 </section>
 
-<!-- ===== VALUES SECTION ===== -->
 <section class="values" id="values" aria-labelledby="values-heading">
   <div class="values-header">
     <p class="section-label">Core Values</p>
@@ -706,7 +684,6 @@
   </div>
 </section>
 
-<!-- ===== OBJECTIVES SECTION ===== -->
 <section class="objectives" id="objectives" aria-labelledby="objectives-heading">
   <p class="section-label reveal">Business Objectives</p>
   <div class="gold-divider reveal" aria-hidden="true"></div>
@@ -742,7 +719,6 @@
   </div>
 </section>
 
-<!-- ===== SOCIAL SECTION ===== -->
 <section class="social" id="social" aria-labelledby="social-heading">
   <p class="section-label reveal">Digital Presence</p>
   <div class="gold-divider reveal" aria-hidden="true"></div>
@@ -809,7 +785,6 @@
   </div>
 </section>
 
-<!-- ===== CTA / CONTACT SECTION ===== -->
 <section class="cta" id="contact" aria-labelledby="contact-heading">
   <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
   <p class="cta-sub reveal">Have a story to tell? Get in touch with the Locust Harvest team today.</p>
@@ -855,12 +830,10 @@
     event.target.setAttribute('aria-selected', 'true');
   }
 
-  // ✅ RECOMMENDED: Share Your Story button opens in a new tab
   function openStoryForm() {
     window.open('/story-submit.html', '_blank');
   }
 
-  // Hamburger toggle
   function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('open');
