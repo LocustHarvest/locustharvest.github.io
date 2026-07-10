@@ -3,14 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Locust Harvest | Terms & Conditions</title>
+
+<!-- ✅ Title (already under 70 characters) -->
+<title>Locust Harvest | Terms and Conditions</title>
 <meta name="description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
+<meta name="keywords" content="Locust Harvest, Terms and Conditions, legal, From Plague To Profit, South Africa">
+<meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
 <link rel="canonical" href="https://www.locustharvest.com/terms.html">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- Favicon links -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- ✅ Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.locustharvest.com/terms.html">
+<meta property="og:title" content="Locust Harvest | Terms and Conditions">
+<meta property="og:description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
+<meta property="og:image" content="https://www.locustharvest.com/logo.png">
+<meta property="og:site_name" content="Locust Harvest">
+
+<!-- ✅ Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Locust Harvest | Terms and Conditions">
+<meta name="twitter:description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
+<meta name="twitter:image" content="https://www.locustharvest.com/logo.png">
+<meta name="twitter:site" content="@Plagues2Profit">
+
+<!-- ✅ JSON‑LD Structured Data (Organization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Locust Harvest (Pty) Ltd",
+  "alternateName": "Locust Harvest",
+  "url": "https://www.locustharvest.com",
+  "logo": "https://www.locustharvest.com/logo.png",
+  "description": "Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation — turning challenges into opportunities.",
+  "foundingDate": "2026",
+  "founder": {
+    "@type": "Person",
+    "name": "Sydney Tayiya"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+27-71-364-1561",
+    "contactType": "customer service",
+    "email": "sydneytayiya@locustharvest.com",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@Plague2Profit",
+    "https://www.instagram.com/plague2profit/",
+    "https://www.tiktok.com/@plagues2profit",
+    "https://x.com/Plague2Profit",
+    "https://t.me/Plague2Profit",
+    "https://rumble.com/user/Plague2Profit",
+    "https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j"
+  ],
+  "slogan": "From Plagues to Profit"
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,7 +89,7 @@
     overflow-x: hidden; line-height: 1.75;
   }
 
-  /* NAV */
+  /* NAV (full menu, consistent with other pages) */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -36,12 +99,17 @@
   }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
   .nav-logo img { height: 64px; width: auto; display: block; }
-  .nav-home {
+  .nav-links {
+    display: flex; align-items: center; gap: 2.5rem;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .nav-links a {
     font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
     font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--mist); text-decoration: none; transition: color 0.3s;
   }
-  .nav-home:hover { color: var(--gold); }
+  .nav-links a:hover { color: var(--gold); }
+  @media (max-width: 768px) { .nav-links { display: none; } }
 
   /* HERO */
   .terms-hero {
@@ -165,7 +233,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
-    nav { padding: 0.75rem 2rem; }
+    nav { padding: 0.75rem 2rem; justify-content: space-between; }
     .terms-hero { padding: 9rem 2rem 3rem; }
     .terms-layout { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 2rem; }
     .toc { position: static; }
@@ -179,11 +247,20 @@
 </head>
 <body>
 
+<!-- ✅ Full navigation (consistent with homepage) -->
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="Locust Harvest">
+  <a href="/" class="nav-logo">
+    <img src="logo.png" alt="Locust Harvest — From Plague to Profit">
   </a>
-  <a href="index.html" class="nav-home">← Back to Home</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About Us</a></li>
+    <li><a href="/#philosophy">Philosophy</a></li>
+    <li><a href="/#platform">Platform</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contact.html">Contact Us</a></li>
+  </ul>
 </nav>
 
 <div class="terms-hero">
@@ -414,9 +491,9 @@
     <div class="footer-reg">Reg No: 2026/392620/07 · Tax No: 9050539320</div>
   </div>
   <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="mailto:sydneytayiya@locustharvest.com">Contact</a>
+    <a href="/">Home</a>
+    <a href="/terms.html">Terms &amp; Conditions</a>
+    <a href="/contact.html">Contact</a>
   </div>
 </footer>
 
