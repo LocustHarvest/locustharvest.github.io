@@ -536,7 +536,7 @@
     </div>
   </div>
 
-  <!-- ✅ SHARE YOUR STORY BUTTON (redirects to story-submit.html) -->
+  <!-- ✅ SHARE YOUR STORY BUTTON (opens in new tab) -->
   <div class="story-cta-top">
     <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
   </div>
@@ -851,9 +851,9 @@
     event.target.setAttribute('aria-selected', 'true');
   }
 
-  // ✅ UPDATED: Share Your Story button redirects to story-submit.html
+  // ✅ RECOMMENDED: Share Your Story button opens in a new tab
   function openStoryForm() {
-    window.location.href = '/story-submit.html';
+    window.open('/story-submit.html', '_blank');
   }
 
   // Hamburger toggle
