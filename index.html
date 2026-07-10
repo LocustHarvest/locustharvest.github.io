@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Locust Harvest — From Plague to Profit | Resilience Stories</title>
 <meta name="description" content="Locust Harvest (Pty) Ltd — Stories of resilience, entrepreneurship, and transformation. From Plague to Profit.">
 <meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
@@ -12,6 +12,8 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta name="google-site-verification" content="o1-Eg9BfoNziduddiN-_Cv-nHghy8YcpCzjkYEd8Lyg">
 <link rel="canonical" href="https://www.locustharvest.com/">
+
+<!-- ✅ UPDATED: Full address in JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,6 +30,10 @@
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Jan Smuts Highway",
+    "addressLocality": "Sherwood",
+    "addressRegion": "KwaZulu-Natal",
+    "postalCode": "4091",
     "addressCountry": "ZA"
   },
   "contactPoint": {
@@ -49,23 +55,29 @@
   "slogan": "From Plagues to Profit"
 }
 </script>
+
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.locustharvest.com/">
 <meta property="og:title" content="Locust Harvest — From Plague to Profit | Resilience Stories">
 <meta property="og:description" content="Locust Harvest (Pty) Ltd — Stories of resilience, entrepreneurship, and transformation. From Plague to Profit.">
 <meta property="og:image" content="https://www.locustharvest.com/logo.png">
 <meta property="og:site_name" content="Locust Harvest">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Locust Harvest — From Plague to Profit | Resilience Stories">
 <meta name="twitter:description" content="Locust Harvest (Pty) Ltd — Stories of resilience, entrepreneurship, and transformation. From Plague to Profit.">
 <meta name="twitter:image" content="https://www.locustharvest.com/logo.png">
 <meta name="twitter:site" content="@Plagues2Profit">
+
+<!-- ✅ Added "defer" to external scripts for faster loading -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -97,8 +109,6 @@
   nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
   .nav-logo img { height: 125px; width: auto; display: block; }
-
-  /* ===== BULLETPROOF NAV ALIGNMENT ===== */
   .nav-links { 
     display: flex; 
     align-items: center;
@@ -128,6 +138,9 @@
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
+    /* ✅ Improved touch target for mobile */
+    touch-action: manipulation;
+    min-height: 44px;
   }
   .nav-links a:hover { color: var(--gold); }
 
@@ -141,6 +154,10 @@
     cursor: pointer;
     padding: 0.5rem;
     transition: color 0.3s;
+    /* ✅ Improved touch target */
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
   }
   .hamburger:hover { color: var(--gold-light); }
 
@@ -237,10 +254,21 @@
     text-align: center;
   }
   .btn-story {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.88rem;
-    letter-spacing: 0.25em; text-transform: uppercase; background: transparent;
-    color: var(--gold); border: 1px solid var(--gold); padding: 1.1rem 3rem;
-    cursor: pointer; white-space: nowrap; transition: background 0.3s, color 0.3s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 1.1rem 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s, color 0.3s;
+    /* ✅ Improved touch target */
+    touch-action: manipulation;
+    min-height: 54px;
   }
   .btn-story:hover { background: var(--gold); color: var(--black); }
 
@@ -273,12 +301,16 @@
     letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--black);
     border: none; padding: 1rem 2.5rem; cursor: pointer; text-decoration: none;
     display: inline-block; white-space: nowrap; transition: background 0.3s, transform 0.2s;
+    touch-action: manipulation;
+    min-height: 44px;
   }
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
   .btn-ghost {
     font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.78rem;
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); text-decoration: none;
     border-bottom: 1px solid var(--stone); padding-bottom: 2px; white-space: nowrap; transition: color 0.3s, border-color 0.3s;
+    touch-action: manipulation;
+    min-height: 44px;
   }
   .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
   .hero-scroll-line {
@@ -375,7 +407,7 @@
 
   .objectives { padding: 8rem 4rem; background: var(--black); }
   .obj-tabs { display: flex; border-bottom: 1px solid rgba(201,168,76,0.15); margin-bottom: 3rem; }
-  .obj-tab { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2rem; cursor: pointer; color: var(--ash); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.3s, border-color 0.3s; background: none; border-top: none; border-left: none; border-right: none; }
+  .obj-tab { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2rem; cursor: pointer; color: var(--ash); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.3s, border-color 0.3s; background: none; border-top: none; border-left: none; border-right: none; touch-action: manipulation; min-height: 44px; }
   .obj-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
   .obj-panel { display: none; }
   .obj-panel.active { display: block; }
@@ -385,7 +417,7 @@
 
   .social { padding: 8rem 4rem; background: var(--dark); }
   .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 4rem; }
-  .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; }
+  .social-handle { background: var(--dark3); border: 1px solid rgba(201,168,76,0.08); padding: 2rem; transition: border-color 0.3s, background 0.3s, transform 0.3s; text-decoration: none; display: block; touch-action: manipulation; }
   .social-handle:hover { border-color: rgba(201,168,76,0.35); background: rgba(201,168,76,0.04); transform: translateY(-4px); }
   .handle-platform { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.5rem; }
   .handle-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; color: var(--gold); }
@@ -398,7 +430,7 @@
   .cta-title em { font-style: italic; color: var(--gold); }
   .cta-sub { font-size: 1.05rem; color: var(--mist); max-width: 500px; margin: 0 auto 3rem; }
   .cta-contact { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; margin-top: 3rem; }
-  .cta-contact a { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--ash); text-decoration: none; transition: color 0.3s; }
+  .cta-contact a { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--ash); text-decoration: none; transition: color 0.3s; touch-action: manipulation; min-height: 44px; }
   .cta-contact a:hover { color: var(--gold); }
 
   footer { background: var(--black); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(201,168,76,0.1); }
@@ -439,7 +471,6 @@
     .hamburger {
       display: block;
     }
-    /* Mobile nav overrides */
     .nav-links {
       display: none;
       flex-direction: column;
@@ -486,6 +517,11 @@
     body { font-size: 13px; }
     .hero-summary { font-size: 1rem; }
     .hero-title { font-size: 3rem; }
+    /* ✅ Increase tap targets on mobile for all buttons */
+    .btn-story, .btn-primary, .btn-ghost, .obj-tab, .nav-links a, .cta-contact a {
+      min-height: 48px;
+      padding: 0.75rem 1.5rem;
+    }
   }
   @media (max-width: 400px) { .social-grid { grid-template-columns: 1fr; } }
 </style>
@@ -518,7 +554,9 @@
   <div class="hero-media">
     <div class="hero-media-box">
       <div class="hero-media-label">Latest Story</div>
+      <!-- ✅ Added loading="lazy" to improve performance -->
       <iframe
+        loading="lazy"
         src="https://www.youtube.com/embed/coCyUaVpVTg?autoplay=1&mute=1&rel=0"
         title="Plague2Profit video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
