@@ -264,6 +264,23 @@
     transform: none;
   }
 
+  /* ✅ Character counter styling */
+  .counter {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--ash);
+    margin-top: 0.3rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.05em;
+  }
+  .counter.warning {
+    color: #e8a84c;
+  }
+  .counter.danger {
+    color: #d9534f;
+  }
+
   .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem 0 2rem; }
   .small-note {
     font-size: 0.75rem;
@@ -366,31 +383,32 @@
     <h2>Tell Us Your Journey</h2>
     <p>Share your story of resilience, entrepreneurship, innovation, or transformation. We'll review it and get back to you within 48 hours.</p>
 
-    <!-- ✅ FormSubmit form + redirect to thank-you.html -->
     <form action="https://formsubmit.co/sydneytayiya@locustharvest.com" method="POST">
       <!-- Anti-spam honeypot -->
       <input type="text" name="_honey" style="display:none;">
-      <!-- Disable captcha (remove this line to enable it) -->
       <input type="hidden" name="_captcha" value="false">
-      <!-- Custom subject line -->
       <input type="hidden" name="_subject" value="New Story Submission — Locust Harvest">
-      <!-- ✅ Redirect to thank-you page -->
       <input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html">
 
       <div class="form-group">
         <label for="name">Your Full Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="story">Your Story</label>
-        <textarea id="story" name="story" placeholder="Tell us about your journey — the challenge, the turning point, the triumph..." required></textarea>
+        <input type="text" id="name" name="name" maxlength="100" required>
+        <span class="counter" id="nameCounter">0/100</span>
       </div>
 
-      <!-- ✅ TERMS & CONDITIONS CHECKBOX -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" maxlength="100" required>
+        <span class="counter" id="emailCounter">0/100</span>
+      </div>
+
+      <div class="form-group">
+        <label for="story">Your Story</label>
+        <textarea id="story" name="story" maxlength="3000" placeholder="Tell us about your journey — the challenge, the turning point, the triumph..." required></textarea>
+        <span class="counter" id="storyCounter">0/3000</span>
+      </div>
+
+      <!-- TERMS & CONDITIONS CHECKBOX -->
       <div class="form-group checkbox-group">
         <label class="checkbox-label">
           <input type="checkbox" id="termsCheckbox" onchange="toggleStorySubmit()">
@@ -403,7 +421,7 @@
         </label>
       </div>
 
-      <!-- ✅ SUBMIT BUTTON (disabled by default) -->
+      <!-- SUBMIT BUTTON (disabled by default) -->
       <button type="submit" class="btn-submit-form" id="submitStoryBtn" disabled>
         Submit Story →
       </button>
@@ -411,7 +429,7 @@
 
     <p class="small-note">By submitting, you agree to our <a href="/terms.html">Terms &amp; Conditions</a>.</p>
 
-    <!-- ===== SOCIAL SHORTCUTS ===== -->
+    <!-- SOCIAL SHORTCUTS -->
     <div class="social-section">
       <h3>Connect With Us</h3>
       <div class="social-links">
@@ -422,7 +440,7 @@
         <a href="https://www.linkedin.com/in/locust-harvest-40aa8b420/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
-    <!-- ===== END SOCIAL SHORTCUTS ===== -->
+    <!-- END SOCIAL SHORTCUTS -->
 
   </div>
 </section>
@@ -445,6 +463,32 @@
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
+  // ✅ Character counter helper
+  function setupCounter(inputId, counterId) {
+    const input = document.getElementById(inputId);
+    const counter = document.getElementById(counterId);
+    if (!input || !counter) return;
+
+    const max = parseInt(input.getAttribute('maxlength'), 10);
+
+    function update() {
+      const current = input.value.length;
+      counter.textContent = current + '/' + max;
+      // Color coding: >80% = orange, >95% = red
+      counter.classList.remove('warning', 'danger');
+      if (current > max * 0.95) counter.classList.add('danger');
+      else if (current > max * 0.80) counter.classList.add('warning');
+    }
+
+    input.addEventListener('input', update);
+    update(); // initial state
+  }
+
+  // Setup all counters
+  setupCounter('name', 'nameCounter');
+  setupCounter('email', 'emailCounter');
+  setupCounter('story', 'storyCounter');
+
   // ✅ Toggle submit button based on checkbox
   function toggleStorySubmit() {
     const checkbox = document.getElementById('termsCheckbox');
@@ -452,11 +496,10 @@
     btn.disabled = !checkbox.checked;
   }
 
-  // Also ensure the button starts disabled if the checkbox is unchecked (it is, by default)
-  // But just in case, we call it on load.
+  // Ensure the button starts disabled
   window.addEventListener('DOMContentLoaded', function() {
     const btn = document.getElementById('submitStoryBtn');
-    btn.disabled = true;
+    if (btn) btn.disabled = true;
   });
 </script>
 </body>
