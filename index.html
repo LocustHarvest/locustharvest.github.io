@@ -131,7 +131,8 @@
 
   .hero {
     position: relative; min-height: 100vh; display: flex; flex-direction: column;
-    justify-content: center; padding: 8rem 4rem 6rem; overflow: hidden;
+    justify-content: center; padding: 8rem 4rem 3rem; /* ✅ REDUCED from 6rem to 3rem */
+    overflow: hidden;
   }
   .hero-bg {
     position: absolute; inset: 0;
@@ -155,7 +156,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-bottom: 1rem;  /* ✅ REDUCED from 3rem to 1rem */
+    margin-bottom: 0.5rem;  /* ✅ REDUCED from 1rem to 0.5rem */
     position: relative;
     z-index: 2;
     opacity: 0;
@@ -184,7 +185,7 @@
   .hero-media-box iframe {
     width: 100%;
     flex: 1;
-    min-height: 200px;
+    min-height: 200px;  /* ✅ Kept at 200px — FULL SIZE */
     border: none;
     display: block;
     aspect-ratio: 16 / 9;
@@ -198,7 +199,7 @@
     color: var(--mist);
     border: 1px dashed rgba(201,168,76,0.25);
     padding: 1.5rem;
-    min-height: 200px;
+    min-height: 200px;  /* ✅ Kept at 200px — FULL SIZE */
     flex: 1;
   }
   .adsense-placeholder span {
@@ -216,7 +217,8 @@
 
   /* ===== STORY BUTTON ===== */
   .story-cta-top {
-    margin-bottom: 2.5rem; opacity: 0;
+    margin-bottom: 0.5rem;  /* ✅ REDUCED from 2.5rem to 0.5rem */
+    opacity: 0;
     animation: fadeUp 1s 0.05s forwards;
     position: relative; z-index: 1;
     text-align: center;
@@ -416,8 +418,9 @@
   /* ===== RESPONSIVE (with hamburger) ===== */
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; }
-    .hero { padding: 7rem 2rem 5rem; }
-    .hero-media { grid-template-columns: 1fr; margin-bottom: 1rem; } /* ✅ Added margin-bottom: 1rem for mobile too */
+    .hero { padding: 7rem 2rem 3rem; }  /* ✅ REDUCED bottom padding from 5rem to 3rem */
+    .hero-media { grid-template-columns: 1fr; margin-bottom: 0.5rem; } /* ✅ Added margin-bottom: 0.5rem for mobile */
+    .story-cta-top { margin-bottom: 0.5rem; } /* ✅ Added for mobile */
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
     .about-visual { height: 300px; }
     .cycle-grid { grid-template-columns: 1fr 1fr; }
@@ -472,7 +475,8 @@
   }
 
   @media (max-width: 640px) {
-    .hero-media { grid-template-columns: 1fr; margin-bottom: 1rem; } /* ✅ Added margin-bottom: 1rem for smaller mobile too */
+    .hero-media { grid-template-columns: 1fr; margin-bottom: 0.5rem; }
+    .story-cta-top { margin-bottom: 0.5rem; }
     .cycle-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .values-grid { grid-template-columns: 1fr; }
