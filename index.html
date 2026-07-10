@@ -155,7 +155,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;  /* ✅ REDUCED from 3rem to 1rem */
     position: relative;
     z-index: 2;
     opacity: 0;
@@ -417,7 +417,7 @@
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; }
     .hero { padding: 7rem 2rem 5rem; }
-    .hero-media { grid-template-columns: 1fr; }
+    .hero-media { grid-template-columns: 1fr; margin-bottom: 1rem; } /* ✅ Added margin-bottom: 1rem for mobile too */
     .about, .platform { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
     .about-visual { height: 300px; }
     .cycle-grid { grid-template-columns: 1fr 1fr; }
@@ -472,7 +472,7 @@
   }
 
   @media (max-width: 640px) {
-    .hero-media { grid-template-columns: 1fr; }
+    .hero-media { grid-template-columns: 1fr; margin-bottom: 1rem; } /* ✅ Added margin-bottom: 1rem for smaller mobile too */
     .cycle-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .values-grid { grid-template-columns: 1fr; }
