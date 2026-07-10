@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ✅ Title (already under 70 characters) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Locust Harvest | Terms and Conditions</title>
 <meta name="description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
 <meta name="keywords" content="Locust Harvest, Terms and Conditions, legal, From Plague To Profit, South Africa">
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
-
-<!-- Canonical URL -->
 <link rel="canonical" href="https://www.locustharvest.com/terms.html">
 
 <!-- Favicon links -->
@@ -20,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<!-- ✅ Open Graph (Facebook, LinkedIn, etc.) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.locustharvest.com/terms.html">
 <meta property="og:title" content="Locust Harvest | Terms and Conditions">
@@ -28,14 +24,14 @@
 <meta property="og:image" content="https://www.locustharvest.com/logo.png">
 <meta property="og:site_name" content="Locust Harvest">
 
-<!-- ✅ Twitter Cards -->
+<!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Locust Harvest | Terms and Conditions">
 <meta name="twitter:description" content="Terms and Conditions for Locust Harvest (Pty) Ltd — From Plagues to Profit storytelling platform.">
 <meta name="twitter:image" content="https://www.locustharvest.com/logo.png">
 <meta name="twitter:site" content="@Plagues2Profit">
 
-<!-- ✅ JSON‑LD Structured Data (Organization) -->
+<!-- JSON‑LD Structured Data (Organization) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,6 +48,10 @@
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Jan Smuts Highway",
+    "addressLocality": "Sherwood",
+    "addressRegion": "KwaZulu-Natal",
+    "postalCode": "4091",
     "addressCountry": "ZA"
   },
   "contactPoint": {
@@ -75,6 +75,8 @@
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -89,29 +91,68 @@
     overflow-x: hidden; line-height: 1.75;
   }
 
-  /* NAV (full menu, consistent with other pages) */
+  /* ===== NAVIGATION ===== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 0.75rem 4rem;
     background: rgba(10,8,4,0.97);
     border-bottom: 1px solid rgba(201,168,76,0.15);
+    transition: background 0.4s;
   }
+  nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
   .nav-logo img { height: 64px; width: auto; display: block; }
   .nav-links {
-    display: flex; align-items: center; gap: 2.5rem;
-    list-style: none; margin: 0; padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
-    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--mist); text-decoration: none; transition: color 0.3s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+    min-height: 44px;
   }
   .nav-links a:hover { color: var(--gold); }
-  @media (max-width: 768px) { .nav-links { display: none; } }
 
-  /* HERO */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hamburger:hover { color: var(--gold-light); }
+
+  /* ===== TERMS HERO ===== */
   .terms-hero {
     padding: 10rem 4rem 4rem;
     background: linear-gradient(175deg, #0A0804 0%, #1A1208 60%, #0D0B06 100%);
@@ -134,7 +175,7 @@
   }
   .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1.5rem 0; }
 
-  /* LAYOUT */
+  /* ===== LAYOUT ===== */
   .terms-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -144,7 +185,7 @@
     padding: 5rem 4rem;
   }
 
-  /* SIDEBAR TOC */
+  /* ===== SIDEBAR TOC ===== */
   .toc {
     position: sticky; top: 6rem;
     align-self: start;
@@ -171,7 +212,7 @@
   }
   .toc ol li a:hover { color: var(--gold); }
 
-  /* CONTENT */
+  /* ===== CONTENT ===== */
   .terms-content { max-width: 740px; }
 
   .clause {
@@ -216,7 +257,7 @@
     text-align: justify;
   }
 
-  /* FOOTER */
+  /* ===== FOOTER ===== */
   footer {
     background: var(--dark);
     padding: 3rem 4rem;
@@ -231,12 +272,40 @@
   .footer-links a { font-size: 0.75rem; color: var(--ash); text-decoration: none; letter-spacing: 0.08em; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; transition: color 0.3s; }
   .footer-links a:hover { color: var(--gold); }
 
-  /* RESPONSIVE */
+  /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; justify-content: space-between; }
     .terms-hero { padding: 9rem 2rem 3rem; }
     .terms-layout { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 2rem; }
     .toc { position: static; }
+    .hamburger { display: block; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      padding: 1.5rem 2rem;
+      gap: 1.2rem;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      align-items: stretch;
+      height: auto;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { height: auto; display: block; }
+    .nav-links a {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.05);
+      display: block;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .nav-links li:last-child a { border-bottom: none; }
+    .nav-logo img { height: 100px; }
     footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2rem; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
   }
@@ -248,11 +317,16 @@
 <body>
 
 <!-- ✅ Full navigation (consistent with homepage) -->
-<nav>
+<nav id="nav" aria-label="Main navigation">
   <a href="/" class="nav-logo">
     <img src="logo.png" alt="Locust Harvest — From Plague to Profit">
   </a>
-  <ul class="nav-links">
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/about.html">About Us</a></li>
     <li><a href="/#philosophy">Philosophy</a></li>
@@ -497,5 +571,26 @@
   </div>
 </footer>
 
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open');
+  }
+
+  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
+  });
+</script>
 </body>
 </html>
