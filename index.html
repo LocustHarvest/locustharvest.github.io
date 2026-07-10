@@ -97,6 +97,8 @@
   nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
   .nav-logo { text-decoration: none; display: flex; align-items: center; }
   .nav-logo img { height: 125px; width: auto; display: block; }
+
+  /* ===== BULLETPROOF NAV ALIGNMENT ===== */
   .nav-links { 
     display: flex; 
     align-items: center;
@@ -104,8 +106,15 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
   }
-  /* ✅ FIXED: Consistent line-height, padding, and display for perfect vertical alignment */
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
   .nav-links a {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 500;
@@ -115,9 +124,10 @@
     color: var(--mist);
     text-decoration: none;
     transition: color 0.3s;
-    display: inline-block;
-    line-height: 1.2;
+    line-height: 1;
     padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
   }
   .nav-links a:hover { color: var(--gold); }
 
@@ -425,13 +435,11 @@
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
     .nav-logo img { height: 120px; }
-    .framework-grid { grid-template-columns: repeat(3, 1fr); }
-    .framework-step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.1); }
-    .framework-step:nth-child(3), .framework-step:last-child { border-bottom: none; }
 
     .hamburger {
       display: block;
     }
+    /* Mobile nav overrides */
     .nav-links {
       display: none;
       flex-direction: column;
@@ -445,12 +453,14 @@
       border-bottom: 1px solid rgba(201,168,76,0.1);
       box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       align-items: stretch;
+      height: auto;
     }
     .nav-links.open {
       display: flex;
     }
     .nav-links li {
-      transform: none;
+      height: auto;
+      display: block;
     }
     .nav-links a {
       font-size: 1.1rem;
@@ -458,6 +468,7 @@
       border-bottom: 1px solid rgba(201,168,76,0.05);
       display: block;
       text-align: center;
+      line-height: 1.5;
     }
     .nav-links li:last-child a {
       border-bottom: none;
@@ -842,3 +853,4 @@
 
 </body>
 </html>
+
