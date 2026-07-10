@@ -290,7 +290,6 @@
     <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
   </a>
   <ul class="nav-links">
-    <!-- ✅ Added Home link for consistency -->
     <li><a href="/">Home</a></li>
     <li><a href="/about.html">About Us</a></li>
     <li><a href="/#philosophy">Philosophy</a></li>
@@ -346,10 +345,21 @@
       </div>
     </div>
 
-    <!-- Right: Contact Form -->
+    <!-- Right: Contact Form (UPDATED with FormSubmit) -->
     <div class="contact-form">
       <h2>Send a Message</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+
+      <!-- ✅ WORKING FORM — FormSubmit + Thank You Page Redirect -->
+      <form action="https://formsubmit.co/sydneytayiya@locustharvest.com" method="POST">
+        <!-- Anti-spam honeypot -->
+        <input type="text" name="_honey" style="display:none;">
+        <!-- Disable captcha (remove this line if you want to enable it) -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Custom subject line -->
+        <input type="hidden" name="_subject" value="New Locust Harvest Contact Message">
+        <!-- ✅ Redirect to thank-you page after successful submission -->
+        <input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html">
+
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" required>
@@ -368,6 +378,7 @@
         </div>
         <button type="submit" class="btn-submit-form">Send Message →</button>
       </form>
+
       <p style="font-size:0.75rem;color:var(--ash);margin-top:1rem;">We'll get back to you within 48 hours.</p>
     </div>
   </div>
