@@ -339,7 +339,6 @@
 </nav>
 
 <section class="page-header">
-  <!-- ✅ FULL HEADING RESTORED -->
   <h1 class="page-title">How to Turn Crisis Into <em>Catalyst</em> — 5 Steps to Transform Adversity</h1>
   <p class="page-sub">Crisis doesn't have to be the end. Discover 5 practical steps to transform adversity into opportunity — and emerge stronger than before.</p>
 </section>
@@ -458,6 +457,16 @@
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('open');
   }
+
+  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
+  });
 </script>
 </body>
 </html>
