@@ -74,6 +74,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -95,6 +96,8 @@
     content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.35;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
+
+  /* ===== NAVIGATION ===== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -138,6 +141,7 @@
     min-height: 44px;
   }
   .nav-links a:hover { color: var(--gold); }
+
   .hamburger {
     display: none;
     background: none;
@@ -153,6 +157,7 @@
   }
   .hamburger:hover { color: var(--gold-light); }
 
+  /* ===== PAGE HEADER ===== */
   .page-header {
     padding: 10rem 4rem 4rem;
     background: var(--dark);
@@ -172,11 +177,15 @@
     color: var(--mist);
     max-width: 600px;
   }
+
+  /* ===== CONTENT SECTION ===== */
   .content-section {
     padding: 4rem 4rem 6rem;
     max-width: 900px;
     margin: 0 auto;
   }
+  .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem 0 2rem; }
+
   .story-form h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -190,6 +199,7 @@
     line-height: 1.7;
     margin-bottom: 2rem;
   }
+
   .form-group {
     margin-bottom: 1.2rem;
   }
@@ -316,7 +326,6 @@
     color: #d9534f;
   }
 
-  .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem 0 2rem; }
   .small-note {
     font-size: 0.75rem;
     color: var(--ash);
@@ -325,6 +334,7 @@
   .small-note a { color: var(--gold); text-decoration: none; }
   .small-note a:hover { text-decoration: underline; }
 
+  /* ===== SOCIAL LINKS ===== */
   .social-section {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -356,7 +366,14 @@
     color: var(--gold);
     transform: translateY(-3px);
   }
+  .social-links a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
+  /* ===== FOOTER ===== */
   footer {
     background: var(--black);
     padding: 3rem 4rem;
@@ -371,6 +388,7 @@
   .footer-right a { color: var(--ash); text-decoration: none; transition: color 0.3s; }
   .footer-right a:hover { color: var(--gold); }
 
+  /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; }
     .page-header { padding: 8rem 2rem 3rem; }
@@ -411,6 +429,7 @@
     .page-title { font-size: 2.5rem; }
     .social-links { gap: 1rem; }
     .social-links a { font-size: 1.5rem; }
+    .social-links a svg { width: 1.5rem; height: 1.5rem; }
     .checkbox-text { font-size: 0.8rem; }
   }
 </style>
@@ -448,19 +467,12 @@
     <h2>Tell Us Your Journey</h2>
     <p>Share your story of resilience, entrepreneurship, innovation, or transformation. We'll review it and get back to you within 48 hours.</p>
 
-    <!-- ✅ FormSubmit with correct redirect and email settings -->
     <form action="https://formsubmit.co/sydneytayiya@locustharvest.com" method="POST">
       <!-- Anti-spam honeypot -->
       <input type="text" name="_honey" style="display:none;">
       <input type="hidden" name="_captcha" value="false">
-
-      <!-- Clear subject for better email delivery -->
       <input type="hidden" name="_subject" value="📖 New Story Submission — Locust Harvest">
-
-      <!-- Cache-busting parameter to force fresh thank-you page -->
       <input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html?nocache=1">
-
-      <!-- Auto-reply so the sender knows we received it -->
       <input type="hidden" name="_autoresponse" value="Thank you for sharing your story with Locust Harvest! We'll review it and get back to you within 48 hours. - The Locust Harvest Team">
 
       <div class="form-group">
@@ -502,7 +514,7 @@
 
     <p class="small-note">By submitting, you agree to our <a href="/terms.html">Terms &amp; Conditions</a>.</p>
 
-    <!-- ✅ SOCIAL SHORTCUTS (with Rumble added) -->
+    <!-- ✅ SOCIAL LINKS (with Rumble) -->
     <div class="social-section">
       <h3>Connect With Us</h3>
       <div class="social-links">
@@ -511,9 +523,8 @@
         <a href="https://www.tiktok.com/@plagues2profit" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="https://x.com/Plague2Profit" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="https://www.facebook.com/Plague2Profit" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <!-- ✅ Rumble added -->
         <a href="https://rumble.com/user/Plague2Profit" target="_blank" aria-label="Rumble">
-          <svg width="1.5rem" height="1.5rem" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;">
+          <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M396.7 169.6c0-29.7-16.9-46.4-46.7-46.4h-26.4v92.8h26.4c29.8 0 46.7-16.7 46.7-46.4zM256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 256 256 16zm94.7 297.6c-6.4 9.6-15.2 17.1-25.9 22.1l36.3 60.5h-55.4l-30.1-51.2h-22.1v51.2h-49.3V123.2h75.7c26.6 0 47.9 6.5 63.1 19.3 15.3 12.9 22.9 31 22.9 54.1 0 26.3-9.7 45.9-29.2 59.6 6.5 4.3 12 9.9 16.1 16.6 4.1 6.8 6.2 14.2 6.2 22.4 0 8.7-2.5 17-7.3 24.4z"/>
           </svg>
         </a>
@@ -546,6 +557,16 @@
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('open');
   }
+
+  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
+  });
 
   // Character counter helper
   function setupCounter(inputId, counterId) {
@@ -581,3 +602,4 @@
 </script>
 </body>
 </html>
+
