@@ -4,7 +4,8 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.locustharvest.com/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
@@ -12,47 +13,61 @@
   <url>
     <loc>https://www.locustharvest.com/about.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.locustharvest.com/contact.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.locustharvest.com/blog.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Blog Posts -->
+  <!-- ✅ NEWEST: Post 5 — How to Turn Crisis Into Catalyst -->
   <url>
-    <loc>https://www.locustharvest.com/blog/post-1.html</loc>
+    <loc>https://www.locustharvest.com/blog/post-5.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-4.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-3.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.locustharvest.com/blog/post-2.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.locustharvest.com/blog/post-3.html</loc>
+    <loc>https://www.locustharvest.com/blog/post-1.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  
-  <!-- NEW: Capitec CEO Story (post-4) -->
-  <url>
-    <loc>https://www.locustharvest.com/blog/post-4.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <priority>0.7</priority>
   </url>
   
   <!-- Legal -->
   <url>
     <loc>https://www.locustharvest.com/terms.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   
