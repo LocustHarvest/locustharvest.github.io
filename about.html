@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ✅ Fixed title (descriptive, under 70 characters) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>About Locust Harvest | Strategy-Driven Storytelling</title>
 <meta name="description" content="Locust Harvest (Pty) Ltd — Stories of resilience, entrepreneurship, and transformation. From Plague to Profit.">
 <meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
@@ -14,7 +12,7 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="https://www.locustharvest.com/about.html">
 
-<!-- ✅ Favicon links (same as homepage) -->
+<!-- ✅ Favicon links -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -52,6 +50,10 @@
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Jan Smuts Highway",
+    "addressLocality": "Sherwood",
+    "addressRegion": "KwaZulu-Natal",
+    "postalCode": "4091",
     "addressCountry": "ZA"
   },
   "contactPoint": {
@@ -76,7 +78,12 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+  /* === Same CSS as index.html (abbreviated for space) === */
+  /* I'll include the full CSS to be safe, but you can reuse the same style block from index.html */
+  /* For brevity, I'll include the minimal required styles, but it's identical to your index.css */
+  /* Full CSS is included in the actual file; here I'll paste the full version to ensure consistency */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #7A6330;
@@ -114,14 +121,49 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
+  }
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
   .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1.0rem;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist);
-    text-decoration: none; transition: color 0.3s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.0rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+    min-height: 44px;
   }
-  .nav-links li:first-child { transform: translateY(2px); }
   .nav-links a:hover { color: var(--gold); }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hamburger:hover { color: var(--gold-light); }
+
+  /* page header */
   .page-header {
     padding: 10rem 4rem 4rem;
     background: var(--dark);
@@ -176,10 +218,36 @@
   .footer-right a { color: var(--ash); text-decoration: none; transition: color 0.3s; }
   .footer-right a:hover { color: var(--gold); }
   @media (max-width: 1024px) {
-    nav { padding: 0.75rem 2rem; justify-content: flex-end; }
+    nav { padding: 0.75rem 2rem; }
     .page-header { padding: 8rem 2rem 3rem; }
     .content-section { padding: 3rem 2rem 4rem; }
-    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      padding: 1.5rem 2rem;
+      gap: 1.2rem;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      align-items: stretch;
+      height: auto;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { height: auto; display: block; }
+    .nav-links a {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.05);
+      display: block;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .nav-links li:last-child a { border-bottom: none; }
     .nav-logo img { height: 120px; }
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
     .footer-right { text-align: center; }
@@ -196,8 +264,12 @@
   <a href="/" class="nav-logo" aria-label="Locust Harvest home">
     <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
   </a>
-  <ul class="nav-links">
-    <!-- Added Home link for consistency -->
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/about.html">About Us</a></li>
     <li><a href="/#philosophy">Philosophy</a></li>
@@ -252,18 +324,24 @@
 </footer>
 
 <script>
-  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
-document.querySelectorAll('.nav-links a').forEach(function(link) {
-  link.addEventListener('click', function() {
-    const navLinks = document.getElementById('navLinks');
-    if (navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-    }
-  });
-});
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open');
+  }
+
+  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
   });
 </script>
 </body>
