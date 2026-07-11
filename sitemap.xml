@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.locustharvest.com/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -24,13 +24,21 @@
   </url>
   <url>
     <loc>https://www.locustharvest.com/blog.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Blog Posts -->
-  <!-- ✅ NEWEST: Post 5 — How to Turn Crisis Into Catalyst -->
+  <!-- ✅ NEWEST: Post 6 — Lanre: From Street Hawker to Millionaire -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-6.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Post 5 — How to Turn Crisis Into Catalyst -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-5.html</loc>
     <lastmod>2026-07-10</lastmod>
