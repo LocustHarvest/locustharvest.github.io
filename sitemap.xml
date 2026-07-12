@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.locustharvest.com/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -24,13 +24,29 @@
   </url>
   <url>
     <loc>https://www.locustharvest.com/blog.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Blog Posts -->
-  <!-- ✅ NEWEST: Post 6 — Lanre: From Street Hawker to Millionaire -->
+  <!-- ✅ NEWEST: Post 8 — Botswana -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-8.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- ✅ Post 7 — Ghana -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-7.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Post 6 — Nigeria -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-6.html</loc>
     <lastmod>2026-07-11</lastmod>
