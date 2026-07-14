@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- Homepage -->
+  <!-- ============================================================ -->
+  <!-- HOMEPAGE — Updated to today -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Main Pages -->
+  <!-- ============================================================ -->
+  <!-- MAIN PAGES -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/about.html</loc>
     <lastmod>2026-07-08</lastmod>
@@ -24,12 +28,51 @@
   </url>
   <url>
     <loc>https://www.locustharvest.com/blog.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Blog Posts (Newest First) -->
+  <!-- ============================================================ -->
+  <!-- 🆕 NEW BLOG POSTS (July 16, 2026) — Newest First -->
+  <!-- ============================================================ -->
+  
+  <!-- Post 12 — Tanzania: Street Tailor to Fashion Empire -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-12.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Post 11 — South Sudan: 20 Litres of Honey to Global Exporter -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-11.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Post 10 — Zimbabwe: A' Level Failure to Logistics Empire -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-10.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Post 9 — Kenya: From Flood to $1 Million -->
+  <url>
+    <loc>https://www.locustharvest.com/blog/post-9.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- ============================================================ -->
+  <!-- EXISTING BLOG POSTS (Newest First) -->
+  <!-- ============================================================ -->
+  
   <!-- Post 8 — Botswana: The 'Corn Lady' -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-8.html</loc>
@@ -38,7 +81,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Post 7 — Ghana: Beauty Icon -->
+  <!-- Post 7 — Nigeria: Beauty Icon -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-7.html</loc>
     <lastmod>2026-07-14</lastmod>
@@ -94,7 +137,9 @@
     <priority>0.6</priority>
   </url>
   
-  <!-- Story Submission & Thank You -->
+  <!-- ============================================================ -->
+  <!-- STORY SUBMISSION & THANK YOU -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/story-submit.html</loc>
     <lastmod>2026-07-10</lastmod>
@@ -108,7 +153,9 @@
     <priority>0.4</priority>
   </url>
   
-  <!-- Legal -->
+  <!-- ============================================================ -->
+  <!-- LEGAL -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/terms.html</loc>
     <lastmod>2026-07-08</lastmod>
