@@ -8,17 +8,15 @@
 <meta name="keywords" content="Locust Harvest, From Plague To Profit, storytelling platform, resilience stories, South Africa">
 <meta name="author" content="Locust Harvest (Pty) Ltd">
 <meta name="robots" content="index, follow">
-
-<!-- Canonical URL -->
 <link rel="canonical" href="https://www.locustharvest.com/about.html">
 
-<!-- ✅ Favicon links -->
+<!-- Favicon links -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<!-- ✅ Open Graph (Facebook, LinkedIn, etc.) -->
+<!-- ✅ Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.locustharvest.com/about.html">
 <meta property="og:title" content="About Locust Harvest | Strategy-Driven Storytelling">
@@ -33,7 +31,7 @@
 <meta name="twitter:image" content="https://www.locustharvest.com/logo.png">
 <meta name="twitter:site" content="@Plagues2Profit">
 
-<!-- ✅ JSON‑LD Structured Data (Organization) -->
+<!-- ✅ VALID JSON-LD (no wrapper) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,182 +78,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-  /* === Same CSS as index.html (abbreviated for space) === */
-  /* I'll include the full CSS to be safe, but you can reuse the same style block from index.html */
-  /* For brevity, I'll include the minimal required styles, but it's identical to your index.css */
-  /* Full CSS is included in the actual file; here I'll paste the full version to ensure consistency */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #7A6330;
-    --black: #0A0804; --dark: #110E07; --dark2: #1A1610; --dark3: #241F14;
-    --stone: #2E2820; --ash: #6B6358; --mist: #AFA89E;
-    --cream: #F0EBE0; --white: #FAF8F3; --red-ember: #8B2E0A;
-  }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--black);
-    color: var(--cream);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    overflow-x: hidden;
-  }
-  body::before {
-    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.35;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  }
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.75rem 4rem;
-    background: linear-gradient(to bottom, rgba(10,8,4,0.95) 0%, transparent 100%);
-    transition: background 0.4s;
-  }
-  nav.scrolled { background: rgba(10,8,4,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
-  .nav-logo { text-decoration: none; display: flex; align-items: center; }
-  .nav-logo img { height: 125px; width: auto; display: block; }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  .nav-links li {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  .nav-links a {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 500;
-    font-size: 1.0rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--mist);
-    text-decoration: none;
-    transition: color 0.3s;
-    line-height: 1;
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    touch-action: manipulation;
-    min-height: 44px;
-  }
-  .nav-links a:hover { color: var(--gold); }
-
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--gold);
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: color 0.3s;
-    touch-action: manipulation;
-    min-height: 44px;
-    min-width: 44px;
-  }
-  .hamburger:hover { color: var(--gold-light); }
-
-  /* page header */
-  .page-header {
-    padding: 10rem 4rem 4rem;
-    background: var(--dark);
-    border-bottom: 1px solid rgba(201,168,76,0.1);
-  }
-  .page-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-  .page-title em { font-style: italic; color: var(--gold); }
-  .page-sub {
-    font-size: 1.1rem;
-    color: var(--mist);
-    max-width: 600px;
-  }
-  .content-section {
-    padding: 4rem 4rem 6rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .content-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--gold);
-    margin: 2rem 0 1rem;
-  }
-  .content-section h2:first-child { margin-top: 0; }
-  .content-section p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--mist);
-    margin-bottom: 1.2rem;
-    text-align: justify;
-  }
-  .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 1rem 0 2rem; }
-  footer {
-    background: var(--black);
-    padding: 3rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(201,168,76,0.1);
-  }
-  .footer-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
-  .footer-reg { font-size: 0.72rem; color: var(--ash); letter-spacing: 0.05em; margin-top: 0.25rem; }
-  .footer-right { font-size: 0.72rem; color: var(--ash); text-align: right; letter-spacing: 0.05em; }
-  .footer-right a { color: var(--ash); text-decoration: none; transition: color 0.3s; }
-  .footer-right a:hover { color: var(--gold); }
-  @media (max-width: 1024px) {
-    nav { padding: 0.75rem 2rem; }
-    .page-header { padding: 8rem 2rem 3rem; }
-    .content-section { padding: 3rem 2rem 4rem; }
-    .hamburger { display: block; }
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--black);
-      padding: 1.5rem 2rem;
-      gap: 1.2rem;
-      border-bottom: 1px solid rgba(201,168,76,0.1);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      align-items: stretch;
-      height: auto;
-    }
-    .nav-links.open { display: flex; }
-    .nav-links li { height: auto; display: block; }
-    .nav-links a {
-      font-size: 1.1rem;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(201,168,76,0.05);
-      display: block;
-      text-align: center;
-      line-height: 1.5;
-    }
-    .nav-links li:last-child a { border-bottom: none; }
-    .nav-logo img { height: 120px; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
-    .footer-right { text-align: center; }
-  }
-  @media (max-width: 640px) {
-    body { font-size: 13px; }
-    .page-title { font-size: 2.5rem; }
-  }
+  /* ✅ Minified CSS with font-display: swap — identical to index.html */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dim:#7A6330;--black:#0A0804;--dark:#110E07;--dark2:#1A1610;--dark3:#241F14;--stone:#2E2820;--ash:#6B6358;--mist:#AFA89E;--cream:#F0EBE0;--white:#FAF8F3;--red-ember:#8B2E0A}html{scroll-behavior:smooth}body{background:var(--black);color:var(--cream);font-family:'Barlow',sans-serif;font-weight:300;font-size:14px;overflow-x:hidden}body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.75rem 4rem;background:linear-gradient(to bottom,rgba(10,8,4,.95) 0%,transparent 100%);transition:background .4s}nav.scrolled{background:rgba(10,8,4,.97);border-bottom:1px solid rgba(201,168,76,.15)}.nav-logo{text-decoration:none;display:flex;align-items:center}.nav-logo img{height:125px;width:auto;display:block}.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;margin:0;padding:0;height:100%}.nav-links li{display:flex;align-items:center;margin:0;padding:0;height:100%}.nav-links a{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .3s;line-height:1;padding:.5rem 0;display:flex;align-items:center;touch-action:manipulation;min-height:44px}.nav-links a:hover{color:var(--gold)}.hamburger{display:none;background:0 0;border:none;color:var(--gold);font-size:2rem;cursor:pointer;padding:.5rem;transition:color .3s;touch-action:manipulation;min-height:44px;min-width:44px}.hamburger:hover{color:var(--gold-light)}.page-header{padding:10rem 4rem 4rem;background:var(--dark);border-bottom:1px solid rgba(201,168,76,.1)}.page-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);line-height:1.1;margin-bottom:.5rem}.page-title em{font-style:italic;color:var(--gold)}.page-sub{font-size:1.1rem;color:var(--mist);max-width:600px}.content-section{padding:4rem 4rem 6rem;max-width:900px;margin:0 auto}.content-section h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;color:var(--gold);margin:2rem 0 1rem}.content-section h2:first-child{margin-top:0}.content-section p{font-size:1rem;line-height:1.8;color:var(--mist);margin-bottom:1.2rem;text-align:justify}.gold-divider{width:60px;height:2px;background:var(--gold);margin:1rem 0 2rem}footer{background:var(--black);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(201,168,76,.1)}.footer-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--gold)}.footer-reg{font-size:.72rem;color:var(--ash);letter-spacing:.05em;margin-top:.25rem}.footer-right{font-size:.72rem;color:var(--ash);text-align:right;letter-spacing:.05em}.footer-right a{color:var(--ash);text-decoration:none;transition:color .3s}.footer-right a:hover{color:var(--gold)}@media(max-width:1024px){nav{padding:.75rem 2rem}.page-header{padding:8rem 2rem 3rem}.content-section{padding:3rem 2rem 4rem}.hamburger{display:block}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--black);padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid rgba(201,168,76,.1);box-shadow:0 8px 20px rgba(0,0,0,.5);align-items:stretch;height:auto}.nav-links.open{display:flex}.nav-links li{height:auto;display:block}.nav-links a{font-size:1.1rem;padding:.5rem 0;border-bottom:1px solid rgba(201,168,76,.05);display:block;text-align:center;line-height:1.5}.nav-links li:last-child a{border-bottom:none}.nav-logo img{height:120px}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem}.footer-right{text-align:center}}@media(max-width:640px){body{font-size:13px}.page-title{font-size:2.5rem}}
 </style>
 </head>
 <body>
@@ -264,11 +88,7 @@
   <a href="/" class="nav-logo" aria-label="Locust Harvest home">
     <img src="logo.png" alt="Locust Harvest — From Plague to Profit" height="72" loading="lazy">
   </a>
-
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
-    ☰
-  </button>
-
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/about.html">About Us</a></li>
@@ -287,18 +107,14 @@
 
 <section class="content-section">
   <div class="gold-divider"></div>
-
   <h2>Our Story</h2>
   <p>LOCUST HARVEST (PTY) LTD was founded in 2026 with a powerful dual mandate: to transform disruption into opportunity, and to capture the most extraordinary human stories of resilience that the world has to offer.</p>
   <p>Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
-
   <h2>Our Mission</h2>
   <p>To uncover, curate, and amplify stories of resilience, entrepreneurship, innovation, and transformation — turning challenges into opportunities and inspiring global audiences.</p>
-
   <h2>What We Do</h2>
   <p>We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes. Through storytelling, research, and strategic insights, we connect people, ideas, and opportunities.</p>
   <p>Our flagship platform, "From Plague to Profit," is a global digital storytelling ecosystem where people from every corner of the world can tell their personal stories of rising against all odds.</p>
-
   <h2>Our Values</h2>
   <p><strong>Precision</strong> — Accuracy, patience and disciplined execution in all strategic processes.</p>
   <p><strong>Insight</strong> — Understanding patterns provides a strategic advantage in any environment.</p>
@@ -306,7 +122,6 @@
   <p><strong>Consistency</strong> — Structured approaches rather than emotional or impulsive decisions.</p>
   <p><strong>Restoration</strong> — Every challenge presents an opportunity for renewal and growth.</p>
   <p><strong>Excellence</strong> — Committed to continuous improvement and high-quality outcomes in everything we do.</p>
-
   <h2>Our Founder</h2>
   <p><strong>Sydney Tayiya</strong> — The visionary behind Locust Harvest (Pty) Ltd. With a deep understanding of human resilience and a passion for storytelling, Sydney leads the company's mission to turn disruption into opportunity and amplify the voices of those who have overcome extraordinary adversity.</p>
 </section>
@@ -325,22 +140,15 @@
 
 <script>
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
   function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('open');
   }
-
-  // ✅ AUTO-CLOSE MENU ON LINK CLICK (fixes anchor links on mobile)
   document.querySelectorAll('.nav-links a').forEach(function(link) {
     link.addEventListener('click', function() {
       const navLinks = document.getElementById('navLinks');
-      if (navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-      }
+      if (navLinks.classList.contains('open')) { navLinks.classList.remove('open'); }
     });
   });
 </script>
