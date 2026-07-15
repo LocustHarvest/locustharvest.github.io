@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — UNCHANGED (YOUR ORIGINAL LAYOUT) ===== */
+        /* ===== HERO — NO SCROLL INDICATOR ===== */
         .hero {
             position: relative;
             display: flex;
@@ -250,7 +250,7 @@
             display: flex;
         }
         .hero-top {
-            flex: 1.2;
+            flex: 1.5;
             gap: 2rem;
             padding-bottom: 0.5rem;
             align-items: stretch;
@@ -554,7 +554,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* ===== PHILOSOPHY — ads on both sides ===== */
+        /* ===== PHILOSOPHY — with ad box ===== */
         .philosophy {
             padding: 5rem 3rem;
             background: var(--black);
@@ -562,25 +562,19 @@
         }
         .philosophy-top {
             display: flex;
-            gap: 2rem;
-            align-items: center;
+            gap: 4rem;
+            align-items: flex-start;
             margin-bottom: 3rem;
         }
+        .philosophy-top .philosophy-header {
+            flex: 0 0 auto;
+            max-width: 540px;
+            margin-bottom: 0;
+        }
         .philosophy-top .ad-box {
-            flex: 0 0 200px;
+            flex: 1;
             min-height: 200px;
             justify-content: center;
-        }
-        .philosophy-top .philosophy-header {
-            flex: 1;
-            max-width: 540px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .philosophy-top .philosophy-header .section-body {
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center;
         }
         .cycle-grid {
             display: grid;
@@ -656,26 +650,21 @@
             border-right: none !important;
         }
 
-        /* ===== PLATFORM — ONLY CHANGE: AD BOX STRETCHES ===== */
+        /* ===== PLATFORM — with ad box ===== */
         .platform {
             padding: 5rem 3rem;
             background: var(--dark);
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: stretch;
+            align-items: start;
         }
         .platform-left {
-            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-        .platform-left .ad-box {
-            flex: 1;
-            min-height: 0;
-        }
         .platform-cards {
-            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
@@ -784,18 +773,18 @@
 
         /* ===== VALUES — with vertical ads on both sides (WIDER) ===== */
         .values {
-            padding: 5rem 1.5rem;
+            padding: 5rem 1.5rem; /* reduced side padding */
             background: var(--dark2);
         }
         .values-wrapper {
             display: flex;
             align-items: stretch;
             gap: 2rem;
-            max-width: 1500px;
+            max-width: 1500px; /* increased from 1200px */
             margin: 0 auto;
         }
         .values-ad {
-            flex: 0 0 260px;
+            flex: 0 0 260px; /* wider from 180px */
             display: flex;
             align-items: stretch;
         }
@@ -836,27 +825,9 @@
             text-justify: inter-word;
         }
 
-        /* ===== OBJECTIVES — with ad box extending to match RHS ===== */
         .objectives {
             padding: 5rem 3rem;
             background: var(--black);
-        }
-        .objectives-wrapper {
-            display: flex;
-            gap: 3rem;
-            align-items: stretch;
-        }
-        .objectives-ad {
-            flex: 0 0 280px;
-            display: flex;
-            align-items: stretch;
-        }
-        .objectives-ad .ad-box {
-            min-height: 100%;
-            justify-content: center;
-        }
-        .objectives-main {
-            flex: 1;
         }
         .obj-tabs {
             display: flex;
@@ -917,7 +888,6 @@
             flex-shrink: 0;
         }
 
-        /* ===== SOCIAL ===== */
         .social {
             padding: 5rem 3rem;
             background: var(--dark);
@@ -976,7 +946,6 @@
             text-justify: inter-word;
         }
 
-        /* ===== CTA — no line, 60% ad box ===== */
         .cta {
             padding: 5rem 3rem;
             background: var(--dark3);
@@ -1012,10 +981,6 @@
             font-size: .95rem;
             color: var(--mist);
             max-width: 460px;
-            margin: 0 auto 2rem;
-        }
-        .cta-ad-wrapper {
-            max-width: 60%;
             margin: 0 auto 2rem;
         }
         .cta-contact {
@@ -1173,7 +1138,8 @@
                 text-align: center;
                 padding: .8rem 1.5rem;
             }
-            .about {
+            .about,
+            .platform {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
                 padding: 3.5rem 1.5rem;
@@ -1181,26 +1147,9 @@
             .about-visual {
                 height: 280px;
             }
-            .platform {
-                flex-direction: column;
-                gap: 2.5rem;
-                padding: 3.5rem 1.5rem;
-            }
-            .platform-left {
-                flex: none;
-            }
-            .platform-cards {
-                flex: none;
-            }
             .philosophy-top {
                 flex-direction: column;
                 gap: 2rem;
-            }
-            .philosophy-top .ad-box {
-                flex: none;
-                width: 100%;
-                max-width: 400px;
-                min-height: 140px;
             }
             .philosophy-top .philosophy-header {
                 max-width: 100%;
@@ -1239,18 +1188,6 @@
             .values {
                 padding: 3.5rem 1.5rem;
             }
-            .objectives-wrapper {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .objectives-ad {
-                flex: none;
-                width: 100%;
-                max-width: 100%;
-            }
-            .objectives-ad .ad-box {
-                min-height: 140px;
-            }
             .objectives,
             .social,
             .cta {
@@ -1261,9 +1198,6 @@
             }
             .social-grid {
                 grid-template-columns: repeat(3, 1fr);
-            }
-            .cta-ad-wrapper {
-                max-width: 80%;
             }
             footer {
                 flex-direction: column;
@@ -1425,9 +1359,6 @@
             .cta-sub {
                 font-size: .85rem;
             }
-            .cta-ad-wrapper {
-                max-width: 100%;
-            }
             footer {
                 padding: 1.2rem 1rem;
             }
@@ -1474,11 +1405,11 @@
     <!-- ===== MAIN CONTENT ===== -->
     <main>
 
-        <!-- ===== HERO (unchanged – your layout) ===== -->
+        <!-- ===== HERO (Scroll indicator removed) ===== -->
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <!-- TOP: YouTube only -->
+            <!-- TOP SECTION: YouTube and Ad side by side -->
             <div class="hero-top">
                 <div class="hero-media-col">
                     <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
@@ -1488,28 +1419,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="hero-media-col">
+                    <div class="hero-media-box">
+                        <div class="hero-media-label">Advertisement</div>
+                        <div class="adsense-placeholder">
+                            <span>✦ Advertise Here ✦</span>
+                            <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- BOTTOM: Share button, summary, ad, subtitle + buttons -->
+            <!-- BOTTOM SECTION: Compact text box with Share button -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
-                    <div class="story-cta-bottom" style="margin-bottom:0.5rem;">
-                        <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
-                    </div>
-                    <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
-
-                    <!-- AD BOX — lowered to optimize space -->
-                    <div class="ad-box" style="margin: 0.5rem 0 0.5rem 0; min-height:120px;">
-                        <span class="ad-label">Advertisement</span>
-                        <span class="ad-headline">✦ Advertise Here ✦</span>
-                        <p class="ad-text" style="max-width:100%;">Premium ad space on the Locust Harvest platform.</p>
-                        <span class="ad-url">locustharvest.com/advertise</span>
-                    </div>
-
+                    <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
+                    <h1 class="hero-title">From Plagues <em>to Profit.</em></h1>
                     <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
-                    <div class="hero-actions" style="display:flex; flex-wrap:wrap; gap:.75rem 1.5rem; align-items:center; justify-content:center;">
-                        <a href="#platform" class="btn-primary" style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; background:var(--gold); color:var(--black); border:none; padding:.8rem 2.5rem; cursor:pointer; text-decoration:none; display:inline-block; white-space:nowrap; transition:background .3s,transform .2s; touch-action:manipulation; min-height:44px;">Explore the Platform</a>
-                        <a href="#contact" class="btn-ghost" style="font-family:'Barlow Condensed',sans-serif; font-weight:500; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; color:var(--mist); text-decoration:none; border-bottom:1px solid var(--stone); padding-bottom:2px; white-space:nowrap; transition:color .3s,border-color .3s; touch-action:manipulation; min-height:44px; display:inline-flex; align-items:center;">Get in touch →</a>
+                    <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
+                    <div class="story-cta-bottom">
+                        <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
                     </div>
                 </div>
             </div>
@@ -1536,15 +1465,9 @@
             </div>
         </section>
 
-        <!-- ===== PHILOSOPHY — ads on both sides ===== -->
+        <!-- ===== PHILOSOPHY — with ad box ===== -->
         <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
             <div class="philosophy-top reveal">
-                <div class="ad-box">
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
-                </div>
                 <div class="philosophy-header">
                     <p class="section-label">Strategic Philosophy</p>
                     <div class="gold-divider" aria-hidden="true"></div>
@@ -1554,7 +1477,7 @@
                 <div class="ad-box">
                     <span class="ad-label">Advertisement</span>
                     <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform.</p>
+                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
                     <span class="ad-url">locustharvest.com/advertise</span>
                 </div>
             </div>
@@ -1569,7 +1492,7 @@
             <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
         </section>
 
-        <!-- ===== PLATFORM — CHANGED: AD BOX STRETCHES TO MATCH CARDS ===== -->
+        <!-- ===== PLATFORM — with ad box below "everyday heroes" ===== -->
         <section class="platform" id="platform" aria-labelledby="platform-heading">
             <div class="platform-left">
                 <div>
@@ -1580,8 +1503,8 @@
                 <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
                 <p class="section-body reveal" style="margin-top:0.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
 
-                <!-- AD BOX — now stretches to fill remaining space -->
-                <div class="ad-box reveal" style="margin-top:0;">
+                <!-- AD BOX (page 4) — directly below "everyday heroes" -->
+                <div class="ad-box reveal" style="margin-top:1rem;">
                     <span class="ad-label">Advertisement</span>
                     <span class="ad-headline">✦ Advertise Here ✦</span>
                     <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
@@ -1617,9 +1540,10 @@
             </div>
         </section>
 
-        <!-- ===== VALUES — with vertical ads on both sides (WIDER) ===== -->
+        <!-- ===== VALUES — with wider vertical ads on both sides ===== -->
         <section class="values" id="values" aria-labelledby="values-heading">
             <div class="values-wrapper">
+                <!-- LEFT AD (wider) -->
                 <div class="values-ad reveal">
                     <div class="ad-box">
                         <span class="ad-label">Advertisement</span>
@@ -1629,6 +1553,7 @@
                     </div>
                 </div>
 
+                <!-- MAIN CONTENT -->
                 <div class="values-main">
                     <div class="values-header">
                         <p class="section-label">Core Values</p>
@@ -1645,6 +1570,7 @@
                     </div>
                 </div>
 
+                <!-- RIGHT AD (wider) -->
                 <div class="values-ad reveal reveal-delay-1">
                     <div class="ad-box">
                         <span class="ad-label">Advertisement</span>
@@ -1656,51 +1582,39 @@
             </div>
         </section>
 
-        <!-- ===== OBJECTIVES — with ad box extending to match RHS ===== -->
+        <!-- ===== OBJECTIVES ===== -->
         <section class="objectives" id="objectives" aria-labelledby="objectives-heading">
-            <div class="objectives-wrapper">
-                <div class="objectives-ad reveal">
-                    <div class="ad-box">
-                        <span class="ad-label">Advertisement</span>
-                        <span class="ad-headline">✦ Advertise Here ✦</span>
-                        <p class="ad-text">Premium ad space on the Locust Harvest platform.</p>
-                        <span class="ad-url">locustharvest.com/advertise</span>
-                    </div>
-                </div>
-                <div class="objectives-main">
-                    <p class="section-label reveal">Business Objectives</p>
-                    <div class="gold-divider reveal" aria-hidden="true"></div>
-                    <h2 class="section-title reveal" id="objectives-heading" style="max-width:600px;">The Road <em>Ahead</em></h2>
-                    <div class="obj-tabs reveal" role="tablist">
-                        <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
-                        <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
-                        <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
-                    </div>
-                    <div class="obj-panel active" id="tab-short" role="tabpanel">
-                        <ul class="obj-list">
-                            <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
-                            <li>Begin acquiring and publishing inspirational story content from global contributors</li>
-                            <li>Establish structured analytical framework and tools</li>
-                            <li>Build strong brand identity and social media presence across all channels</li>
-                        </ul>
-                    </div>
-                    <div class="obj-panel" id="tab-medium" role="tabpanel">
-                        <ul class="obj-list">
-                            <li>Expand platform reach and grow audience across all channels</li>
-                            <li>Develop automated story submission and curation tools</li>
-                            <li>Build strategic content partnerships and media collaborations</li>
-                            <li>Increase monetisation and story owner revenue sharing</li>
-                        </ul>
-                    </div>
-                    <div class="obj-panel" id="tab-long" role="tabpanel">
-                        <ul class="obj-list">
-                            <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
-                            <li>Develop proprietary analytical and pattern recognition technologies</li>
-                            <li>Publish research, books and comprehensive training programs</li>
-                            <li>Expand internationally across all major markets</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="section-label reveal">Business Objectives</p>
+            <div class="gold-divider reveal" aria-hidden="true"></div>
+            <h2 class="section-title reveal" id="objectives-heading" style="max-width:600px;">The Road <em>Ahead</em></h2>
+            <div class="obj-tabs reveal" role="tablist">
+                <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
+                <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
+                <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
+            </div>
+            <div class="obj-panel active" id="tab-short" role="tabpanel">
+                <ul class="obj-list">
+                    <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
+                    <li>Begin acquiring and publishing inspirational story content from global contributors</li>
+                    <li>Establish structured analytical framework and tools</li>
+                    <li>Build strong brand identity and social media presence across all channels</li>
+                </ul>
+            </div>
+            <div class="obj-panel" id="tab-medium" role="tabpanel">
+                <ul class="obj-list">
+                    <li>Expand platform reach and grow audience across all channels</li>
+                    <li>Develop automated story submission and curation tools</li>
+                    <li>Build strategic content partnerships and media collaborations</li>
+                    <li>Increase monetisation and story owner revenue sharing</li>
+                </ul>
+            </div>
+            <div class="obj-panel" id="tab-long" role="tabpanel">
+                <ul class="obj-list">
+                    <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
+                    <li>Develop proprietary analytical and pattern recognition technologies</li>
+                    <li>Publish research, books and comprehensive training programs</li>
+                    <li>Expand internationally across all major markets</li>
+                </ul>
             </div>
         </section>
 
@@ -1722,20 +1636,10 @@
             </div>
         </section>
 
-        <!-- ===== CTA — no line, 60% ad box ===== -->
+        <!-- ===== CTA / CONTACT ===== -->
         <section class="cta" id="contact" aria-labelledby="contact-heading">
             <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
             <p class="cta-sub reveal">Have a story to tell? Get in touch with the Locust Harvest team today.</p>
-
-            <div class="cta-ad-wrapper reveal">
-                <div class="ad-box">
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
-                </div>
-            </div>
-
             <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal">sydneytayiya@locustharvest.com</a>
             <div class="cta-contact reveal">
                 <a href="tel:+27713641561">+27 71 364 1561</a>
@@ -1829,4 +1733,7 @@
         }
     </script>
 </body>
-</html>
+    </html>
+
+
+
