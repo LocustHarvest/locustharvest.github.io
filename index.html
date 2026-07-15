@@ -419,6 +419,47 @@
             margin-bottom: 1rem;
         }
 
+        /* ===== AD BOX (reusable) ===== */
+        .ad-box {
+            background: #1A1610;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 180px;
+            width: 100%;
+        }
+        .ad-box .ad-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            color: var(--gold);
+            font-size: .55rem;
+            margin-bottom: 0.5rem;
+        }
+        .ad-box .ad-headline {
+            color: #E8C97A;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.15em;
+        }
+        .ad-box .ad-text {
+            color: #D0C8B8;
+            font-size: 0.9rem;
+            max-width: 80%;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+        .ad-box .ad-url {
+            color: #6B6358;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
         /* ===== rest of the page ===== */
         section {
             position: relative
@@ -453,7 +494,7 @@
             text-justify: inter-word;
         }
 
-        /* ===== ABOUT — AD BOX VERSION ===== */
+        /* ===== ABOUT — AD BOX ===== */
         .about {
             padding: 5rem 3rem;
             display: grid;
@@ -596,6 +637,7 @@
             border-right: none !important;
         }
 
+        /* ===== PLATFORM — with ad box ===== */
         .platform {
             padding: 5rem 3rem;
             background: var(--dark);
@@ -603,6 +645,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
+        }
+        .platform-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
         .platform-cards {
             display: flex;
@@ -1208,9 +1255,6 @@
             .about-visual {
                 height: 200px;
             }
-            .about-motto {
-                font-size: 1.6rem;
-            }
             .platform-cards {
                 gap: 1rem;
             }
@@ -1376,15 +1420,26 @@
             <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
         </section>
 
-        <!-- ===== PLATFORM ===== -->
+        <!-- ===== PLATFORM — with ad box below "everyday heroes" ===== -->
         <section class="platform" id="platform" aria-labelledby="platform-heading">
-            <div>
-                <p class="section-label reveal">The Platform</p>
-                <div class="gold-divider reveal" aria-hidden="true"></div>
-                <h2 class="section-title reveal" id="platform-heading">A Global <em>Storytelling</em> Ecosystem</h2>
+            <div class="platform-left">
+                <div>
+                    <p class="section-label reveal">The Platform</p>
+                    <div class="gold-divider reveal" aria-hidden="true"></div>
+                    <h2 class="section-title reveal" id="platform-heading">A Global <em>Storytelling</em> Ecosystem</h2>
+                </div>
                 <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
-                <p class="section-body reveal" style="margin-top:1.2rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
+                <p class="section-body reveal" style="margin-top:0.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
+
+                <!-- AD BOX (page 4) — directly below "everyday heroes" -->
+                <div class="ad-box reveal" style="margin-top:1rem;">
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Advertise Here ✦</span>
+                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
+                    <span class="ad-url">locustharvest.com/advertise</span>
+                </div>
             </div>
+
             <div class="platform-cards">
                 <div class="pcard reveal"><div class="pcard-title">What We Capture</div><p class="pcard-text">Authentic journeys from devastation, hardship or failure to restoration and success. Narratives that inspire, educate and motivate global audiences.</p></div>
                 <div class="pcard reveal reveal-delay-1"><div class="pcard-title">Upfront Payment</div><p class="pcard-text">Story owners receive a once-off payment at the time of story submission and publication.</p></div>
@@ -1581,4 +1636,4 @@
         }
     </script>
 </body>
-    </html>
+            </html>
