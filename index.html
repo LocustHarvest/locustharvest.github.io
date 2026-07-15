@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — BALANCED LAYOUT ===== */
+        /* ===== HERO — BALANCED LAYOUT (UNDO LAST CHANGES) ===== */
         .hero {
             position: relative;
             display: flex;
@@ -249,17 +249,17 @@
             min-height: 0;
             display: flex;
         }
-        /* TOP BOXES — 55% of viewport (slightly reduced to give bottom more room) */
+        /* TOP BOXES — LARGER (flex: 1.5) as you requested earlier */
         .hero-top {
-            flex: 1.2;
+            flex: 1.5;
             gap: 2rem;
             padding-bottom: 0.5rem;
             align-items: stretch;
         }
-        /* BOTTOM BOX — 45% of viewport, moved lower with extra padding-top */
+        /* BOTTOM BOX — reverted padding-top to 1rem (was 2rem) */
         .hero-bottom {
             flex: 1;
-            padding-top: 2rem;
+            padding-top: 1rem;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
             align-items: center;
         }
@@ -325,11 +325,11 @@
             margin: 0;
         }
 
-        /* ===== BOTTOM TEXT BOX — LARGER, ROOMIER ===== */
+        /* ===== BOTTOM TEXT BOX — REVERTED PADDING AND FONT SIZES ===== */
         .hero-text-box {
             background: rgba(26, 22, 16, 0.65);
             backdrop-filter: blur(6px);
-            padding: 2rem 2.5rem;
+            padding: 1.5rem 2rem; /* reverted from 2rem 2.5rem */
             border-radius: 10px;
             border: 1px solid rgba(201, 168, 76, 0.2);
             width: 100%;
@@ -365,23 +365,23 @@
             color: #AFA89E !important;
             max-width: 100%;
             line-height: 1.4;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             display: block;
         }
-        /* INCREASED SUMMARY TEXT SIZE */
+        /* REVERTED SUMMARY FONT SIZE */
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
-            font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+            font-size: .85rem; /* was .9rem-1.1rem */
             max-width: 100%;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #FAF8F3 !important;
             display: block;
             padding-bottom: 0.5rem;
             border-bottom: none;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
         .hero-handle {
             color: #C9A84C !important;
@@ -1209,7 +1209,7 @@
                 line-height: 1.05;
             }
             .hero-summary {
-                font-size: .85rem;
+                font-size: .8rem;
             }
             .btn-story {
                 font-size: .7rem;
@@ -1353,7 +1353,7 @@
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <!-- TOP 55%: YouTube and Ad side by side -->
+            <!-- TOP 60%: YouTube and Ad side by side -->
             <div class="hero-top">
                 <div class="hero-media-col">
                     <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
@@ -1374,7 +1374,7 @@
                 </div>
             </div>
 
-            <!-- BOTTOM 45%: Spacious text box with Share button -->
+            <!-- BOTTOM 40%: Compact text box with Share button -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
@@ -1631,4 +1631,4 @@
         }
     </script>
 </body>
-                    </html>
+    </html>
