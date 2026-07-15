@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — BALANCED LAYOUT ===== */
+        /* ===== HERO — NO SCROLL INDICATOR ===== */
         .hero {
             position: relative;
             display: flex;
@@ -257,7 +257,7 @@
         }
         .hero-bottom {
             flex: 1;
-            padding-top: 2rem; /* Increased gap */
+            padding-top: 2rem;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
             align-items: center;
         }
@@ -344,7 +344,7 @@
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
-            font-size: clamp(1.6rem, 2.8vw, 3rem); /* Reduced size */
+            font-size: clamp(1.6rem, 2.8vw, 3rem);
             line-height: 1.05;
             letter-spacing: -.02em;
             color: #FAF8F3 !important;
@@ -410,35 +410,7 @@
             color: var(--black);
         }
 
-        .hero-scroll-line {
-            position: absolute;
-            bottom: 1.5rem;
-            right: 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: .4rem;
-            opacity: 0;
-            animation: fadeIn 1s 1.4s forwards;
-            z-index: 2;
-            will-change: transform, opacity;
-        }
-        .hero-scroll-line span {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: .5rem;
-            letter-spacing: .3em;
-            text-transform: uppercase;
-            color: var(--ash);
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-        }
-        .hero-scroll-line::after {
-            content: '';
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, var(--gold-dim), transparent);
-            animation: lineGrow 1.5s 1.6s both;
-        }
+        /* SCROLL INDICATOR REMOVED */
 
         .gold-divider {
             width: 50px;
@@ -481,6 +453,7 @@
             text-justify: inter-word;
         }
 
+        /* ===== ABOUT — AD BOX VERSION ===== */
         .about {
             padding: 5rem 3rem;
             display: grid;
@@ -496,58 +469,48 @@
         .about-visual-box {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, var(--dark3) 0%, var(--dark2) 100%);
-            border: 1px solid rgba(201, 168, 76, .12);
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            overflow: hidden;
-        }
-        .about-visual-box::before {
-            content: '';
-            position: absolute;
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(201, 168, 76, .08) 0%, transparent 70%)
-        }
-        .about-motto {
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-style: italic;
-            font-size: 2.2rem;
-            color: var(--gold);
-            text-align: center;
-            line-height: 1.2;
+            align-items: center;
+            background: #1A1610;
+            border: 1px solid rgba(201, 168, 76, 0.15);
             padding: 1.5rem;
-            position: relative;
-            z-index: 1;
+            text-align: center;
         }
-        .about-motto::before,
-        .about-motto::after {
-            content: '"';
-            display: block;
-            font-size: 4rem;
-            line-height: .5;
-            color: rgba(201, 168, 76, .15);
-            font-family: 'Playfair Display', serif;
-        }
-        .about-visual-accent {
+        .about-visual-box .ad-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            color: var(--gold);
+            font-size: .55rem;
+            background: rgba(0, 0, 0, .3);
+            padding: .3rem .6rem;
             position: absolute;
-            top: -16px;
-            right: -16px;
-            width: 100px;
-            height: 100px;
-            border: 2px solid rgba(201, 168, 76, .2);
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: left;
         }
-        .about-visual-accent2 {
-            position: absolute;
-            bottom: -16px;
-            left: -16px;
-            width: 60px;
-            height: 60px;
-            background: var(--red-ember);
-            opacity: .4;
+        .about-visual-box .ad-headline {
+            color: #E8C97A;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.15em;
+            margin-top: 0.5rem;
+        }
+        .about-visual-box .ad-text {
+            color: #D0C8B8;
+            font-size: 0.9rem;
+            max-width: 80%;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+        .about-visual-box .ad-url {
+            color: #6B6358;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            letter-spacing: 0.05em;
         }
 
         .philosophy {
@@ -1177,13 +1140,6 @@
             .nav-links li:last-child a {
                 border-bottom: none;
             }
-            .hero-scroll-line {
-                right: 1.2rem;
-                bottom: 1.2rem;
-            }
-            .hero-scroll-line::after {
-                height: 28px;
-            }
         }
 
         @media(max-width:640px) {
@@ -1200,7 +1156,6 @@
             .hero-text-box {
                 padding: 1rem;
             }
-            /* Keep title readable on mobile */
             .hero-title {
                 font-size: clamp(1.6rem, 6vw, 2.2rem);
                 line-height: 1.05;
@@ -1303,9 +1258,6 @@
             .footer-brand {
                 font-size: .9rem;
             }
-            .hero-scroll-line {
-                display: none;
-            }
             nav {
                 padding: .4rem 1rem;
             }
@@ -1346,7 +1298,7 @@
     <!-- ===== MAIN CONTENT ===== -->
     <main>
 
-        <!-- ===== HERO ===== -->
+        <!-- ===== HERO (Scroll indicator removed) ===== -->
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
@@ -1384,17 +1336,18 @@
                 </div>
             </div>
 
-            <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
+            <!-- SCROLL INDICATOR REMOVED -->
         </section>
 
-        <!-- ===== ABOUT ===== -->
+        <!-- ===== ABOUT — AD BOX ===== -->
         <section class="about" id="about" aria-labelledby="about-heading">
             <div class="about-visual reveal">
                 <div class="about-visual-box">
-                    <div class="about-motto">From<br>Plagues<br>to Profit</div>
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Advertise Here ✦</span>
+                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
+                    <span class="ad-url">locustharvest.com/advertise</span>
                 </div>
-                <div class="about-visual-accent" aria-hidden="true"></div>
-                <div class="about-visual-accent2" aria-hidden="true"></div>
             </div>
             <div class="about-content">
                 <p class="section-label reveal">Company Overview</p>
@@ -1628,4 +1581,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
