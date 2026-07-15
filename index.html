@@ -713,7 +713,7 @@
             text-justify: inter-word;
         }
 
-        /* ===== SERVICES — HEADER NOW STACKED LEFT ===== */
+        /* ===== SERVICES — header stacked left ===== */
         .services {
             padding: 5rem 3rem;
             background: var(--black);
@@ -771,9 +771,29 @@
             text-justify: inter-word;
         }
 
+        /* ===== VALUES — with vertical ads on both sides ===== */
         .values {
             padding: 5rem 3rem;
             background: var(--dark2);
+        }
+        .values-wrapper {
+            display: flex;
+            align-items: stretch;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .values-ad {
+            flex: 0 0 180px;
+            display: flex;
+            align-items: stretch;
+        }
+        .values-ad .ad-box {
+            min-height: 100%;
+            justify-content: center;
+        }
+        .values-main {
+            flex: 1;
             text-align: center;
         }
         .values-header {
@@ -1147,6 +1167,19 @@
             .services {
                 padding: 3.5rem 1.5rem;
             }
+            .values-wrapper {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: center;
+            }
+            .values-ad {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+            }
+            .values-ad .ad-box {
+                min-height: 140px;
+            }
             .values-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 1.8rem;
@@ -1250,6 +1283,9 @@
             .values-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+            .values-ad {
+                max-width: 100%;
             }
             .social-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1481,7 +1517,7 @@
             </div>
         </section>
 
-        <!-- ===== SERVICES — header now stacked left ===== -->
+        <!-- ===== SERVICES — header stacked left ===== -->
         <section class="services" id="services" aria-labelledby="services-heading">
             <div class="services-header">
                 <div>
@@ -1501,20 +1537,45 @@
             </div>
         </section>
 
-        <!-- ===== VALUES ===== -->
+        <!-- ===== VALUES — with vertical ads on both sides ===== -->
         <section class="values" id="values" aria-labelledby="values-heading">
-            <div class="values-header">
-                <p class="section-label">Core Values</p>
-                <div class="gold-divider" aria-hidden="true"></div>
-                <h2 class="section-title" id="values-heading">Built on <em>Principle</em></h2>
-            </div>
-            <div class="values-grid">
-                <div class="value-item reveal"><div class="value-word">Precision</div><p class="value-def">Accuracy, patience and disciplined execution in all strategic processes.</p></div>
-                <div class="value-item reveal reveal-delay-1"><div class="value-word">Insight</div><p class="value-def">Understanding patterns provides a strategic advantage in any environment.</p></div>
-                <div class="value-item reveal reveal-delay-2"><div class="value-word">Integrity</div><p class="value-def">Transparency, honesty and accountability in all engagements, without exception.</p></div>
-                <div class="value-item reveal reveal-delay-3"><div class="value-word">Consistency</div><p class="value-def">Structured approaches rather than emotional or impulsive decisions.</p></div>
-                <div class="value-item reveal reveal-delay-4"><div class="value-word">Restoration</div><p class="value-def">Every challenge presents an opportunity for renewal and growth.</p></div>
-                <div class="value-item reveal reveal-delay-5"><div class="value-word">Excellence</div><p class="value-def">Committed to continuous improvement and high-quality outcomes in everything we do.</p></div>
+            <div class="values-wrapper">
+                <!-- LEFT AD -->
+                <div class="values-ad reveal">
+                    <div class="ad-box">
+                        <span class="ad-label">Advertisement</span>
+                        <span class="ad-headline">✦ Advertise Here ✦</span>
+                        <p class="ad-text">Premium ad space on the Locust Harvest platform.</p>
+                        <span class="ad-url">locustharvest.com/advertise</span>
+                    </div>
+                </div>
+
+                <!-- MAIN CONTENT -->
+                <div class="values-main">
+                    <div class="values-header">
+                        <p class="section-label">Core Values</p>
+                        <div class="gold-divider" aria-hidden="true"></div>
+                        <h2 class="section-title" id="values-heading">Built on <em>Principle</em></h2>
+                    </div>
+                    <div class="values-grid">
+                        <div class="value-item reveal"><div class="value-word">Precision</div><p class="value-def">Accuracy, patience and disciplined execution in all strategic processes.</p></div>
+                        <div class="value-item reveal reveal-delay-1"><div class="value-word">Insight</div><p class="value-def">Understanding patterns provides a strategic advantage in any environment.</p></div>
+                        <div class="value-item reveal reveal-delay-2"><div class="value-word">Integrity</div><p class="value-def">Transparency, honesty and accountability in all engagements, without exception.</p></div>
+                        <div class="value-item reveal reveal-delay-3"><div class="value-word">Consistency</div><p class="value-def">Structured approaches rather than emotional or impulsive decisions.</p></div>
+                        <div class="value-item reveal reveal-delay-4"><div class="value-word">Restoration</div><p class="value-def">Every challenge presents an opportunity for renewal and growth.</p></div>
+                        <div class="value-item reveal reveal-delay-5"><div class="value-word">Excellence</div><p class="value-def">Committed to continuous improvement and high-quality outcomes in everything we do.</p></div>
+                    </div>
+                </div>
+
+                <!-- RIGHT AD -->
+                <div class="values-ad reveal reveal-delay-1">
+                    <div class="ad-box">
+                        <span class="ad-label">Advertisement</span>
+                        <span class="ad-headline">✦ Advertise Here ✦</span>
+                        <p class="ad-text">Premium ad space on the Locust Harvest platform.</p>
+                        <span class="ad-url">locustharvest.com/advertise</span>
+                    </div>
+                </div>
             </div>
         </section>
 
