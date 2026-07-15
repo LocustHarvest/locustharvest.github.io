@@ -83,7 +83,7 @@
     <meta name="twitter:image" content="https://www.locustharvest.com/logo.png">
     <meta name="twitter:site" content="@Plagues2Profit">
 
-    <!-- Google Fonts: trimmed to weights actually used in the CSS below (deferred, display=swap) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@300&display=swap" rel="stylesheet"></noscript>
 
@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — COMPACT ===== */
+        /* ===== HERO — VISIBLE TEXT FIX ===== */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -219,12 +219,13 @@
             flex-direction: column;
             justify-content: center;
             padding: 3rem 3rem 1.5rem;
-            overflow: hidden
+            overflow: visible; /* FIX: prevents text clipping */
         }
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201, 168, 76, .06) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 20% 80%, rgba(139, 46, 10, .08) 0%, transparent 50%), linear-gradient(175deg, #0A0804 0%, #1A1208 50%, #0D0B06 100%)
+            background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201, 168, 76, .06) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 20% 80%, rgba(139, 46, 10, .08) 0%, transparent 50%), linear-gradient(175deg, #0A0804 0%, #1A1208 50%, #0D0B06 100%);
+            z-index: 0;
         }
         .hero-bg::after {
             content: '';
@@ -234,13 +235,24 @@
             background-image: radial-gradient(1px 1px at 15% 25%, rgba(201, 168, 76, .4) 0%, transparent 100%), radial-gradient(1px 1px at 42% 18%, rgba(201, 168, 76, .3) 0%, transparent 100%), radial-gradient(1px 1px at 68% 35%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 85% 22%, rgba(201, 168, 76, .35) 0%, transparent 100%), radial-gradient(1px 1px at 30% 60%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 55% 70%, rgba(201, 168, 76, .15) 0%, transparent 100%)
         }
 
+        /* Ensure all hero text is above the background */
+        .hero-media,
+        .story-cta-top,
+        .hero-summary,
+        .hero-eyebrow,
+        .hero-title,
+        .hero-sub,
+        .hero-actions,
+        .hero-scroll-line {
+            position: relative;
+            z-index: 2;
+        }
+
         .hero-media {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: .75rem;
             margin-bottom: .25rem;
-            position: relative;
-            z-index: 2;
             max-height: 200px;
         }
         .hero-media-box {
@@ -301,8 +313,6 @@
 
         .story-cta-top {
             margin-bottom: .25rem;
-            position: relative;
-            z-index: 1;
             text-align: center;
         }
         .btn-story {
@@ -326,6 +336,7 @@
             color: var(--black);
         }
 
+        /* FIX: Explicit hex colors & safe display */
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
@@ -335,10 +346,11 @@
             text-align: justify;
             text-justify: inter-word;
             line-height: 1.5;
-            color: var(--cream);
+            color: #FAF8F3 !important; /* explicit white */
+            display: block;
         }
         .hero-handle {
-            color: var(--gold);
+            color: #C9A84C !important;
             font-weight: 500;
         }
 
@@ -348,8 +360,9 @@
             font-size: .6rem;
             letter-spacing: .35em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: #C9A84C !important;
             margin-bottom: .6rem;
+            display: block;
         }
 
         .hero-title {
@@ -358,12 +371,13 @@
             font-size: clamp(2.2rem, 5vw, 4.2rem);
             line-height: .95;
             letter-spacing: -.02em;
-            color: var(--white);
+            color: #FAF8F3 !important;
             margin-bottom: .15em;
+            display: block;
         }
         .hero-title em {
             font-style: italic;
-            color: var(--gold);
+            color: #C9A84C !important;
             display: block;
         }
 
@@ -371,10 +385,11 @@
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
             font-size: clamp(.85rem, 1.4vw, 1.1rem);
-            color: var(--mist);
+            color: #AFA89E !important;
             max-width: 520px;
             line-height: 1.5;
             margin-bottom: 1.5rem;
+            display: block;
         }
 
         .hero-actions {
@@ -437,6 +452,7 @@
             gap: .4rem;
             opacity: 0;
             animation: fadeIn 1s 1.4s forwards;
+            z-index: 2;
         }
         .hero-scroll-line span {
             font-family: 'Barlow Condensed', sans-serif;
@@ -1071,7 +1087,8 @@
                 padding: .5rem 1.5rem
             }
             .hero {
-                padding: 2.5rem 1.5rem 1.5rem
+                padding: 2.5rem 1.5rem 1.5rem;
+                overflow: visible;
             }
             .hero-media {
                 max-height: 160px;
@@ -1228,6 +1245,7 @@
             }
             .hero {
                 padding: 2rem 1rem 1rem;
+                overflow: visible;
             }
             .about,
             .platform,
@@ -1335,13 +1353,13 @@
     <!-- ===== MAIN CONTENT ===== -->
     <main>
 
-        <!-- ===== HERO — COMPACT ===== -->
+        <!-- ===== HERO ===== -->
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
             <div class="hero-media">
                 <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
-                    <div id="youtube-placeholder" style="text-align:center; color:var(--gold); font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.7rem;">
+                    <div id="youtube-placeholder" style="text-align:center; color:#C9A84C; font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.7rem;">
                         <div style="font-size:2.8rem; margin-bottom:0.3rem;">▶</div>
                         Watch the Story
                     </div>
@@ -1359,6 +1377,7 @@
                 <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
             </div>
 
+            <!-- ALL TEXT NOW HAS EXPLICIT COLORS AND DISPLAY:BLOCK -->
             <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
 
             <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
@@ -1603,4 +1622,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
