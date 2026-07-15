@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — PERFECT 50/50 SPLIT ===== */
+        /* ===== HERO — OPTIMIZED 60/40 SPLIT ===== */
         .hero {
             position: relative;
             display: flex;
@@ -246,19 +246,21 @@
         .hero-bottom {
             position: relative;
             z-index: 2;
-            flex: 1;
             min-height: 0;
-        }
-        .hero-top {
             display: flex;
+        }
+        /* TOP BOXES — NOW 60% of viewport */
+        .hero-top {
+            flex: 1.5;
             gap: 2rem;
             padding-bottom: 1rem;
             align-items: stretch;
         }
+        /* BOTTOM BOX — 40% of viewport, optimized */
         .hero-bottom {
-            padding-top: 1rem;
+            flex: 1;
+            padding-top: 0.5rem;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
-            display: flex;
             align-items: center;
         }
 
@@ -323,11 +325,11 @@
             margin: 0;
         }
 
-        /* ===== BOTTOM TEXT BOX — TIGHTER SPACING ===== */
+        /* ===== BOTTOM TEXT BOX — COMPACT & OPTIMIZED ===== */
         .hero-text-box {
-            background: rgba(26, 22, 16, 0.55);
-            backdrop-filter: blur(4px);
-            padding: 1.5rem 2rem;
+            background: rgba(26, 22, 16, 0.65);
+            backdrop-filter: blur(6px);
+            padding: 1rem 1.5rem;
             border-radius: 8px;
             border: 1px solid rgba(201, 168, 76, 0.2);
             width: 100%;
@@ -335,22 +337,21 @@
         .hero-eyebrow {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 500;
-            font-size: .65rem;
+            font-size: .6rem;
             letter-spacing: .35em;
             text-transform: uppercase;
             color: #C9A84C !important;
-            margin-bottom: .4rem;
+            margin-bottom: .2rem;
             display: block;
         }
-        /* SINGLE LINE TITLE — REDUCED FONT SIZE */
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
-            font-size: clamp(2rem, 3.8vw, 3.4rem); /* was 2.8rem → 4.2rem */
+            font-size: clamp(1.8rem, 3.2vw, 3rem);
             line-height: 1.05;
             letter-spacing: -.02em;
             color: #FAF8F3 !important;
-            margin-bottom: .2em;
+            margin-bottom: .1em;
             display: block;
         }
         .hero-title em {
@@ -360,26 +361,26 @@
         .hero-sub {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
-            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            font-size: clamp(.9rem, 1.2vw, 1rem);
             color: #AFA89E !important;
             max-width: 100%;
-            line-height: 1.4;
-            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
             display: block;
         }
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
-            font-size: .85rem;
+            font-size: .75rem;
             max-width: 100%;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.5;
+            line-height: 1.4;
             color: #FAF8F3 !important;
             display: block;
-            padding-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
             border-bottom: none;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
         .hero-handle {
             color: #C9A84C !important;
@@ -388,23 +389,23 @@
 
         .story-cta-bottom {
             text-align: center;
-            margin-top: 0.25rem;
+            margin-top: 0.2rem;
         }
         .btn-story {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 600;
-            font-size: .8rem;
+            font-size: .7rem;
             letter-spacing: .25em;
             text-transform: uppercase;
             background: transparent;
             color: var(--gold);
             border: 1px solid var(--gold);
-            padding: .8rem 2.5rem;
+            padding: .6rem 2rem;
             cursor: pointer;
             white-space: nowrap;
             transition: background .3s, color .3s;
             touch-action: manipulation;
-            min-height: 48px;
+            min-height: 40px;
             display: inline-block;
         }
         .btn-story:hover {
@@ -1202,13 +1203,12 @@
             .hero-text-box {
                 padding: 1rem;
             }
-            /* Smaller title on mobile */
             .hero-title {
                 font-size: clamp(1.6rem, 6vw, 2.2rem);
                 line-height: 1.05;
             }
             .hero-summary {
-                font-size: .85rem;
+                font-size: .8rem;
             }
             .btn-story {
                 font-size: .7rem;
@@ -1352,7 +1352,7 @@
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <!-- TOP 50%: YouTube and Ad side by side (equal height) -->
+            <!-- TOP 60%: YouTube and Ad side by side -->
             <div class="hero-top">
                 <div class="hero-media-col">
                     <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
@@ -1373,11 +1373,10 @@
                 </div>
             </div>
 
-            <!-- BOTTOM 50%: Tighter text box with Share button -->
+            <!-- BOTTOM 40%: Compact text box with Share button -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
-                    <!-- SINGLE LINE TITLE — SMALLER FONT -->
                     <h1 class="hero-title">From Plagues <em>to Profit.</em></h1>
                     <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
                     <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
@@ -1631,4 +1630,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
