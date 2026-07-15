@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <!-- ============================================================ -->
-  <!-- HOMEPAGE — Updated to today -->
+  <!-- HOMEPAGE -->
   <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/</loc>
@@ -16,13 +16,13 @@
   <!-- ============================================================ -->
   <url>
     <loc>https://www.locustharvest.com/about.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.locustharvest.com/contact.html</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,36 +32,46 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.locustharvest.com/story-submit.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.locustharvest.com/thank-you.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.locustharvest.com/terms.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
   <!-- ============================================================ -->
   <!-- 🆕 NEW BLOG POSTS (July 16, 2026) — Newest First -->
   <!-- ============================================================ -->
-  
-  <!-- Post 12 — Tanzania: Street Tailor to Fashion Empire -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-12.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 11 — South Sudan: 20 Litres of Honey to Global Exporter -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-11.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 10 — Zimbabwe: A' Level Failure to Logistics Empire -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-10.html</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 9 — Kenya: From Flood to $1 Million -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-9.html</loc>
     <lastmod>2026-07-16</lastmod>
@@ -70,97 +80,55 @@
   </url>
   
   <!-- ============================================================ -->
-  <!-- EXISTING BLOG POSTS (Newest First) -->
+  <!-- EXISTING BLOG POSTS -->
   <!-- ============================================================ -->
-  
-  <!-- Post 8 — Botswana: The 'Corn Lady' -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-8.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 7 — Nigeria: Beauty Icon -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-7.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 6 — Nigeria: Lanre -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-6.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 5 — How to Turn Crisis Into Catalyst -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-5.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Post 4 — Capitec CEO -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-4.html</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Post 3 — The Power of Resilience -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-3.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Post 2 — 5 Lessons from Entrepreneurs -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-2.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Post 1 — What Does "From Plague to Profit" Really Mean? -->
   <url>
     <loc>https://www.locustharvest.com/blog/post-1.html</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  
-  <!-- ============================================================ -->
-  <!-- STORY SUBMISSION & THANK YOU -->
-  <!-- ============================================================ -->
-  <url>
-    <loc>https://www.locustharvest.com/story-submit.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.locustharvest.com/thank-you.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  
-  <!-- ============================================================ -->
-  <!-- LEGAL -->
-  <!-- ============================================================ -->
-  <url>
-    <loc>https://www.locustharvest.com/terms.html</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
   
 </urlset>
