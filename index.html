@@ -211,13 +211,13 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — DESKTOP 50/50 LAYOUT ===== */
+        /* ===== HERO — NEW 50/50 SPLIT ===== */
         .hero {
             position: relative;
             min-height: 100vh;
             display: flex;
-            align-items: center;
-            padding: 6rem 3rem 3rem;
+            flex-direction: column;
+            padding: 6rem 3rem 2rem;
             overflow: visible;
         }
         .hero-bg {
@@ -234,26 +234,29 @@
             background-image: radial-gradient(1px 1px at 15% 25%, rgba(201, 168, 76, .4) 0%, transparent 100%), radial-gradient(1px 1px at 42% 18%, rgba(201, 168, 76, .3) 0%, transparent 100%), radial-gradient(1px 1px at 68% 35%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 85% 22%, rgba(201, 168, 76, .35) 0%, transparent 100%), radial-gradient(1px 1px at 30% 60%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 55% 70%, rgba(201, 168, 76, .15) 0%, transparent 100%)
         }
 
-        .hero-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            width: 100%;
+        .hero-top,
+        .hero-bottom {
             position: relative;
             z-index: 2;
+            flex: 1; /* each takes 50% of available height */
+            display: flex;
+            align-items: center;
+        }
+        .hero-top {
+            gap: 2rem;
+            padding-bottom: 1rem;
+        }
+        .hero-bottom {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
         }
 
-        /* LEFT COLUMN — 50% */
-        .hero-left {
-            flex: 0 0 50%;
+        /* Left column: YouTube */
+        .hero-media-col {
+            flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-        }
-        .hero-media {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         .hero-media-box {
             background: var(--dark2);
@@ -309,8 +312,12 @@
             margin: 0;
         }
 
+        /* Right column: Ad + Share button */
+        .ad-col {
+            gap: 1rem;
+        }
         .story-cta-top {
-            text-align: left;
+            text-align: center;
         }
         .btn-story {
             font-family: 'Barlow Condensed', sans-serif;
@@ -327,25 +334,23 @@
             transition: background .3s, color .3s;
             touch-action: manipulation;
             min-height: 44px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
         }
         .btn-story:hover {
             background: var(--gold);
             color: var(--black);
         }
 
-        /* RIGHT COLUMN — 50% TEXT BOX */
-        .hero-right {
-            flex: 0 0 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .hero-right-inner {
-            background: rgba(26, 22, 16, 0.65);
+        /* Bottom text box – full width */
+        .hero-text-box {
+            background: rgba(26, 22, 16, 0.6);
             backdrop-filter: blur(4px);
-            padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+            padding: 2rem 2.5rem;
             border-radius: 8px;
-            border: 1px solid rgba(201, 168, 76, 0.25);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            width: 100%;
         }
         .hero-eyebrow {
             font-family: 'Barlow Condensed', sans-serif;
@@ -382,56 +387,6 @@
             margin-bottom: 1.5rem;
             display: block;
         }
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .75rem 1.5rem;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        .btn-primary {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: .75rem;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            background: var(--gold);
-            color: var(--black);
-            border: none;
-            padding: .8rem 2.5rem;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            white-space: nowrap;
-            transition: background .3s, transform .2s;
-            touch-action: manipulation;
-            min-height: 44px;
-        }
-        .btn-primary:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px)
-        }
-        .btn-ghost {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 500;
-            font-size: .75rem;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            color: var(--mist);
-            text-decoration: none;
-            border-bottom: 1px solid var(--stone);
-            padding-bottom: 2px;
-            white-space: nowrap;
-            transition: color .3s, border-color .3s;
-            touch-action: manipulation;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-        }
-        .btn-ghost:hover {
-            color: var(--gold);
-            border-color: var(--gold);
-        }
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
@@ -453,7 +408,7 @@
 
         .hero-scroll-line {
             position: absolute;
-            bottom: 2rem;
+            bottom: 1.5rem;
             right: 3rem;
             display: flex;
             flex-direction: column;
@@ -1099,36 +1054,34 @@
             }
             .hero {
                 padding: 5rem 1.5rem 2rem;
-                align-items: flex-start;
+                min-height: auto;
             }
-            .hero-container {
+            .hero-top,
+            .hero-bottom {
+                flex: none;
+                height: auto;
+            }
+            .hero-top {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
+                padding-bottom: 1rem;
             }
-            .hero-left {
-                flex: 0 0 100%;
+            .hero-media-col {
                 width: 100%;
             }
-            .hero-media {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
+            .hero-bottom {
+                padding-top: 1rem;
             }
-            .hero-media-box {
-                aspect-ratio: 16/9;
-                max-height: none;
-            }
-            .hero-right {
-                flex: 0 0 100%;
-                width: 100%;
-            }
-            .hero-right-inner {
+            .hero-text-box {
                 padding: 1.5rem;
                 backdrop-filter: none;
                 background: rgba(26, 22, 16, 0.8);
             }
-            .story-cta-top {
-                text-align: center;
+            .ad-col {
+                gap: 1rem;
+            }
+            .btn-story {
+                max-width: 100%;
             }
             .about,
             .platform {
@@ -1227,15 +1180,28 @@
         }
 
         @media(max-width:640px) {
-            .hero-media {
-                grid-template-columns: 1fr;
+            .hero {
+                padding: 5rem 1rem 1.5rem;
+            }
+            .hero-top {
                 gap: 1rem;
             }
             .hero-media-box {
                 aspect-ratio: 16/9;
             }
-            .story-cta-top {
-                margin-bottom: .2rem;
+            .hero-text-box {
+                padding: 1.2rem;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-summary {
+                font-size: .85rem;
+            }
+            .btn-story {
+                font-size: .7rem;
+                padding: .6rem 1.5rem;
+                min-height: 40px;
             }
             .cycle-grid {
                 grid-template-columns: 1fr;
@@ -1257,26 +1223,11 @@
             body {
                 font-size: 13px;
             }
-            .hero-summary {
-                font-size: .85rem;
-            }
-            .hero-title {
-                font-size: 2.2rem;
-            }
             .btn-story,
-            .btn-primary,
-            .btn-ghost,
             .obj-tab,
             .cta-contact a {
                 min-height: 40px;
                 padding: .6rem 1.2rem;
-            }
-            .hero {
-                padding: 5rem 1rem 1.5rem;
-                align-items: flex-start;
-            }
-            .hero-right-inner {
-                padding: 1.2rem;
             }
             .about,
             .platform,
@@ -1388,41 +1339,37 @@
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <div class="hero-container">
-                <!-- LEFT COLUMN: Media + Share Button -->
-                <div class="hero-left">
-                    <div class="hero-media">
-                        <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
-                            <div id="youtube-placeholder" style="text-align:center; color:#C9A84C; font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.8rem;">
-                                <div style="font-size:3rem; margin-bottom:0.5rem;">▶</div>
-                                WATCH OUR STORY OF THE DAY
-                            </div>
+            <!-- TOP 50%: YouTube and Ad side by side -->
+            <div class="hero-top">
+                <div class="hero-media-col">
+                    <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
+                        <div id="youtube-placeholder" style="text-align:center; color:#C9A84C; font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.8rem;">
+                            <div style="font-size:3rem; margin-bottom:0.5rem;">▶</div>
+                            WATCH OUR STORY OF THE DAY
                         </div>
-                        <div class="hero-media-box">
-                            <div class="hero-media-label">Advertisement</div>
-                            <div class="adsense-placeholder">
-                                <span>✦ Advertise Here ✦</span>
-                                <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="hero-media-col ad-col">
+                    <div class="hero-media-box">
+                        <div class="hero-media-label">Advertisement</div>
+                        <div class="adsense-placeholder">
+                            <span>✦ Advertise Here ✦</span>
+                            <p>Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
                         </div>
                     </div>
                     <div class="story-cta-top">
                         <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
                     </div>
                 </div>
+            </div>
 
-                <!-- RIGHT COLUMN: Text Box -->
-                <div class="hero-right">
-                    <div class="hero-right-inner">
-                        <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
-                        <h1 class="hero-title">From Plagues<br><em>to Profit.</em></h1>
-                        <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
-                        <div class="hero-actions">
-                            <a href="#platform" class="btn-primary">Explore the Platform</a>
-                            <a href="#contact" class="btn-ghost">Get in touch →</a>
-                        </div>
-                        <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
-                    </div>
+            <!-- BOTTOM 50%: Full-width text box (no buttons) -->
+            <div class="hero-bottom">
+                <div class="hero-text-box">
+                    <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
+                    <h1 class="hero-title">From Plagues<br><em>to Profit.</em></h1>
+                    <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
+                    <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
                 </div>
             </div>
 
