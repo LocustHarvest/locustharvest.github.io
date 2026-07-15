@@ -211,7 +211,7 @@
             color: var(--gold-light)
         }
 
-        /* ===== HERO — OPTIMIZED 60/40 SPLIT ===== */
+        /* ===== HERO — BALANCED LAYOUT ===== */
         .hero {
             position: relative;
             display: flex;
@@ -249,17 +249,17 @@
             min-height: 0;
             display: flex;
         }
-        /* TOP BOXES — NOW 60% of viewport */
+        /* TOP BOXES — 55% of viewport (slightly reduced to give bottom more room) */
         .hero-top {
-            flex: 1.5;
+            flex: 1.2;
             gap: 2rem;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             align-items: stretch;
         }
-        /* BOTTOM BOX — 40% of viewport, optimized */
+        /* BOTTOM BOX — 45% of viewport, moved lower with extra padding-top */
         .hero-bottom {
             flex: 1;
-            padding-top: 0.5rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
             align-items: center;
         }
@@ -325,33 +325,33 @@
             margin: 0;
         }
 
-        /* ===== BOTTOM TEXT BOX — COMPACT & OPTIMIZED ===== */
+        /* ===== BOTTOM TEXT BOX — LARGER, ROOMIER ===== */
         .hero-text-box {
             background: rgba(26, 22, 16, 0.65);
             backdrop-filter: blur(6px);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
+            padding: 2rem 2.5rem;
+            border-radius: 10px;
             border: 1px solid rgba(201, 168, 76, 0.2);
             width: 100%;
         }
         .hero-eyebrow {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 500;
-            font-size: .6rem;
+            font-size: .65rem;
             letter-spacing: .35em;
             text-transform: uppercase;
             color: #C9A84C !important;
-            margin-bottom: .2rem;
+            margin-bottom: .4rem;
             display: block;
         }
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
-            font-size: clamp(1.8rem, 3.2vw, 3rem);
+            font-size: clamp(2rem, 4vw, 3.5rem);
             line-height: 1.05;
             letter-spacing: -.02em;
             color: #FAF8F3 !important;
-            margin-bottom: .1em;
+            margin-bottom: .15em;
             display: block;
         }
         .hero-title em {
@@ -361,26 +361,27 @@
         .hero-sub {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
-            font-size: clamp(.9rem, 1.2vw, 1rem);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             color: #AFA89E !important;
             max-width: 100%;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
             display: block;
         }
+        /* INCREASED SUMMARY TEXT SIZE */
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
-            font-size: .75rem;
+            font-size: clamp(0.9rem, 1.4vw, 1.1rem);
             max-width: 100%;
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.4;
+            line-height: 1.6;
             color: #FAF8F3 !important;
             display: block;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
             border-bottom: none;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
         }
         .hero-handle {
             color: #C9A84C !important;
@@ -389,23 +390,23 @@
 
         .story-cta-bottom {
             text-align: center;
-            margin-top: 0.2rem;
+            margin-top: 0.25rem;
         }
         .btn-story {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 600;
-            font-size: .7rem;
+            font-size: .85rem;
             letter-spacing: .25em;
             text-transform: uppercase;
             background: transparent;
             color: var(--gold);
             border: 1px solid var(--gold);
-            padding: .6rem 2rem;
+            padding: .8rem 3rem;
             cursor: pointer;
             white-space: nowrap;
             transition: background .3s, color .3s;
             touch-action: manipulation;
-            min-height: 40px;
+            min-height: 50px;
             display: inline-block;
         }
         .btn-story:hover {
@@ -1080,7 +1081,7 @@
             }
             .hero-bottom {
                 flex: none;
-                padding-top: 1rem;
+                padding-top: 1.5rem;
             }
             .hero-text-box {
                 padding: 1.5rem;
@@ -1208,7 +1209,7 @@
                 line-height: 1.05;
             }
             .hero-summary {
-                font-size: .8rem;
+                font-size: .85rem;
             }
             .btn-story {
                 font-size: .7rem;
@@ -1352,7 +1353,7 @@
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <!-- TOP 60%: YouTube and Ad side by side -->
+            <!-- TOP 55%: YouTube and Ad side by side -->
             <div class="hero-top">
                 <div class="hero-media-col">
                     <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
@@ -1373,7 +1374,7 @@
                 </div>
             </div>
 
-            <!-- BOTTOM 40%: Compact text box with Share button -->
+            <!-- BOTTOM 45%: Spacious text box with Share button -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
@@ -1630,4 +1631,4 @@
         }
     </script>
 </body>
-    </html>
+                    </html>
