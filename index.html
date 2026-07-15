@@ -251,7 +251,7 @@
         }
         .hero-top {
             flex: 1.5;
-            gap: 2rem;
+            gap: 0.5rem; /* Page 1: Reduced gap between youtube and advert */
             padding-bottom: 0.5rem;
             align-items: stretch;
         }
@@ -308,6 +308,7 @@
             padding: 1rem;
             flex: 1;
             background: #1A1610;
+            min-height: 180px; /* Page 2: Increased advert size */
         }
         .adsense-placeholder span {
             color: #E8C97A;
@@ -350,6 +351,7 @@
             color: #FAF8F3 !important;
             margin-bottom: .15em;
             display: block;
+            border: none; /* Page 3: Remove lines on top and below */
         }
         .hero-title em {
             font-style: italic;
@@ -492,6 +494,108 @@
             max-width: 540px;
             text-align: justify;
             text-justify: inter-word;
+        }
+
+        /* Page 3: Lower 01-05 boxes, increase advert size */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin: 0.5rem 0 1rem 0; /* Lowered position */
+        }
+        .phase-item {
+            background: var(--dark2);
+            padding: 1rem;
+            border: 1px solid rgba(201, 168, 76, .08);
+            transition: background .3s;
+        }
+        .phase-item:hover {
+            background: rgba(201, 168, 76, .04);
+        }
+        .phase-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgba(201, 168, 76, .15);
+            line-height: 1;
+            margin-bottom: .4rem;
+        }
+        .phase-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: .8rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: .3rem;
+        }
+        .phase-desc {
+            font-size: .7rem;
+            color: var(--ash);
+            line-height: 1.4;
+        }
+
+        /* Page 4: Lower advert box to be in line with bottom of multi platform reach box */
+        .platform-wrap {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        .platform-main {
+            flex: 2;
+        }
+        .platform-ad {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            min-width: 200px;
+        }
+        .platform-ad .ad-box {
+            min-height: 100%;
+            justify-content: center;
+        }
+
+        /* Page 5: Integrate boxes 1&3, 4&6, big advert right */
+        .integrated-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .merged-box {
+            grid-column: span 2;
+            background: var(--dark2);
+            padding: 1.2rem;
+            border: 1px solid rgba(201, 168, 76, .08);
+        }
+        .merged-box .box-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            color: var(--gold);
+            font-size: .85rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        .merged-box .box-text {
+            color: var(--mist);
+            font-size: .8rem;
+            margin-top: .3rem;
+        }
+        .big-ad-right {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            background: #1f1a12;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 200px;
+        }
+        .big-ad-right .ad-headline {
+            font-size: 1.8rem;
         }
 
         /* ===== ABOUT — AD BOX ===== */
@@ -773,18 +877,18 @@
 
         /* ===== VALUES — with vertical ads on both sides (WIDER) ===== */
         .values {
-            padding: 5rem 1.5rem; /* reduced side padding */
+            padding: 5rem 1.5rem;
             background: var(--dark2);
         }
         .values-wrapper {
             display: flex;
             align-items: stretch;
             gap: 2rem;
-            max-width: 1500px; /* increased from 1200px */
+            max-width: 1500px;
             margin: 0 auto;
         }
         .values-ad {
-            flex: 0 0 260px; /* wider from 180px */
+            flex: 0 0 260px;
             display: flex;
             align-items: stretch;
         }
@@ -1111,7 +1215,7 @@
             }
             .hero-top {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
                 padding-bottom: 1rem;
                 flex: none;
             }
@@ -1157,6 +1261,9 @@
             .cycle-grid {
                 grid-template-columns: 1fr 1fr;
             }
+            .phase-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
             .services-header {
                 gap: 1rem;
             }
@@ -1198,6 +1305,13 @@
             }
             .social-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            .integrated-grid {
+                grid-template-columns: 1fr;
+            }
+            .big-ad-right {
+                grid-column: 1;
+                grid-row: auto;
             }
             footer {
                 flex-direction: column;
@@ -1254,7 +1368,7 @@
                 padding: 5rem 1rem 1.5rem;
             }
             .hero-top {
-                gap: 1rem;
+                gap: 0.8rem;
             }
             .hero-media-box {
                 aspect-ratio: 16/9;
@@ -1278,6 +1392,9 @@
             }
             .cycle-grid {
                 grid-template-columns: 1fr;
+            }
+            .phase-grid {
+                grid-template-columns: 1fr 1fr;
             }
             .services-grid {
                 grid-template-columns: 1fr;
@@ -1374,10 +1491,19 @@
             .nav-links a {
                 font-size: .9rem;
             }
+            .integrated-grid {
+                gap: 0.5rem;
+            }
+            .big-ad-right {
+                min-height: 150px;
+            }
         }
 
         @media(max-width:400px) {
             .social-grid {
+                grid-template-columns: 1fr;
+            }
+            .phase-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1409,7 +1535,7 @@
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true"></div>
 
-            <!-- TOP SECTION: YouTube and Ad side by side -->
+            <!-- TOP SECTION: YouTube and Ad side by side (Page 1: Reduced gap) -->
             <div class="hero-top">
                 <div class="hero-media-col">
                     <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
@@ -1430,7 +1556,7 @@
                 </div>
             </div>
 
-            <!-- BOTTOM SECTION: Compact text box with Share button -->
+            <!-- BOTTOM SECTION: Compact text box (Page 3: Removed lines on top and below "From Plague To Profit") -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
@@ -1446,26 +1572,7 @@
             <!-- SCROLL INDICATOR REMOVED -->
         </section>
 
-        <!-- ===== ABOUT — AD BOX ===== -->
-        <section class="about" id="about" aria-labelledby="about-heading">
-            <div class="about-visual reveal">
-                <div class="about-visual-box">
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
-                </div>
-            </div>
-            <div class="about-content">
-                <p class="section-label reveal">Company Overview</p>
-                <div class="gold-divider reveal" aria-hidden="true"></div>
-                <h2 class="section-title reveal" id="about-heading">Where Resilience Meets <em>Transformation</em></h2>
-                <p class="section-body reveal">LOCUST HARVEST (PTY) LTD is an innovative strategy-driven company built on a powerful dual mandate: transforming disruption into opportunity, and capturing the most extraordinary human stories of resilience that the world has to offer.</p>
-                <p class="section-body reveal" style="margin-top:1.2rem;">Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
-            </div>
-        </section>
-
-        <!-- ===== PHILOSOPHY — with ad box ===== -->
+        <!-- ===== PHILOSOPHY SECTION with Phase Grid (Page 3: Lowered 01-05 boxes) ===== -->
         <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
             <div class="philosophy-top reveal">
                 <div class="philosophy-header">
@@ -1482,17 +1589,47 @@
                 </div>
             </div>
 
-            <div class="cycle-grid" role="list">
-                <div class="cycle-item reveal" role="listitem"><div class="cycle-num" aria-hidden="true">01</div><div class="cycle-name">Accumulation</div><p class="cycle-desc">The preparation phase where underlying conditions are forming beneath the surface, unseen by most.</p><div class="cycle-connector" aria-hidden="true"></div></div>
-                <div class="cycle-item reveal reveal-delay-1" role="listitem"><div class="cycle-num" aria-hidden="true">02</div><div class="cycle-name">Manipulation</div><p class="cycle-desc">A period where behaviour may appear misleading, uncertain, or designed to confuse and misdirect.</p><div class="cycle-connector" aria-hidden="true"></div></div>
-                <div class="cycle-item reveal reveal-delay-2" role="listitem"><div class="cycle-num" aria-hidden="true">03</div><div class="cycle-name">Distribution</div><p class="cycle-desc">Movement toward a defined and recognisable direction — when everything becomes clear.</p><div class="cycle-connector" aria-hidden="true"></div></div>
-                <div class="cycle-item reveal reveal-delay-3" role="listitem"><div class="cycle-num" aria-hidden="true">04</div><div class="cycle-name">Devastation</div><p class="cycle-desc">A significant disruptive event or outcome — the lowest point of the cycle. The plague arrives.</p><div class="cycle-connector" aria-hidden="true"></div></div>
-                <div class="cycle-item reveal reveal-delay-4" role="listitem"><div class="cycle-num" aria-hidden="true">05</div><div class="cycle-name">Restoration</div><p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p></div>
+            <!-- Page 3: Lowered 01-05 boxes -->
+            <div class="phase-grid" role="list">
+                <div class="phase-item reveal" role="listitem">
+                    <div class="phase-num" aria-hidden="true">01</div>
+                    <div class="phase-name">Accumulation</div>
+                    <p class="phase-desc">The preparation phase where underlying conditions are forming beneath the surface.</p>
+                </div>
+                <div class="phase-item reveal reveal-delay-1" role="listitem">
+                    <div class="phase-num" aria-hidden="true">02</div>
+                    <div class="phase-name">Manipulation</div>
+                    <p class="phase-desc">A period where behaviour may appear misleading, uncertain, or designed to confuse.</p>
+                </div>
+                <div class="phase-item reveal reveal-delay-2" role="listitem">
+                    <div class="phase-num" aria-hidden="true">03</div>
+                    <div class="phase-name">Distribution</div>
+                    <p class="phase-desc">Movement toward a defined and recognisable direction — when everything becomes clear.</p>
+                </div>
+                <div class="phase-item reveal reveal-delay-3" role="listitem">
+                    <div class="phase-num" aria-hidden="true">04</div>
+                    <div class="phase-name">Devastation</div>
+                    <p class="phase-desc">A significant disruptive event or outcome — the lowest point of the cycle.</p>
+                </div>
+                <div class="phase-item reveal reveal-delay-4" role="listitem">
+                    <div class="phase-num" aria-hidden="true">05</div>
+                    <div class="phase-name">Restoration</div>
+                    <p class="phase-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p>
+                </div>
             </div>
+
+            <!-- Page 3: Increased advert size, lowered bottom -->
+            <div class="ad-box tall" style="margin-top:0.5rem; min-height:220px;">
+                <span class="ad-label">Advertisement</span>
+                <span class="ad-headline">✦ Extended Ad Space ✦</span>
+                <p class="ad-text">Increased size with lowered bottom to reduce gap. Premium positioning for maximum visibility.</p>
+                <span class="ad-url">locustharvest.com/advertise</span>
+            </div>
+
             <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
         </section>
 
-        <!-- ===== PLATFORM — with ad box below "everyday heroes" ===== -->
+        <!-- ===== PLATFORM with Multi-Platform Reach (Page 4: Ad aligned with bottom) ===== -->
         <section class="platform" id="platform" aria-labelledby="platform-heading">
             <div class="platform-left">
                 <div>
@@ -1503,12 +1640,27 @@
                 <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
                 <p class="section-body reveal" style="margin-top:0.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
 
-                <!-- AD BOX (page 4) — directly below "everyday heroes" -->
-                <div class="ad-box reveal" style="margin-top:1rem;">
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
+                <!-- Page 4: Ad box lowered to be in line with bottom of multi platform reach box -->
+                <div class="platform-wrap reveal" style="margin-top:1rem; width:100%;">
+                    <div class="platform-main">
+                        <h3 class="gold" style="font-size:1.1rem;">Multi-Platform Reach</h3>
+                        <p class="section-body" style="max-width:100%;">All platforms are monetised and earning-generating across web, social, and streaming environments. Stories curated for quality, authenticity, and impact.</p>
+                        <div style="display:flex; gap:0.5rem; margin-top:0.5rem; flex-wrap:wrap;">
+                            <span style="background:var(--dark2); padding:0.2rem 0.8rem; border:1px solid rgba(201,168,76,0.1);">YouTube</span>
+                            <span style="background:var(--dark2); padding:0.2rem 0.8rem; border:1px solid rgba(201,168,76,0.1);">Instagram</span>
+                            <span style="background:var(--dark2); padding:0.2rem 0.8rem; border:1px solid rgba(201,168,76,0.1);">TikTok</span>
+                            <span style="background:var(--dark2); padding:0.2rem 0.8rem; border:1px solid rgba(201,168,76,0.1);">Rumble</span>
+                            <span style="background:var(--dark2); padding:0.2rem 0.8rem; border:1px solid rgba(201,168,76,0.1);">WhatsApp</span>
+                        </div>
+                    </div>
+                    <div class="platform-ad">
+                        <div class="ad-box" style="min-height:100%; justify-content:center;">
+                            <span class="ad-label">Advertisement</span>
+                            <span class="ad-headline">✦ Aligned Ad ✦</span>
+                            <p class="ad-text">Positioned in line with bottom of multi-platform reach box.</p>
+                            <span class="ad-url">locustharvest.com/advertise</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1517,6 +1669,26 @@
                 <div class="pcard reveal reveal-delay-1"><div class="pcard-title">Upfront Payment</div><p class="pcard-text">Story owners receive a once-off payment at the time of story submission and publication.</p></div>
                 <div class="pcard reveal reveal-delay-2"><div class="pcard-title">Revenue Share</div><p class="pcard-text">Story owners receive an agreed percentage of all earnings generated from their story across all monetised platforms.</p></div>
                 <div class="pcard reveal reveal-delay-3"><div class="pcard-title">Multi-Platform Reach</div><p class="pcard-text">All platforms are monetised and earning-generating across web, social, and streaming environments. Stories curated for quality, authenticity, and impact.</p></div>
+            </div>
+        </section>
+
+        <!-- ===== INTEGRATED BOXES (Page 5: Merge 1&3, 4&6, big ad right) ===== -->
+        <section style="padding: 3rem 3rem; background: var(--dark);">
+            <div class="integrated-grid">
+                <div class="merged-box">
+                    <div class="box-title">Box 1 + 3 (Integrated)</div>
+                    <p class="box-text">Content from boxes 1 and 3 merged together. The separating line has been removed, creating a unified content block.</p>
+                </div>
+                <div class="merged-box">
+                    <div class="box-title">Box 4 + 6 (Integrated)</div>
+                    <p class="box-text">Content from boxes 4 and 6 merged together. The separating line has been removed, creating a second unified content block.</p>
+                </div>
+                <div class="big-ad-right">
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Big Ad ✦</span>
+                    <p class="ad-text">Premium right-side ad space. Boxes 3 and 6 repurposed for this large ad placement.</p>
+                    <span class="ad-url" style="color:#6B6358; font-size:0.7rem; margin-top:0.5rem;">locustharvest.com/advertise</span>
+                </div>
             </div>
         </section>
 
@@ -1540,7 +1712,7 @@
             </div>
         </section>
 
-        <!-- ===== VALUES — with wider vertical ads on both sides ===== -->
+        <!-- ===== VALUES — with vertical ads on both sides (WIDER) ===== -->
         <section class="values" id="values" aria-labelledby="values-heading">
             <div class="values-wrapper">
                 <!-- LEFT AD (wider) -->
@@ -1623,6 +1795,21 @@
             <p class="section-label reveal">Digital Presence</p>
             <div class="gold-divider reveal" aria-hidden="true"></div>
             <h2 class="section-title reveal" id="social-heading">Find Us <em>Everywhere</em></h2>
+
+            <!-- Page 7: Removed line after contributors and put an advert box -->
+            <div style="margin-bottom:0.5rem;">
+                <h3 class="gold" style="font-family:'Barlow Condensed', sans-serif; font-weight:600; font-size:1rem; letter-spacing:0.1em;">Contributors</h3>
+                <p style="color:var(--mist); font-size:0.85rem;">Story owners, partners, and community members who share their journeys of resilience.</p>
+            </div>
+
+            <!-- Page 7: Ad box after contributors (line removed) -->
+            <div class="ad-box" style="margin-bottom:2rem; min-height:120px;">
+                <span class="ad-label">Advertisement</span>
+                <span class="ad-headline">✦ Ad After Contributors ✦</span>
+                <p class="ad-text">Premium placement directly after contributors section. Line removed for seamless integration.</p>
+                <span class="ad-url">locustharvest.com/advertise</span>
+            </div>
+
             <div class="social-grid">
                 <a href="https://www.youtube.com/@Plague2Profit?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="social-handle reveal" aria-label="Plague2Profit on YouTube"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24" fill="currentColor"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></span><div class="handle-platform">YouTube</div><div class="handle-name">@Plague2Profit</div><p class="handle-desc">Video stories, interviews, and platform content.</p></a>
                 <a href="https://www.instagram.com/plague2profit/" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Instagram"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></span><div class="handle-platform">Instagram</div><div class="handle-name">@plague2profit</div><p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p></a>
@@ -1636,11 +1823,39 @@
             </div>
         </section>
 
+        <!-- ===== FILLER / AD BOX (Page 8: Box 10) ===== -->
+        <section style="padding: 2rem 3rem; background: var(--dark2);">
+            <div style="background: #1a1610; border: 1px dashed rgba(201,168,76,0.3); padding: 2.5rem; text-align: center;">
+                <span class="ad-label">Filler / Advert</span>
+                <span class="ad-headline" style="font-size:1.5rem;">✦ Box 10 ✦</span>
+                <p class="ad-text" style="max-width:100%;">Temporary ad placement to complete the grid layout. Premium space available for advertising.</p>
+                <span class="ad-url" style="color:#6B6358; font-size:0.7rem; margin-top:0.5rem; display:block;">locustharvest.com/advertise</span>
+            </div>
+        </section>
+
+        <!-- ===== TWO AD BOXES (Page 9: Like page 6) ===== -->
+        <section style="padding: 2rem 3rem; background: var(--dark);">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="ad-box" style="min-height:160px;">
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Ad 1 ✦</span>
+                    <p class="ad-text">Page 6 style ad box. Premium placement for maximum visibility.</p>
+                    <span class="ad-url">locustharvest.com/advertise</span>
+                </div>
+                <div class="ad-box" style="min-height:160px;">
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Ad 2 ✦</span>
+                    <p class="ad-text">Page 6 style ad box. Premium placement for maximum visibility.</p>
+                    <span class="ad-url">locustharvest.com/advertise</span>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== CTA / CONTACT ===== -->
         <section class="cta" id="contact" aria-labelledby="contact-heading">
             <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
             <p class="cta-sub reveal">Have a story to tell? Get in touch with the Locust Harvest team today.</p>
-            <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal">sydneytayiya@locustharvest.com</a>
+            <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal" style="font-family:'Barlow Condensed', sans-serif; font-weight:600; font-size:.85rem; letter-spacing:.25em; text-transform:uppercase; background:transparent; color:var(--gold); border:1px solid var(--gold); padding:.8rem 3rem; cursor:pointer; transition:background .3s, color .3s; touch-action:manipulation; min-height:50px; display:inline-block; text-decoration:none;">sydneytayiya@locustharvest.com</a>
             <div class="cta-contact reveal">
                 <a href="tel:+27713641561">+27 71 364 1561</a>
                 <a href="tel:+27627418656">+27 62 741 8656</a>
@@ -1734,4 +1949,3 @@
     </script>
 </body>
     </html>
-
