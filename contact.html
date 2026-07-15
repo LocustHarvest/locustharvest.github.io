@@ -131,4 +131,63 @@
       <form action="https://formsubmit.co/sydneytayiya@locustharvest.com" method="POST">
         <input type="text" name="_honey" style="display:none;">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Locust Harvest Contact Message
+        <input type="hidden" name="_subject" value="New Locust Harvest Contact Message">
+        <input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html?nocache=1">
+        <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" maxlength="100" required><span class="counter" id="nameCounter">0/100</span></div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" maxlength="100" required><span class="counter" id="emailCounter">0/100</span></div>
+        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" maxlength="200"><span class="counter" id="subjectCounter">0/200</span></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" maxlength="3000" required></textarea><span class="counter" id="messageCounter">0/3000</span></div>
+        <button type="submit" class="btn-submit-form">Send Message →</button>
+      </form>
+      <p style="font-size:0.75rem;color:var(--ash);margin-top:1rem;">We'll get back to you within 48 hours.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-brand">LOCUST HARVEST</div>
+    <div class="footer-reg">Reg No: 2026/392620/07 · Tax No: 9050539320</div>
+  </div>
+  <div class="footer-right">
+    &copy; 2026 Locust Harvest (Pty) Ltd<br>
+    "From Plague to Profit"<br>
+    <a href="/terms.html">Terms &amp; Conditions</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) { navLinks.classList.remove('open'); }
+    });
+  });
+  function setupCounter(inputId, counterId) {
+    const input = document.getElementById(inputId);
+    const counter = document.getElementById(counterId);
+    if (!input || !counter) return;
+    const max = parseInt(input.getAttribute('maxlength'), 10);
+    function update() {
+      const current = input.value.length;
+      counter.textContent = current + '/' + max;
+      counter.classList.remove('warning', 'danger');
+      if (current > max * 0.95) counter.classList.add('danger');
+      else if (current > max * 0.80) counter.classList.add('warning');
+    }
+    input.addEventListener('input', update);
+    update();
+  }
+  setupCounter('name', 'nameCounter');
+  setupCounter('email', 'emailCounter');
+  setupCounter('subject', 'subjectCounter');
+  setupCounter('message', 'messageCounter');
+</script>
+</body>
+</html>
