@@ -86,5 +86,286 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
 <style>
-  /* ✅ Minified CSS with font-display: swap */
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dim:#7A6330;--black:#0A0804;--dark:#110E07;--dark2:#1A1610;--dark3:#241F14;--stone:#2E2820;--ash:#6B6358;--mist:#AFA89E;--cream:#F0EBE0;--white:#FAF8F3;--red-ember:#8B2E0A}html{scroll-behavior:smooth}body{background:var(--black);color:var(--cream);font-family:'Barlow',sans-serif;font-weight:300;font-size:14px;overflow-x:hidden;font-display:swap}body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.75rem 4rem;background:linear-gradient(to bottom,rgba(10,8,4,.95) 0%,transparent 100%);transition:background .4s}nav.scrolled{background:rgba(10,8,4,.97);border-bottom:1px solid rgba(201,168,76,.15)}.nav-logo{text-decoration:none;display:flex;align-items:center}.nav-logo img{height:125px;width:auto;display:block}.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:n
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dim:#7A6330;--black:#0A0804;--dark:#110E07;--dark2:#1A1610;--dark3:#241F14;--stone:#2E2820;--ash:#6B6358;--mist:#AFA89E;--cream:#F0EBE0;--white:#FAF8F3;--red-ember:#8B2E0A}html{scroll-behavior:smooth}body{background:var(--black);color:var(--cream);font-family:'Barlow',sans-serif;font-weight:300;font-size:14px;overflow-x:hidden;font-display:swap}body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.75rem 4rem;background:linear-gradient(to bottom,rgba(10,8,4,.95) 0%,transparent 100%);transition:background .4s}nav.scrolled{background:rgba(10,8,4,.97);border-bottom:1px solid rgba(201,168,76,.15)}.nav-logo{text-decoration:none;display:flex;align-items:center}.nav-logo img{height:125px;width:auto;display:block}.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none;margin:0;padding:0;height:100%}.nav-links li{display:flex;align-items:center;margin:0;padding:0;height:100%}.nav-links a{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .3s;line-height:1;padding:.5rem 0;display:flex;align-items:center;touch-action:manipulation;min-height:44px}.nav-links a:hover{color:var(--gold)}.hamburger{display:none;background:0 0;border:none;color:var(--gold);font-size:2rem;cursor:pointer;padding:.5rem;transition:color .3s;touch-action:manipulation;min-height:44px;min-width:44px}.hamburger:hover{color:var(--gold-light)}.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 3rem;overflow:hidden}.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(201,168,76,.06) 0%,transparent 60%),radial-gradient(ellipse 50% 80% at 20% 80%,rgba(139,46,10,.08) 0%,transparent 50%),linear-gradient(175deg,#0A0804 0%,#1A1208 50%,#0D0B06 100%)}.hero-bg::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 15% 25%,rgba(201,168,76,.4) 0%,transparent 100%),radial-gradient(1px 1px at 42% 18%,rgba(201,168,76,.3) 0%,transparent 100%),radial-gradient(1px 1px at 68% 35%,rgba(201,168,76,.2) 0%,transparent 100%),radial-gradient(1px 1px at 85% 22%,rgba(201,168,76,.35) 0%,transparent 100%),radial-gradient(1px 1px at 30% 60%,rgba(201,168,76,.2) 0%,transparent 100%),radial-gradient(1px 1px at 55% 70%,rgba(201,168,76,.15) 0%,transparent 100%)}.hero-media{display:grid;grid-template-columns:2fr 1fr;gap:2rem;margin-bottom:.5rem;position:relative;z-index:2;opacity:0;animation:fadeUp 1s .08s forwards}.hero-media-box{background:var(--dark2);border:1px solid rgba(201,168,76,.15);padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;aspect-ratio:16/9}.hero-media-label{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);padding:.5rem .75rem;font-size:.65rem;background:rgba(0,0,0,.3);flex-shrink:0;z-index:2}.hero-media-box iframe{width:100%;flex:1;min-height:200px;border:none;display:block;aspect-ratio:16/9}.adsense-placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:var(--mist);border:1px dashed rgba(201,168,76,.25);padding:1.5rem;min-height:200px;flex:1}.adsense-placeholder span{color:var(--gold);font-size:1.2rem;margin-bottom:.75rem;font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em}.adsense-placeholder p{font-size:.8rem;color:var(--ash);line-height:1.5}.story-cta-top{margin-bottom:.5rem;opacity:0;animation:fadeUp 1s .05s forwards;position:relative;z-index:1;text-align:center}.btn-story{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.88rem;letter-spacing:.25em;text-transform:uppercase;background:transparent;color:var(--gold);border:1px solid var(--gold);padding:1.1rem 3rem;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s;touch-action:manipulation;min-height:54px}.btn-story:hover{background:var(--gold);color:var(--black)}.hero-summary{font-family:'Barlow',sans-serif;font-weight:300;font-size:clamp(1rem,1.8vw,1.4rem);max-width:900px;margin-bottom:3rem;text-align:justify;text-justify:inter-word;opacity:0;animation:fadeUp 1s .1s forwards}.hero-handle{color:var(--gold);font-weight:500}.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s .3s forwards}.hero-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.02em;color:var(--white);margin-bottom:.3em;opacity:0;animation:fadeUp 1s .5s forwards}.hero-title em{font-style:italic;color:var(--gold);display:block}.hero-sub{font-family:'Barlow',sans-serif;font-weight:300;font-size:clamp(1rem,2vw,1.3rem);color:var(--mist);max-width:520px;line-height:1.6;margin-bottom:3rem;opacity:0;animation:fadeUp 1s .7s forwards}.hero-actions{display:flex;flex-wrap:wrap;gap:1.25rem 1.5rem;align-items:center;opacity:0;animation:fadeUp 1s .9s forwards}.btn-primary{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:1rem 2.5rem;cursor:pointer;text-decoration:none;display:inline-block;white-space:nowrap;transition:background .3s,transform .2s;touch-action:manipulation;min-height:44px}.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}.btn-ghost{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist);text-decoration:none;border-bottom:1px solid var(--stone);padding-bottom:2px;white-space:nowrap;transition:color .3s,border-color .3s;touch-action:manipulation;min-height:44px}.btn-ghost:hover{color:var(--gold);border-color:var(--gold)}.hero-scroll-line{position:absolute;bottom:2rem;right:4rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fadeIn 1s 1.4s forwards}.hero-scroll-line span{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);writing-mode:vertical-rl;transform:rotate(180deg)}.hero-scroll-line::after{content:'';width:1px;height:60px;background:linear-gradient(to bottom,var(--gold-dim),transparent);animation:lineGrow 1.5s 1.6s both}.gold-divider{width:60px;height:2px;background:var(--gold);margin-bottom:1.5rem}section{position:relative}.section-label{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}.section-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.15;color:var(--white);margin-bottom:1.2rem}.section-title em{font-style:italic;color:var(--gold)}.section-body{font-size:.9rem;line-height:1.65;color:var(--mist);max-width:540px;text-align:justify;text-justify:inter-word}.about{padding:8rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;background:var(--dark)}.about-visual{position:relative;height:480px}.about-visual-box{position:absolute;inset:0;background:linear-gradient(135deg,var(--dark3) 0%,var(--dark2) 100%);border:1px solid rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;overflow:hidden}.about-visual-box::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%)}.about-motto{font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:2.5rem;color:var(--gold);text-align:center;line-height:1.2;padding:2rem;position:relative;z-index:1}.about-motto::before,.about-motto::after{content:'"';display:block;font-size:6rem;line-height:.5;color:rgba(201,168,76,.15);font-family:'Playfair Display',serif}.about-visual-accent{position:absolute;top:-20px;right:-20px;width:120px;height:120px;border:2px solid rgba(201,168,76,.2)}.about-visual-accent2{position:absolute;bottom:-20px;left:-20px;width:80px;height:80px;background:var(--red-ember);opacity:.4}.philosophy{padding:8rem 4rem;background:var(--black);overflow:hidden}.philosophy-header{max-width:600px;margin-bottom:5rem}.cycle-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid rgba(201,168,76,.12)}.cycle-item{padding:2.5rem 2rem;border-right:1px solid rgba(201,168,76,.12);position:relative;transition:background .4s}.cycle-item:last-child{border-right:none}.cycle-item:hover{background:rgba(201,168,76,.04)}.cycle-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:rgba(201,168,76,.1);line-height:1;margin-bottom:1rem;transition:color .4s}.cycle-item:hover .cycle-num{color:rgba(201,168,76,.25)}.cycle-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}.cycle-desc{font-size:.85rem;line-height:1.65;color:var(--ash);text-align:justify;text-justify:inter-word}.cycle-connector{position:absolute;top:50%;right:-1px;width:12px;height:12px;border-radius:50%;background:var(--gold-dim);transform:translate(50%,-50%);z-index:2}.cycle-item:last-child .cycle-connector{display:none}.philosophy-quote{margin:4rem 0 0 0!important;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.2rem,2.5vw,1.8rem);color:var(--gold-dim);text-align:center;padding:2rem;border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1);border-left:none!important;border-right:none!important}.platform{padding:8rem 4rem;background:var(--dark);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}.platform-cards{display:flex;flex-direction:column;gap:1.5rem}.pcard{background:var(--dark2);border:1px solid rgba(201,168,76,.1);padding:2rem;transition:border-color .3s,transform .3s;position:relative;overflow:hidden}.pcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transition:transform .3s;transform-origin:bottom}.pcard:hover::before{transform:scaleY(1)}.pcard:hover{transform:translateX(6px);border-color:rgba(201,168,76,.3)}.pcard-title{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}.pcard-text{font-size:.9rem;line-height:1.7;color:var(--mist);text-align:justify;text-justify:inter-word}.services{padding:8rem 4rem;background:var(--black)}.services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:5rem}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.1)}.service-item{background:var(--black);padding:3rem 2.5rem;transition:background .4s}.service-item:hover{background:var(--dark)}.service-icon{width:40px;height:40px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:var(--gold);font-size:1.1rem}.service-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem}.service-text{font-size:.85rem;line-height:1.7;color:var(--ash);text-align:justify;text-justify:inter-word}.values{padding:8rem 4rem;background:var(--dark2);text-align:center}.values-header{max-width:500px;margin:0 auto 5rem}.values-header .gold-divider{margin:0 auto 1.5rem}.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;max-width:900px;margin:0 auto}.value-word{font-family:'Playfair Display',serif;font-weight:700;font-size:1.5rem;color:var(--gold);margin-bottom:.75rem}.value-def{font-size:.85rem;line-height:1.7;color:var(--ash);text-align:justify;text-justify:inter-word}.objectives{padding:8rem 4rem;background:var(--black)}.obj-tabs{display:flex;border-bottom:1px solid rgba(201,168,76,.15);margin-bottom:3rem}.obj-tab{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;padding:1rem 2rem;cursor:pointer;color:var(--ash);border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s;background:0 0;border-top:none;border-left:none;border-right:none;touch-action:manipulation;min-height:44px}.obj-tab.active{color:var(--gold);border-bottom-color:var(--gold)}.obj-panel{display:none}.obj-panel.active{display:block}.obj-list{list-style:none;display:flex;flex-direction:column;gap:1.25rem;max-width:700px}.obj-list li{display:flex;align-items:flex-start;gap:1.25rem;font-size:1rem;line-height:1.65;color:var(--mist);text-align:justify;text-justify:inter-word}.obj-list li::before{content:'▶';font-size:.55rem;color:var(--gold);margin-top:.5em;flex-shrink:0}.social{padding:8rem 4rem;background:var(--dark)}.social-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:4rem}.social-handle{background:var(--dark3);border:1px solid rgba(201,168,76,.08);padding:2rem;transition:border-color .3s,background .3s,transform .3s;text-decoration:none;display:block;touch-action:manipulation}.social-handle:hover{border-color:rgba(201,168,76,.35);background:rgba(201,168,76,.04);transform:translateY(-4px)}.handle-platform{font-family:'Barlow Condensed',sans-serif;font-weight:500;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash);margin-bottom:.5rem}.handle-icon{font-size:1.8rem;margin-bottom:.75rem;display:block;color:var(--gold)}.handle-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:var(--gold);margin-bottom:.5rem}.handle-desc{font-size:.82rem;line-height:1.6;color:var(--ash);text-align:justify;text-justify:inter-word}.cta{padding:8rem 4rem;background:var(--dark3);text-align:center;position:relative;overflow:hidden}.cta::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%);pointer-events:none}.cta-title{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;color:var(--white);margin-bottom:1.5rem}.cta-title em{font-style:italic;color:var(--gold)}.cta-sub{font-size:1.05rem;color:var(--mist);max-width:500px;margin:0 auto 3rem}.cta-contact{display:flex;flex-direction:column;gap:.5rem;align-items:center;margin-top:3rem}.cta-contact a{font-family:'Barlow Condensed',sans-serif;font-weight:400;font-size:.85rem;letter-spacing:.12em;color:var(--ash);text-decoration:none;transition:color .3s;touch-action:manipulation;min-height:44px}.cta-contact a:hover{color:var(--gold)}footer{background:var(--black);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(201,168,76,.1)}.footer-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--gold)}.footer-reg{font-size:.72rem;color:var(--ash);letter-spacing:.05em;margin-top:.25rem}.footer-right{font-size:.72rem;color:var(--ash);text-align:right;letter-spacing:.05em}footer .footer-reg,footer .footer-right{color:#b0a89a}@keyframes fadeUp{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes lineGrow{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}.reveal-delay-5{transition-delay:.5s}@media(max-width:1024px){nav{padding:.75rem 2rem}.hero{padding:7rem 2rem 3rem}.hero-media{grid-template-columns:1fr;margin-bottom:.5rem}.story-cta-top{margin-bottom:.5rem}.about,.platform{grid-template-columns:1fr;gap:3rem;padding:5rem 2rem}.about-visual{height:300px}.cycle-grid{grid-template-columns:1fr 1fr}.services-header{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr;padding:0 2rem}.services{padding:5rem 2rem}.values-grid{grid-template-columns:1fr 1fr;gap:2rem}.values,.objectives,.social,.cta{padding:5rem 2rem}.philosophy{padding:5rem 2rem}.social-grid{grid-template-columns:repeat(3,1fr)}footer{flex-direction:column;gap:1rem;text-align:center;padding:2rem}.footer-right{text-align:center}.nav-logo img{height:120px}.hamburger{display:block}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--black);padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid rgba(201,168,76,.1);box-shadow:0 8px 20px rgba(0,0,0,.5);align-items:stretch;height:auto}.nav-links.open{display:flex}.nav-links li{height:auto;display:block}.nav-links a{font-size:1.1rem;padding:.5rem 0;border-bottom:1px solid rgba(201,168,76,.05);display:block;text-align:center;line-height:1.5}.nav-links li:last-child a{border-bottom:none}}@media(max-width:640px){.hero-media{grid-template-columns:1fr;margin-bottom:.5rem}.story-cta-top{margin-bottom:.5rem}.cycle-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr 1fr}.services-header{gap:2rem}body{font-size:13px}.hero-summary{font-size:1rem}.hero-title{font-size:3rem}.btn-story,.btn-primary,.btn-ghost,.obj-tab,.nav-links a,.cta-contact a{min-height:48px;padding:.75rem 1.5rem}}@media(max-width:400px){.social-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="Locust Harvest home">
+    <img src="logo.png?v=2" alt="Locust Harvest — From Plague to Profit" height="72" width="112" fetchpriority="high">
+  </a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About Us</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#platform">Platform</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-media">
+    <div class="hero-media-box" style="position:relative; background:#111; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
+      <div id="youtube-placeholder" style="text-align:center; color:var(--gold); font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.8rem;">
+        <div style="font-size:4rem; margin-bottom:0.5rem;">▶</div>
+        Watch the Story
+      </div>
+    </div>
+    <div class="hero-media-box">
+      <div class="hero-media-label">Advertisement</div>
+      <div class="adsense-placeholder">
+        <span style="color:#e8c97a;">✦ Advertise Here ✦</span>
+        <p style="color:#b8a99a;">Premium ad space on the Locust Harvest platform.<br>Powered by Google AdSense.</p>
+      </div>
+    </div>
+  </div>
+  <div class="story-cta-top">
+    <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
+  </div>
+  <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
+  <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
+  <h1 class="hero-title">From Plagues<br><em>to Profit.</em></h1>
+  <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
+  <div class="hero-actions">
+    <a href="#platform" class="btn-primary">Explore the Platform</a>
+    <a href="#contact" class="btn-ghost">Get in touch →</a>
+  </div>
+  <div class="hero-scroll-line" aria-hidden="true"><span>Scroll</span></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="about-visual reveal">
+    <div class="about-visual-box">
+      <div class="about-motto">From<br>Plagues<br>to Profit</div>
+    </div>
+    <div class="about-visual-accent" aria-hidden="true"></div>
+    <div class="about-visual-accent2" aria-hidden="true"></div>
+  </div>
+  <div class="about-content">
+    <p class="section-label reveal">Company Overview</p>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="about-heading">Where Resilience Meets <em>Transformation</em></h2>
+    <p class="section-body reveal">LOCUST HARVEST (PTY) LTD is an innovative strategy-driven company built on a powerful dual mandate: transforming disruption into opportunity, and capturing the most extraordinary human stories of resilience that the world has to offer.</p>
+    <p class="section-body reveal" style="margin-top:1.5rem;">Inspired by the natural behaviour of locust swarms and the biblical principle of restoration following devastation, we combine analytical precision with the raw power of human storytelling — creating platforms where individuals and organisations rise from challenge to triumph.</p>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
+  <div class="philosophy-header">
+    <p class="section-label reveal">Strategic Philosophy</p>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="philosophy-heading">The Five <em>Phases</em> of Every Environment</h2>
+    <p class="section-body reveal">Every environment — personal, financial, or societal — moves through identifiable phases. Understanding them allows for strategic positioning rather than reactive decision-making.</p>
+  </div>
+  <div class="cycle-grid" role="list">
+    <div class="cycle-item reveal" role="listitem"><div class="cycle-num" aria-hidden="true">01</div><div class="cycle-name">Accumulation</div><p class="cycle-desc">The preparation phase where underlying conditions are forming beneath the surface, unseen by most.</p><div class="cycle-connector" aria-hidden="true"></div></div>
+    <div class="cycle-item reveal reveal-delay-1" role="listitem"><div class="cycle-num" aria-hidden="true">02</div><div class="cycle-name">Manipulation</div><p class="cycle-desc">A period where behaviour may appear misleading, uncertain, or designed to confuse and misdirect.</p><div class="cycle-connector" aria-hidden="true"></div></div>
+    <div class="cycle-item reveal reveal-delay-2" role="listitem"><div class="cycle-num" aria-hidden="true">03</div><div class="cycle-name">Distribution</div><p class="cycle-desc">Movement toward a defined and recognisable direction — when everything becomes clear.</p><div class="cycle-connector" aria-hidden="true"></div></div>
+    <div class="cycle-item reveal reveal-delay-3" role="listitem"><div class="cycle-num" aria-hidden="true">04</div><div class="cycle-name">Devastation</div><p class="cycle-desc">A significant disruptive event or outcome — the lowest point of the cycle. The plague arrives.</p><div class="cycle-connector" aria-hidden="true"></div></div>
+    <div class="cycle-item reveal reveal-delay-4" role="listitem"><div class="cycle-num" aria-hidden="true">05</div><div class="cycle-name">Restoration</div><p class="cycle-desc">The recovery phase where new opportunities emerge, growth begins, and profit is claimed.</p></div>
+  </div>
+  <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
+</section>
+
+<!-- ===== PLATFORM ===== -->
+<section class="platform" id="platform" aria-labelledby="platform-heading">
+  <div>
+    <p class="section-label reveal">The Platform</p>
+    <div class="gold-divider reveal" aria-hidden="true"></div>
+    <h2 class="section-title reveal" id="platform-heading">A Global <em>Storytelling</em> Ecosystem</h2>
+    <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
+    <p class="section-body reveal" style="margin-top:1.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
+  </div>
+  <div class="platform-cards">
+    <div class="pcard reveal"><div class="pcard-title">What We Capture</div><p class="pcard-text">Authentic journeys from devastation, hardship or failure to restoration and success. Narratives that inspire, educate and motivate global audiences.</p></div>
+    <div class="pcard reveal reveal-delay-1"><div class="pcard-title">Upfront Payment</div><p class="pcard-text">Story owners receive a once-off payment at the time of story submission and publication.</p></div>
+    <div class="pcard reveal reveal-delay-2"><div class="pcard-title">Revenue Share</div><p class="pcard-text">Story owners receive an agreed percentage of all earnings generated from their story across all monetised platforms.</p></div>
+    <div class="pcard reveal reveal-delay-3"><div class="pcard-title">Multi-Platform Reach</div><p class="pcard-text">All platforms are monetised and earning-generating across web, social, and streaming environments. Stories curated for quality, authenticity, and impact.</p></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="services-header">
+    <div>
+      <p class="section-label reveal">Products &amp; Services</p>
+      <div class="gold-divider reveal" aria-hidden="true"></div>
+      <h2 class="section-title reveal" id="services-heading">What We <em>Offer</em></h2>
+    </div>
+    <p class="section-body reveal">Structured services that combine the power of human narratives — delivering insight, impact, and opportunity.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-item reveal"><div class="service-icon" aria-hidden="true">◈</div><h3 class="service-name">Storytelling Platform</h3><p class="service-text">Global "From Plague to Profit" digital story platform with story acquisition, curation, production and multi-platform distribution.</p></div>
+    <div class="service-item reveal reveal-delay-1"><div class="service-icon" aria-hidden="true">◎</div><h3 class="service-name">Pattern Analysis</h3><p class="service-text">Strategic identification of behavioural structures and directional tendencies across dynamic environments.</p></div>
+    <div class="service-item reveal reveal-delay-2"><div class="service-icon" aria-hidden="true">◇</div><h3 class="service-name">Opportunity Timing</h3><p class="service-text">Methods to determine favourable timing for decisions — the difference between reactive and strategic positioning.</p></div>
+    <div class="service-item reveal reveal-delay-3"><div class="service-icon" aria-hidden="true">▲</div><h3 class="service-name">Analytical Methods</h3><p class="service-text">Structured rule-based approaches to interpreting change and building reliable decision frameworks.</p></div>
+    <div class="service-item reveal reveal-delay-4"><div class="service-icon" aria-hidden="true">✦</div><h3 class="service-name">Educational Resources</h3><p class="service-text">Principles of structured analytical observation — training and resources to sharpen strategic thinking.</p></div>
+    <div class="service-item reveal reveal-delay-5"><div class="service-icon" aria-hidden="true">⟡</div><h3 class="service-name">Research &amp; Development</h3><p class="service-text">Continuous improvement of methodologies and development of proprietary analytical and pattern recognition technologies.</p></div>
+  </div>
+</section>
+
+<!-- ===== VALUES ===== -->
+<section class="values" id="values" aria-labelledby="values-heading">
+  <div class="values-header">
+    <p class="section-label">Core Values</p>
+    <div class="gold-divider" aria-hidden="true"></div>
+    <h2 class="section-title" id="values-heading">Built on <em>Principle</em></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-item reveal"><div class="value-word">Precision</div><p class="value-def">Accuracy, patience and disciplined execution in all strategic processes.</p></div>
+    <div class="value-item reveal reveal-delay-1"><div class="value-word">Insight</div><p class="value-def">Understanding patterns provides a strategic advantage in any environment.</p></div>
+    <div class="value-item reveal reveal-delay-2"><div class="value-word">Integrity</div><p class="value-def">Transparency, honesty and accountability in all engagements, without exception.</p></div>
+    <div class="value-item reveal reveal-delay-3"><div class="value-word">Consistency</div><p class="value-def">Structured approaches rather than emotional or impulsive decisions.</p></div>
+    <div class="value-item reveal reveal-delay-4"><div class="value-word">Restoration</div><p class="value-def">Every challenge presents an opportunity for renewal and growth.</p></div>
+    <div class="value-item reveal reveal-delay-5"><div class="value-word">Excellence</div><p class="value-def">Committed to continuous improvement and high-quality outcomes in everything we do.</p></div>
+  </div>
+</section>
+
+<!-- ===== OBJECTIVES ===== -->
+<section class="objectives" id="objectives" aria-labelledby="objectives-heading">
+  <p class="section-label reveal">Business Objectives</p>
+  <div class="gold-divider reveal" aria-hidden="true"></div>
+  <h2 class="section-title reveal" id="objectives-heading" style="max-width:600px;">The Road <em>Ahead</em></h2>
+  <div class="obj-tabs reveal" role="tablist">
+    <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
+    <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
+    <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
+  </div>
+  <div class="obj-panel active" id="tab-short" role="tabpanel">
+    <ul class="obj-list">
+      <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
+      <li>Begin acquiring and publishing inspirational story content from global contributors</li>
+      <li>Establish structured analytical framework and tools</li>
+      <li>Build strong brand identity and social media presence across all channels</li>
+    </ul>
+  </div>
+  <div class="obj-panel" id="tab-medium" role="tabpanel">
+    <ul class="obj-list">
+      <li>Expand platform reach and grow audience across all channels</li>
+      <li>Develop automated story submission and curation tools</li>
+      <li>Build strategic content partnerships and media collaborations</li>
+      <li>Increase monetisation and story owner revenue sharing</li>
+    </ul>
+  </div>
+  <div class="obj-panel" id="tab-long" role="tabpanel">
+    <ul class="obj-list">
+      <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
+      <li>Develop proprietary analytical and pattern recognition technologies</li>
+      <li>Publish research, books and comprehensive training programs</li>
+      <li>Expand internationally across all major markets</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SOCIAL ===== -->
+<section class="social" id="social" aria-labelledby="social-heading">
+  <p class="section-label reveal">Digital Presence</p>
+  <div class="gold-divider reveal" aria-hidden="true"></div>
+  <h2 class="section-title reveal" id="social-heading">Find Us <em>Everywhere</em></h2>
+  <div class="social-grid">
+    <a href="https://www.youtube.com/@Plague2Profit?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="social-handle reveal" aria-label="Plague2Profit on YouTube"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24" fill="currentColor"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></span><div class="handle-platform">YouTube</div><div class="handle-name">@Plague2Profit</div><p class="handle-desc">Video stories, interviews, and platform content.</p></a>
+    <a href="https://www.instagram.com/plague2profit/" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit on Instagram"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></span><div class="handle-platform">Instagram</div><div class="handle-name">@plague2profit</div><p class="handle-desc">Visual stories, reels, and inspiration from around the world.</p></a>
+    <a href="https://www.tiktok.com/@plagues2profit" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-2" aria-label="Plague2Profit on TikTok"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="currentColor"><path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.4A162.6,162.6,0,1,1,185,188.3V278.2a74.6,74.6,0,1,0,52.2,71.2V0l0,0h52.8a124.5,124.5,0,0,0,12.5,40.8,125,125,0,0,0,35.2,40.8,123.9,123.9,0,0,0,49.3,21.2V209.9z"/></svg></span><div class="handle-platform">TikTok</div><div class="handle-name">@plague2profit</div><p class="handle-desc">Short-form content, highlights, and viral inspiration stories.</p></a>
+    <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on X Twitter"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span><div class="handle-platform">X (Twitter)</div><div class="handle-name">@Plague2Profit</div><p class="handle-desc">Strategy insights, news, and platform updates.</p></a>
+    <a href="https://www.facebook.com/Plague2Profit" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-4" aria-label="Plague2Profit on Facebook"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></span><div class="handle-platform">Facebook</div><div class="handle-name">Plague2Profit</div><p class="handle-desc">Community updates and story features.</p></a>
+    <a href="https://t.me/Plague2Profit" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-1" aria-label="Plague2Profit Telegram channel"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24" fill="currentColor"><path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.6-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.3.4-38.2 24.3-107.9 71.4-10.2 7-19.5 10.4-27.8 10.2-9.1-.2-26.6-5.1-39.6-9.3-16-5.2-28.7-8-27.6-16.9.6-4.9 7.4-9.9 19-15.1 73.9-32.2 123.3-53.5 148.3-64 24.9-10.5 30.1-12.3 33.5-12.4 1.3 0 4.2.3 6.1 1.8 2.3 1.8 3.2 4.6 3.6 7.1.5 3.3-.2 9.8-.5 10.2z"/></svg></span><div class="handle-platform">Telegram</div><div class="handle-name">Plague2Profit</div><p class="handle-desc">Direct updates and community discussions via Telegram.</p></a>
+    <a href="https://whatsapp.com/channel/0029VbCkSQBC1FuI6MsbqR3j" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-2" aria-label="Follow Plague2Profit on WhatsApp"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span><div class="handle-platform">WhatsApp Channel</div><div class="handle-name">Plague2Profit</div><p class="handle-desc">Follow our WhatsApp channel for story drops and announcements.</p></a>
+    <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-3" aria-label="Plague2Profit on Rumble"><span class="handle-icon" aria-hidden="true"><svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M396.7 169.6c0-29.7-16.9-46.4-46.7-46.4h-26.4v92.8h26.4c29.8 0 46.7-16.7 46.7-46.4zM256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 256 256 16zm94.7 297.6c-6.4 9.6-15.2 17.1-25.9 22.1l36.3 60.5h-55.4l-30.1-51.2h-22.1v51.2h-49.3V123.2h75.7c26.6 0 47.9 6.5 63.1 19.3 15.3 12.9 22.9 31 22.9 54.1 0 26.3-9.7 45.9-29.2 59.6 6.5 4.3 12 9.9 16.1 16.6 4.1 6.8 6.2 14.2 6.2 22.4 0 8.7-2.5 17-7.3 24.4z"/></svg></span><div class="handle-platform">Rumble</div><div class="handle-name">@Plague2Profit</div><p class="handle-desc">Video platform — long and short-form stories of resilience, devastation and restoration for global audiences.</p></a>
+    <a href="https://www.linkedin.com/in/locust-harvest-40aa8b420/" target="_blank" rel="noopener noreferrer" class="social-handle reveal reveal-delay-4" aria-label="Locust Harvest on LinkedIn"><span class="handle-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="currentColor"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg></span><div class="handle-platform">LinkedIn</div><div class="handle-name">Locust Harvest</div><p class="handle-desc">Professional network and company updates.</p></a>
+  </div>
+</section>
+
+<!-- ===== CTA / CONTACT ===== -->
+<section class="cta" id="contact" aria-labelledby="contact-heading">
+  <h2 class="cta-title reveal" id="contact-heading">Your Plague Is<br><em>Your Profit</em></h2>
+  <p class="cta-sub reveal">Have a story to tell? Get in touch with the Locust Harvest team today.</p>
+  <a href="mailto:sydneytayiya@locustharvest.com" class="btn-primary reveal">sydneytayiya@locustharvest.com</a>
+  <div class="cta-contact reveal">
+    <a href="tel:+27713641561">+27 71 364 1561</a>
+    <a href="tel:+27627418656">+27 62 741 8656</a>
+    <a href="https://www.locustharvest.com" target="_blank">www.locustharvest.com</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div>
+    <div class="footer-brand">LOCUST HARVEST</div>
+    <div class="footer-reg">Reg No: 2026/392620/07 · Tax No: 9050539320</div>
+  </div>
+  <div class="footer-right">
+    &copy; 2026 Locust Harvest (Pty) Ltd<br>
+    "From Plague to Profit"<br>
+    <a href="terms.html" style="font-size:0.72rem; color:var(--ash); text-decoration:none; letter-spacing:0.05em; transition:color 0.3s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#6B6358'">Terms &amp; Conditions</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  function showTab(id, event) {
+    document.querySelectorAll('.obj-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    document.querySelectorAll('.obj-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+    event.target.setAttribute('aria-selected', 'true');
+  }
+
+  function openStoryForm() {
+    window.open('/story-submit.html', '_blank');
+  }
+
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('open');
+  }
+
+  // ✅ AUTO-CLOSE MENU ON LINK CLICK
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+      }
+    });
+  });
+
+  // ✅ LAZY LOAD YOUTUBE VIDEO
+  function loadVideo(el) {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/coCyUaVpVTg?mute=1&rel=0&autoplay=1');
+    iframe.setAttribute('title', 'Plague2Profit video');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.style.position = 'absolute';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    el.innerHTML = '';
+    el.appendChild(iframe);
+  }
+</script>
+</body>
+      </html>
