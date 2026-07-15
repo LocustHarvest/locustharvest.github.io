@@ -554,14 +554,27 @@
             letter-spacing: 0.05em;
         }
 
+        /* ===== PHILOSOPHY — with ad box ===== */
         .philosophy {
             padding: 5rem 3rem;
             background: var(--black);
             overflow: hidden;
         }
-        .philosophy-header {
-            max-width: 540px;
+        .philosophy-top {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
             margin-bottom: 3rem;
+        }
+        .philosophy-top .philosophy-header {
+            flex: 0 0 auto;
+            max-width: 540px;
+            margin-bottom: 0;
+        }
+        .philosophy-top .ad-box {
+            flex: 1;
+            min-height: 200px;
+            justify-content: center;
         }
         .cycle-grid {
             display: grid;
@@ -1109,6 +1122,13 @@
             .about-visual {
                 height: 280px;
             }
+            .philosophy-top {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .philosophy-top .philosophy-header {
+                max-width: 100%;
+            }
             .cycle-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1402,14 +1422,23 @@
             </div>
         </section>
 
-        <!-- ===== PHILOSOPHY ===== -->
+        <!-- ===== PHILOSOPHY — with ad box ===== -->
         <section class="philosophy" id="philosophy" aria-labelledby="philosophy-heading">
-            <div class="philosophy-header">
-                <p class="section-label reveal">Strategic Philosophy</p>
-                <div class="gold-divider reveal" aria-hidden="true"></div>
-                <h2 class="section-title reveal" id="philosophy-heading">The Five <em>Phases</em> of Every Environment</h2>
-                <p class="section-body reveal">Every environment — personal, financial, or societal — moves through identifiable phases. Understanding them allows for strategic positioning rather than reactive decision-making.</p>
+            <div class="philosophy-top reveal">
+                <div class="philosophy-header">
+                    <p class="section-label">Strategic Philosophy</p>
+                    <div class="gold-divider" aria-hidden="true"></div>
+                    <h2 class="section-title" id="philosophy-heading">The Five <em>Phases</em> of Every Environment</h2>
+                    <p class="section-body">Every environment — personal, financial, or societal — moves through identifiable phases. Understanding them allows for strategic positioning rather than reactive decision-making.</p>
+                </div>
+                <div class="ad-box">
+                    <span class="ad-label">Advertisement</span>
+                    <span class="ad-headline">✦ Advertise Here ✦</span>
+                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
+                    <span class="ad-url">locustharvest.com/advertise</span>
+                </div>
             </div>
+
             <div class="cycle-grid" role="list">
                 <div class="cycle-item reveal" role="listitem"><div class="cycle-num" aria-hidden="true">01</div><div class="cycle-name">Accumulation</div><p class="cycle-desc">The preparation phase where underlying conditions are forming beneath the surface, unseen by most.</p><div class="cycle-connector" aria-hidden="true"></div></div>
                 <div class="cycle-item reveal reveal-delay-1" role="listitem"><div class="cycle-num" aria-hidden="true">02</div><div class="cycle-name">Manipulation</div><p class="cycle-desc">A period where behaviour may appear misleading, uncertain, or designed to confuse and misdirect.</p><div class="cycle-connector" aria-hidden="true"></div></div>
@@ -1636,4 +1665,4 @@
         }
     </script>
 </body>
-            </html>
+</html>
