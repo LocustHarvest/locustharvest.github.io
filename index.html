@@ -480,6 +480,13 @@
             user-select: none;
         }
 
+        /* ===== AD #4 – bottom‑left alignment (box only) ===== */
+        .ad-bottom-left {
+            align-self: flex-start;    /* align box left inside flex column */
+            margin-top: auto;          /* push box to bottom of the column */
+            min-height: 140px;         /* compact height, content centered inside */
+        }
+
         /* ===== rest of the page ===== */
         section {
             position: relative
@@ -677,7 +684,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: start;
+            align-items: stretch;       /* both columns equal height */
         }
         .platform-left {
             display: flex;
@@ -1451,7 +1458,7 @@
                 </div>
             </div>
 
-            <!-- BOTTOM SECTION: Compact text box with Share button -->
+            <!-- BOTTOM SECTION -->
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
@@ -1513,7 +1520,7 @@
             <blockquote class="philosophy-quote reveal">"From Plague To Profit."</blockquote>
         </section>
 
-        <!-- ===== PLATFORM — AD BOX #4 ===== -->
+        <!-- ===== PLATFORM — AD BOX #4 (bottom‑left) ===== -->
         <section class="platform" id="platform" aria-labelledby="platform-heading">
             <div class="platform-left">
                 <div>
@@ -1524,8 +1531,8 @@
                 <p class="section-body reveal">At the heart of Locust Harvest (Pty) Ltd is a collection of premium, monetised digital platforms where people from every corner of the world can tell their personal stories of rising against all odds.</p>
                 <p class="section-body reveal" style="margin-top:0.5rem;">We capture inspirational true stories of triumph over extraordinary adversity — from entrepreneurs to survivors, community leaders to everyday heroes.</p>
 
-                <!-- AD BOX #4 -->
-                <div class="ad-box reveal" style="margin-top:1rem;">
+                <!-- AD BOX #4 – bottom‑left alignment (box only) -->
+                <div class="ad-box ad-bottom-left reveal">
                     <span class="ad-number">Ad #4</span>
                     <span class="ad-label">Advertisement</span>
                     <span class="ad-headline">✦ Advertise Here ✦</span>
@@ -1542,7 +1549,7 @@
             </div>
         </section>
 
-        <!-- ===== SERVICES — header stacked left ===== -->
+        <!-- ===== SERVICES ===== -->
         <section class="services" id="services" aria-labelledby="services-heading">
             <div class="services-header">
                 <div>
@@ -1562,7 +1569,7 @@
             </div>
         </section>
 
-        <!-- ===== VALUES — with wider vertical ads on both sides (Ad #5 & Ad #6) ===== -->
+        <!-- ===== VALUES — with vertical ads on both sides (Ad #5 & Ad #6) ===== -->
         <section class="values" id="values" aria-labelledby="values-heading">
             <div class="values-wrapper">
                 <!-- LEFT AD #5 -->
