@@ -327,7 +327,7 @@
         .hero-text-box {
             background: rgba(26, 22, 16, 0.55);
             backdrop-filter: blur(4px);
-            padding: 1.5rem 2rem; /* Reduced from 2rem 2.5rem */
+            padding: 1.5rem 2rem;
             border-radius: 8px;
             border: 1px solid rgba(201, 168, 76, 0.2);
             width: 100%;
@@ -342,11 +342,11 @@
             margin-bottom: .4rem;
             display: block;
         }
-        /* SINGLE LINE TITLE */
+        /* SINGLE LINE TITLE — REDUCED FONT SIZE */
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
-            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-size: clamp(2rem, 3.8vw, 3.4rem); /* was 2.8rem → 4.2rem */
             line-height: 1.05;
             letter-spacing: -.02em;
             color: #FAF8F3 !important;
@@ -364,7 +364,7 @@
             color: #AFA89E !important;
             max-width: 100%;
             line-height: 1.4;
-            margin-bottom: 0.75rem; /* Reduced from 1.5rem */
+            margin-bottom: 0.75rem;
             display: block;
         }
         .hero-summary {
@@ -377,9 +377,9 @@
             line-height: 1.5;
             color: #FAF8F3 !important;
             display: block;
-            padding-bottom: 0.75rem; /* Reduced from 1.5rem */
-            border-bottom: none; /* Removed to save space */
-            margin-bottom: 0.5rem; /* Reduced from 1.5rem */
+            padding-bottom: 0.75rem;
+            border-bottom: none;
+            margin-bottom: 0.5rem;
         }
         .hero-handle {
             color: #C9A84C !important;
@@ -1202,8 +1202,9 @@
             .hero-text-box {
                 padding: 1rem;
             }
+            /* Smaller title on mobile */
             .hero-title {
-                font-size: 2.2rem;
+                font-size: clamp(1.6rem, 6vw, 2.2rem);
                 line-height: 1.05;
             }
             .hero-summary {
@@ -1376,7 +1377,7 @@
             <div class="hero-bottom">
                 <div class="hero-text-box">
                     <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
-                    <!-- SINGLE LINE TITLE -->
+                    <!-- SINGLE LINE TITLE — SMALLER FONT -->
                     <h1 class="hero-title">From Plagues <em>to Profit.</em></h1>
                     <p class="hero-sub">Transforming disruption into opportunity — through the power of human storytelling.</p>
                     <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
