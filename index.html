@@ -487,25 +487,6 @@
             min-height: 140px;
         }
 
-        /* ===== NEW: Ad boxes in Services & Objectives ===== */
-        .services-header-wrapper,
-        .objectives-header-wrapper {
-            display: flex;
-            align-items: stretch;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        .services-header-content,
-        .objectives-header-content {
-            flex: 1;
-        }
-        .services-ad-box,
-        .objectives-ad-box {
-            flex: 0 0 300px;
-            max-width: 400px;
-            min-height: auto;
-        }
-
         /* ===== rest of the page ===== */
         section {
             position: relative
@@ -759,12 +740,32 @@
             text-justify: inter-word;
         }
 
-        /* ===== SERVICES — header stacked left ===== */
+        /* ===== SERVICES — AD #7 stretched ===== */
         .services {
             padding: 5rem 3rem;
             background: var(--black);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .services-header-content {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .services-ad-box {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: stretch;
+            min-height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .services-grid {
+            grid-column: 1;
+            grid-row: 2;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1px;
@@ -860,9 +861,29 @@
             text-justify: inter-word;
         }
 
+        /* ===== OBJECTIVES — AD #8 left 50% ===== */
         .objectives {
             padding: 5rem 3rem;
             background: var(--black);
+        }
+        .objectives-wrapper {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        .objectives-ad {
+            flex: 0 0 50%;
+            max-width: 50%;
+            display: flex;
+            align-items: stretch;
+        }
+        .objectives-ad .ad-box {
+            min-height: 100%;
+            justify-content: center;
+        }
+        .objectives-content {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
         .obj-tabs {
             display: flex;
@@ -1192,23 +1213,18 @@
             .cycle-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .services-header-wrapper,
-            .objectives-header-wrapper {
-                flex-direction: column;
+            .services {
+                grid-template-columns: 1fr;
                 gap: 2rem;
+                padding: 3.5rem 1.5rem;
             }
-            .services-ad-box,
-            .objectives-ad-box {
-                flex: 1 1 auto;
-                max-width: 100%;
+            .services-ad-box {
+                grid-column: 1;
+                grid-row: auto;
                 min-height: 180px;
             }
             .services-grid {
                 grid-template-columns: 1fr 1fr;
-                padding: 0 1.5rem;
-            }
-            .services {
-                padding: 3.5rem 1.5rem;
             }
             .values-wrapper {
                 flex-direction: column;
@@ -1230,6 +1246,18 @@
             }
             .values {
                 padding: 3.5rem 1.5rem;
+            }
+            .objectives-wrapper {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .objectives-ad {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .objectives-content {
+                flex: 1 1 100%;
+                max-width: 100%;
             }
             .objectives,
             .social,
@@ -1324,7 +1352,6 @@
             }
             .services-grid {
                 grid-template-columns: 1fr;
-                padding: 0;
             }
             .values-grid {
                 grid-template-columns: 1fr;
@@ -1561,22 +1588,21 @@
             </div>
         </section>
 
-        <!-- ===== SERVICES — AD BOX #7 (Next to "What We Offer") ===== -->
+        <!-- ===== SERVICES — AD BOX #7 (Stretched) ===== -->
         <section class="services" id="services" aria-labelledby="services-heading">
-            <div class="services-header-wrapper reveal">
-                <div class="services-header-content">
-                    <p class="section-label">Products &amp; Services</p>
-                    <div class="gold-divider" aria-hidden="true"></div>
-                    <h2 class="section-title" id="services-heading">What We <em>Offer</em></h2>
-                    <p class="section-body">Structured services that combine the power of human narratives — delivering insight, impact, and opportunity.</p>
-                </div>
-                <div class="ad-box services-ad-box">
-                    <span class="ad-number">Ad #7</span>
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
-                </div>
+            <div class="services-header-content reveal">
+                <p class="section-label">Products &amp; Services</p>
+                <div class="gold-divider" aria-hidden="true"></div>
+                <h2 class="section-title" id="services-heading">What We <em>Offer</em></h2>
+                <p class="section-body">Structured services that combine the power of human narratives — delivering insight, impact, and opportunity.</p>
+            </div>
+
+            <div class="services-ad-box ad-box reveal">
+                <span class="ad-number">Ad #7</span>
+                <span class="ad-label">Advertisement</span>
+                <span class="ad-headline">✦ Advertise Here ✦</span>
+                <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
+                <span class="ad-url">locustharvest.com/advertise</span>
             </div>
 
             <div class="services-grid">
@@ -1633,52 +1659,56 @@
             </div>
         </section>
 
-        <!-- ===== OBJECTIVES — AD BOX #8 (Next to "The Road Ahead") ===== -->
+        <!-- ===== OBJECTIVES — AD BOX #8 (Left 50%) ===== -->
         <section class="objectives" id="objectives" aria-labelledby="objectives-heading">
-            <div class="objectives-header-wrapper reveal">
-                <div class="objectives-header-content">
-                    <p class="section-label">Business Objectives</p>
-                    <div class="gold-divider" aria-hidden="true"></div>
-                    <h2 class="section-title" id="objectives-heading">The Road <em>Ahead</em></h2>
-                    <p class="section-body">Our strategic roadmap for growth, impact, and global reach.</p>
+            <div class="objectives-wrapper reveal">
+                <div class="objectives-ad">
+                    <div class="ad-box">
+                        <span class="ad-number">Ad #8</span>
+                        <span class="ad-label">Advertisement</span>
+                        <span class="ad-headline">✦ Advertise Here ✦</span>
+                        <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
+                        <span class="ad-url">locustharvest.com/advertise</span>
+                    </div>
                 </div>
-                <div class="ad-box objectives-ad-box">
-                    <span class="ad-number">Ad #8</span>
-                    <span class="ad-label">Advertisement</span>
-                    <span class="ad-headline">✦ Advertise Here ✦</span>
-                    <p class="ad-text">Premium ad space on the Locust Harvest platform. Reach a global audience of innovators and change-makers.</p>
-                    <span class="ad-url">locustharvest.com/advertise</span>
-                </div>
-            </div>
+                <div class="objectives-content">
+                    <div class="objectives-header">
+                        <p class="section-label">Business Objectives</p>
+                        <div class="gold-divider" aria-hidden="true"></div>
+                        <h2 class="section-title" id="objectives-heading">The Road <em>Ahead</em></h2>
+                        <p class="section-body">Our strategic roadmap for growth, impact, and global reach.</p>
+                    </div>
 
-            <div class="obj-tabs reveal" role="tablist">
-                <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
-                <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
-                <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
-            </div>
-            <div class="obj-panel active" id="tab-short" role="tabpanel">
-                <ul class="obj-list">
-                    <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
-                    <li>Begin acquiring and publishing inspirational story content from global contributors</li>
-                    <li>Establish structured analytical framework and tools</li>
-                    <li>Build strong brand identity and social media presence across all channels</li>
-                </ul>
-            </div>
-            <div class="obj-panel" id="tab-medium" role="tabpanel">
-                <ul class="obj-list">
-                    <li>Expand platform reach and grow audience across all channels</li>
-                    <li>Develop automated story submission and curation tools</li>
-                    <li>Build strategic content partnerships and media collaborations</li>
-                    <li>Increase monetisation and story owner revenue sharing</li>
-                </ul>
-            </div>
-            <div class="obj-panel" id="tab-long" role="tabpanel">
-                <ul class="obj-list">
-                    <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
-                    <li>Develop proprietary analytical and pattern recognition technologies</li>
-                    <li>Publish research, books and comprehensive training programs</li>
-                    <li>Expand internationally across all major markets</li>
-                </ul>
+                    <div class="obj-tabs" role="tablist">
+                        <button class="obj-tab active" onclick="showTab('short', event)" role="tab" aria-selected="true" aria-controls="tab-short">Short-Term</button>
+                        <button class="obj-tab" onclick="showTab('medium', event)" role="tab" aria-selected="false" aria-controls="tab-medium">Medium-Term</button>
+                        <button class="obj-tab" onclick="showTab('long', event)" role="tab" aria-selected="false" aria-controls="tab-long">Long-Term</button>
+                    </div>
+                    <div class="obj-panel active" id="tab-short" role="tabpanel">
+                        <ul class="obj-list">
+                            <li>Establish and launch the 'From Plague to Profit' digital storytelling platform</li>
+                            <li>Begin acquiring and publishing inspirational story content from global contributors</li>
+                            <li>Establish structured analytical framework and tools</li>
+                            <li>Build strong brand identity and social media presence across all channels</li>
+                        </ul>
+                    </div>
+                    <div class="obj-panel" id="tab-medium" role="tabpanel">
+                        <ul class="obj-list">
+                            <li>Expand platform reach and grow audience across all channels</li>
+                            <li>Develop automated story submission and curation tools</li>
+                            <li>Build strategic content partnerships and media collaborations</li>
+                            <li>Increase monetisation and story owner revenue sharing</li>
+                        </ul>
+                    </div>
+                    <div class="obj-panel" id="tab-long" role="tabpanel">
+                        <ul class="obj-list">
+                            <li>Become the globally recognised home of 'From Plague to Profit' storytelling</li>
+                            <li>Develop proprietary analytical and pattern recognition technologies</li>
+                            <li>Publish research, books and comprehensive training programs</li>
+                            <li>Expand internationally across all major markets</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1797,4 +1827,4 @@
         }
     </script>
 </body>
-                                                             </html>
+</html>                                                             </html>
