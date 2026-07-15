@@ -713,16 +713,21 @@
             text-justify: inter-word;
         }
 
+        /* ===== SERVICES — HEADER NOW STACKED LEFT ===== */
         .services {
             padding: 5rem 3rem;
             background: var(--black);
         }
         .services-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: end;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
             margin-bottom: 3rem;
+        }
+        .services-header .section-body {
+            max-width: 100%;
+            margin: 0;
         }
         .services-grid {
             display: grid;
@@ -1133,8 +1138,7 @@
                 grid-template-columns: 1fr 1fr;
             }
             .services-header {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
             .services-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1477,7 +1481,7 @@
             </div>
         </section>
 
-        <!-- ===== SERVICES ===== -->
+        <!-- ===== SERVICES — header now stacked left ===== -->
         <section class="services" id="services" aria-labelledby="services-heading">
             <div class="services-header">
                 <div>
@@ -1665,4 +1669,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
