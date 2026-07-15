@@ -219,7 +219,7 @@
             flex-direction: column;
             justify-content: center;
             padding: 3rem 3rem 1.5rem;
-            overflow: visible; /* FIX: prevents text clipping */
+            overflow: visible;
         }
         .hero-bg {
             position: absolute;
@@ -235,7 +235,6 @@
             background-image: radial-gradient(1px 1px at 15% 25%, rgba(201, 168, 76, .4) 0%, transparent 100%), radial-gradient(1px 1px at 42% 18%, rgba(201, 168, 76, .3) 0%, transparent 100%), radial-gradient(1px 1px at 68% 35%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 85% 22%, rgba(201, 168, 76, .35) 0%, transparent 100%), radial-gradient(1px 1px at 30% 60%, rgba(201, 168, 76, .2) 0%, transparent 100%), radial-gradient(1px 1px at 55% 70%, rgba(201, 168, 76, .15) 0%, transparent 100%)
         }
 
-        /* Ensure all hero text is above the background */
         .hero-media,
         .story-cta-top,
         .hero-summary,
@@ -336,7 +335,6 @@
             color: var(--black);
         }
 
-        /* FIX: Explicit hex colors & safe display */
         .hero-summary {
             font-family: 'Barlow', sans-serif;
             font-weight: 300;
@@ -346,7 +344,7 @@
             text-align: justify;
             text-justify: inter-word;
             line-height: 1.5;
-            color: #FAF8F3 !important; /* explicit white */
+            color: #FAF8F3 !important;
             display: block;
         }
         .hero-handle {
@@ -1361,7 +1359,7 @@
                 <div class="hero-media-box" style="position:relative; background:#111; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="loadVideo(this)">
                     <div id="youtube-placeholder" style="text-align:center; color:#C9A84C; font-family:'Barlow Condensed', sans-serif; letter-spacing:0.2em; text-transform:uppercase; font-size:0.7rem;">
                         <div style="font-size:2.8rem; margin-bottom:0.3rem;">▶</div>
-                        Watch the Story
+                        WATCH OUR STORY OF THE DAY
                     </div>
                 </div>
                 <div class="hero-media-box">
@@ -1377,7 +1375,6 @@
                 <button class="btn-story" onclick="openStoryForm()">✦ Share Your Story Here</button>
             </div>
 
-            <!-- ALL TEXT NOW HAS EXPLICIT COLORS AND DISPLAY:BLOCK -->
             <p class="hero-summary">Locust Harvest — Transforming disruption into opportunity through powerful stories, innovative strategies, and human resilience. Locust Harvest is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation. We connect people, ideas, and opportunities by highlighting individuals and organisations that overcome challenges and create meaningful impact. Through storytelling, research, and strategic insights, Locust Harvest captures the lessons behind adversity — turning challenges into opportunities. <span class="hero-handle">@Plague2Profit</span></p>
 
             <p class="hero-eyebrow">Locust Harvest (Pty) Ltd · Est. 2026</p>
