@@ -1,4 +1,4 @@
-# 🦗 Locust Harvest — From Plague to Profit
+# Locust Harvest — From Plague to Profit
 
 **Locust Harvest (Pty) Ltd** is a strategy-driven company dedicated to uncovering extraordinary stories of resilience, entrepreneurship, innovation, and transformation — turning challenges into opportunities.
 
