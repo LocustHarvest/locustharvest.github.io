@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>LOCUPLACE — Get Notified</title>
+<meta name="description" content="LOCUPLACE is in development as a mobile app for nurses, nurse aides and healthcare facilities. Leave your email to be notified when it launches.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.locustharvest.com/locuplace-waitlist.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav id="nav" aria-label="Main navigation">
+<a href="/" class="nav-logo" aria-label="Locust Harvest home">
+<img src="nav-lockup.png" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps">
+</a>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="/#lohaplace">LOHAPLACE</a></li>
+<li><a href="/#locuplace">LOCUPLACE</a></li>
+<li><a href="/#wealthwise">WealthWise</a></li>
+<li><a href="/#novelty">NOVELTY</a></li>
+<li><a href="/#choosa">CHOOSA</a></li>
+<li><a href="/#myplacer">MYPLACER</a></li>
+<li><a href="/#plague2profit">Plague2Profit</a></li>
+<li><a href="/about.html">About</a></li>
+<li><a href="/contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<header class="top-banner small">
+<p class="top-eyebrow">Mobile App &middot; In Development</p>
+<h1 class="top-title">LOCUPLACE</h1>
+</header>
+
+<main class="doors">
+<section class="door">
+<div class="contact-grid">
+<div>
+<p class="door-eyebrow">The Nursing Locum Platform</p>
+<h2 class="door-title">LOCUPLACE<sup>&trade;</sup></h2>
+<p class="door-body">LOCUPLACE connects nurses and nurse aides with healthcare facilities that need qualified, short-term cover. It's built and running today as a mobile app for nurses, aides and facilities — but it isn't published on the App Store or Google Play yet, so there's nothing to download just yet.</p>
+<p class="door-body" style="margin-top:.9rem">Leave your name and email below and we'll send you a note the moment LOCUPLACE is ready to download on your phone.</p>
+
+<form action="https://formsubmit.co/locuplace@locustharvest.com" method="POST">
+<input type="hidden" name="_subject" value="LOCUPLACE launch notification signup">
+<input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none">
+
+<div class="form-field">
+<label for="name">Name</label>
+<input type="text" id="name" name="Name" required>
+</div>
+<div class="form-field">
+<label for="email">Email</label>
+<input type="email" id="email" name="Email" required>
+</div>
+<button type="submit" class="btn">Notify Me When It's Ready &rarr;</button>
+</form>
+</div>
+
+<div class="contact-info">
+<div class="ci-item">
+<h3>Email</h3>
+<p><a href="mailto:locuplace@locustharvest.com">locuplace@locustharvest.com</a></p>
+</div>
+<div class="ci-item">
+<h3>Status</h3>
+<p>Mobile app built, not yet on the App&nbsp;Store or Google&nbsp;Play</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-brand">LOCUST HARVEST (PTY) LTD</div>
+<div class="footer-tagline">Technology &bull; Innovation &bull; Digital Platforms</div>
+<div class="footer-brands">LOHAPLACE&trade; | LOCUPLACE&trade; | WealthWise&trade; | NOVELTY&trade; | CHOOSA&trade; | MYPLACER&trade; | PLAGUE2PROFIT</div>
+<div class="footer-links">
+<a href="/terms.html#privacy">Privacy Policy</a>
+<span>|</span>
+<a href="/terms.html#terms">Terms &amp; Conditions</a>
+<span>|</span>
+<a href="/terms.html#cookies">Cookie Policy</a>
+<span>|</span>
+<a href="/contact.html">Contact</a>
+</div>
+<div class="footer-copy">&copy; 2026 Locust Harvest (Pty) Ltd. All rights reserved. &middot; Follow <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener"><svg viewBox="0 0 512 512" fill="currentColor" style="width:13px;height:13px;vertical-align:-1px;margin-right:3px;display:inline-block"><path d="M389.2 48h70.6L305.6 224.2 487 464H345.7L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM64.4 421.8h39.1L151.1 88h-42L64.4 421.8z"/></svg>@Plague2Profit</a></div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => {
+document.getElementById('navLinks').classList.remove('open');
+}));
+</script>
+</body>
+</html>
