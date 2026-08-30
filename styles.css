@@ -45,6 +45,8 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
 .door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:640px;text-align:justify}
+.door-body a{color:var(--green-bright);text-decoration:underline;text-decoration-color:var(--green-dim)}
+.door-body a:hover{color:var(--silver-bright)}
 .door-body + .door-body{margin-top:.9rem}
 .door-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .door-row.thirds{grid-template-columns:repeat(3,1fr)}
