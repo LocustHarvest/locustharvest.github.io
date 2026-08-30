@@ -44,7 +44,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .door-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
 .door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
-.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:640px}
+.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:640px;text-align:justify}
 .door-body + .door-body{margin-top:.9rem}
 .door-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .door-row.thirds{grid-template-columns:repeat(3,1fr)}
@@ -91,7 +91,8 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .legal h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
 .legal h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
-.legal p,.legal li{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem}
+.legal p{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem;text-align:justify}
+.legal li{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem}
 .legal ul{padding-left:1.3rem;margin-bottom:.9rem}
 .legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani',sans-serif;letter-spacing:.05em}
 
