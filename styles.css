@@ -132,3 +132,15 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ===== ABOUT PAGE: justify all text (Sydney request 2026-09-13) ===== */
+body.about-page .top-eyebrow,
+body.about-page .top-title,
+body.about-page .door-eyebrow,
+body.about-page .door-title,
+body.about-page .value-card h3,
+body.about-page .value-card p,
+body.about-page .footer-brand,
+body.about-page .footer-tagline,
+body.about-page .footer-brands,
+body.about-page .footer-copy{text-align:justify}
