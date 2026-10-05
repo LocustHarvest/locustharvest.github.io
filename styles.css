@@ -155,4 +155,4 @@ section[id], div[id], article[id] { scroll-margin-top: 260px; }
 /* Push content down on every page except index. The fixed nav otherwise
    clips the first heading on pages that don't have the .doors wrapper. */
 body.page-offset { padding-top: 4rem; }
-body.page-offset .top-banner { padding-top: 6rem; }
+body.page-offset .top-banner { padding-top: 10rem; }
