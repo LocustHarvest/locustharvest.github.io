@@ -37,7 +37,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 
 /* ===== DOORS / SECTIONS ===== */
 .doors{max-width:1180px;margin:0 auto;padding:3.5rem 2rem 5rem;display:flex;flex-direction:column;gap:1.5rem}
-.door{position:relative;margin-bottom:3rem;border:1px solid var(--line);background:var(--panel);padding:2.8rem;overflow:hidden;transition:border-color .3s,transform .3s}
+.door{position:relative;margin-bottom:5rem;border:1px solid var(--line);background:var(--panel);padding:2.8rem;overflow:hidden;transition:border-color .3s,transform .3s}
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
 .door:hover{border-color:var(--line-bright);transform:translateY(-2px)}
 .door:hover::before{transform:scaleY(1)}
