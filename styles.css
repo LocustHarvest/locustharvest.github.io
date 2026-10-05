@@ -36,7 +36,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
 /* ===== DOORS / SECTIONS ===== */
-.doors{max-width:1180px;margin:0 auto;padding:3.5rem 2rem 5rem;display:flex;flex-direction:column;gap:4rem}
+.doors{max-width:1180px;margin:0 auto;padding:7rem 2rem 5rem;display:flex;flex-direction:column;gap:4rem}
 .door{position:relative;border:1px solid var(--line);background:var(--panel);padding:2.8rem;overflow:hidden;transition:border-color .3s,transform .3s}
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
 .door:hover{border-color:var(--line-bright);transform:translateY(-2px)}
@@ -90,7 +90,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .contact-info .ci-item a:hover{color:var(--green-bright)}
 
 /* ===== LEGAL (Terms) ===== */
-.legal{max-width:820px;margin:0 auto;padding:3.5rem 2rem 5rem}
+.legal{max-width:820px;margin:0 auto;padding:7rem 2rem 5rem}
 .legal h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
 .legal h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
