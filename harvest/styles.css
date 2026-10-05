@@ -205,3 +205,68 @@ body.harvest {
 
 .harvest-nav a:hover,
 .harvest-nav a.active { color: var(--accent); }
+
+/* ── Archive: one row per post, buttons + date ──────────────────── */
+.archive-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.archive-list li {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.archive-list li:last-child {
+    border-bottom: none;
+}
+
+.state-btns {
+    display: inline-flex;
+    gap: .5rem;
+    flex-shrink: 0;
+}
+
+.state-btn {
+    display: inline-block;
+    padding: .4rem .9rem;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    transition: background .15s ease, color .15s ease;
+    line-height: 1.2;
+    min-width: 72px;
+    text-align: center;
+}
+
+.state-btn:hover {
+    background: var(--accent);
+    color: #0a0a0a;
+    text-decoration: none;
+}
+
+.state-btn.disabled {
+    border-color: #2a2a2a;
+    color: #4a4a4a;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .5;
+}
+
+.archive-list .archive-date {
+    font-size: 1rem;
+    color: #e5e5e5;
+    font-weight: 500;
+    line-height: 1.2;
+}
