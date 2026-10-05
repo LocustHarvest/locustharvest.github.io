@@ -149,5 +149,5 @@ body.about-page .footer-copy{text-align:justify}
    #novelty and #plague2profit land underneath the header. This tells
    the browser to leave space at the top so the section heading clears
    the fixed nav. */
-html { scroll-padding-top: 100px; }
-section[id], div[id], article[id] { scroll-margin-top: 100px; }
+html { scroll-padding-top: 140px; }
+section[id], div[id], article[id] { scroll-margin-top: 140px; }
