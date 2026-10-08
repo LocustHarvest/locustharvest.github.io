@@ -116,7 +116,7 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .door-row{grid-template-columns:1fr}
   .door-row.thirds{grid-template-columns:1fr}
   .value-grid{grid-template-columns:1fr}
-  .p2p-socials{grid-template-columns:repeat(3,1fr)}
+  .p2p-socials{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
@@ -130,7 +130,7 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .legal{padding:2.5rem 1.25rem 3.5rem}
   .door{padding:1.8rem}
   .door-lh{flex-direction:column;text-align:center}
-  .p2p-socials{grid-template-columns:repeat(2,1fr)}
+  .p2p-socials{grid-template-columns:1fr}
 }
 
 /* ===== ABOUT PAGE: justify all text (Sydney request 2026-09-13) ===== */
@@ -156,3 +156,4 @@ section[id], div[id], article[id] { scroll-margin-top: 260px; }
    clips the first heading on pages that don't have the .doors wrapper. */
 body.page-offset { padding-top: 4rem; }
 body.page-offset .top-banner { padding-top: 10rem; }
+/* BLOG_MOBILE_FIX_2026_10_08 */
