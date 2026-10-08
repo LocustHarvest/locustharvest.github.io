@@ -44,7 +44,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .door-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
 .door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
-.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:640px;text-align:justify}
+.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:100%;text-align:left}  /* FIX_DOOR_BODY_ALWAYS_2026_10_08 */
 .door-body a{color:var(--green-bright);text-decoration:underline;text-decoration-color:var(--green-dim)}
 .door-body a:hover{color:var(--silver-bright)}
 .door-body + .door-body{margin-top:.9rem}
@@ -163,3 +163,4 @@ body.page-offset { padding-top: 4rem; }
 body.page-offset .top-banner { padding-top: 10rem; }
 /* BLOG_MOBILE_FIX_2026_10_08 */
 /* FIX_MOBILE_NOVELTY_PANEL_2026_10_08 */
+/* FIX_DOOR_BODY_ALWAYS_2026_10_08 */
