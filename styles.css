@@ -136,6 +136,13 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .door-body{max-width:100%;text-align:left}
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:1fr}
+  /* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 — on about.html the .door-lh
+     flex-column layout kept min-width:260px on .lh-text, forcing the
+     text block wider than the viewport and shifting it right. Cap the
+     text block, neutralise the reserved mark slot. */
+  .door-lh{gap:0}
+  .door-lh .lh-text{min-width:0;width:100%;flex:1 1 auto}
+  .door-lh .lh-mark{flex:0 0 auto;width:auto}
 }
 
 /* ===== ABOUT PAGE: justify all text (Sydney request 2026-09-13) ===== */
@@ -164,3 +171,4 @@ body.page-offset .top-banner { padding-top: 10rem; }
 /* BLOG_MOBILE_FIX_2026_10_08 */
 /* FIX_MOBILE_NOVELTY_PANEL_2026_10_08 */
 /* FIX_DOOR_BODY_ALWAYS_2026_10_08 */
+/* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 */
