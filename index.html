@@ -237,6 +237,18 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .door{padding:1.8rem}
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:repeat(2,1fr)}
+  /* FIX_MOBILE_DOOR_BODY_INLINE_2026_10_12 — the homepage inlines its
+     own CSS and never loaded styles.css, so it never picked up the
+     mobile .door-body override that other pages got. Copy it here:
+     cap to 100% and stop justifying. Long tokens like NOVELTY™ with
+     non-breaking spaces were stretching past the viewport under
+     text-align:justify at narrow widths. */
+  .door-body{max-width:100%;text-align:left}
+  .door-row{gap:1rem}
+  .value-card{padding:1.2rem}
+  .btn-hero{min-width:0;width:100%}
+  .door-actions{display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;width:100%}
+  .door-actions > a.btn, .door-actions > a.btn.btn-hero{width:100%;min-width:0;margin-top:0;justify-content:center;text-align:center}
 }
 
 /* ===== ABOUT PAGE: justify all text (Sydney request 2026-09-13) ===== */
@@ -381,3 +393,4 @@ document.getElementById('navLinks').classList.remove('open');
 </html>
 <!-- BLOG_MOBILE_FIX_2026_10_08 -->
 <!-- FIX_SOCIALS_INLINE_5x2_2026_10_12 -->
+<!-- FIX_MOBILE_DOOR_BODY_INLINE_2026_10_12 -->
