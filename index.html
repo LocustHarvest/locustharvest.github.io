@@ -173,7 +173,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .value-grid{margin-top:.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .value-card{border:1px solid var(--line);background:var(--panel2);padding:1.5rem}
 .value-card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
-.value-card p{font-size:.85rem;color:var(--body);line-height:1.65}
+.value-card p{font-size:.85rem;color:var(--body);line-height:1.65;text-align:justify;text-align-last:left}
 
 .p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
 .p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s}
@@ -306,6 +306,27 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
 @media(min-width:901px){
   .p2p-two-lines{max-width:960px}
 }
+
+/* ===== FIX_JUSTIFY_FOUR_2026_10_12 =====
+   Every split span is one forced line. text-align-last:justify makes
+   that final (and only) line flush on both edges, so the whole line
+   stretches edge to edge — the same visual result as text-align:justify
+   does for wrapped lines, but applied per-span.
+   white-space:normal + inline-block keeps each span on its own line. */
+.justify-lines{max-width:none;text-align:justify}
+.justify-lines > span{
+  display:block;
+  text-align:justify;
+  text-align-last:justify;
+  -moz-text-align-last:justify;
+  white-space:normal;
+}
+.p2p-two-lines .line-a,
+.p2p-two-lines .line-b{
+  text-align:justify;
+  text-align-last:justify;
+  -moz-text-align-last:justify;
+}
 </style>
 </head>
 <body>
@@ -337,7 +358,12 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
 <div class="lh-text">
 <p class="door-eyebrow">Who We Are</p>
 <h2 class="door-title" id="lh-heading">Locust Harvest<sup>&trade;</sup></h2>
-<p class="door-body">A technology and innovation company building practical apps for everyday life. We identify real-world challenges and explore how technology can turn them into useful digital solutions, opportunities and growth. Our philosophy is simple: every challenge can become an opportunity—from plague to profit.</p>
+<p class="door-body justify-lines justify-4">
+  <span> A technology and innovation company building practical apps for everyday </span>
+  <span> life. We identify real-world challenges and explore how technology can </span>
+  <span> turn them into useful digital solutions, opportunities and growth. Our </span>
+  <span> philosophy is simple: every challenge can become an opportunity—from plague to profit. </span>
+</p>
 </div>
 </div>
 </section>
@@ -359,7 +385,11 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
      contents with your <ins class="adsbygoogle"> once ready. -->
 </div>
 
-<p class="door-body" style="margin-top:1.2rem;font-size:.8rem;text-align:justify">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
+<p class="door-body justify-lines justify-3" style="margin-top:1.2rem;font-size:.8rem">
+  <span>Some users may choose to use NOVELTY&trade;'s content in connection with sports</span>
+  <span>betting, which is restricted or prohibited in some countries — you are</span>
+  <span>responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</span>
+</p>
 
 <div class="door-actions">
 <a href="https://app.novelty.locustharvest.com" class="btn btn-hero">Open NOVELTY&trade; →</a>
@@ -428,3 +458,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_FONT_BUMP_2026_10_12 -->
 <!-- FIX_NOVELTY_3COL_2026_10_12 -->
 <!-- FIX_REVERT_AD_SLOT_2026_10_12 -->
+<!-- FIX_JUSTIFY_FOUR_2026_10_12 -->
