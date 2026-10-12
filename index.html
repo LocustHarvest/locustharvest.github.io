@@ -243,7 +243,7 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
      cap to 100% and stop justifying. Long tokens like NOVELTY™ with
      non-breaking spaces were stretching past the viewport under
      text-align:justify at narrow widths. */
-  .door-body{max-width:100%;text-align:left}
+  .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
   .door-row{gap:1rem}
   .value-card{padding:1.2rem}
   .btn-hero{min-width:0;width:100%}
@@ -288,6 +288,34 @@ body.about-page .footer-copy{text-align:justify}
    / Who We Are all land the same way. */
 section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top: 100px; }
 @media(max-width:768px){ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top: 80px; } }
+
+/* ===== NOVELTY 3-COL + P2P 2-LINE + AD SLOT — 2026-10-12 ===== */
+/* Desktop: NOVELTY paragraph | value-card | ad slot
+   Tablet/mobile: stacked via .door-row.thirds collapse. */
+@media(min-width:901px){
+  .door-row.thirds{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,336px)}
+}
+.door-row.thirds > .novelty-body{max-width:none}
+.ad-slot{
+  border:1px dashed var(--line);
+  background:var(--panel2);
+  display:flex;align-items:center;justify-content:center;
+  min-height:280px;min-width:300px;
+  color:var(--ash);font-family:'Rajdhani',sans-serif;
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+}
+.ad-slot-label{opacity:.5}
+@media(max-width:900px){
+  .ad-slot{min-height:250px;min-width:0;width:100%}
+}
+
+/* P2P: forced 2-line split */
+.p2p-two-lines{max-width:none}
+.p2p-two-lines .line-a,
+.p2p-two-lines .line-b{display:block}
+@media(min-width:901px){
+  .p2p-two-lines{max-width:960px}
+}
 </style>
 </head>
 <body>
@@ -328,14 +356,20 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
 <!-- DOOR 0: NOVELTY — FLAGSHIP APP -->
 <section class="door" id="novelty" aria-labelledby="novelty-heading">
 <h2 class="door-title" id="novelty-heading">NOVELTY<sup>&trade;</sup></h2>
-<div class="door-row">
-<p class="door-body">NOVELTY&trade; — daily NOVELTY&trade; sports predictions, engine-powered and human-reviewed and analysis, built on statistics and market data across dozens of leading leagues. NOVELTY&trade; provides sports analysis, statistics, predictions, opinions, and informational content for entertainment and informational purposes only. Predictions and analysis do not guarantee any particular outcome. Daily picks are published as matches become available. NOVELTY&trade; does not provide gambling services, accept wagers, facilitate betting, or guarantee profits — see our Terms and Conditions for the full breakdown.</p>
+<div class="door-row thirds">
+<p class="door-body novelty-body">NOVELTY&trade; — daily NOVELTY&trade; sports predictions, engine-powered and human-reviewed and analysis, built on statistics and market data across dozens of leading leagues. NOVELTY&trade; provides sports analysis, statistics, predictions, opinions, and informational content for entertainment and informational purposes only. Predictions and analysis do not guarantee any particular outcome. Daily picks are published as matches become available. NOVELTY&trade; does not provide gambling services, accept wagers, facilitate betting, or guarantee profits — see our Terms and Conditions for the full breakdown.</p>
 
 <div class="value-card">
 <h3>UNLOCK DAILY PICKS: R199/month</h3>
 <p><a href="https://app.novelty.locustharvest.com/subscribe" style="color:#1a56db;font-weight:600;text-decoration:underline">Subscribe</a> to unlock NOVELTY&trade;&apos;s daily picks powered by the NOVELTY&trade; engine and reviewed by our team, with top-tier statistical selection and analysis.</p>
 <a href="https://app.novelty.locustharvest.com/subscribe" class="btn btn-hero" style="margin-top:1.25rem;display:flex;margin-left:auto;margin-right:auto;justify-content:center;align-items:center;text-align:center">Subscribe — R199/month</a>
 </div>
+
+<!-- Ad slot — reserve space for AdSense / partner ad. Replace inner
+     contents with your <ins class="adsbygoogle"> once ready. -->
+<aside class="ad-slot" aria-label="Advertisement">
+  <span class="ad-slot-label">Advertisement</span>
+</aside>
 </div>
 
 <p class="door-body" style="margin-top:1.2rem;font-size:.8rem">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
@@ -352,7 +386,10 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
 <section class="door" id="plague2profit" aria-labelledby="p2p-heading">
 <p class="door-eyebrow">The Philosophy &middot; Media &middot; Social Ecosystem</p>
 <h2 class="door-title" id="p2p-heading">Plague2Profit<sup>&trade;</sup></h2>
-<p class="door-body">From Plague to Profit. We turn challenges into opportunities, ideas into solutions and problems into productive ventures.</p>
+<p class="door-body p2p-two-lines">
+  <span class="line-a">From Plague to Profit. We turn challenges into opportunities,</span>
+  <span class="line-b">ideas into solutions and problems into productive ventures.</span>
+</p>
 <p class="p2p-handle">@Plague2Profit — on all social handles</p>
 
 <div class="p2p-socials">
@@ -402,3 +439,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_MOBILE_DOOR_BODY_INLINE_2026_10_12 -->
 <!-- FIX_SCROLL_MARGIN_2026_10_12 -->
 <!-- FIX_FONT_BUMP_2026_10_12 -->
+<!-- FIX_NOVELTY_3COL_2026_10_12 -->
