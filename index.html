@@ -305,6 +305,11 @@ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top:
 .p2p-two-lines .line-b{display:block}
 @media(min-width:901px){
   .p2p-two-lines{max-width:960px}
+  /* FIX_HALF_WIDTH_PARAS_2026_10_12 — the two pre-split paragraphs
+     occupy half the door block on desktop; right half stays empty.
+     Mobile unaffected (rule scoped to min-width:901px). */
+  .door-body.justify-lines{max-width:50%}
+  .door-lh .lh-text{max-width:50%}
 }
 
 /* ===== FIX_JUSTIFY_FOUR_2026_10_12 =====
@@ -459,3 +464,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_NOVELTY_3COL_2026_10_12 -->
 <!-- FIX_REVERT_AD_SLOT_2026_10_12 -->
 <!-- FIX_JUSTIFY_FOUR_2026_10_12 -->
+<!-- FIX_HALF_WIDTH_PARAS_2026_10_12 -->
