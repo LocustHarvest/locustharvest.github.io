@@ -244,6 +244,13 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
      non-breaking spaces were stretching past the viewport under
      text-align:justify at narrow widths. */
   .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+  /* FIX_P2P_MOBILE_2026_10_12 — on mobile, undo the desktop <br>
+     and text-align-last:justify on the P2P paragraph. The forced
+     break + last-line justify stretches the half-line on narrow
+     screens and leaves huge gaps. Let it wrap naturally here. */
+  .door-body.p2p-lines{max-width:100%}
+  .door-body.p2p-lines br{display:none}
+  .door-body.p2p-lines{text-align-last:auto}
   .door-row{gap:1rem}
   .value-card{padding:1.2rem}
   .btn-hero{min-width:0;width:100%}
@@ -452,3 +459,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_P2P_36_2026_10_12 -->
 <!-- FIX_PARA18_42_2026_10_12 -->
 <!-- FIX_P2P_LASTJUSTIFY_2026_10_12 -->
+<!-- FIX_P2P_MOBILE_2026_10_12 -->
