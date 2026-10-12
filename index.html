@@ -281,7 +281,13 @@ body.about-page .footer-copy{text-align:justify}
 /* F — 2026-10-05: #novelty heading was landing behind the fixed nav on
    anchor jump. Bump its specific scroll-margin so the heading sits well
    clear of the nav (nav is ~80px; 400px gives ~320px of breathing room). */
-section#novelty { scroll-margin-top: 400px; }
+/* FIX_SCROLL_MARGIN_2026_10_12 — 400px was overshooting the fixed
+   nav on both desktop and mobile. #novelty landed too far up the
+   page. Use a single consistent offset that clears the nav on every
+   viewport. Applied to every anchor target so NOVELTY / Plague2Profit
+   / Who We Are all land the same way. */
+section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top: 100px; }
+@media(max-width:768px){ section#novelty, section#plague2profit, section#about-blurb { scroll-margin-top: 80px; } }
 </style>
 </head>
 <body>
@@ -394,3 +400,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- BLOG_MOBILE_FIX_2026_10_08 -->
 <!-- FIX_SOCIALS_INLINE_5x2_2026_10_12 -->
 <!-- FIX_MOBILE_DOOR_BODY_INLINE_2026_10_12 -->
+<!-- FIX_SCROLL_MARGIN_2026_10_12 -->
