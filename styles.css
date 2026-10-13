@@ -220,3 +220,20 @@ p.body-copy {
   }
 }
 /* TEXT_ALIGN_LAST_LEFT_MOBILE_2026_10_13 */
+/* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
+   and every <button> centres its text horizontally and vertically. */
+.btn,
+.btn-hero,
+.btn.primary,
+button,
+input[type="submit"] {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
