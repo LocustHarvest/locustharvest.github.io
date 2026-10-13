@@ -174,6 +174,9 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .value-card{border:1px solid var(--line);background:var(--panel2);padding:1.5rem}
 .value-card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
 .value-card p{font-size:.85rem;color:var(--body);line-height:1.65;text-align:justify;text-align-last:left}
+/* JUSTIFY_VALUE_H3_2026_10_13 — the "UNLOCK DAILY PICKS" h3 was the only
+   left-aligned text in the value card. Match the paragraph alignment. */
+.value-card h3{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 
 .p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
 .p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s}
@@ -496,3 +499,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_PARA18_42_2026_10_12 -->
 <!-- FIX_P2P_LASTJUSTIFY_2026_10_12 -->
 <!-- FIX_P2P_MOBILE_2026_10_12 -->
+<!-- JUSTIFY_VALUE_H3_2026_10_13 -->
