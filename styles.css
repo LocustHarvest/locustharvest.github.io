@@ -134,7 +134,7 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
      paragraph was justified (huge word gaps) and its 640px max-width
      was wider than the viewport (content clipped on the right edge).
      Cap to 100% and left-align. */
-  .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+  .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;text-align-last:left}
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:1fr}
   /* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 — on about.html the .door-lh
@@ -219,3 +219,4 @@ p.body-copy {
     overflow-wrap: break-word;
   }
 }
+/* TEXT_ALIGN_LAST_LEFT_MOBILE_2026_10_13 */
