@@ -44,7 +44,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .door-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
 .door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
-.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:100%;text-align:left}  /* FIX_DOOR_BODY_ALWAYS_2026_10_08 */
+.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}  /* COSMETIC_JUSTIFY_2026_10_13 */
 .door-body a{color:var(--green-bright);text-decoration:underline;text-decoration-color:var(--green-dim)}
 .door-body a:hover{color:var(--silver-bright)}
 .door-body + .door-body{margin-top:.9rem}
@@ -134,7 +134,7 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
      paragraph was justified (huge word gaps) and its 640px max-width
      was wider than the viewport (content clipped on the right edge).
      Cap to 100% and left-align. */
-  .door-body{max-width:100%;text-align:left}
+  .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:1fr}
   /* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 — on about.html the .door-lh
@@ -175,3 +175,47 @@ body.page-offset .top-banner { padding-top: 10rem; }
 /* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 */
 /* FIX_SOCIALS_5x2_2026_10_11 */
 /* FIX_FONT_BUMP_2026_10_12 */
+
+/* COSMETIC_JUSTIFY_2026_10_13 — justify paragraph-level text across
+   every page that loads this stylesheet. Covers footers, legal blocks,
+   the shared NOVELTY disclaimer, and any prose containers.
+   Scoped to paragraphs and copy blocks only — headings, buttons,
+   tables and nav keep their existing alignment. */
+footer p,
+footer div.footer-copy,
+footer div.footer-brands,
+footer div.footer-links,
+footer span.footer-copy,
+.legal p,
+.legal li,
+.contact-info p,
+.harvest-article p,
+.novelty-legal p,
+.about-page p,
+.about-page .footer-copy,
+p.prose,
+p.body-copy {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Narrow screens: keep hyphens on so justify doesn't produce rivers. */
+@media(max-width:768px){
+  footer p,
+  footer div.footer-copy,
+  footer div.footer-brands,
+  footer div.footer-links,
+  .legal p,
+  .legal li,
+  .contact-info p,
+  .harvest-article p,
+  .novelty-legal p,
+  .about-page p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
