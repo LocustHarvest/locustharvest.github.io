@@ -247,6 +247,13 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
      non-breaking spaces were stretching past the viewport under
      text-align:justify at narrow widths. */
   .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+  /* JUSTIFY_MOBILE_FONT_2026_10_13 — justified text only reads as
+     justified when there are enough words per line. On a 360px column
+     the 15px font forces 3-5 words per line, so the browser silently
+     falls back to left-align. Dropping to .86rem gets 6-8 words per
+     line and the flush edges become visible. */
+  .door-body{font-size:.86rem;line-height:1.7}
+  .legal p{font-size:.84rem;line-height:1.7}
   /* FIX_P2P_MOBILE_2026_10_12 — on mobile, undo the desktop <br>
      and text-align-last:justify on the P2P paragraph. The forced
      break + last-line justify stretches the half-line on narrow
@@ -500,3 +507,4 @@ document.getElementById('navLinks').classList.remove('open');
 <!-- FIX_P2P_LASTJUSTIFY_2026_10_12 -->
 <!-- FIX_P2P_MOBILE_2026_10_12 -->
 <!-- JUSTIFY_VALUE_H3_2026_10_13 -->
+<!-- JUSTIFY_MOBILE_FONT_2026_10_13 -->
