@@ -65,11 +65,13 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
 .footer-links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;font-size:.72rem}
 .footer-links a{color:var(--ash);text-decoration:none;transition:color .25s}
 .footer-links a:hover{color:var(--green-bright)}
-.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:center}  /* FOOTER_COPY_CENTER_ALL_2026_10_14 */
+.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:left}  /* FOOTER_COPY_DESKTOP_LEFT_2026_10_14 */
 .footer-copy a{color:var(--green-dim);text-decoration:none}
 .footer-copy a:hover{color:var(--green-bright)}
 
 @media(max-width:768px){
+  .footer-copy{text-align:center}  /* FOOTER_COPY_MOBILE_CENTER_2026_10_14 */
+
 nav{padding:.7rem 1.25rem}
 .hamburger{display:block}
 .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
@@ -191,7 +193,7 @@ input[type="submit"] {
     <span>|</span>
     <a href="/contact.html">Contact</a>
   </div>
-  <div class="footer-copy">&copy; 2026 Locust Harvest (Pty) Ltd. All rights reserved. &middot; Follow <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles</div>
+  <div class="footer-copy">&copy; 2026 Locust Harvest (Pty) Ltd. All rights reserved. Follow <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles.</div>
 </footer>
 
 <script>
