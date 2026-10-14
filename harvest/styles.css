@@ -48,13 +48,21 @@ body.harvest {
   color: var(--text-dim);
   font-size: .95rem;
   margin: 0;
-}
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}  /* ARCHIVE_JUSTIFY_2026_10_14 */
 
 .harvest-lead {
   font-size: 1.05rem;
   color: #d1d5db;
   margin: 1.5rem 0 2rem;
-}
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}  /* ARCHIVE_JUSTIFY_2026_10_14 */
 
 .harvest-section-title {
   font-size: 1.15rem;
@@ -182,7 +190,11 @@ body.harvest {
   padding-top: 1.25rem;
   border-top: 1px solid var(--border);
   line-height: 1.6;
-}
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}  /* ARCHIVE_JUSTIFY_2026_10_14 */
 
 /* Site nav at top of harvest pages */
 .harvest-nav {
