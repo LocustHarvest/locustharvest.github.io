@@ -189,7 +189,6 @@ footer div.footer-links,
 .harvest-article p,
 .novelty-legal p,
 .about-page p,
-.about-page .footer-copy,
 p.prose,
 p.body-copy {
   text-align: justify;
@@ -201,7 +200,6 @@ p.body-copy {
 /* Narrow screens: keep hyphens on so justify doesn't produce rivers. */
 @media(max-width:768px){
   footer p,
-  footer div.footer-copy,
   footer div.footer-brands,
   footer div.footer-links,
   .legal p,
