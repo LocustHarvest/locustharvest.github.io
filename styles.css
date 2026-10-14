@@ -155,7 +155,6 @@ body.about-page .value-card p,
 body.about-page .footer-brand,
 body.about-page .footer-tagline,
 body.about-page .footer-brands{text-align:justify}
-body.about-page .footer-copy{text-align:center}  /* ABOUT_FOOTER_CENTER_2026_10_14 */
 
 /* ── Fixed-header anchor offset ──────────────────────────────────
    The nav uses position:fixed, so anchor jumps to sections like
@@ -182,10 +181,8 @@ body.page-offset .top-banner { padding-top: 10rem; }
    Scoped to paragraphs and copy blocks only — headings, buttons,
    tables and nav keep their existing alignment. */
 footer p,
-footer div.footer-copy,
 footer div.footer-brands,
 footer div.footer-links,
-footer span.footer-copy,
 .legal p,
 .legal li,
 .contact-info p,
