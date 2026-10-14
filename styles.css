@@ -154,8 +154,8 @@ body.about-page .value-card h3,
 body.about-page .value-card p,
 body.about-page .footer-brand,
 body.about-page .footer-tagline,
-body.about-page .footer-brands,
-body.about-page .footer-copy{text-align:justify}
+body.about-page .footer-brands{text-align:justify}
+body.about-page .footer-copy{text-align:center}  /* ABOUT_FOOTER_CENTER_2026_10_14 */
 
 /* ── Fixed-header anchor offset ──────────────────────────────────
    The nav uses position:fixed, so anchor jumps to sections like
