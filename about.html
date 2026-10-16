@@ -255,41 +255,23 @@ footer div,
   }
 }
 
-/* PLATFORMS_BLOCK_2026_10_16 — mobile default + desktop override.
-   Mobile: paragraphs and button full width, natural wrap, <br> hidden.
-   Desktop (>= 901px): paragraphs and button 40% column, <br> shown,
-   text-align-last:justify so every line reaches the right edge. */
+/* PLATFORMS_BLOCK_RULES_2026_10_14 — desktop: 58% column, button centered;
+   mobile: full width, natural wrap, centered button. */
 .platforms-block{
-  max-width:100%;
+  max-width:58%;
   margin:0 auto;
   text-align:center;
 }
 .platforms-block .door-body{
-  max-width:100%;
-  text-align:justify;
-  text-justify:inter-word;
+  text-align:left;
 }
 .platforms-block .btn{
-  display:flex;
-  max-width:100%;
+  display:inline-flex;
   margin:1.5rem auto 0;
   justify-content:center;
 }
-br.desk-br{
-  display:none;
-}
-
-@media(min-width:901px){
-  .platforms-block .door-body{
-    max-width:40%;
-  }
-  .platforms-block .btn{
-    max-width:40%;
-    margin:1.5rem 0 0 0;
-  }
-  br.desk-br{
-    display:inline;
-  }
+@media(max-width:768px){
+  .platforms-block{max-width:100%}
 }
 
 /* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
@@ -370,8 +352,8 @@ input[type="submit"] {
     <p class="door-eyebrow">What We've Built</p>
     <h2 class="door-title" id="platforms-heading">Our Platforms</h2>
     <div class="platforms-block">
-      <p class="door-body"><a href="https://app.novelty.locustharvest.com" target="_blank" rel="noopener">NOVELTY™</a> — daily statistical picks and analysis for<br class="desk-br">football, built for informed decisions.</p>
-      <p class="door-body" style="text-align:justify;text-justify:inter-word"><a href="/#plague2profit">Plague2Profit&trade;</a> — our philosophy, media and social<br class="desk-br">ecosystem: turning challenges into opportunities,<br class="desk-br">ideas into solutions, and problems into productive ventures.</p>
+      <p class="door-body"><a href="https://app.novelty.locustharvest.com" target="_blank" rel="noopener">NOVELTY™</a> — daily statistical picks and analysis for football, built for informed decisions.</p>
+      <p class="door-body" style="text-align:justify;text-justify:inter-word"><a href="/#plague2profit">Plague2Profit&trade;</a> — our philosophy, media and social ecosystem: turning challenges into opportunities, ideas into solutions, and problems into productive ventures.</p>
       <a href="/#novelty" class="btn btn-hero" style="white-space:nowrap">Explore NOVELTY&trade; →</a>
     </div>
   </section>
