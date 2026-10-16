@@ -255,23 +255,40 @@ footer div,
   }
 }
 
-/* PLATFORMS_BLOCK_RULES_2026_10_14 — desktop: 58% column, button centered;
-   mobile: full width, natural wrap, centered button. */
+/* PLATFORMS_BLOCK_2026_10_16 — mobile default + desktop override.
+   Mobile (< 901px): full width, natural wrap, <br> hidden.
+   Desktop (>= 901px): 40% column, <br> shown. */
 .platforms-block{
-  max-width:58%;
+  max-width:100%;
   margin:0 auto;
   text-align:center;
 }
 .platforms-block .door-body{
-  text-align:left;
+  max-width:100%;
+  text-align:justify;
+  text-justify:inter-word;
 }
 .platforms-block .btn{
-  display:inline-flex;
+  display:flex;
+  max-width:100%;
   margin:1.5rem auto 0;
   justify-content:center;
 }
-@media(max-width:768px){
-  .platforms-block{max-width:100%}
+br.desk-br{
+  display:none;
+}
+
+@media(min-width:901px){
+  .platforms-block .door-body{
+    max-width:40%;
+  }
+  .platforms-block .btn{
+    max-width:40%;
+    margin:1.5rem 0 0 0;
+  }
+  br.desk-br{
+    display:inline;
+  }
 }
 
 /* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
