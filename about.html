@@ -255,39 +255,42 @@ footer div,
   }
 }
 
-/* PLATFORMS_BLOCK_RULES_2026_10_14 — desktop: 58% column, button centered;
-   mobile: full width, natural wrap, centered button. */
+/* PLATFORMS_BLOCK_2026_10_16 — mobile default + desktop override.
+   Mobile: paragraphs and button full width, natural wrap, <br> hidden.
+   Desktop (>= 901px): paragraphs and button 40% column, <br> shown,
+   text-align-last:justify so every line reaches the right edge. */
 .platforms-block{
   max-width:100%;
   margin:0 auto;
   text-align:center;
 }
 .platforms-block .door-body{
-  max-width:40%;                /* PARA_HALF_WIDTH_2026_10_16 — text column ends at 40% of the card */
+  max-width:100%;
   text-align:justify;
   text-justify:inter-word;
 }
-@media(min-width:901px){
-  .platforms-block .door-body{text-align-last:justify}
-}
 .platforms-block .btn{
   display:flex;
-  max-width:40%;               /* same column width as the paragraphs */
-  margin:1.5rem 0 0 0;         /* left-anchored to the paragraph column */
-  justify-content:center;      /* button centered inside that 40% column */
+  max-width:100%;
+  margin:1.5rem auto 0;
+  justify-content:center;
 }
-/* DESK_BR_2026_10_16 — desktop-only line breaks. The <br class="desk-br">
-   elements are hidden below 901px, so mobile wraps the paragraphs
-   naturally. At 901px+ they show, giving exact line counts:
-   NOVELTY = 2 lines, Plague2Profit = 3 lines. */
-br.desk-br{display:none}
-@media(min-width:901px){
-  br.desk-br{display:inline}
+br.desk-br{
+  display:none;
 }
 
-@media(max-width:768px){
-  .platforms-block{max-width:100%}
-  .platforms-block .btn{max-width:100%;margin:1.5rem auto 0}
+@media(min-width:901px){
+  .platforms-block .door-body{
+    max-width:40%;
+    text-align-last:justify;
+  }
+  .platforms-block .btn{
+    max-width:40%;
+    margin:1.5rem 0 0 0;
+  }
+  br.desk-br{
+    display:inline;
+  }
 }
 
 /* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
