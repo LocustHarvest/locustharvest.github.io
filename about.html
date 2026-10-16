@@ -271,6 +271,15 @@ footer div,
   margin:1.5rem auto 0;
   justify-content:center;
 }
+/* DESK_BR_2026_10_16 — desktop-only line breaks. The <br class="desk-br">
+   elements are hidden below 901px, so mobile wraps the paragraphs
+   naturally. At 901px+ they show, giving exact line counts:
+   NOVELTY = 2 lines, Plague2Profit = 3 lines. */
+br.desk-br{display:none}
+@media(min-width:901px){
+  br.desk-br{display:inline}
+}
+
 @media(max-width:768px){
   .platforms-block{max-width:100%}
 }
@@ -353,8 +362,8 @@ input[type="submit"] {
     <p class="door-eyebrow">What We've Built</p>
     <h2 class="door-title" id="platforms-heading">Our Platforms</h2>
     <div class="platforms-block">
-      <p class="door-body"><a href="https://app.novelty.locustharvest.com" target="_blank" rel="noopener">NOVELTY™</a> — daily statistical picks and analysis for football, built for informed decisions.</p>
-      <p class="door-body" style="text-align:justify;text-justify:inter-word"><a href="/#plague2profit">Plague2Profit&trade;</a> — our philosophy, media and social ecosystem: turning challenges into opportunities, ideas into solutions, and problems into productive ventures.</p>
+      <p class="door-body"><a href="https://app.novelty.locustharvest.com" target="_blank" rel="noopener">NOVELTY™</a> — daily statistical picks and analysis for<br class="desk-br">football, built for informed decisions.</p>
+      <p class="door-body" style="text-align:justify;text-justify:inter-word"><a href="/#plague2profit">Plague2Profit&trade;</a> — our philosophy, media and social<br class="desk-br">ecosystem: turning challenges into opportunities,<br class="desk-br">ideas into solutions, and problems into productive ventures.</p>
       <a href="/#novelty" class="btn btn-hero" style="white-space:nowrap">Explore NOVELTY&trade; →</a>
     </div>
   </section>
