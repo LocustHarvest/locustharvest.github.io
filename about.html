@@ -271,9 +271,10 @@ footer div,
   .platforms-block .door-body{text-align-last:justify}
 }
 .platforms-block .btn{
-  display:inline-flex;
-  margin:1.5rem auto 0;
-  justify-content:center;
+  display:flex;
+  max-width:40%;               /* same column width as the paragraphs */
+  margin:1.5rem 0 0 0;         /* left-anchored to the paragraph column */
+  justify-content:center;      /* button centered inside that 40% column */
 }
 /* DESK_BR_2026_10_16 — desktop-only line breaks. The <br class="desk-br">
    elements are hidden below 901px, so mobile wraps the paragraphs
@@ -286,6 +287,7 @@ br.desk-br{display:none}
 
 @media(max-width:768px){
   .platforms-block{max-width:100%}
+  .platforms-block .btn{max-width:100%;margin:1.5rem auto 0}
 }
 
 /* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
