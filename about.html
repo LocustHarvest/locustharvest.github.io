@@ -264,8 +264,10 @@ footer div,
 }
 .platforms-block .door-body{
   text-align:justify;
-  text-align-last:justify;   /* justify the last line too — all lines reach the right edge */
   text-justify:inter-word;
+}
+@media(min-width:901px){
+  .platforms-block .door-body{text-align-last:justify}
 }
 .platforms-block .btn{
   display:inline-flex;
