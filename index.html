@@ -580,106 +580,69 @@ input[type="submit"] {
   color:#04140a;
 }
 
-/* MOBILE_SOLID_SOCIALS_2026_10_27 — on mobile, there is no hover,
-   so the buttons would stay gray. Give them their brand colour by
-   default on screens <= 768px. */
-@media(max-width:768px){
-  .p2p-socials a[aria-label="YouTube"]{background:#ff0000;border-color:#ff0000;color:#fff}
-  .p2p-socials a[aria-label="Instagram"]{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:#dc2743;color:#fff}
-  .p2p-socials a[aria-label="TikTok"]{background:#000;border-color:#69C9D0;color:#fff}
-  .p2p-socials a[aria-label="Facebook"]{background:#1877f2;border-color:#1877f2;color:#fff}
-  .p2p-socials a[aria-label="X"]{background:#000;border-color:#333;color:#fff}
-  .p2p-socials a[aria-label="Telegram"]{background:#0088cc;border-color:#0088cc;color:#fff}
-  .p2p-socials a[aria-label="WhatsApp"]{background:#25d366;border-color:#25d366;color:#fff}
-  .p2p-socials a[aria-label="Rumble"]{background:#85c742;border-color:#85c742;color:#fff}
-  .p2p-socials a[aria-label="Bluesky"]{background:#1185fe;border-color:#1185fe;color:#fff}
-  .p2p-socials a[aria-label="NOVELTY"]{background:#2563eb;border-color:#2563eb;color:#fff}
-}
 
-
-/* MOBILE_SOCIAL_MOVING_GLOW_2026_10_27 — a pulsing glow on social buttons */
-@keyframes social-pulse {
-  0% { box-shadow: 0 0 8px rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.1); }
-  100% { box-shadow: 0 0 16px rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.3); }
-}
-@media(max-width:768px){
-  .p2p-socials a {
-    animation: social-pulse 2.5s ease-in-out infinite alternate;
-    border: 1px solid rgba(255,255,255,0.1);
+  /* FINAL_TIER_LAYOUT_2026_10_27 */
+  
+  /* Stretch outer box to edges */
+  #tiers-grid .advert-card {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
-}
+  #tiers-grid .advert-card > .advert-headline {
+    padding: 1.5rem 1.5rem 1rem 1.5rem !important;
+    margin: 0 !important;
+  }
 
+  /* Stretch rows to edges */
+  #tiers-grid .advert-card > div > div {
+    width: 100% !important;
+    padding: 1rem 1.2rem !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(150,255,150,.1) !important;
+    box-sizing: border-box !important;
+  }
 
-/* DESKTOP_SOCIAL_SHIMMER_2026_10_27 — moving shimmer on social buttons */
-.p2p-socials a::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -70%;
-  width: 55%; height: 200%;
-  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 60%, transparent 100%);
-  transform: rotate(10deg);
-  animation: social-shimmer 6s linear infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-@keyframes social-shimmer {
-  0% { left: -70%; }
-  70% { left: 130%; }
-  100% { left: 130%; }
-}
-
-
-  
-  
-  
-  /* MOBILE_EXACT_3_LINE_2026_10_27 */
+  /* MOBILE ONLY: Force the neat 3-line layout */
   @media(max-width:768px){
-    /* Stack the whole card */
+    /* Line 1 & 2 stacked */
     #tiers-grid .advert-card > div > div > div:first-child {
       display: flex !important;
       flex-direction: column !important;
       align-items: flex-start !important;
-      gap: 0.4rem !important;
-      width: 100% !important;
+      gap: 0.3rem !important;
     }
-    
-    /* LINE 1: Teams */
+    /* Line 1: Match name full width */
     #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
       width: 100% !important;
-      font-size: 1rem !important;
+      font-size: 0.95rem !important;
       line-height: 1.3 !important;
-      text-align: left !important;
     }
-
-    /* LINE 2: Badge + Score */
+    /* Line 2: Badge and score left-aligned */
     #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
       width: 100% !important;
-      display: flex !important;
-      justify-content: flex-start !important; /* Pushes badge to the left */
-      align-items: center !important;
-      gap: 0.5rem !important;
+      justify-content: flex-start !important;
     }
-
-    /* LINE 3: Odds + Date */
+    /* Line 3: Odds left, Date right */
     #tiers-grid .advert-card > div > div > div:last-child {
       display: flex !important;
       flex-direction: row !important;
-      justify-content: space-between !important; /* Odds left, Date right */
+      justify-content: space-between !important;
       align-items: center !important;
       width: 100% !important;
-      margin-top: 0.3rem !important;
-      padding-top: 0.3rem !important;
-      border-top: 1px solid rgba(150,255,150,.1) !important; /* Optional separator */
+      margin-top: 0.2rem !important;
     }
-    
-    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
-      font-size: 0.75rem !important; /* Odds */
+    #tiers-grid .advert-card > div > div > div:last-child > div {
       white-space: nowrap !important;
+    }
+    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
+      font-size: 0.75rem !important;
     }
     #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-      font-size: 0.68rem !important; /* Date */
-      white-space: nowrap !important;
-      text-align: right !important;
+      font-size: 0.65rem !important;
     }
   }
 
@@ -831,7 +794,7 @@ document.getElementById('navLinks').classList.remove('open');
       var won = true;
       var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
       var row = document.createElement('div');
-      row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;';
+      row.style.cssText = 'padding: 1rem 1.2rem !important; font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;border-bottom:1px solid rgba(150,255,150,.1);';
       row.innerHTML = '<div class="tier-shimmer"></div>' +
         '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
           '<div style="font-weight:600;color:var(--silver-bright);">' + (p.match || '—') + '</div>' +
