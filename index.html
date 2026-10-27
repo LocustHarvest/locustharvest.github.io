@@ -603,103 +603,32 @@ input[type="submit"] {
     box-sizing: border-box !important;
   }
 
-  /* MOBILE_3_LINE_LOCKED_2026_10_27 */
-  @media(max-width:768px){
-    #tiers-grid .advert-card > div > div > div:first-child {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 0.3rem !important;
-      width: 100% !important;
-    }
-    /* Line 1: Teams */
-    #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
-      width: 100% !important;
-      font-size: 0.95rem !important;
-      line-height: 1.3 !important;
-      text-align: left !important;
-    }
-    /* Line 2: Badge + Score */
-    #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
-      width: 100% !important;
-      justify-content: flex-start !important;
-    }
-    /* Line 3: Odds + Date */
-    #tiers-grid .advert-card > div > div > div:last-child {
-      display: flex !important;
-      flex-direction: row !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      width: 100% !important;
-      margin-top: 0.2rem !important;
-    }
-    #tiers-grid .advert-card > div > div > div:last-child > div {
-      white-space: nowrap !important;
-    }
-    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
-      font-size: 0.75rem !important;
-    }
-    #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-      font-size: 0.65rem !important;
-    }
-  }
-
-
   
-  /* MOBILE_HARD_3_LINE_RULE_2026_10_27 */
+  /* STRICT_MOBILE_3_LINE_CSS_2026_10_27 */
   @media(max-width:768px){
-    
-    /* Force the card into a 3-row grid */
     #tiers-grid .advert-card > div > div > div:first-child {
       display: flex !important;
       flex-direction: column !important;
       align-items: flex-start !important;
       gap: 0.3rem !important;
-      width: 100% !important;
     }
-    
-    /* LINE 1: Teams */
     #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
       width: 100% !important;
-      font-size: 0.95rem !important;
-      line-height: 1.3 !important;
-      white-space: normal !important; /* Allow wrapping if needed */
-      text-align: left !important;
+      white-space: normal !important;
     }
-
-    /* LINE 2: Badge + Score */
     #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
       width: 100% !important;
-      display: flex !important;
       justify-content: flex-start !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-      white-space: nowrap !important; /* Hard rule: never wrap */
     }
-
-    /* LINE 3: Odds + Date */
     #tiers-grid .advert-card > div > div > div:last-child {
       display: flex !important;
       flex-direction: row !important;
       justify-content: space-between !important;
-      align-items: center !important;
       width: 100% !important;
       margin-top: 0.3rem !important;
-      padding-top: 0.3rem !important;
     }
-    
-    /* Hard rule: Odds and Date never wrap */
     #tiers-grid .advert-card > div > div > div:last-child > div {
       white-space: nowrap !important;
-    }
-    
-    /* Font sizes to ensure it fits */
-    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
-      font-size: 0.75rem !important;
-    }
-    #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-      font-size: 0.65rem !important;
-      text-align: right !important;
     }
   }
 
@@ -852,16 +781,31 @@ document.getElementById('navLinks').classList.remove('open');
       var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
       var row = document.createElement('div');
       row.style.cssText = 'padding: 1rem 1.2rem !important; font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;border-bottom:1px solid rgba(150,255,150,.1);';
-      row.innerHTML = '<div class="tier-shimmer"></div>' +
-        '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
-          '<div style="font-weight:600;color:var(--silver-bright);">' + (p.match || '—') + '</div>' +
-          '<div><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
-          (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>' +
-        '</div>' +
-        '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem; margin-top:.2rem;">' +
-          '<div style="color:var(--mist);font-size:.75rem;">' + (p.market || '') + '</div>' +
-          (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;text-align:right;">' + p.date_time + '</div>' : '') +
-        '</div>';
+      var isMobile = window.innerWidth <= 768;
+      
+      var teamDiv = '<div style="font-weight:600;color:var(--silver-bright); ' + (isMobile ? 'width:100%; margin-bottom:0.2rem;' : '') + '">' + (p.match || '—') + '</div>';
+      var badgeDiv = '<div><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
+          (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>';
+      var oddsDiv = '<div style="color:var(--mist);font-size:.75rem;">' + (p.market || '') + '</div>';
+      var dateDiv = (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;text-align:right;">' + p.date_time + '</div>' : '');
+
+      if (isMobile) {
+        row.innerHTML = '<div class="tier-shimmer"></div>' +
+          '<div style="display:flex; flex-direction:column; align-items:flex-start; width:100%;">' +
+            teamDiv + badgeDiv +
+          '</div>' +
+          '<div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-top:0.3rem;">' +
+            oddsDiv + dateDiv +
+          '</div>';
+      } else {
+        row.innerHTML = '<div class="tier-shimmer"></div>' +
+          '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
+            teamDiv + badgeDiv +
+          '</div>' +
+          '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem; margin-top:.2rem;">' +
+            oddsDiv + dateDiv +
+          '</div>';
+      }
       list.appendChild(row);
     });
     col.appendChild(list);
