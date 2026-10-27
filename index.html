@@ -286,8 +286,7 @@ body.about-page .value-card h3,
 body.about-page .value-card p,
 body.about-page .footer-brand,
 body.about-page .footer-tagline,
-body.about-page .footer-brands,
-
+body.about-page .footer-brands { text-align: justify; }
 
 /* Force the three door action buttons (Open / Terms / Harvest) to share a row equally */
 .door > a.btn.btn-hero { flex: 1 1 0; min-width: 0; margin-top: 1rem; }
@@ -680,7 +679,6 @@ document.getElementById('navLinks').classList.remove('open');
     col.className = 'advert-card';
     col.innerHTML = '<span class="advert-kicker">' + v.kicker + '</span><h3 class="advert-headline">' + v.headline + '</h3><p class="advert-body">' + v.body + '</p><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a>';
     return col;
-  }
   }
 
   fetch(API)
