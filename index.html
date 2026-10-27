@@ -697,18 +697,25 @@ document.getElementById('navLinks').classList.remove('open');
         renderAdvertCard('access')
       ];
 
-      // Mix Tiers and Adverts
-      var allBlocks = tiers.concat(adverts);
+      // 1. Build the FULL pool (Tiers + Adverts). This will have between 3 and 6 items.
+      var fullPool = tiers.concat(adverts);
 
-      // Display first 3
-      for (var j = 0; j < 3; j++) {
-        if (allBlocks[j]) grid.appendChild(allBlocks[j]);
+      // 2. Function to render only the first 3 items from the pool
+      function renderGrid() {
+        grid.innerHTML = '';
+        for (var j = 0; j < 3; j++) {
+          if (fullPool[j]) grid.appendChild(fullPool[j]);
+        }
       }
 
-      // Rotate every 7 seconds
+      // 3. Render the initial 3 items
+      renderGrid();
+
+      // 4. Rotate the FULL pool by shifting the first item to the back
       setInterval(function() {
-        var firstChild = grid.firstElementChild;
-        if (firstChild) grid.appendChild(firstChild);
+        var first = fullPool.shift();
+        fullPool.push(first);
+        renderGrid();
       }, 7000);
     })
     .catch(function (error) {
