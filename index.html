@@ -636,6 +636,7 @@ document.getElementById('navLinks').classList.remove('open');
       row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4';
       row.innerHTML = '<div style="font-weight:600;color:var(--silver-bright)">' + (p.match || '—') + '</div>' +
         '<div style="color:var(--mist);margin-top:.2rem">' + (p.market || '') + '</div>' +
+        (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;margin-top:.2rem">' + p.date_time + '</div>' : '') +
         '<div style="margin-top:.3rem"><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
         (p.score ? ' <span style="color:var(--ash)">' + p.score + '</span>' : '') + '</div>';
       list.appendChild(row);
