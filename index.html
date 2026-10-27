@@ -565,6 +565,19 @@ input[type="submit"] {
   .p2p-socials a[aria-label="NOVELTY"]{background:#2563eb;border-color:#2563eb;color:#fff}
 }
 
+
+/* MOBILE_SOCIAL_MOVING_GLOW_2026_10_27 — a pulsing glow on social buttons */
+@keyframes social-pulse {
+  0% { box-shadow: 0 0 8px rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.1); }
+  100% { box-shadow: 0 0 16px rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.3); }
+}
+@media(max-width:768px){
+  .p2p-socials a {
+    animation: social-pulse 2.5s ease-in-out infinite alternate;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
 </style>
 </head>
 <body>
