@@ -629,19 +629,41 @@ input[type="submit"] {
 }
 
 
-  /* INCREASE_INNER_TEXT_BOX_2026_10_27 */
-  @media(max-width:768px){
-    .pick-card {
-      padding: 1.2rem 1rem !important;
-    }
+  
+  /* TIER_STRETCH_TO_EDGES_2026_10_27 */
+  
+  /* Remove padding from the outer tier box (the .advert-card wrapper) */
+  #tiers-grid .advert-card {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
+  /* Ensure the title stays padded so it doesn't hit the border */
+  #tiers-grid .advert-card > h3,
+  #tiers-grid .advert-card > .tier-title {
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+  }
 
-  /* INCREASE_TIER_BOX_PADDING_MOBILE_2026_10_27 */
-  @media(max-width:768px){
-    #tiers-grid .advert-card {
-      padding: 1.5rem 1.2rem !important;
-    }
+  /* Make the list of matches fill the width */
+  #tiers-grid .advert-card > div {
+    width: 100% !important;
+  }
+
+  /* Style the individual match rows to stretch edge-to-edge */
+  #tiers-grid .pick {
+    width: 100% !important;
+    padding: 1rem 1.2rem !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Optional: add a subtle line between matches */
+  #tiers-grid .pick + .pick {
+    border-top: 1px solid rgba(150,255,150,.1) !important;
   }
 
 </style>
