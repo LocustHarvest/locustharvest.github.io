@@ -420,7 +420,7 @@ input[type="submit"] {
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  height: 100%; /* Stretch content */
+  align-self: stretch; /* Stretch content */
   text-align: center;  /* Center text */
 }
 .advert-card::before {
@@ -697,7 +697,7 @@ document.getElementById('navLinks').classList.remove('open');
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div><span class="advert-kicker">' + v.kicker + '</span><h3 class="advert-headline">' + v.headline + '</h3></div><div style="flex: 1; display: flex; flex-direction: column; justify-content: center; margin: 1.5rem 0;"><p class="advert-body" style="margin:0;">' + v.body + '</p></div><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a></div>';
+    col.innerHTML = '<div style="display:flex; flex-direction:column; flex: 1; width:100%;"><div><span class="advert-kicker">' + v.kicker + '</span><h3 class="advert-headline">' + v.headline + '</h3></div><div style="flex: 1; display: flex; flex-direction: column; justify-content: center; margin: 1.5rem 0;"><p class="advert-body" style="margin:0;">' + v.body + '</p></div><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a></div>';
     return col;
   }
 
