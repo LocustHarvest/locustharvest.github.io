@@ -645,51 +645,61 @@ input[type="submit"] {
   }
 
 
-  /* MOBILE_TEXT_WRAP_ONLY_2026_10_27 */
+  
+  /* MOBILE_HARD_3_LINE_RULE_2026_10_27 */
   @media(max-width:768px){
-    /* Ensure the row does not break the layout */
+    
+    /* Force the card into a 3-row grid */
     #tiers-grid .advert-card > div > div > div:first-child {
       display: flex !important;
-      flex-direction: row !important;
-      justify-content: space-between !important;
+      flex-direction: column !important;
       align-items: flex-start !important;
+      gap: 0.3rem !important;
       width: 100% !important;
-      gap: 0.5rem !important;
     }
     
-    /* 1. Team Names: Allow ONLY the text to wrap to a 2nd line */
+    /* LINE 1: Teams */
     #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
-      white-space: normal !important;
-      word-wrap: break-word !important;
-      flex: 1 1 auto !important;
-      min-width: 0 !important;
+      width: 100% !important;
       font-size: 0.95rem !important;
       line-height: 1.3 !important;
+      white-space: normal !important; /* Allow wrapping if needed */
       text-align: left !important;
     }
 
-    /* 2. Badge & Score: Locked to the right, never wraps */
+    /* LINE 2: Badge + Score */
     #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
-      flex: 0 0 auto !important;
-      white-space: nowrap !important;
+      width: 100% !important;
       display: flex !important;
+      justify-content: flex-start !important;
       align-items: center !important;
-      justify-content: flex-end !important;
+      gap: 0.5rem !important;
+      white-space: nowrap !important; /* Hard rule: never wrap */
     }
 
-    /* 3. Odds & Date: Locked to one line */
+    /* LINE 3: Odds + Date */
     #tiers-grid .advert-card > div > div > div:last-child {
       display: flex !important;
       flex-direction: row !important;
-      flex-wrap: nowrap !important;
       justify-content: space-between !important;
       align-items: center !important;
       width: 100% !important;
-      margin-top: 0.2rem !important;
+      margin-top: 0.3rem !important;
+      padding-top: 0.3rem !important;
     }
     
+    /* Hard rule: Odds and Date never wrap */
     #tiers-grid .advert-card > div > div > div:last-child > div {
       white-space: nowrap !important;
+    }
+    
+    /* Font sizes to ensure it fits */
+    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
+      font-size: 0.75rem !important;
+    }
+    #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
+      font-size: 0.65rem !important;
+      text-align: right !important;
     }
   }
 
