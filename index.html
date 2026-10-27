@@ -409,6 +409,15 @@ input[type="submit"] {
 }
 
 /* ADVERT_ANIMATION_2026_10_27 */
+.tier-shimmer {
+  position: absolute;
+  top: -50%; left: -70%;
+  width: 55%; height: 200%;
+  background: linear-gradient(105deg, transparent 0%, rgba(123,255,92,0.05) 40%, rgba(123,255,92,0.15) 50%, rgba(123,255,92,0.05) 60%, transparent 100%);
+  transform: rotate(10deg);
+  animation: advert-shimmer 6s linear infinite;
+  pointer-events: none;
+}
 .advert-card {
   position: relative;
   overflow: hidden;
@@ -633,8 +642,9 @@ document.getElementById('navLinks').classList.remove('open');
       var won = true;
       var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
       var row = document.createElement('div');
-      row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4';
-      row.innerHTML = '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
+      row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;';
+      row.innerHTML = '<div class="tier-shimmer"></div>' +
+        '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
           '<div style="font-weight:600;color:var(--silver-bright);">' + (p.match || '—') + '</div>' +
           '<div><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
           (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>' +
