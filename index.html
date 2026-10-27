@@ -408,6 +408,39 @@ input[type="submit"] {
   line-height: 1;
 }
 
+
+/* ===== LOGO EFFECTS ===== */
+.logo-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.logo-wrap img {
+  position: relative;
+  z-index: 1;
+  animation: logo-glow 3s ease-in-out infinite alternate;
+}
+.logo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -70%;
+  width: 55%; height: 200%;
+  background: linear-gradient(105deg, transparent 0%, rgba(123,255,92,0.1) 40%, rgba(123,255,92,0.4) 50%, rgba(123,255,92,0.1) 60%, transparent 100%);
+  transform: rotate(10deg);
+  animation: logo-shimmer 4s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes logo-shimmer {
+  0% { left: -70%; }
+  70% { left: 130%; }
+  100% { left: 130%; }
+}
+@keyframes logo-glow {
+  0% { filter: drop-shadow(0 0 5px rgba(62,226,62,0.2)); }
+  100% { filter: drop-shadow(0 0 15px rgba(62,226,62,0.6)); }
+}
+
 /* ADVERT_ANIMATION_2026_10_27 */
 .tier-shimmer {
   position: absolute;
@@ -505,7 +538,7 @@ input[type="submit"] {
 
 <nav id="nav" aria-label="Main navigation">
 <a href="/" class="nav-logo" aria-label="Locust Harvest home">
-<img src="nav-lockup-89.webp" srcset="nav-lockup-89.webp 89w, nav-lockup-178.webp 178w" sizes="89px" width="89" height="38" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps" decoding="async">
+<span class="logo-wrap"><img src="nav-lockup-89.webp" srcset="nav-lockup-89.webp 89w, nav-lockup-178.webp 178w" sizes="89px" width="89" height="38" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps" decoding="async"></span>
 </a>
 <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
 <ul class="nav-links" id="navLinks">
@@ -519,7 +552,7 @@ input[type="submit"] {
 </nav>
 
 <header class="top-banner">
-<img class="hero-mark" src="logo-website-372.webp" srcset="logo-website-372.webp 372w, logo-website-744.webp 744w, logo-website-1349.webp 1349w" sizes="(max-width: 768px) 372px, 630px" width="1349" height="900" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps" fetchpriority="high" decoding="async">
+<span class="logo-wrap"><img class="hero-mark" src="logo-website-372.webp" srcset="logo-website-372.webp 372w, logo-website-744.webp 744w, logo-website-1349.webp 1349w" sizes="(max-width: 768px) 372px, 630px" width="1349" height="900" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps" fetchpriority="high" decoding="async"></span>
 <p class="top-eyebrow">Locust Harvest (Pty) Ltd</p>
 </header>
 
