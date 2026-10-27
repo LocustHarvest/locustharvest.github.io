@@ -702,42 +702,49 @@ document.getElementById('navLinks').classList.remove('open');
   fetch(API)
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
-      // data should look like: { winners: [ {match, market, score}, ... ] }
       var winners = (data && data.winners) ? data.winners : [];
-      var totalBlocks = Math.floor(winners.length / 5); // Strictly 5 per block, discard leftovers
-      
-      // If we have no winners, show 3 adverts
-      if (totalBlocks === 0) {
-        ['offer', 'proof', 'access'].forEach(function (key) { grid.appendChild(renderAdvertCard(key)); });
-        return;
-      }
+      var totalTiers = Math.floor(winners.length / 5);
+      var pool = [];
 
-      // 1. Render the winner blocks
-      var renderedBlocks = 0;
-      for (var i = 0; i < totalBlocks; i++) {
-        if (renderedBlocks >= 3) break;
+      // 1. Gather winners and 2. Split into 5-match Tiers
+      for (var i = 0; i < totalTiers; i++) {
         var chunk = winners.slice(i * 5, (i * 5) + 5);
-        grid.appendChild(renderTierBlock(chunk, i));
-        renderedBlocks++;
+        pool.push(renderTierBlock(chunk, i));
       }
 
-      // 2. Fill the remaining space with adverts
-      var remaining = 3 - renderedBlocks;
-      var adOrder = remaining === 3 ? ['offer', 'proof', 'access'] : (remaining === 2 ? ['offer', 'proof'] : ['access']);
-      adOrder.forEach(function (key) { grid.appendChild(renderAdvertCard(key)); });
+      // 3. Create all 3 Adverts
+      pool.push(renderAdvertCard('offer'));
+      pool.push(renderAdvertCard('proof'));
+      pool.push(renderAdvertCard('access'));
 
-      // 3. ROTATION LOGIC: Cycle the blocks every 5 seconds
-      var intervalId = setInterval(function() {
+      // 4. Combine them into one massive array (already done by pushing to 'pool')
+      // 5. Display the first 3
+      for (var j = 0; j < 3; j++) {
+        if (pool[j]) grid.appendChild(pool[j]);
+      }
+
+      // 6. Rotate them every 7 seconds
+      setInterval(function() {
         var firstChild = grid.firstElementChild;
-        if (firstChild && grid.children.length > 1) {
-          grid.appendChild(firstChild); // Move the first child to the end
+        if (firstChild) {
+          grid.appendChild(firstChild); // Pull the first one out and push to the back
         }
-      }, 7000); // 7000ms = 7 seconds
-
+      }, 7000);
     })
     .catch(function () {
-      // Fallback to adverts if the JSON fetch fails
-      ['offer', 'proof', 'access'].forEach(function (key) { grid.appendChild(renderAdvertCard(key)); });
+      // Fallback if API fails: Just show the 3 adverts and rotate them
+      var fallbackPool = [
+        renderAdvertCard('offer'), 
+        renderAdvertCard('proof'), 
+        renderAdvertCard('access')
+      ];
+      for (var j = 0; j < 3; j++) { if (fallbackPool[j]) grid.appendChild(fallbackPool[j]); }
+      
+      setInterval(function() {
+        var firstChild = grid.firstElementChild;
+        if (firstChild) grid.appendChild(firstChild);
+      }, 7000);
+    });
       
       // Rotation for fallback blocks
       setInterval(function() {
