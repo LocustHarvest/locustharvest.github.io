@@ -690,6 +690,46 @@ input[type="submit"] {
     white-space: nowrap !important;
   }
 
+
+  /* MOBILE_3_LINE_FIX_2026_10_27 */
+  @media(max-width:768px){
+    /* 1. Force Match Name on Line 1, WON badge on Line 2 */
+    #tiers-grid .advert-card > div > div > div:first-child {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.3rem !important;
+    }
+    
+    #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
+      width: 100% !important;
+      font-size: 1rem !important;
+      line-height: 1.2 !important;
+    }
+
+    /* Push the WON badge and score to the left on its own line */
+    #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
+      width: 100% !important;
+      justify-content: flex-start !important;
+    }
+
+    /* 2. Line 3: Odds and Date */
+    #tiers-grid .advert-card > div > div > div:last-child {
+      margin-top: 0.2rem !important;
+      width: 100% !important;
+    }
+    
+    /* Let the odds and date wrap naturally if they absolutely must, 
+       but shrinking the font slightly helps them fit on one line */
+    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
+      font-size: 0.75rem !important;
+      white-space: normal !important; 
+    }
+    #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
+      font-size: 0.7rem !important;
+      white-space: normal !important;
+    }
+  }
+
 </style>
 </head>
 <body>
