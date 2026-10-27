@@ -612,53 +612,34 @@ document.getElementById('navLinks').classList.remove('open');
 
 <script>
 (function loadYesterdayTiers() {
-  // The API endpoint we will generate alongside the blog
-  var API = 'https://www.locustharvest.com/harvest/yesterday.json';
+  var API = 'https://app.novelty.locustharvest.com/api/bets/yesterday';
   var grid = document.getElementById('tiers-grid');
   if (!grid) return;
 
   function renderTierBlock(winners, tierIndex) {
     var col = document.createElement('div');
-    col.className = 'tier-column'; // Add styling if needed
+    var blockTitles = ['Prime Selections', 'Top Tier Selections', 'Elite Selections'];
     
-    // Add a header to the block
     var header = document.createElement('h3');
-    header.className = 'advert-headline'; // Reuse the placard style
+    header.className = 'advert-headline';
     header.style.fontSize = '1.2rem';
     header.style.marginBottom = '1rem';
     header.style.textAlign = 'center';
-    var blockTitles = ['Prime Selections', 'Top Tier Selections', 'Elite Selections'];
     header.innerText = blockTitles[tierIndex] || 'Premium Selections';
     col.appendChild(header);
 
     var list = document.createElement('div');
     winners.forEach(function (p) {
-      // Build the visual card for each winner
+      var won = p.result === 'won';
+      var badge = won ? 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)' : 'background:rgba(255,80,80,.12);color:#ff6b6b;border:1px solid rgba(255,80,80,.3)';
       var row = document.createElement('div');
-      row.style.cssText = 'border:1px solid var(--line);padding:.75rem;margin-bottom:.5rem;background:var(--panel2);text-align:left;';
-      
-      var teams = document.createElement('div');
-      teams.style.cssText = 'font-weight:600;color:var(--silver-bright);font-size:.9rem;margin-bottom:.25rem;';
-      teams.innerText = p.match;
-      
-      var details = document.createElement('div');
-      details.style.cssText = 'font-size:.8rem;color:var(--mist);display:flex;justify-content:space-between;';
-      
-      var market = document.createElement('span');
-      market.innerText = p.market;
-      
-      var score = document.createElement('span');
-      score.style.color = 'var(--green-bright)';
-      score.innerText = 'WON ' + p.score;
-      
-      details.appendChild(market);
-      details.appendChild(score);
-      row.appendChild(teams);
-      row.appendChild(details);
-      
+      row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4';
+      row.innerHTML = '<div style="font-weight:600;color:var(--silver-bright)">' + (p.match || '—') + '</div>' +
+        '<div style="color:var(--mist);margin-top:.2rem">' + (p.market || '') + '</div>' +
+        '<div style="margin-top:.3rem"><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">' + (won ? 'WON' : 'LOST') + '</span>' +
+        (p.score ? ' <span style="color:var(--ash)">' + p.score + '</span>' : '') + '</div>';
       list.appendChild(row);
     });
-    
     col.appendChild(list);
     return col;
   }
@@ -694,7 +675,6 @@ document.getElementById('navLinks').classList.remove('open');
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    // Force perfect centering using absolute CSS
     col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="text-align:center;"><a href="' + v.href + '" class="advert-cta" style="margin-bottom:0;">' + v.cta + '</a></div></div>';
     return col;
   }
@@ -706,52 +686,34 @@ document.getElementById('navLinks').classList.remove('open');
       var totalTiers = Math.floor(winners.length / 5);
       var pool = [];
 
-      // 1. Gather winners and 2. Split into 5-match Tiers
+      // 1. Split into Tiers
       for (var i = 0; i < totalTiers; i++) {
         var chunk = winners.slice(i * 5, (i * 5) + 5);
         pool.push(renderTierBlock(chunk, i));
       }
 
-      // 3. Create all 3 Adverts
+      // 2. Add all 3 Adverts
       pool.push(renderAdvertCard('offer'));
       pool.push(renderAdvertCard('proof'));
       pool.push(renderAdvertCard('access'));
 
-      // 4. Combine them into one massive array (already done by pushing to 'pool')
-      // 5. Display the first 3
+      // 3. Display the first 3 from the massive pool
       for (var j = 0; j < 3; j++) {
         if (pool[j]) grid.appendChild(pool[j]);
       }
 
-      // 6. Rotate them every 7 seconds
-      setInterval(function() {
-        var firstChild = grid.firstElementChild;
-        if (firstChild) {
-          grid.appendChild(firstChild); // Pull the first one out and push to the back
-        }
-      }, 7000);
-    })
-    .catch(function () {
-      // Fallback if API fails: Just show the 3 adverts and rotate them
-      var fallbackPool = [
-        renderAdvertCard('offer'), 
-        renderAdvertCard('proof'), 
-        renderAdvertCard('access')
-      ];
-      for (var j = 0; j < 3; j++) { if (fallbackPool[j]) grid.appendChild(fallbackPool[j]); }
-      
+      // 4. Rotate every 7 seconds
       setInterval(function() {
         var firstChild = grid.firstElementChild;
         if (firstChild) grid.appendChild(firstChild);
       }, 7000);
-    });
-      
-      // Rotation for fallback blocks
+    })
+    .catch(function () {
+      var fallbackPool = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
+      for (var j = 0; j < 3; j++) { if (fallbackPool[j]) grid.appendChild(fallbackPool[j]); }
       setInterval(function() {
         var firstChild = grid.firstElementChild;
-        if (firstChild && grid.children.length > 1) {
-          grid.appendChild(firstChild);
-        }
+        if (firstChild) grid.appendChild(firstChild);
       }, 7000);
     });
 })();
