@@ -419,7 +419,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  align-items: start;
+  align-items: stretch;
   align-self: stretch; /* Stretch content */
   text-align: center;  /* Center text */
 }
@@ -680,14 +680,14 @@ document.getElementById('navLinks').classList.remove('open');
         href: 'https://app.novelty.locustharvest.com/picks' 
       },
       proof: { 
-        kicker: 'RADICAL TRANSPARENCY', 
+        kicker: '', 
         headline: 'The Truth is on the Board.', 
         body: 'We aren\'t afraid to show you the losses right next to the wins. Every selection is graded against the official scoreboard and published instantly. Total transparency, zero excuses, and absolute proof of our performance.', 
         cta: 'See The Results →', 
         href: 'https://www.locustharvest.com/harvest/' 
       },
       access: { 
-        kicker: 'FULL ARCHIVE ACCESS', 
+        kicker: '', 
         headline: 'Your All-Access Pass.', 
         body: 'Step inside the vault and unlock our highly guarded daily selections. You get full, unrestricted access to the exclusive picks our proprietary engine generates every single day. Stop guessing and use our premium daily picks.', 
         cta: 'Subscribe — ' + price + ' / MONTH →', 
@@ -697,7 +697,7 @@ document.getElementById('navLinks').classList.remove('open');
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    col.innerHTML = '<div style="display:flex; flex-direction:column; flex: 1; width:100%;"><div><span class="advert-kicker">' + v.kicker + '</span><h3 class="advert-headline">' + v.headline + '</h3></div><div style="flex: 1; display: flex; flex-direction: column; justify-content: center; margin: 1.5rem 0;"><p class="advert-body" style="margin:0;">' + v.body + '</p></div><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a></div>';
+    col.innerHTML = '<div style="display:flex; flex-direction:column; flex: 1; width:100%;"><div><h3 class="advert-headline">' + v.headline + '</h3></div><div style="flex: 1; display: flex; flex-direction: column; justify-content: center; margin: 1.5rem 0;"><p class="advert-body" style="margin:0;">' + v.body + '</p></div><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a></div>';
     return col;
   }
 
