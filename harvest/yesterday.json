@@ -1,3 +1,54 @@
 {
-  "winners": []
+  "winners": [
+    {
+      "match": "FC Copenhagen v OB Odense BK",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1"
+    },
+    {
+      "match": "\u00d6rebro SK v Falkenbergs FF",
+      "market": "Under 4.5 @ 1.20",
+      "score": "1-0"
+    },
+    {
+      "match": "Santa Clara v Benfica",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-2"
+    },
+    {
+      "match": "Montpellier v Red Star",
+      "market": "Under 4.5 @ 1.20",
+      "score": "2-1"
+    },
+    {
+      "match": "Boulogne v Stade de Reims",
+      "market": "Under 4.5 @ 1.20",
+      "score": "1-1"
+    },
+    {
+      "match": "Sevilla v CA Osasuna",
+      "market": "Under 4.5 @ 1.20",
+      "score": "2-0"
+    },
+    {
+      "match": "Union Santa Fe v Estudiantes",
+      "market": "Under 4.5 @ 1.20",
+      "score": "3-1"
+    },
+    {
+      "match": "Coritiba v Gr\u00eamio",
+      "market": "Under 2.5 @ 1.20",
+      "score": "0-1"
+    },
+    {
+      "match": "Am\u00e9rica Mineiro v Cuiab\u00e1",
+      "market": "Under 2.5 @ 1.20",
+      "score": "1-0"
+    },
+    {
+      "match": "Juventude v Nautico PE",
+      "market": "Under 4.5 @ 1.20",
+      "score": "4-0"
+    }
+  ]
 }
