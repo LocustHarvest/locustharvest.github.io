@@ -548,6 +548,23 @@ input[type="submit"] {
   background:var(--green); 
   color:#04140a;
 }
+
+/* MOBILE_SOLID_SOCIALS_2026_10_27 — on mobile, there is no hover,
+   so the buttons would stay gray. Give them their brand colour by
+   default on screens <= 768px. */
+@media(max-width:768px){
+  .p2p-socials a[aria-label="YouTube"]{background:#ff0000;border-color:#ff0000;color:#fff}
+  .p2p-socials a[aria-label="Instagram"]{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:#dc2743;color:#fff}
+  .p2p-socials a[aria-label="TikTok"]{background:#000;border-color:#69C9D0;color:#fff}
+  .p2p-socials a[aria-label="Facebook"]{background:#1877f2;border-color:#1877f2;color:#fff}
+  .p2p-socials a[aria-label="X"]{background:#000;border-color:#333;color:#fff}
+  .p2p-socials a[aria-label="Telegram"]{background:#0088cc;border-color:#0088cc;color:#fff}
+  .p2p-socials a[aria-label="WhatsApp"]{background:#25d366;border-color:#25d366;color:#fff}
+  .p2p-socials a[aria-label="Rumble"]{background:#85c742;border-color:#85c742;color:#fff}
+  .p2p-socials a[aria-label="Bluesky"]{background:#1185fe;border-color:#1185fe;color:#fff}
+  .p2p-socials a[aria-label="NOVELTY"]{background:#2563eb;border-color:#2563eb;color:#fff}
+}
+
 </style>
 </head>
 <body>
