@@ -630,40 +630,64 @@ input[type="submit"] {
 
 
   
-  /* TIER_STRETCH_TO_EDGES_2026_10_27 */
   
-  /* Remove padding from the outer tier box (the .advert-card wrapper) */
+  /* TIER_CARD_ULTIMATE_FIX_2026_10_27 */
+  
+  /* Remove padding from the outer tier box */
   #tiers-grid .advert-card {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
   }
-
-  /* Ensure the title stays padded so it doesn't hit the border */
-  #tiers-grid .advert-card > h3,
-  #tiers-grid .advert-card > .tier-title {
+  
+  /* Keep the title padded nicely */
+  #tiers-grid .advert-card > .advert-headline {
     padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+    margin: 0 !important;
   }
 
-  /* Make the list of matches fill the width */
-  #tiers-grid .advert-card > div {
-    width: 100% !important;
-  }
-
-  /* Style the individual match rows to stretch edge-to-edge */
-  #tiers-grid .pick {
+  /* Stretch the match rows to the edges, overriding inline JS styles */
+  #tiers-grid .advert-card > div > div {
     width: 100% !important;
     padding: 1rem 1.2rem !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
     margin: 0 !important;
+    border-top: 1px solid rgba(150,255,150,.1) !important;
     box-sizing: border-box !important;
   }
 
-  /* Optional: add a subtle line between matches */
-  #tiers-grid .pick + .pick {
-    border-top: 1px solid rgba(150,255,150,.1) !important;
+  /* Force the inner flex layout to fix long team names */
+  #tiers-grid .advert-card > div > div > div:first-child {
+    flex-wrap: wrap !important; 
+  }
+  
+  /* Make the match name take full width so it doesn't get crushed */
+  #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  /* Push the WON badge and score to the right */
+  #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
+    flex: 1 1 100% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  /* Ensure the bottom row (Odds + Date) stays on one line */
+  #tiers-grid .advert-card > div > div > div:last-child {
+    flex-wrap: nowrap !important;
+  }
+  #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
+    white-space: nowrap !important;
+  }
+  #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
+    white-space: nowrap !important;
   }
 
 </style>
