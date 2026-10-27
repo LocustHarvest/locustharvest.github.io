@@ -726,7 +726,10 @@ document.getElementById('navLinks').classList.remove('open');
 
   function renderTierBlock(winners, tierIndex) {
     var col = document.createElement('div');
-    col.style.cssText = 'display:flex; flex-direction:column; height:100%;';
+    col.className = 'advert-card';
+    col.style.transform = 'none';
+    col.style.justifyContent = 'flex-start';
+    col.style.textAlign = 'left';
     var blockTitles = ['Prime Selections', 'Top Tier Selections', 'Elite Selections'];
     var header = document.createElement('h3');
     header.className = 'advert-headline';
@@ -737,7 +740,7 @@ document.getElementById('navLinks').classList.remove('open');
     col.appendChild(header);
 
     var list = document.createElement('div');
-    list.style.flex = '1';
+    
     winners.forEach(function (p) {
       var won = true;
       var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
