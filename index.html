@@ -179,7 +179,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .value-card h3{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 
 .p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
-.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s;animation:social-glow 4s ease-in-out infinite alternate}
+.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s;animation:social-glow 4s ease-in-out infinite alternate;position:relative;overflow:hidden}
 @keyframes social-glow {
   0% { box-shadow: 0 0 0 rgba(62,226,62,0); border-color: var(--line); }
   100% { box-shadow: 0 0 12px rgba(62,226,62,0.15); border-color: rgba(62,226,62,0.25); }
@@ -576,6 +576,25 @@ input[type="submit"] {
     animation: social-pulse 2.5s ease-in-out infinite alternate;
     border: 1px solid rgba(255,255,255,0.1);
   }
+}
+
+
+/* DESKTOP_SOCIAL_SHIMMER_2026_10_27 — moving shimmer on social buttons */
+.p2p-socials a::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -70%;
+  width: 55%; height: 200%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 60%, transparent 100%);
+  transform: rotate(10deg);
+  animation: social-shimmer 6s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes social-shimmer {
+  0% { left: -70%; }
+  70% { left: 130%; }
+  100% { left: 130%; }
 }
 
 </style>
