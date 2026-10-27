@@ -631,156 +631,55 @@ input[type="submit"] {
 
   
   
-  /* TIER_CARD_ULTIMATE_FIX_2026_10_27 */
   
-  /* Remove padding from the outer tier box */
-  #tiers-grid .advert-card {
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  /* Keep the title padded nicely */
-  #tiers-grid .advert-card > .advert-headline {
-    padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
-    margin: 0 !important;
-  }
-
-  /* Stretch the match rows to the edges, overriding inline JS styles */
-  #tiers-grid .advert-card > div > div {
-    width: 100% !important;
-    padding: 1rem 1.2rem !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-    border-top: 1px solid rgba(150,255,150,.1) !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Force the inner flex layout to fix long team names */
-  #tiers-grid .advert-card > div > div > div:first-child {
-    flex-wrap: wrap !important; 
-  }
-  
-  /* Make the match name take full width so it doesn't get crushed */
-  #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    font-size: 0.95rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 0.2rem !important;
-  }
-
-  /* Push the WON badge and score to the right */
-  #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
-    flex: 1 1 100% !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-  }
-
-  /* Ensure the bottom row (Odds + Date) stays on one line */
-  #tiers-grid .advert-card > div > div > div:last-child {
-    flex-wrap: nowrap !important;
-  }
-  #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
-    white-space: nowrap !important;
-  }
-  #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-    white-space: nowrap !important;
-  }
-
-
-  /* MOBILE_3_LINE_FIX_2026_10_27 */
+  /* MOBILE_EXACT_3_LINE_2026_10_27 */
   @media(max-width:768px){
-    /* 1. Force Match Name on Line 1, WON badge on Line 2 */
-    #tiers-grid .advert-card > div > div > div:first-child {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 0.3rem !important;
-    }
-    
-    #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
-      width: 100% !important;
-      font-size: 1rem !important;
-      line-height: 1.2 !important;
-    }
-
-    /* Push the WON badge and score to the left on its own line */
-    #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
-      width: 100% !important;
-      justify-content: flex-start !important;
-    }
-
-    /* 2. Line 3: Odds and Date */
-    #tiers-grid .advert-card > div > div > div:last-child {
-      margin-top: 0.2rem !important;
-      width: 100% !important;
-    }
-    
-    /* Let the odds and date wrap naturally if they absolutely must, 
-       but shrinking the font slightly helps them fit on one line */
-    #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
-      font-size: 0.75rem !important;
-      white-space: normal !important; 
-    }
-    #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-      font-size: 0.7rem !important;
-      white-space: normal !important;
-    }
-  }
-
-
-  
-  /* MOBILE_3_LINE_CLEAN_FIX_2026_10_27 */
-  @media(max-width:768px){
-    
-    /* Reset the container so it stacks properly */
+    /* Stack the whole card */
     #tiers-grid .advert-card > div > div > div:first-child {
       display: flex !important;
       flex-direction: column !important;
       align-items: flex-start !important;
       gap: 0.4rem !important;
+      width: 100% !important;
     }
     
-    /* LINE 1: Match Name */
+    /* LINE 1: Teams */
     #tiers-grid .advert-card > div > div > div:first-child > div:first-child {
       width: 100% !important;
-      font-size: 0.95rem !important;
+      font-size: 1rem !important;
       line-height: 1.3 !important;
       text-align: left !important;
     }
 
-    /* LINE 2: WON Badge and Score */
+    /* LINE 2: Badge + Score */
     #tiers-grid .advert-card > div > div > div:first-child > div:last-child {
       width: 100% !important;
       display: flex !important;
-      justify-content: flex-start !important; /* Push to the left */
+      justify-content: flex-start !important; /* Pushes badge to the left */
       align-items: center !important;
       gap: 0.5rem !important;
     }
 
-    /* LINE 3: Odds and Date */
+    /* LINE 3: Odds + Date */
     #tiers-grid .advert-card > div > div > div:last-child {
       display: flex !important;
       flex-direction: row !important;
       justify-content: space-between !important; /* Odds left, Date right */
       align-items: center !important;
       width: 100% !important;
-      margin-top: 0.2rem !important;
+      margin-top: 0.3rem !important;
+      padding-top: 0.3rem !important;
+      border-top: 1px solid rgba(150,255,150,.1) !important; /* Optional separator */
     }
     
-    /* Make sure text doesn't wrap weirdly on line 3 */
-    #tiers-grid .advert-card > div > div > div:last-child > div {
-      white-space: nowrap !important;
-    }
-    
-    /* Slight font adjustments for mobile to fit perfectly */
     #tiers-grid .advert-card > div > div > div:last-child > div:first-child {
       font-size: 0.75rem !important; /* Odds */
+      white-space: nowrap !important;
     }
     #tiers-grid .advert-card > div > div > div:last-child > div:last-child {
-      font-size: 0.65rem !important; /* Date */
+      font-size: 0.68rem !important; /* Date */
+      white-space: nowrap !important;
+      text-align: right !important;
     }
   }
 
