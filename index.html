@@ -725,10 +725,27 @@ document.getElementById('navLinks').classList.remove('open');
       var remaining = 3 - renderedBlocks;
       var adOrder = remaining === 3 ? ['offer', 'proof', 'access'] : (remaining === 2 ? ['offer', 'proof'] : ['access']);
       adOrder.forEach(function (key) { grid.appendChild(renderAdvertCard(key)); });
+
+      // 3. ROTATION LOGIC: Cycle the blocks every 5 seconds
+      var intervalId = setInterval(function() {
+        var firstChild = grid.firstElementChild;
+        if (firstChild && grid.children.length > 1) {
+          grid.appendChild(firstChild); // Move the first child to the end
+        }
+      }, 5000); // 5000ms = 5 seconds
+
     })
     .catch(function () {
       // Fallback to adverts if the JSON fetch fails
       ['offer', 'proof', 'access'].forEach(function (key) { grid.appendChild(renderAdvertCard(key)); });
+      
+      // Rotation for fallback blocks
+      setInterval(function() {
+        var firstChild = grid.firstElementChild;
+        if (firstChild && grid.children.length > 1) {
+          grid.appendChild(firstChild);
+        }
+      }, 5000);
     });
 })();
 </script>
