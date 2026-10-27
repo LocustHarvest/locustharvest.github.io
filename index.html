@@ -634,11 +634,15 @@ document.getElementById('navLinks').classList.remove('open');
       var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
       var row = document.createElement('div');
       row.style.cssText = 'border:1px solid var(--line);padding:.6rem .8rem;margin-bottom:.5rem;font-size:.78rem;line-height:1.4';
-      row.innerHTML = '<div style="font-weight:600;color:var(--silver-bright)">' + (p.match || '—') + '</div>' +
-        '<div style="color:var(--mist);margin-top:.2rem">' + (p.market || '') + '</div>' +
-        (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;margin-top:.2rem">' + p.date_time + '</div>' : '') +
-        '<div style="margin-top:.3rem"><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
-        (p.score ? ' <span style="color:var(--ash)">' + p.score + '</span>' : '') + '</div>';
+      row.innerHTML = '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' +
+          '<div style="font-weight:600;color:var(--silver-bright);">' + (p.match || '—') + '</div>' +
+          '<div><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' +
+          (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>' +
+        '</div>' +
+        '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem; margin-top:.2rem;">' +
+          '<div style="color:var(--mist);font-size:.75rem;">' + (p.market || '') + '</div>' +
+          (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;text-align:right;">' + p.date_time + '</div>' : '') +
+        '</div>';
       list.appendChild(row);
     });
     col.appendChild(list);
