@@ -626,7 +626,8 @@ document.getElementById('navLinks').classList.remove('open');
     header.style.fontSize = '1.2rem';
     header.style.marginBottom = '1rem';
     header.style.textAlign = 'center';
-    header.innerText = 'Verified Winners';
+    var blockTitles = ['Prime Selections', 'Top Tier Selections', 'Elite Selections'];
+    header.innerText = blockTitles[tierIndex] || 'Premium Selections';
     col.appendChild(header);
 
     var list = document.createElement('div');
