@@ -626,7 +626,7 @@ document.getElementById('navLinks').classList.remove('open');
     header.style.fontSize = '1.2rem';
     header.style.marginBottom = '1rem';
     header.style.textAlign = 'center';
-    header.innerText = 'Winners — Tier ' + (tierIndex + 1);
+    header.innerText = 'Verified Winners';
     col.appendChild(header);
 
     var list = document.createElement('div');
@@ -704,7 +704,7 @@ document.getElementById('navLinks').classList.remove('open');
     .then(function (data) {
       // data should look like: { winners: [ {match, market, score}, ... ] }
       var winners = (data && data.winners) ? data.winners : [];
-      var totalBlocks = Math.ceil(winners.length / 8);
+      var totalBlocks = Math.floor(winners.length / 5); // Strictly 5 per block, discard leftovers
       
       // If we have no winners, show 3 adverts
       if (totalBlocks === 0) {
@@ -716,7 +716,7 @@ document.getElementById('navLinks').classList.remove('open');
       var renderedBlocks = 0;
       for (var i = 0; i < totalBlocks; i++) {
         if (renderedBlocks >= 3) break;
-        var chunk = winners.slice(i * 8, (i * 8) + 8);
+        var chunk = winners.slice(i * 5, (i * 5) + 5);
         grid.appendChild(renderTierBlock(chunk, i));
         renderedBlocks++;
       }
