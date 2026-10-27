@@ -3,52 +3,62 @@
     {
       "match": "FC Copenhagen v OB Odense BK",
       "market": "Over 1.5 @ 1.20",
-      "score": "1-1"
+      "score": "1-1",
+      "time": "Mon 26 Oct \u00b7 20:00 SAST"
     },
     {
       "match": "\u00d6rebro SK v Falkenbergs FF",
       "market": "Under 4.5 @ 1.20",
-      "score": "1-0"
+      "score": "1-0",
+      "time": "Mon 26 Oct \u00b7 20:05 SAST"
     },
     {
       "match": "Santa Clara v Benfica",
       "market": "Over 1.5 @ 1.20",
-      "score": "1-2"
+      "score": "1-2",
+      "time": "Mon 26 Oct \u00b7 20:45 SAST"
     },
     {
       "match": "Montpellier v Red Star",
       "market": "Under 4.5 @ 1.20",
-      "score": "2-1"
+      "score": "2-1",
+      "time": "Mon 26 Oct \u00b7 21:45 SAST"
     },
     {
       "match": "Boulogne v Stade de Reims",
       "market": "Under 4.5 @ 1.20",
-      "score": "1-1"
+      "score": "1-1",
+      "time": "Mon 26 Oct \u00b7 21:45 SAST"
     },
     {
       "match": "Sevilla v CA Osasuna",
       "market": "Under 4.5 @ 1.20",
-      "score": "2-0"
+      "score": "2-0",
+      "time": "Mon 26 Oct \u00b7 22:00 SAST"
     },
     {
       "match": "Union Santa Fe v Estudiantes",
       "market": "Under 4.5 @ 1.20",
-      "score": "3-1"
+      "score": "3-1",
+      "time": "Tue 27 Oct \u00b7 00:00 SAST"
     },
     {
       "match": "Coritiba v Gr\u00eamio",
       "market": "Under 2.5 @ 1.20",
-      "score": "0-1"
+      "score": "0-1",
+      "time": "Tue 27 Oct \u00b7 00:30 SAST"
     },
     {
       "match": "Am\u00e9rica Mineiro v Cuiab\u00e1",
       "market": "Under 2.5 @ 1.20",
-      "score": "1-0"
+      "score": "1-0",
+      "time": "Tue 27 Oct \u00b7 00:30 SAST"
     },
     {
       "match": "Juventude v Nautico PE",
       "market": "Under 4.5 @ 1.20",
-      "score": "4-0"
+      "score": "4-0",
+      "time": "Tue 27 Oct \u00b7 01:30 SAST"
     }
   ]
 }
