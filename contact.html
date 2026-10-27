@@ -329,19 +329,19 @@ input[type="submit"] {
       <div>
         <h2 class="door-title">Send Us A Message</h2>
         <p class="door-body" style="margin-bottom:1.3rem">For general questions and partnerships &mdash; use form below.</p>
-        <form action="https://formsubmit.co/info@locustharvest.com" method="POST">
-          <input type="hidden" name="_subject" value="New message from locustharvest.com">
-          <input type="hidden" name="_next" value="https://www.locustharvest.com/thank-you.html">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="76a5af30-521e-4ede-ae1c-83747158d1ec">
+          <input type="hidden" name="subject" value="New message from locustharvest.com">
+          <input type="hidden" name="redirect" value="https://www.locustharvest.com/thank-you.html">
+          <input type="checkbox" name="botcheck" style="display:none">
 
           <div class="form-field">
             <label for="name">Name</label>
-            <input type="text" id="name" name="Name" required>
+            <input type="text" id="name" name="from_name" required>
           </div>
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-field">
             <label for="subject">Subject</label>
