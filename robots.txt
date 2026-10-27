@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /terms.html
-Disallow: /privacy.html
-Disallow: /cookies.html
+
 Sitemap: https://www.locustharvest.com/sitemap.xml
