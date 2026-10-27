@@ -179,8 +179,24 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .value-card h3{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 
 .p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
-.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s}
-.p2p-socials a:hover{background:var(--green);border-color:var(--green);color:#04140a;transform:translateY(-2px)}
+.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s;animation:social-glow 4s ease-in-out infinite alternate}
+@keyframes social-glow {
+  0% { box-shadow: 0 0 0 rgba(62,226,62,0); border-color: var(--line); }
+  100% { box-shadow: 0 0 12px rgba(62,226,62,0.15); border-color: rgba(62,226,62,0.25); }
+}
+.p2p-socials a:hover{transform:translateY(-2px);animation:none}
+
+/* Brand-colour hovers */
+.p2p-socials a[aria-label="YouTube"]:hover{background:#ff0000;border-color:#ff0000;color:#fff}
+.p2p-socials a[aria-label="Instagram"]:hover{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:#dc2743;color:#fff}
+.p2p-socials a[aria-label="TikTok"]:hover{background:#000;border-color:#69C9D0;color:#fff}
+.p2p-socials a[aria-label="Facebook"]:hover{background:#1877f2;border-color:#1877f2;color:#fff}
+.p2p-socials a[aria-label="X"]:hover{background:#000;border-color:#333;color:#fff}
+.p2p-socials a[aria-label="Telegram"]:hover{background:#0088cc;border-color:#0088cc;color:#fff}
+.p2p-socials a[aria-label="WhatsApp"]:hover{background:#25d366;border-color:#25d366;color:#fff}
+.p2p-socials a[aria-label="Rumble"]:hover{background:#85c742;border-color:#85c742;color:#fff}
+.p2p-socials a[aria-label="Bluesky"]:hover{background:#1185fe;border-color:#1185fe;color:#fff}
+.p2p-socials a[aria-label="NOVELTY"]:hover{background:var(--green);border-color:var(--green);color:#04140a}
 .p2p-socials svg{width:20px;height:20px}
 .p2p-socials span{font-family:'Rajdhani',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
 .p2p-handle{margin-top:1rem;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
