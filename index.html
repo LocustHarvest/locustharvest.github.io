@@ -420,6 +420,8 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center; /* Center content */
+  text-align: center;  /* Center text */
 }
 .advert-card::before {
   content: '';
@@ -468,8 +470,9 @@ input[type="submit"] {
 }
 .advert-cta { 
   display:inline-block; 
-  background:var(--green); 
-  color:#04140a; 
+  background:transparent; 
+  color:var(--green-bright); 
+  border: 1px solid var(--green);
   padding:.8rem 1.5rem; 
   font-family:'Rajdhani',sans-serif; 
   font-weight:600; 
@@ -477,13 +480,14 @@ input[type="submit"] {
   letter-spacing:.1em; 
   text-transform:uppercase; 
   text-decoration:none; 
-  transition:background .2s; 
+  transition:background .2s, color .2s; 
   text-align:center; 
   margin-top: auto; 
-  align-self: flex-start; 
+  align-self: center; /* Center button */
 }
 .advert-cta:hover { 
-  background:var(--green-bright); 
+  background:var(--green); 
+  color:#04140a;
 }
 </style>
 </head>
@@ -527,6 +531,14 @@ input[type="submit"] {
 <h2 class="door-title" id="novelty-heading">NOVELTY<sup>&trade;</sup></h2>
 <div class="door-row">
 <p class="door-body novelty-body">NOVELTY&trade; — daily NOVELTY&trade; sports predictions, engine-powered and human-reviewed and analysis, built on statistics and market data across dozens of leading leagues. NOVELTY&trade; provides sports analysis, statistics, predictions, opinions, and informational content for entertainment and informational purposes only. Predictions and analysis do not guarantee any particular outcome. Daily picks are published as matches become available. NOVELTY&trade; does not provide gambling services, accept wagers, facilitate betting, or guarantee profits — see our Terms and Conditions for the full breakdown.</p>
+
+<div class="advert-card" style="margin-top:1rem;">
+  <span class="advert-kicker">UPGRADE YOUR EDGE</span>
+  <h3 class="advert-headline">Unlock Daily Picks</h3>
+  <p class="advert-body">Subscribe to unlock NOVELTY&trade;&apos;s daily picks, powered by our engine and reviewed by our team.</p>
+  <a href="https://app.novelty.locustharvest.com/subscribe" class="advert-cta">Subscribe Now →</a>
+</div>
+
 
 
 
@@ -632,16 +644,43 @@ document.getElementById('navLinks').classList.remove('open');
   }
 
   function renderAdvert(variant) {
+    // Get user's currency based on timezone
+    var tz = 'UTC';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; } catch(e) {}
+    var price = '$12';
+    if (tz.includes('Johannesburg')) price = 'R199';
+    else if (tz.includes('London')) price = '£9';
+    else if (tz.startsWith('Europe/')) price = '€11';
+
     var configs = {
-      offer: { kicker: 'NOVELTY™ Daily Picks', headline: "Today's slate is live.", body: 'Every day our team publishes reviewed picks across leading leagues. Market, odds, and selection — ready to follow.', cta: "Get today's picks →", href: 'https://app.novelty.locustharvest.com/subscribe' },
-      proof: { kicker: 'Graded · Published Daily', headline: 'Wins and losses, in the open.', body: "Yesterday's picks are settled and published with the full score. Nothing hidden, nothing edited after the fact.", cta: "See yesterday's results →", href: 'https://app.novelty.locustharvest.com/harvest' },
-      access: { kicker: 'Local Pricing · 30 Days · Full Access', headline: 'One month. Every pick.', body: "Full access to NOVELTY's daily picks, graded results, and the full archive. You will be billed in your local currency at checkout.", cta: 'Subscribe Now →', href: 'https://app.novelty.locustharvest.com/subscribe' }
+      offer: { 
+        kicker: 'NEW PICKS PUBLISHED', 
+        headline: 'The slate is live.', 
+        body: 'Fresh market analysis and top-tier statistical selections, ready for you to review.', 
+        cta: 'View Today\'s Picks →', 
+        href: 'https://app.novelty.locustharvest.com/picks' 
+      },
+      proof: { 
+        kicker: '100% TRANSPARENT', 
+        headline: 'Wins and losses. Exposed.', 
+        body: 'Every pick is settled and published with the full score. We hide nothing, and we edit nothing.', 
+        cta: 'See The Results →', 
+        href: 'https://app.novelty.locustharvest.com/harvest' 
+      },
+      access: { 
+        kicker: 'LOCAL PRICING', 
+        headline: 'Unlock the archive.', 
+        body: 'Get full access to every daily pick, graded result, and the complete historical archive.', 
+        cta: 'Subscribe — ' + price + '/mo →', 
+        href: 'https://app.novelty.locustharvest.com/subscribe' 
+      }
     };
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
     col.innerHTML = '<span class="advert-kicker">' + v.kicker + '</span><h3 class="advert-headline">' + v.headline + '</h3><p class="advert-body">' + v.body + '</p><a href="' + v.href + '" class="advert-cta">' + v.cta + '</a>';
     return col;
+  }
   }
 
   fetch(API)
