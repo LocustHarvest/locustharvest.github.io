@@ -692,23 +692,24 @@ input[type="submit"] {
   }
 
 
+  
   /* DESKTOP_TIER_UNIFORMITY_FINAL_2026_10_28 */
   @media(min-width: 769px){
-    /* Widen the main container (pushes blocks sideways) */
+    /* Keep the container wide */
     .doors {
       max-width: 1440px !important; 
     }
     
-    /* Reduce gap and force equal 3-column width */
+    /* Keep the gap tight and equal columns */
     #tiers-grid {
       gap: 0.75rem !important; 
       grid-template-columns: repeat(3, 1fr) !important; 
     }
     
-    /* Shrink the WON badge */
+    /* Make the badge bigger (back to 0.65rem) */
     #tiers-grid .advert-card span {
-      font-size: 0.58rem !important; 
-      padding: 0.1rem 0.4rem !important; 
+      font-size: 0.65rem !important; 
+      padding: 0.15rem 0.5rem !important; 
     }
   }
 
