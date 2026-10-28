@@ -1,64 +1,70 @@
 {
   "winners": [
     {
-      "match": "FC Copenhagen v OB Odense BK",
-      "market": "Over 1.5 @ 1.20",
+      "match": "Landskrona BoIS v Varbergs BoIS",
+      "market": "Under 3.5 @ 1.60",
       "score": "1-1",
-      "date_time": "Mon 26 Oct \u00b7 20:00 SAST"
+      "date_time": "Tue 27 Oct \u00b7 20:00 SAST"
     },
     {
-      "match": "\u00d6rebro SK v Falkenbergs FF",
-      "market": "Under 4.5 @ 1.20",
-      "score": "1-0",
-      "date_time": "Mon 26 Oct \u00b7 20:05 SAST"
-    },
-    {
-      "match": "Santa Clara v Benfica",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-2",
-      "date_time": "Mon 26 Oct \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Montpellier v Red Star",
-      "market": "Under 4.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Mon 26 Oct \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Boulogne v Stade de Reims",
-      "market": "Under 4.5 @ 1.20",
+      "match": "Benevento v US Catanzaro 1929",
+      "market": "Under 3.5 @ 1.50",
       "score": "1-1",
-      "date_time": "Mon 26 Oct \u00b7 21:45 SAST"
+      "date_time": "Tue 27 Oct \u00b7 20:00 SAST"
     },
     {
-      "match": "Sevilla v CA Osasuna",
-      "market": "Under 4.5 @ 1.20",
+      "match": "Virtus Entella v Avellino",
+      "market": "Under 2.5 @ 1.70",
+      "score": "1-1",
+      "date_time": "Tue 27 Oct \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Ascoli v Sampdoria",
+      "market": "Under 3.5 @ 1.40",
       "score": "2-0",
-      "date_time": "Mon 26 Oct \u00b7 22:00 SAST"
+      "date_time": "Tue 27 Oct \u00b7 21:00 SAST"
     },
     {
-      "match": "Union Santa Fe v Estudiantes",
-      "market": "Under 4.5 @ 1.20",
-      "score": "3-1",
-      "date_time": "Tue 27 Oct \u00b7 00:00 SAST"
+      "match": "Padova v S\u00fcdtirol",
+      "market": "Under 2.5 @ 1.70",
+      "score": "2-0",
+      "date_time": "Tue 27 Oct \u00b7 21:00 SAST"
     },
     {
-      "match": "Coritiba v Gr\u00eamio",
-      "market": "Under 2.5 @ 1.20",
-      "score": "0-1",
-      "date_time": "Tue 27 Oct \u00b7 00:30 SAST"
+      "match": "Mantova v Cremonese",
+      "market": "Under 2.5 @ 1.80",
+      "score": "0-2",
+      "date_time": "Tue 27 Oct \u00b7 21:00 SAST"
     },
     {
-      "match": "Am\u00e9rica Mineiro v Cuiab\u00e1",
-      "market": "Under 2.5 @ 1.20",
+      "match": "Vicenza v Modena",
+      "market": "Under 3.5 @ 1.40",
+      "score": "1-2",
+      "date_time": "Tue 27 Oct \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Leicester City v Wigan Athletic",
+      "market": "Under 3.5 @ 1.60",
+      "score": "3-0",
+      "date_time": "Tue 27 Oct \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Oxford United v Stockport County FC",
+      "market": "Home or Draw @ 1.70",
       "score": "1-0",
-      "date_time": "Tue 27 Oct \u00b7 00:30 SAST"
+      "date_time": "Tue 27 Oct \u00b7 21:45 SAST"
     },
     {
-      "match": "Juventude v Nautico PE",
-      "market": "Under 4.5 @ 1.20",
-      "score": "4-0",
-      "date_time": "Tue 27 Oct \u00b7 01:30 SAST"
+      "match": "Barnet v York City",
+      "market": "Home Win @ 2.10",
+      "score": "3-1",
+      "date_time": "Tue 27 Oct \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Argentinos Juniors v Independiente Rivadavia",
+      "market": "Under 2.5 @ 1.60",
+      "score": "1-0",
+      "date_time": "Wed 28 Oct \u00b7 00:00 SAST"
     }
   ]
 }
