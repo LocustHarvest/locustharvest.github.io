@@ -947,7 +947,7 @@ document.getElementById('navLinks').classList.remove('open');
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="text-align:center;"><a href="' + v.href + '" class="advert-cta" style="margin-bottom:0;">' + v.cta + '</a></div></div>';
+    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="display:flex; justify-content:center; width:100%; margin-top:auto;"><a href="' + v.href + '" class="advert-cta" style="margin-bottom:0; margin-top:0;">' + v.cta + '</a></div></div>';
     return col;
   }
 
