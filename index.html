@@ -792,42 +792,55 @@ input[type="submit"] {
 </div>
 
 <p class="door-body para-18plus" style="margin-top:0.5rem; margin-bottom:1rem; text-align:justify">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
-<div class="door-actions" style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%;">
-      
-      <!-- 1. Top Left: Web Button -->
-      <a href="https://app.novelty.locustharvest.com" class="btn btn-hero" style="height: 130px; display: flex; align-items: center; justify-content: center; gap: 15px; margin: 0; padding: 0 1rem; text-transform: uppercase; font-size: 1.4rem; text-align: center; line-height: 1.2;">
-        <img src="novelty-icon.png" alt="N" style="height: 50px; width: auto; flex-shrink: 0;" />
-        <span>OPEN NOVELTY APP VIA WEB</span>
-      </a>
+<style>
+        /* Desktop Defaults */
+        .novelty-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 1.5rem; }
+        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 1rem; text-transform: uppercase; font-size: 2rem; text-align: center; line-height: 1.1; }
+        .novelty-google-btn { height: 130px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background-color: #000; border: 1px solid #444; border-radius: 4px; text-decoration: none; padding: 0; margin: 0; }
+        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.7rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
+        .novelty-google-badge { display: flex; justify-content: center; align-items: center; height: 100%; }
+        .novelty-google-badge img { height: 105px; width: auto; max-width: 95%; object-fit: contain; }
 
-      <!-- 2. Top Right: Text Next to Official Google Play Badge -->
-      <a href="https://play.google.com/store/apps/details?id=com.locustharvest.novelty.app.twa" target="_blank" rel="noopener noreferrer" style="height: 130px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background-color: #000; border: 1px solid #444; border-radius: 4px; text-decoration: none; padding: 0; box-sizing: border-box; margin: 0;">
-        
-        <!-- Left Half: Text -->
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-          <span style="color: #fff; font-family: inherit; font-size: 1.7rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center;">
-            DOWNLOAD<br>NOVELTY VIA
-          </span>
+        /* Mobile Breakpoint (Stack Everything) */
+        @media (max-width: 768px) {
+            .novelty-actions-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+            .novelty-web-btn { height: 100px !important; font-size: 1.4rem !important; gap: 10px !important; }
+            .novelty-web-btn img { height: 60px !important; }
+            .novelty-google-btn { height: auto !important; grid-template-columns: 1fr !important; padding: 15px 0 !important; gap: 10px !important; }
+            .novelty-google-text { font-size: 1.4rem !important; }
+            .novelty-google-badge img { height: 75px !important; }
+        }
+        </style>
+
+        <div class="novelty-actions-grid">
+          
+          <!-- 1. Top Left: Web Button -->
+          <a href="https://app.novelty.locustharvest.com" class="btn btn-hero novelty-web-btn">
+            <img src="novelty-icon.png" alt="N" style="height: 95px; width: auto; flex-shrink: 0;" />
+            <span>OPEN NOVELTY APP VIA WEB</span>
+          </a>
+
+          <!-- 2. Top Right: Google Play Custom Button -->
+          <a href="https://play.google.com/store/apps/details?id=com.locustharvest.novelty.app.twa" target="_blank" rel="noopener noreferrer" class="novelty-google-btn">
+            <div class="novelty-google-text">
+              DOWNLOAD<br>NOVELTY VIA
+            </div>
+            <div class="novelty-google-badge">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+            </div>
+          </a>
+
+          <!-- 3. Bottom Left: Terms -->
+          <a href="/novelty-legal.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
+            TERMS &amp; RESPONSIBLE USE →
+          </a>
+
+          <!-- 4. Bottom Right: Harvest -->
+          <a href="/harvest/index.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
+            THE DAILY HARVEST →
+          </a>
+
         </div>
-        
-        <!-- Right Half: Badge -->
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 105px; width: auto; max-width: 95%; object-fit: contain;" />
-        </div>
-
-      </a>
-
-      <!-- 3. Bottom Left: Terms -->
-      <a href="/novelty-legal.html" class="btn btn-hero" style="height: 40px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.8rem; text-align: center;">
-        TERMS &amp; RESPONSIBLE USE →
-      </a>
-
-      <!-- 4. Bottom Right: Harvest -->
-      <a href="/harvest/index.html" class="btn btn-hero" style="height: 40px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.8rem; text-align: center;">
-        THE DAILY HARVEST →
-      </a>
-
-    </div>
     </section>
 
 
