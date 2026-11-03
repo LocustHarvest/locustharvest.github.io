@@ -794,18 +794,23 @@ input[type="submit"] {
 <p class="door-body para-18plus" style="margin-top:0.5rem; margin-bottom:1rem; text-align:justify">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
 <style>
         /* Desktop Defaults */
-        .novelty-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 1.5rem; }
-        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 15px; padding: 0 1rem; text-transform: uppercase; font-size: 1.4rem; text-align: center; line-height: 1.1; white-space: nowrap; }
+        .novelty-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 1.5rem; align-items: stretch; }
+        
+        /* Left Button Massive Text & Logo */
+        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 1rem; text-transform: uppercase; font-size: 2.1rem; font-weight: 700; text-align: center; line-height: 1.1; white-space: nowrap; }
+        .novelty-web-btn img { height: 95px; width: auto; flex-shrink: 0; }
+        
+        /* Right Button Google Play */
         .novelty-google-btn { height: 130px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background-color: #000; border: 1px solid #444; border-radius: 4px; text-decoration: none; padding: 0; margin: 0; }
-        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.5rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
+        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.8rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
         .novelty-google-badge { display: flex; justify-content: center; align-items: center; height: 100%; }
         .novelty-google-badge img { height: 105px; width: auto; max-width: 95%; object-fit: contain; }
 
-        /* Mobile Breakpoint (Stack Everything) */
+        /* Mobile Breakpoint */
         @media (max-width: 768px) {
             .novelty-actions-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
-            .novelty-web-btn { height: 100px !important; font-size: 1.2rem !important; gap: 10px !important; white-space: normal !important; }
-            .novelty-web-btn img { height: 55px !important; }
+            .novelty-web-btn { height: 100px !important; font-size: 1.4rem !important; gap: 10px !important; white-space: normal !important; }
+            .novelty-web-btn img { height: 60px !important; }
             .novelty-google-btn { height: auto !important; grid-template-columns: 1fr !important; padding: 15px 0 !important; gap: 10px !important; }
             .novelty-google-text { font-size: 1.4rem !important; }
             .novelty-google-badge img { height: 75px !important; }
@@ -814,13 +819,11 @@ input[type="submit"] {
 
         <div class="novelty-actions-grid">
           
-          <!-- 1. Top Left: Web Button -->
           <a href="https://app.novelty.locustharvest.com" class="btn btn-hero novelty-web-btn">
-            <img src="novelty-icon.png" alt="N" style="height: 70px; width: auto; flex-shrink: 0;" />
+            <img src="novelty-icon.png" alt="N" />
             <span>OPEN NOVELTY APP VIA WEB</span>
           </a>
 
-          <!-- 2. Top Right: Google Play Custom Button -->
           <a href="https://play.google.com/store/apps/details?id=com.locustharvest.novelty.app.twa" target="_blank" rel="noopener noreferrer" class="novelty-google-btn">
             <div class="novelty-google-text">
               DOWNLOAD<br>NOVELTY VIA
@@ -830,12 +833,10 @@ input[type="submit"] {
             </div>
           </a>
 
-          <!-- 3. Bottom Left: Terms -->
           <a href="/novelty-legal.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
             TERMS &amp; RESPONSIBLE USE →
           </a>
 
-          <!-- 4. Bottom Right: Harvest -->
           <a href="/harvest/index.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
             THE DAILY HARVEST →
           </a>
