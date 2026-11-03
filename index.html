@@ -734,6 +734,21 @@ input[type="submit"] {
     }
   }
 
+
+        /* MOBILE GOOGLE TEXT 2 LINES */
+        .mobile-break { display: none; }
+        @media (max-width: 768px) {
+            .mobile-break { display: block !important; }
+            .google-content span { 
+                font-size: 1.1rem !important; 
+                line-height: 1.15 !important; 
+                white-space: normal !important; 
+            }
+            .google-content img { 
+                height: 60px !important; 
+                max-width: 45% !important; 
+            }
+        }
 </style>
 </head>
 <body>
@@ -818,7 +833,22 @@ input[type="submit"] {
             .google-content span { font-size: 1.6rem !important; }
             .google-content img { height: 75px !important; }
         }
-        </style>
+        
+        /* MOBILE GOOGLE TEXT 2 LINES */
+        .mobile-break { display: none; }
+        @media (max-width: 768px) {
+            .mobile-break { display: block !important; }
+            .google-content span { 
+                font-size: 1.1rem !important; 
+                line-height: 1.15 !important; 
+                white-space: normal !important; 
+            }
+            .google-content img { 
+                height: 60px !important; 
+                max-width: 45% !important; 
+            }
+        }
+</style>
 
         <div class="novelty-grid">
           
@@ -832,7 +862,7 @@ input[type="submit"] {
 
           <a href="https://play.google.com/store/apps/details?id=com.locustharvest.novelty.app.twa" target="_blank" rel="noopener noreferrer" class="btn btn-hero novelty-main-btn">
             <div class="google-content">
-              <span>DOWNLOAD NOVELTY VIA</span>
+              <span>DOWNLOAD<br class="mobile-break">NOVELTY VIA</span>
               <img src="google-play-badge.png" alt="Get it on Google Play" />
             </div>
           </a>
