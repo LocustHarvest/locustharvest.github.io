@@ -795,17 +795,17 @@ input[type="submit"] {
 <style>
         /* Desktop Defaults */
         .novelty-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 1.5rem; }
-        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 1rem; text-transform: uppercase; font-size: 2rem; text-align: center; line-height: 1.1; }
+        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 15px; padding: 0 1rem; text-transform: uppercase; font-size: 1.4rem; text-align: center; line-height: 1.1; white-space: nowrap; }
         .novelty-google-btn { height: 130px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background-color: #000; border: 1px solid #444; border-radius: 4px; text-decoration: none; padding: 0; margin: 0; }
-        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.7rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
+        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.5rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
         .novelty-google-badge { display: flex; justify-content: center; align-items: center; height: 100%; }
         .novelty-google-badge img { height: 105px; width: auto; max-width: 95%; object-fit: contain; }
 
         /* Mobile Breakpoint (Stack Everything) */
         @media (max-width: 768px) {
             .novelty-actions-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
-            .novelty-web-btn { height: 100px !important; font-size: 1.4rem !important; gap: 10px !important; }
-            .novelty-web-btn img { height: 60px !important; }
+            .novelty-web-btn { height: 100px !important; font-size: 1.2rem !important; gap: 10px !important; white-space: normal !important; }
+            .novelty-web-btn img { height: 55px !important; }
             .novelty-google-btn { height: auto !important; grid-template-columns: 1fr !important; padding: 15px 0 !important; gap: 10px !important; }
             .novelty-google-text { font-size: 1.4rem !important; }
             .novelty-google-badge img { height: 75px !important; }
@@ -816,7 +816,7 @@ input[type="submit"] {
           
           <!-- 1. Top Left: Web Button -->
           <a href="https://app.novelty.locustharvest.com" class="btn btn-hero novelty-web-btn">
-            <img src="novelty-icon.png" alt="N" style="height: 95px; width: auto; flex-shrink: 0;" />
+            <img src="novelty-icon.png" alt="N" style="height: 70px; width: auto; flex-shrink: 0;" />
             <span>OPEN NOVELTY APP VIA WEB</span>
           </a>
 
