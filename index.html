@@ -793,33 +793,111 @@ input[type="submit"] {
 
 <p class="door-body para-18plus" style="margin-top:0.5rem; margin-bottom:1rem; text-align:justify">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
 <style>
-        /* Desktop Defaults */
-        .novelty-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 1.5rem; align-items: stretch; }
+        /* STRICT 50/50 GRID ALIGNMENT */
+        .novelty-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 15px;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        .novelty-grid > a {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            text-decoration: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
         
-        /* Left Button Massive Text & Logo */
-        .novelty-web-btn { height: 130px; display: flex; align-items: center; justify-content: center; gap: 15px; padding: 0 1rem; text-transform: uppercase; font-size: 1.6rem; font-weight: 700; text-align: center; line-height: 1.1; white-space: nowrap; overflow: hidden; min-width: 0; }
-        .novelty-web-btn img { height: 75px; width: auto; flex-shrink: 0; }
+        /* WEB BUTTON */
+        .novelty-web-btn {
+            height: 130px;
+            justify-content: center;
+            gap: 15px;
+            padding: 0 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.1;
+            border: 1px solid #22c55e;
+            border-radius: 4px;
+            background: transparent;
+            color: #22c55e;
+        }
+        .novelty-web-btn img {
+            height: 75px;
+            width: auto;
+            flex-shrink: 0;
+        }
+        .novelty-web-btn span {
+            font-size: 1.5rem;
+            white-space: normal;
+        }
         
-        /* Right Button Google Play */
-        .novelty-google-btn { height: 130px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background-color: #000; border: 1px solid #444; border-radius: 4px; text-decoration: none; padding: 0; margin: 0; }
-        .novelty-google-text { display: flex; justify-content: center; align-items: center; height: 100%; color: #fff; font-size: 1.8rem; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: center; }
-        .novelty-google-badge { display: flex; justify-content: center; align-items: center; height: 100%; }
-        .novelty-google-badge img { height: 105px; width: auto; max-width: 95%; object-fit: contain; }
+        /* GOOGLE PLAY BUTTON */
+        .novelty-google-btn {
+            height: 130px;
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            background-color: #000;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 0;
+        }
+        .novelty-google-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+        }
+        .novelty-google-badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .novelty-google-badge img {
+            height: 95px;
+            width: auto;
+            max-width: 90%;
+            object-fit: contain;
+        }
+        
+        /* BOTTOM BUTTONS */
+        .novelty-small-btn {
+            height: 45px;
+            justify-content: center;
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border: 1px solid #22c55e;
+            border-radius: 4px;
+            color: #22c55e;
+            background: transparent;
+        }
 
-        /* Mobile Breakpoint */
+        /* MOBILE */
         @media (max-width: 768px) {
-            .novelty-actions-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
-            .novelty-web-btn { height: 100px !important; font-size: 1.4rem !important; gap: 10px !important; white-space: normal !important; }
-            .novelty-web-btn img { height: 60px !important; }
-            .novelty-google-btn { height: auto !important; grid-template-columns: 1fr !important; padding: 15px 0 !important; gap: 10px !important; }
-            .novelty-google-text { font-size: 1.4rem !important; }
+            .novelty-grid { grid-template-columns: 1fr !important; }
+            .novelty-web-btn { height: 100px !important; }
+            .novelty-web-btn img { height: 55px !important; }
+            .novelty-web-btn span { font-size: 1.2rem !important; }
+            .novelty-google-btn { height: 110px !important; }
+            .novelty-google-text { font-size: 1.2rem !important; }
             .novelty-google-badge img { height: 75px !important; }
         }
         </style>
 
-        <div class="novelty-actions-grid">
+        <div class="novelty-grid">
           
-          <a href="https://app.novelty.locustharvest.com" class="btn btn-hero novelty-web-btn">
+          <a href="https://app.novelty.locustharvest.com" class="novelty-web-btn">
             <img src="novelty-icon.png" alt="N" />
             <span>OPEN NOVELTY APP VIA WEB</span>
           </a>
@@ -829,15 +907,15 @@ input[type="submit"] {
               DOWNLOAD<br>NOVELTY VIA
             </div>
             <div class="novelty-google-badge">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+              <img src="https://play.google.com/intl_en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
             </div>
           </a>
 
-          <a href="/novelty-legal.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
+          <a href="/novelty-legal.html" class="novelty-small-btn">
             TERMS &amp; RESPONSIBLE USE →
           </a>
 
-          <a href="/harvest/index.html" class="btn btn-hero" style="height: 45px; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 0.5rem; text-transform: uppercase; font-size: 0.85rem; text-align: center;">
+          <a href="/harvest/index.html" class="novelty-small-btn">
             THE DAILY HARVEST →
           </a>
 
