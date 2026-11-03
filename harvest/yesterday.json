@@ -1,3 +1,82 @@
 {
-  "winners": []
+  "winners": [
+    {
+      "match": "VPS Vaasa v HJK Helsinki",
+      "market": "Over 2.5 @ 1.40",
+      "score": "0-4",
+      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
+    },
+    {
+      "match": "Atromitos Athens v Volos FC",
+      "market": "Home Win @ 1.70",
+      "score": "3-0",
+      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
+    },
+    {
+      "match": "FC Inter Turku v IF Gnistan",
+      "market": "Home Win @ 1.30",
+      "score": "4-3",
+      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
+    },
+    {
+      "match": "Zag\u0142\u0119bie Lubin v Korona Kielce",
+      "market": "Under 3.5 @ 1.35",
+      "score": "1-0",
+      "date_time": "Mon 2 Nov \u00b7 19:00 SAST"
+    },
+    {
+      "match": "Real Valladolid CF v Legan\u00e9s",
+      "market": "BTTS + Over 2.5 @ 2.20",
+      "score": "4-3",
+      "date_time": "Mon 2 Nov \u00b7 19:30 SAST"
+    },
+    {
+      "match": "\u00d6sters IF v Helsingborgs IF",
+      "market": "Home or Draw @ 1.40",
+      "score": "3-0",
+      "date_time": "Mon 2 Nov \u00b7 20:00 SAST"
+    },
+    {
+      "match": "Landskrona BoIS v \u00d6rebro SK",
+      "market": "Under 3.5 @ 1.50",
+      "score": "2-1",
+      "date_time": "Mon 2 Nov \u00b7 20:05 SAST"
+    },
+    {
+      "match": "Stade de Reims v Sochaux",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-0",
+      "date_time": "Mon 2 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Atalanta BC v Parma",
+      "market": "Over 1.5 @ 1.20",
+      "score": "0-3",
+      "date_time": "Mon 2 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Mallorca v C\u00e1diz CF",
+      "market": "Under 3.5 @ 1.45",
+      "score": "2-1",
+      "date_time": "Mon 2 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Deportes Limache v Audax Italiano",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-0",
+      "date_time": "Mon 2 Nov \u00b7 23:00 SAST"
+    },
+    {
+      "match": "Defensa y Justicia v Independiente",
+      "market": "Home or Draw @ 1.30",
+      "score": "1-1",
+      "date_time": "Tue 3 Nov \u00b7 00:00 SAST"
+    },
+    {
+      "match": "Goi\u00e1s v Clube de Regatas Brasil",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Tue 3 Nov \u00b7 01:30 SAST"
+    }
+  ]
 }
