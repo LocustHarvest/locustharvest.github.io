@@ -265,3 +265,25 @@ input[type="submit"] {
 @media (max-width: 768px) {
   .compliance-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* FIX_IO_LOGO_SIZING_2026_11_04 */
+.compliance-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+}
+.compliance-logo-grid img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .compliance-logo-grid img { max-height: 30px; }
+  .compliance-logo-grid { gap: 1rem; }
+}
