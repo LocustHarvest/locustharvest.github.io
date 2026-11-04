@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40"><circle cx="25" cy="20" r="15" fill="#C6FE1E"/><text x="45" y="26" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000">Dodo</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40">
+  <circle cx="25" cy="20" r="15" fill="#C6FE1E"/>
+  <path d="M 18 18 Q 22 12 28 16 L 32 22 L 25 20 Z" fill="#000000"/>
+  <text x="45" y="26" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">Dodo</text>
+</svg>
