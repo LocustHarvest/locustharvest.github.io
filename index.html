@@ -774,6 +774,54 @@ input[type="submit"] {
   }
 }
 
+
+/* FIX_IO_LOGO_FINAL_1_LINE */
+.compliance-logo-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Forces exactly 1 line on desktop */
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.compliance-logo-grid img {
+  height: 38px !important; /* Uniform height */
+  width: auto !important;
+  max-width: 120px !important; /* Keeps wide logos from pushing others off */
+  object-fit: contain !important;
+  background: transparent !important; /* Kills the white pill */
+}
+
+/* Let the Dodo logo stretch as wide as it needs to show the text */
+.compliance-logo-grid img[alt="Dodo Payments"] {
+  max-width: none !important; 
+}
+
+/* Keep the NOVELTY "N" a perfect square */
+.compliance-logo-grid img[alt="NOVELTY"] {
+  height: 38px !important;
+  width: 38px !important;
+  border-radius: 4px;
+}
+
+/* Mobile fallback: allow wrapping and shrink slightly */
+@media (max-width: 900px) {
+  .compliance-logo-grid {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .compliance-logo-grid img {
+    height: 30px !important;
+  }
+  .compliance-logo-grid img[alt="NOVELTY"] {
+    height: 30px !important;
+    width: 30px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -898,6 +946,54 @@ input[type="submit"] {
   }
 }
 
+
+/* FIX_IO_LOGO_FINAL_1_LINE */
+.compliance-logo-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Forces exactly 1 line on desktop */
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.compliance-logo-grid img {
+  height: 38px !important; /* Uniform height */
+  width: auto !important;
+  max-width: 120px !important; /* Keeps wide logos from pushing others off */
+  object-fit: contain !important;
+  background: transparent !important; /* Kills the white pill */
+}
+
+/* Let the Dodo logo stretch as wide as it needs to show the text */
+.compliance-logo-grid img[alt="Dodo Payments"] {
+  max-width: none !important; 
+}
+
+/* Keep the NOVELTY "N" a perfect square */
+.compliance-logo-grid img[alt="NOVELTY"] {
+  height: 38px !important;
+  width: 38px !important;
+  border-radius: 4px;
+}
+
+/* Mobile fallback: allow wrapping and shrink slightly */
+@media (max-width: 900px) {
+  .compliance-logo-grid {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .compliance-logo-grid img {
+    height: 30px !important;
+  }
+  .compliance-logo-grid img[alt="NOVELTY"] {
+    height: 30px !important;
+    width: 30px !important;
+  }
+}
+
 </style>
 
         <div class="novelty-grid">
@@ -971,7 +1067,7 @@ input[type="submit"] {
       <img src="payment-logos/payfast.svg" alt="PayFast" />
       <img src="payment-logos/3d-secure.svg" alt="3D Secure" />
       <img src="payment-logos/pci-dss.svg" alt="Secure Payments" />
-      <img src="payment-logos/dodo-payments.png" alt="Dodo Payments" style="background: #ffffff; padding: 6px 12px; border-radius: 8px; height: 44px !important; width: auto !important;" />
+      <img src="payment-logos/dodo-payments.png" alt="Dodo Payments" />
       <img src="payment-logos/locust-harvest.png" alt="Locust Harvest" />
       <img src="google-play-badge.png" alt="Get it on Google Play" />
       <img src="novelty-icon.png" alt="NOVELTY" />
