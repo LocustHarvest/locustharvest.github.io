@@ -775,10 +775,11 @@ input[type="submit"] {
 }
 
 
+
 /* FIX_IO_LOGO_FINAL_1_LINE */
 .compliance-logo-grid {
   display: flex;
-  flex-wrap: nowrap; /* Forces exactly 1 line on desktop */
+  flex-wrap: nowrap; /* Forces exactly 1 line */
   align-items: center;
   justify-content: center;
   gap: 14px;
@@ -786,28 +787,21 @@ input[type="submit"] {
   padding: 10px;
   width: 100%;
 }
-
 .compliance-logo-grid img {
-  height: 38px !important; /* Uniform height */
+  height: 38px !important;
   width: auto !important;
-  max-width: 120px !important; /* Keeps wide logos from pushing others off */
+  max-width: 120px !important;
   object-fit: contain !important;
-  background: transparent !important; /* Kills the white pill */
+  background: transparent !important; /* Removes the white pill */
 }
-
-/* Let the Dodo logo stretch as wide as it needs to show the text */
 .compliance-logo-grid img[alt="Dodo Payments"] {
-  max-width: none !important; 
+  max-width: none !important; /* Lets the full text show */
 }
-
-/* Keep the NOVELTY "N" a perfect square */
 .compliance-logo-grid img[alt="NOVELTY"] {
   height: 38px !important;
   width: 38px !important;
   border-radius: 4px;
 }
-
-/* Mobile fallback: allow wrapping and shrink slightly */
 @media (max-width: 900px) {
   .compliance-logo-grid {
     flex-wrap: wrap;
@@ -947,10 +941,11 @@ input[type="submit"] {
 }
 
 
+
 /* FIX_IO_LOGO_FINAL_1_LINE */
 .compliance-logo-grid {
   display: flex;
-  flex-wrap: nowrap; /* Forces exactly 1 line on desktop */
+  flex-wrap: nowrap; /* Forces exactly 1 line */
   align-items: center;
   justify-content: center;
   gap: 14px;
@@ -958,28 +953,21 @@ input[type="submit"] {
   padding: 10px;
   width: 100%;
 }
-
 .compliance-logo-grid img {
-  height: 38px !important; /* Uniform height */
+  height: 38px !important;
   width: auto !important;
-  max-width: 120px !important; /* Keeps wide logos from pushing others off */
+  max-width: 120px !important;
   object-fit: contain !important;
-  background: transparent !important; /* Kills the white pill */
+  background: transparent !important; /* Removes the white pill */
 }
-
-/* Let the Dodo logo stretch as wide as it needs to show the text */
 .compliance-logo-grid img[alt="Dodo Payments"] {
-  max-width: none !important; 
+  max-width: none !important; /* Lets the full text show */
 }
-
-/* Keep the NOVELTY "N" a perfect square */
 .compliance-logo-grid img[alt="NOVELTY"] {
   height: 38px !important;
   width: 38px !important;
   border-radius: 4px;
 }
-
-/* Mobile fallback: allow wrapping and shrink slightly */
 @media (max-width: 900px) {
   .compliance-logo-grid {
     flex-wrap: wrap;
