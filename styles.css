@@ -235,3 +235,33 @@ input[type="submit"] {
   align-items: center;
   line-height: 1;
 }
+
+/* COMPLIANCE_LOGO_GRID_2026_11_04 — 8-logo row for PayFast / Dodo / Google Play / NOVELTY */
+.compliance-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin: 1.5rem 0 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+}
+.compliance-logo-grid img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+.compliance-logo-grid a { display: inline-flex; }
+.footer-meta {
+  font-size: .7rem;
+  color: var(--ash);
+  letter-spacing: .04em;
+  margin-top: .2rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+@media (max-width: 768px) {
+  .compliance-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
