@@ -266,7 +266,12 @@ input[type="submit"] {
   .compliance-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* FIX_IO_LOGO_SIZING_2026_11_04 */
+@media (max-width: 768px) {
+  .compliance-logo-grid img { max-height: 30px; }
+  .compliance-logo-grid { gap: 1rem; }
+}
+
+/* FIX_IO_LOGO_SIZING_STRICT */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: wrap;
@@ -279,11 +284,21 @@ input[type="submit"] {
   background: var(--panel2);
 }
 .compliance-logo-grid img {
-  max-height: 40px;
-  width: auto;
-  object-fit: contain;
+  height: 32px !important;
+  max-height: 32px !important;
+  width: auto !important;
+  max-width: 120px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+}
+.compliance-logo-grid a {
+  display: inline-flex;
+  align-items: center;
 }
 @media (max-width: 768px) {
-  .compliance-logo-grid img { max-height: 30px; }
+  .compliance-logo-grid img {
+    height: 24px !important;
+    max-height: 24px !important;
+  }
   .compliance-logo-grid { gap: 1rem; }
 }
