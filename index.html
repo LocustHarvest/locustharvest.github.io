@@ -781,7 +781,8 @@ input[type="submit"] {
 
 
 
-/* FIX_IO_LOGO_MOBILE_AND_FOOTER */
+
+/* FIX_IO_LOGO_MOBILE_3DS_LARGE */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -793,7 +794,7 @@ input[type="submit"] {
   width: 100%;
 }
 
-/* Base size for standard logos */
+/* Desktop base */
 .compliance-logo-grid img {
   height: 54px !important; 
   width: auto !important;
@@ -802,26 +803,24 @@ input[type="submit"] {
   background: transparent !important;
 }
 
-/* Desktop sizes for the 3DS logos */
+/* Desktop: bigger for 3DS */
 .compliance-logo-grid img[alt="Verified by Visa"],
 .compliance-logo-grid img[alt="Mastercard SecureCode"] {
   height: 75px !important; 
   max-width: 240px !important;
 }
 
-/* Let Dodo stretch wide */
 .compliance-logo-grid img[alt="Dodo Payments"] {
   max-width: none !important;
 }
 
-/* Keep NOVELTY square */
 .compliance-logo-grid img[alt="NOVELTY"] {
   height: 54px !important;
   width: auto !important;
   border-radius: 4px;
 }
 
-/* Force the footer address to center on mobile */
+/* Force footer address centered */
 .footer-meta {
   text-align: center !important;
   width: 100%;
@@ -829,29 +828,43 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-/* Mobile fallback */
-@media (max-width: 1024px) {
+/* MOBILE */
+@media (max-width: 1200px) {
   .compliance-logo-grid {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
   }
   
-  /* Shrink all base logos slightly for mobile */
+  /* Base mobile size for all */
   .compliance-logo-grid img {
-    height: 38px !important;
+    height: 40px !important;
+    max-width: 140px !important;
+    width: auto !important;
   }
   
-  /* INCREASE the specific 3 on mobile so they are readable */
+  /* MASSIVE mobile size for the 2 3DS logos */
   .compliance-logo-grid img[alt="Verified by Visa"],
   .compliance-logo-grid img[alt="Mastercard SecureCode"],
-  .compliance-logo-grid img[alt="Locust Harvest"] {
-    height: 50px !important; 
-    max-width: 180px !important;
+  .compliance-logo-grid img[src*="visa-verified"],
+  .compliance-logo-grid img[src*="mastercard-secure"] {
+    height: 90px !important;
+    max-width: 300px !important;
+    width: auto !important;
   }
   
-  .compliance-logo-grid img[alt="NOVELTY"] {
-    height: 38px !important;
+  /* Locust Harvest stays at a nice medium size */
+  .compliance-logo-grid img[alt="Locust Harvest"],
+  .compliance-logo-grid img[src*="locust-harvest"] {
+    height: 70px !important;
+    max-width: 220px !important;
+    width: auto !important;
+  }
+  
+  .compliance-logo-grid img[alt="NOVELTY"],
+  .compliance-logo-grid img[src*="novelty"] {
+    height: 40px !important;
+    width: 40px !important;
   }
 }
 
@@ -986,7 +999,8 @@ input[type="submit"] {
 
 
 
-/* FIX_IO_LOGO_MOBILE_AND_FOOTER */
+
+/* FIX_IO_LOGO_MOBILE_3DS_LARGE */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -998,7 +1012,7 @@ input[type="submit"] {
   width: 100%;
 }
 
-/* Base size for standard logos */
+/* Desktop base */
 .compliance-logo-grid img {
   height: 54px !important; 
   width: auto !important;
@@ -1007,26 +1021,24 @@ input[type="submit"] {
   background: transparent !important;
 }
 
-/* Desktop sizes for the 3DS logos */
+/* Desktop: bigger for 3DS */
 .compliance-logo-grid img[alt="Verified by Visa"],
 .compliance-logo-grid img[alt="Mastercard SecureCode"] {
   height: 75px !important; 
   max-width: 240px !important;
 }
 
-/* Let Dodo stretch wide */
 .compliance-logo-grid img[alt="Dodo Payments"] {
   max-width: none !important;
 }
 
-/* Keep NOVELTY square */
 .compliance-logo-grid img[alt="NOVELTY"] {
   height: 54px !important;
   width: auto !important;
   border-radius: 4px;
 }
 
-/* Force the footer address to center on mobile */
+/* Force footer address centered */
 .footer-meta {
   text-align: center !important;
   width: 100%;
@@ -1034,29 +1046,43 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-/* Mobile fallback */
-@media (max-width: 1024px) {
+/* MOBILE */
+@media (max-width: 1200px) {
   .compliance-logo-grid {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
   }
   
-  /* Shrink all base logos slightly for mobile */
+  /* Base mobile size for all */
   .compliance-logo-grid img {
-    height: 38px !important;
+    height: 40px !important;
+    max-width: 140px !important;
+    width: auto !important;
   }
   
-  /* INCREASE the specific 3 on mobile so they are readable */
+  /* MASSIVE mobile size for the 2 3DS logos */
   .compliance-logo-grid img[alt="Verified by Visa"],
   .compliance-logo-grid img[alt="Mastercard SecureCode"],
-  .compliance-logo-grid img[alt="Locust Harvest"] {
-    height: 50px !important; 
-    max-width: 180px !important;
+  .compliance-logo-grid img[src*="visa-verified"],
+  .compliance-logo-grid img[src*="mastercard-secure"] {
+    height: 90px !important;
+    max-width: 300px !important;
+    width: auto !important;
   }
   
-  .compliance-logo-grid img[alt="NOVELTY"] {
-    height: 38px !important;
+  /* Locust Harvest stays at a nice medium size */
+  .compliance-logo-grid img[alt="Locust Harvest"],
+  .compliance-logo-grid img[src*="locust-harvest"] {
+    height: 70px !important;
+    max-width: 220px !important;
+    width: auto !important;
+  }
+  
+  .compliance-logo-grid img[alt="NOVELTY"],
+  .compliance-logo-grid img[src*="novelty"] {
+    height: 40px !important;
+    width: 40px !important;
   }
 }
 
