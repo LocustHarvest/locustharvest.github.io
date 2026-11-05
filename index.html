@@ -780,7 +780,8 @@ input[type="submit"] {
 
 
 
-/* FIX_IO_LOGO_FILL_LINE_V3 */
+
+/* FIX_IO_LOGO_MOBILE_AND_FOOTER */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -801,7 +802,7 @@ input[type="submit"] {
   background: transparent !important;
 }
 
-/* ONLY these two are increased to 75px */
+/* Desktop sizes for the 3DS logos */
 .compliance-logo-grid img[alt="Verified by Visa"],
 .compliance-logo-grid img[alt="Mastercard SecureCode"] {
   height: 75px !important; 
@@ -820,6 +821,14 @@ input[type="submit"] {
   border-radius: 4px;
 }
 
+/* Force the footer address to center on mobile */
+.footer-meta {
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Mobile fallback */
 @media (max-width: 1024px) {
   .compliance-logo-grid {
@@ -827,15 +836,22 @@ input[type="submit"] {
     justify-content: center;
     gap: 12px;
   }
+  
+  /* Shrink all base logos slightly for mobile */
   .compliance-logo-grid img {
-    height: 40px !important;
+    height: 38px !important;
   }
+  
+  /* INCREASE the specific 3 on mobile so they are readable */
   .compliance-logo-grid img[alt="Verified by Visa"],
-  .compliance-logo-grid img[alt="Mastercard SecureCode"] {
-    height: 55px !important;
+  .compliance-logo-grid img[alt="Mastercard SecureCode"],
+  .compliance-logo-grid img[alt="Locust Harvest"] {
+    height: 50px !important; 
+    max-width: 180px !important;
   }
+  
   .compliance-logo-grid img[alt="NOVELTY"] {
-    height: 40px !important;
+    height: 38px !important;
   }
 }
 
@@ -969,7 +985,8 @@ input[type="submit"] {
 
 
 
-/* FIX_IO_LOGO_FILL_LINE_V3 */
+
+/* FIX_IO_LOGO_MOBILE_AND_FOOTER */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -990,7 +1007,7 @@ input[type="submit"] {
   background: transparent !important;
 }
 
-/* ONLY these two are increased to 75px */
+/* Desktop sizes for the 3DS logos */
 .compliance-logo-grid img[alt="Verified by Visa"],
 .compliance-logo-grid img[alt="Mastercard SecureCode"] {
   height: 75px !important; 
@@ -1009,6 +1026,14 @@ input[type="submit"] {
   border-radius: 4px;
 }
 
+/* Force the footer address to center on mobile */
+.footer-meta {
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Mobile fallback */
 @media (max-width: 1024px) {
   .compliance-logo-grid {
@@ -1016,15 +1041,22 @@ input[type="submit"] {
     justify-content: center;
     gap: 12px;
   }
+  
+  /* Shrink all base logos slightly for mobile */
   .compliance-logo-grid img {
-    height: 40px !important;
+    height: 38px !important;
   }
+  
+  /* INCREASE the specific 3 on mobile so they are readable */
   .compliance-logo-grid img[alt="Verified by Visa"],
-  .compliance-logo-grid img[alt="Mastercard SecureCode"] {
-    height: 55px !important;
+  .compliance-logo-grid img[alt="Mastercard SecureCode"],
+  .compliance-logo-grid img[alt="Locust Harvest"] {
+    height: 50px !important; 
+    max-width: 180px !important;
   }
+  
   .compliance-logo-grid img[alt="NOVELTY"] {
-    height: 40px !important;
+    height: 38px !important;
   }
 }
 
