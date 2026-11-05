@@ -1057,31 +1057,37 @@ input[type="submit"] {
 }
 
 
+
 /* MOBILE_SOCIAL_GRID_FIX */
 @media (max-width: 768px) {
   .p2p-socials {
-    align-items: stretch !important;
+    align-items: stretch !important; /* Forces items in a row to stretch to match */
   }
   .p2p-socials a {
+    min-height: 110px !important; /* Locks the height so short text doesn't shrink and long text doesn't stretch */
     height: 100% !important;
-    justify-content: flex-start !important;
-    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* Centers icon and text vertically */
+    align-items: center !important; /* Centers icon and text horizontally */
+    padding: 10px 5px !important;
   }
   .p2p-socials a span {
     text-align: center !important;
     width: 100% !important;
-    display: block !important;
-    word-break: break-word !important;
     font-size: 0.65rem !important;
     line-height: 1.2 !important;
+    margin-top: 8px !important; /* Space between icon and text */
+    display: block !important;
   }
   .p2p-socials a img,
   .p2p-socials a svg {
-    height: 20px !important;
-    max-width: 100% !important;
+    height: 24px !important; /* Makes all icons exactly 24px tall */
     width: auto !important;
+    max-width: 100% !important;
     object-fit: contain !important;
     margin: 0 auto !important;
+    flex-shrink: 0 !important;
   }
 }
 
