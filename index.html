@@ -849,6 +849,47 @@ input[type="submit"] {
 }
 
 
+/* EQUAL_SOCIAL_ICON_SIZES */
+.p2p-socials a img {
+  height: 20px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+
+
+/* MOBILE_SOCIAL_GRID_FIX */
+@media (max-width: 768px) {
+  .p2p-socials {
+    align-items: stretch !important; /* Forces items in a row to stretch to match */
+  }
+  .p2p-socials a {
+    min-height: 110px !important; /* Locks the height so short text doesn't shrink and long text doesn't stretch */
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* Centers icon and text vertically */
+    align-items: center !important; /* Centers icon and text horizontally */
+    padding: 10px 5px !important;
+  }
+  .p2p-socials a span {
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+    margin-top: 8px !important; /* Space between icon and text */
+    display: block !important;
+  }
+  .p2p-socials a img,
+  .p2p-socials a svg {
+    height: 24px !important; /* Makes all icons exactly 24px tall */
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+  }
+}
 
 </style>
 </head>
@@ -897,7 +938,7 @@ input[type="submit"] {
 <div class="advert-card" style="margin-top:1rem;">
   <h3 class="advert-headline">Unlock Daily Picks</h3>
   <p class="advert-body">Subscribe to unlock NOVELTY&trade;&apos;s daily picks, powered by our engine and reviewed by our Expert Analysis Panel.</p>
-  <a href="https://app.novelty.locustharvest.com/subscribe" class="advert-cta">Subscribe Now →</a>
+  <a href="https://app.novelty.locustharvest.com/subscribe" rel="nofollow" class="advert-cta">Subscribe Now →</a>
 </div>
 
 
@@ -1096,7 +1137,7 @@ input[type="submit"] {
         <div class="novelty-grid">
           
           <!-- Main Buttons -->
-          <a href="https://app.novelty.locustharvest.com" class="btn btn-hero novelty-main-btn">
+          <a href="https://app.novelty.locustharvest.com" rel="nofollow" class="btn btn-hero novelty-main-btn">
             <div class="web-content">
               <img src="novelty-icon.png" alt="N" />
               <span>GET NOVELTY VIA WEB</span>
@@ -1150,7 +1191,7 @@ input[type="submit"] {
 <a href="https://rumble.com/user/Plague2Profit" target="_blank" rel="noopener" aria-label="Rumble"><svg viewBox="0 0 512 512" fill="currentColor"><path d="M396.7 169.6c0-29.7-16.9-46.4-46.7-46.4h-26.4v92.8h26.4c29.8 0 46.7-16.7 46.7-46.4zM256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 256 256 16zm94.7 297.6c-6.4 9.6-15.2 17.1-25.9 22.1l36.3 60.5h-55.4l-30.1-51.2h-22.1v51.2h-49.3V123.2h75.7c26.6 0 47.9 6.5 63.1 19.3 15.3 12.9 22.9 31 22.9 54.1 0 26.3-9.7 45.9-29.2 59.6 6.5 4.3 12 9.9 16.1 16.6 4.1 6.8 6.2 14.2 6.2 22.4 0 8.7-2.5 17-7.3 24.4z"/></svg><span>Rumble</span></a>
 
 <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 512 512" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg><span>X</span></a>
-<a href="https://app.novelty.locustharvest.com" target="_blank" rel="noopener" aria-label="NOVELTY"><img src="novelty-icon.png" alt="N"><span>GET NOVELTY VIA WEB</span></a>
+<a href="https://app.novelty.locustharvest.com" target="_blank" rel="nofollow noopener" aria-label="NOVELTY"><img src="novelty-icon.png" alt="N"><span>GET NOVELTY VIA WEB</span></a>
 </div>
 </section>
 
@@ -1285,7 +1326,7 @@ document.getElementById('navLinks').classList.remove('open');
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="display:flex; justify-content:center; width:100%; margin-top:auto;"><a href="' + v.href + '" class="advert-cta" style="margin-bottom:0; margin-top:0;">' + v.cta + '</a></div></div>';
+    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="display:flex; justify-content:center; width:100%; margin-top:auto;"><a href="' + v.href + '" rel="nofollow" class="advert-cta" style="margin-bottom:0; margin-top:0;">' + v.cta + '</a></div></div>';
     return col;
   }
 
