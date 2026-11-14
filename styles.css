@@ -1,28 +1,11 @@
 /* Locust Harvest — global styles */
 
-/* Metric-matched font fallbacks — prevents layout shift when web
-   fonts load. Rajdhani is display-only (font-display: optional),
-   Inter is body text (font-display: swap with matched metrics). */
-@font-face {
-  font-family: 'Rajdhani Fallback';
-  src: local('Arial');
-  size-adjust: 105%;
-  ascent-override: 90%;
-  descent-override: 20%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: 'Inter Fallback';
-  src: local('Arial');
-  size-adjust: 96.5%;
-  ascent-override: 96.9%;
-  descent-override: 24.1%;
-  line-gap-override: 0%;
-}
-@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 600; font-display: optional; src: url('/fonts/Rajdhani-600.woff2') format('woff2'); }
-@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 700; font-display: optional; src: url('/fonts/Rajdhani-700.woff2') format('woff2'); }
-@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400.woff2') format('woff2'); }
-@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500.woff2') format('woff2'); }
+@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:90%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:96.5%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/Inter-500.woff2') format('woff2')}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}
 :root{
@@ -38,7 +21,6 @@ h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;let
 a{color:inherit}
 img{max-width:100%;display:block}
 
-/* ===== NAV ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.9rem 3rem;background:linear-gradient(to bottom,rgba(8,9,11,.96) 0%,transparent 100%);transition:background .3s}
 nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
@@ -49,19 +31,13 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
-/* ===== TOP BANNER ===== */
-.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:
-  radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),
-  linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);
-  border-bottom:1px solid var(--line);
-}
+.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);border-bottom:1px solid var(--line)}
 .top-banner img.hero-mark{height:420px;margin:0 auto 1rem;filter:drop-shadow(0 0 24px rgba(62,226,62,.25))}
 .top-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
 .top-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--silver-bright);letter-spacing:.06em}
 .top-sub{margin-top:.5rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
-/* ===== DOORS / SECTIONS ===== */
 .doors{max-width:1180px;margin:0 auto;padding:7rem 2rem 5rem;display:flex;flex-direction:column;gap:8rem}
 .door{position:relative;border:1px solid var(--line);background:var(--panel);padding:2.8rem;overflow:hidden;transition:border-color .3s,transform .3s}
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
@@ -102,7 +78,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .p2p-socials span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
 .p2p-handle{margin-top:1rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
 
-/* ===== FORMS ===== */
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
 .form-field{margin-bottom:1.1rem}
 .form-field label{display:block;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
@@ -115,7 +90,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .contact-info .ci-item p,.contact-info .ci-item a{font-size:.88rem;color:var(--body);text-decoration:none}
 .contact-info .ci-item a:hover{color:var(--green-bright)}
 
-/* ===== LEGAL ===== */
 .legal{max-width:820px;margin:0 auto;padding:7rem 2rem 5rem}
 .legal h2{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
@@ -126,7 +100,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .legal ul{padding-left:1.3rem;margin-bottom:.9rem}
 .legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.05em}
 
-/* ===== FOOTER ===== */
 footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}
 .footer-brand{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
 .footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
@@ -138,7 +111,6 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
 .footer-copy a{color:var(--green-bright);text-decoration:underline}
 .footer-copy a:hover{color:var(--green-bright)}
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
   .door-row{grid-template-columns:1fr}
   .door-row.thirds{grid-template-columns:1fr}
@@ -173,11 +145,10 @@ body.about-page .footer-brand,
 body.about-page .footer-tagline,
 body.about-page .footer-brands{text-align:justify}
 
-html { scroll-padding-top: 260px; }
-section[id], div[id], article[id] { scroll-margin-top: 260px; }
-
-body.page-offset { padding-top: 4rem; }
-body.page-offset .top-banner { padding-top: 10rem; }
+html{scroll-padding-top:260px}
+section[id],div[id],article[id]{scroll-margin-top:260px}
+body.page-offset{padding-top:4rem}
+body.page-offset .top-banner{padding-top:10rem}
 
 footer p,
 footer div.footer-brands,
@@ -189,73 +160,19 @@ footer div.footer-links,
 .novelty-legal p,
 .about-page p,
 p.prose,
-p.body-copy {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
+p.body-copy{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 @media(max-width:768px){
-  footer p,
-  footer div.footer-brands,
-  footer div.footer-links,
-  .legal p,
-  .legal li,
-  .contact-info p,
-  .harvest-article p,
-  .novelty-legal p,
-  .about-page p {
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    overflow-wrap: break-word;
-  }
+  footer p,footer div.footer-brands,footer div.footer-links,.legal p,.legal li,.contact-info p,.harvest-article p,.novelty-legal p,.about-page p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 }
 
-.btn,
-.btn-hero,
-.btn.primary,
-button,
-input[type="submit"] {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.hamburger {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-}
+.btn,.btn-hero,.btn.primary,button,input[type="submit"]{text-align:center;justify-content:center;align-items:center}
+.hamburger{text-align:center;justify-content:center;align-items:center;line-height:1}
 
-.compliance-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  border: 1px solid var(--line);
-  background: var(--panel2);
-}
-.compliance-logo-grid img {
-  height: 32px !important;
-  max-height: 32px !important;
-  width: auto !important;
-  max-width: 120px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
-}
-.compliance-logo-grid a { display: inline-flex; align-items: center; }
-.footer-meta {
-  font-size: .7rem;
-  color: var(--ash);
-  letter-spacing: .04em;
-  margin-top: .2rem;
-  font-family: 'Rajdhani', 'Rajdhani Fallback', sans-serif;
-}
-@media (max-width: 768px) {
-  .compliance-logo-grid img { height: 24px !important; max-height: 24px !important; }
-  .compliance-logo-grid { gap: 1rem; }
+.compliance-logo-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem;margin:2rem 0;padding:1.5rem;border:1px solid var(--line);background:var(--panel2)}
+.compliance-logo-grid img{height:32px !important;max-height:32px !important;width:auto !important;max-width:120px !important;object-fit:contain !important;display:inline-block !important}
+.compliance-logo-grid a{display:inline-flex;align-items:center}
+.footer-meta{font-size:.7rem;color:var(--ash);letter-spacing:.04em;margin-top:.2rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
+@media(max-width:768px){
+  .compliance-logo-grid img{height:24px !important;max-height:24px !important}
+  .compliance-logo-grid{gap:1rem}
 }
