@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="origin-trial" content="A+I2guewPuXY8te0s+TgmyKKi5/dbZTIdaqCvrClHlr6FvitaEdRd/6o2jLKuO626kxAONWKRXTaRV/n1AliuQYAAAB8eyJvcmlnaW4iOiJodHRwczovL3d3dy5sb2N1c3RoYXJ2ZXN0LmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxODA2MzY0ODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
-<!-- Standard AdSense async snippet – do not modify -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2066193942477897" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Contact Locust Harvest</title>
@@ -17,6 +16,12 @@
 <link rel="canonical" href="https://www.locustharvest.com/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-700.woff2" as="font" type="font/woff2" crossorigin>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +60,8 @@
 <meta name="twitter:site" content="@Plague2Profit">
 <noscript></noscript>
 <style>
-/* FONT_DISPLAY_OPTIONAL_2026_11_14 */
+@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:105%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:96.5%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%}
 @font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
 @font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Inter-400.woff2') format('woff2')}
@@ -70,8 +76,8 @@
 --body:#c6cdd2;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--body);font-family:'Inter',sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
-h1,h2,h3,.brand-font{font-family:'Rajdhani',sans-serif;letter-spacing:.03em}
+body{background:var(--bg);color:var(--body);font-family:'Inter', 'Inter Fallback', sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
+h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.03em}
 a{color:inherit}
 img{max-width:100%;display:block}
 
@@ -79,22 +85,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
 .nav-logo img{height:38px;width:auto}
-.nav-logo span{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.08em;color:var(--silver-bright)}
+.nav-logo span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.08em;color:var(--silver-bright)}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
+.nav-links a{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
-.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:
-radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),
-linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);
-border-bottom:1px solid var(--line);
-}
-.top-banner img.hero-mark{height:420px;margin:0 auto 1rem;filter:drop-shadow(0 0 24px rgba(62,226,62,.25))}
-.top-banner img.hero-mark{width:auto}
-.top-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);border-bottom:1px solid var(--line)}
+.top-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
 .top-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--silver-bright);letter-spacing:.06em}
-.top-sub{margin-top:.5rem;font-family:'Rajdhani',sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
 .doors{max-width:1180px;margin:0 auto;padding:3.5rem 2rem 5rem;display:flex;flex-direction:column;gap:1.5rem}
@@ -102,68 +101,40 @@ border-bottom:1px solid var(--line);
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
 .door:hover{border-color:var(--line-bright);transform:translateY(-2px)}
 .door:hover::before{transform:scaleY(1)}
-.door-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
-.door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
+.door-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
+.door-title{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
 .door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:640px;text-align:justify}
 .door-body a{color:var(--green-bright);text-decoration:underline;text-decoration-color:var(--green-dim)}
 .door-body a:hover{color:var(--silver-bright)}
 .door-body + .door-body{margin-top:.9rem}
-.door-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.door-row.thirds{grid-template-columns:repeat(3,1fr)}
 
-.btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--green-bright);border:1px solid var(--green-dim);padding:.85rem 1.9rem;text-decoration:none;transition:background .25s,color .25s,border-color .25s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--green-bright);border:1px solid var(--green-dim);padding:.85rem 1.9rem;text-decoration:none;transition:background .25s,color .25s,border-color .25s;cursor:pointer}
 .btn-hero{min-width:300px;justify-content:center}
 .btn:hover{background:var(--green);color:#04140a;border-color:var(--green)}
-.btn.soon{color:var(--ash);border-color:var(--line);cursor:default}
-.btn.soon:hover{background:0 0;color:var(--ash)}
-.btn.primary{background:var(--green);color:#04140a;border-color:var(--green)}
-.btn.primary:hover{background:var(--green-bright);border-color:var(--green-bright)}
-
-.door-lh{display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
-.door-lh .lh-mark{flex:0 0 140px}
-.door-lh .lh-mark img{width:140px}
-.door-lh .lh-text{flex:1;min-width:260px}
 
 .value-grid{margin-top:.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .value-card{border:1px solid var(--line);background:var(--panel2);padding:1.5rem}
-.value-card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
+.value-card h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
 .value-card p{font-size:.85rem;color:var(--body);line-height:1.65}
-
-.p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
-.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s}
-.p2p-socials a:hover{background:var(--green);border-color:var(--green);color:#04140a;transform:translateY(-2px)}
-.p2p-socials svg{width:20px;height:20px}
-.p2p-socials span{font-family:'Rajdhani',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
-.p2p-handle{margin-top:1rem;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
 
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
 .form-field{margin-bottom:1.1rem}
-.form-field label{display:block;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
-.form-field input,.form-field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--silver-bright);padding:.75rem .9rem;font-family:'Inter',sans-serif;font-size:.9rem;transition:border-color .25s}
+.form-field label{display:block;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
+.form-field input,.form-field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--silver-bright);padding:.75rem .9rem;font-family:'Inter', 'Inter Fallback', sans-serif;font-size:.9rem;transition:border-color .25s}
 .form-field input:focus,.form-field textarea:focus{outline:none;border-color:var(--green-dim)}
 .form-field textarea{resize:vertical;min-height:120px}
 .contact-info{display:flex;flex-direction:column;gap:1.1rem;align-self:stretch;height:100%}
 .contact-info .ci-item{flex:1}
 .contact-info .ci-item{border:1px solid var(--line);background:var(--panel2);padding:1.1rem 1.3rem}
-.contact-info .ci-item h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
+.contact-info .ci-item h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
 .contact-info .ci-item p,.contact-info .ci-item a{font-size:.88rem;color:var(--body);text-decoration:none}
 .contact-info .ci-item a:hover{color:var(--green-bright)}
 
-.legal{max-width:820px;margin:0 auto;padding:3.5rem 2rem 5rem}
-.legal h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
-.legal h2:first-child{margin-top:0}
-.legal h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
-.legal p{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem;text-align:justify}
-.legal a{color:var(--green-bright);text-decoration:underline;text-underline-offset:2px}
-.legal li{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem}
-.legal ul{padding-left:1.3rem;margin-bottom:.9rem}
-.legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani',sans-serif;letter-spacing:.05em}
-
 footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}
-.footer-brand{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
-.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani',sans-serif}
-.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani',sans-serif}
+.footer-brand{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
+.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
+.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
 .footer-links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;font-size:.72rem}
 .footer-links a{color:var(--ash);text-decoration:none;transition:color .25s}
 .footer-links a:hover{color:var(--green-bright)}
@@ -172,85 +143,30 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
 .footer-copy a:hover{color:var(--green-bright)}
 
 @media(max-width:900px){
-.door-row{grid-template-columns:1fr}
-.door-row.thirds{grid-template-columns:1fr}
-.value-grid{grid-template-columns:1fr}
-.p2p-socials{grid-template-columns:repeat(3,1fr)}
-.contact-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .footer-copy{text-align:center}
-nav{padding:.7rem 1.25rem}
-.hamburger{display:block}
-.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
-.nav-links.open{display:flex}
-.top-banner{padding:7rem 1.25rem 2rem}
-.top-banner img.hero-mark{height:260px}
-.doors{padding:2.5rem 1.25rem 3.5rem}
-.legal{padding:2.5rem 1.25rem 3.5rem}
-.door{padding:1.8rem}
-.door-lh{flex-direction:column;text-align:center}
-.p2p-socials{grid-template-columns:repeat(2,1fr)}
+  nav{padding:.7rem 1.25rem}
+  .hamburger{display:block}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .top-banner{padding:7rem 1.25rem 2rem}
+  .doors{padding:2.5rem 1.25rem 3.5rem}
+  .door{padding:1.8rem}
 }
-
-body.about-page .top-eyebrow,
-body.about-page .top-title,
-body.about-page .door-eyebrow,
-body.about-page .door-title,
-body.about-page .value-card h3,
-body.about-page .value-card p,
-body.about-page .footer-brand,
-body.about-page .footer-tagline,
-body.about-page .footer-brands,
 
 .door-body,
 .value-card p,
-.legal p,
-.legal li,
 footer p,
 footer div,
 .footer-brands,
 .footer-links,
-.contact-info p,
-.about-page p{
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
-@media(max-width:768px){
-  .door-body,
-  .value-card p,
-  .legal p,
-  .legal li,
-  footer p,
-  footer div,
-  .footer-brands,
-  .footer-links,
-  .contact-info p,
-  .about-page p{
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    overflow-wrap: break-word;
-  }
-}
+.contact-info p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 
-.btn,
-.btn-hero,
-.btn.primary,
-button,
-input[type="submit"] {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.hamburger {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-}
+.btn,.btn-hero,.btn.primary,button,input[type="submit"]{text-align:center;justify-content:center;align-items:center}
+.hamburger{text-align:center;justify-content:center;align-items:center;line-height:1}
 </style>
 </head>
 <body class="page-offset">
@@ -264,7 +180,7 @@ input[type="submit"] {
     <li><a href="/#novelty">NOVELTY&trade;</a></li>
     <li><a href="/#plague2profit">Plague2Profit&trade;</a></li>
     <li><a href="/harvest/">The Daily Harvest</a></li>
-<li><a href="/about.html">About Us</a></li>
+    <li><a href="/about.html">About Us</a></li>
     <li><a href="/contact.html" class="active">Contact Us</a></li>
   </ul>
 </nav>
@@ -300,57 +216,25 @@ input[type="submit"] {
       <div>
         <h2 class="door-title">Send Us A Message</h2>
         <p class="door-body" style="margin-bottom:1.3rem">For general questions and partnerships &mdash; use form below.</p>
-        <form action="https://api.web3forms.com/submit" method="POST"
-              toolname="send_contact_message"
-              tooldescription="Send a message to Locust Harvest (Pty) Ltd. Use this when a user wants to contact Locust Harvest about general questions, NOVELTY, partnerships, or the Plague2Profit brand.">
+        <form action="https://api.web3forms.com/submit" method="POST" toolname="send_contact_message" tooldescription="Send a message to Locust Harvest (Pty) Ltd. Use this when a user wants to contact Locust Harvest about general questions, NOVELTY, partnerships, or the Plague2Profit brand.">
           <input type="hidden" name="access_key" value="76a5af30-521e-4ede-ae1c-83747158d1ec">
           <input type="hidden" name="subject" value="New message from locustharvest.com">
           <input type="hidden" name="redirect" value="https://www.locustharvest.com/thank-you.html">
           <input type="checkbox" name="botcheck" style="display:none">
-
-          <div class="form-field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="from_name" required
-                   toolparamdescription="Full name of the person sending the message.">
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required
-                   toolparamdescription="Reply-to email address of the person sending the message.">
-          </div>
-          <div class="form-field">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="user_subject" required
-                   toolparamdescription="Short subject line summarising the reason for the message.">
-          </div>
-          <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="Message" required
-                      toolparamdescription="The body of the message to send to Locust Harvest."></textarea>
-          </div>
+          <div class="form-field"><label for="name">Name</label><input type="text" id="name" name="from_name" required toolparamdescription="Full name of the person sending the message."></div>
+          <div class="form-field"><label for="email">Email</label><input type="email" id="email" name="email" required toolparamdescription="Reply-to email address of the person sending the message."></div>
+          <div class="form-field"><label for="subject">Subject</label><input type="text" id="subject" name="user_subject" required toolparamdescription="Short subject line summarising the reason for the message."></div>
+          <div class="form-field"><label for="message">Message</label><textarea id="message" name="Message" required toolparamdescription="The body of the message to send to Locust Harvest."></textarea></div>
           <button type="submit" class="btn" style="display:flex;margin-left:auto;margin-right:auto;width:fit-content">Send Message</button>
         </form>
       </div>
-
       <div class="contact-info">
         <h2 class="door-title" style="margin-bottom:.5rem">Get In Touch</h2>
         <p class="door-body" style="margin-bottom:1.3rem">Direct contact details &mdash; reach our team.</p>
-        <div class="ci-item">
-          <h3>Email</h3>
-          <a href="mailto:info@locustharvest.com">info@locustharvest.com</a>
-        </div>
-        <div class="ci-item">
-          <h3>Phone</h3>
-          <a href="tel:+27713641561">+27 71 364 1561</a>
-        </div>
-        <div class="ci-item">
-          <h3>Location</h3>
-          <p>Jan Smuts Highway, Sherwood, KwaZulu-Natal, 4091, South Africa</p>
-        </div>
-        <div class="ci-item">
-          <h3>Follow</h3>
-          <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles
-        </div>
+        <div class="ci-item"><h3>Email</h3><a href="mailto:info@locustharvest.com">info@locustharvest.com</a></div>
+        <div class="ci-item"><h3>Phone</h3><a href="tel:+27713641561">+27 71 364 1561</a></div>
+        <div class="ci-item"><h3>Location</h3><p>Jan Smuts Highway, Sherwood, KwaZulu-Natal, 4091, South Africa</p></div>
+        <div class="ci-item"><h3>Follow</h3><a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles</div>
       </div>
     </div>
   </section>
@@ -361,12 +245,9 @@ input[type="submit"] {
   <div class="footer-tagline">Technology &bull; Innovation &bull; Digital Platforms</div>
   <div class="footer-brands">NOVELTY&trade; | PLAGUE2PROFIT&trade;</div>
   <div class="footer-links">
-    <a href="/privacy.html">Privacy Policy</a>
-    <span>|</span>
-    <a href="/terms.html">Terms &amp; Conditions</a>
-    <span>|</span>
-    <a href="/cookies.html">Cookie Policy</a>
-    <span>|</span>
+    <a href="/privacy.html">Privacy Policy</a><span>|</span>
+    <a href="/terms.html">Terms &amp; Conditions</a><span>|</span>
+    <a href="/cookies.html">Cookie Policy</a><span>|</span>
     <a href="/contact.html">Contact</a>
   </div>
   <div class="footer-copy">&copy; 2026 Locust Harvest (Pty) Ltd. All rights reserved. Follow <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles.</div>
