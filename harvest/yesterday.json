@@ -1,64 +1,16 @@
 {
   "winners": [
     {
-      "match": "Argentinos Juniors v Independiente Rivadavia",
-      "market": "Under 2.5 @ 1.20",
+      "match": "Coquimbo Unido v Union La Calera",
+      "market": "Under 3.5 @ 1.35",
       "score": "1-0",
-      "date_time": "Wed 28 Oct \u00b7 00:00 SAST"
+      "date_time": "Sat 31 Oct \u00b7 00:00 SAST"
     },
     {
-      "match": "Cear\u00e1 v Goi\u00e1s",
-      "market": "Under 2.5 @ 1.20",
-      "score": "0-2",
-      "date_time": "Wed 28 Oct \u00b7 01:00 SAST"
-    },
-    {
-      "match": "AC Oulu v VPS Vaasa",
-      "market": "Home or Draw @ 1.40",
-      "score": "0-0",
-      "date_time": "Wed 28 Oct \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Pisa v Palermo",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-3",
-      "date_time": "Wed 28 Oct \u00b7 20:00 SAST"
-    },
-    {
-      "match": "Carrarese v Arezzo",
-      "market": "Under 4.5 @ 1.20",
+      "match": "Racing Club v Aldosivi Mar del Plata",
+      "market": "Under 3.5 @ 1.30",
       "score": "2-1",
-      "date_time": "Wed 28 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Monza v Napoli",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-4",
-      "date_time": "Wed 28 Oct \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Bournemouth v Aston Villa",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-0",
-      "date_time": "Wed 28 Oct \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Dundee FC v Kilmarnock",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-1",
-      "date_time": "Wed 28 Oct \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Hearts v Rangers",
-      "market": "Away or Draw @ 1.25",
-      "score": "2-2",
-      "date_time": "Wed 28 Oct \u00b7 22:00 SAST"
-    },
-    {
-      "match": "Liverpool v Chelsea",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-1",
-      "date_time": "Wed 28 Oct \u00b7 22:00 SAST"
+      "date_time": "Sat 31 Oct \u00b7 02:15 SAST"
     }
   ]
 }
