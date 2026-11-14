@@ -1,287 +1,53 @@
 /* NOVELTY Daily Harvest — shared styles */
 
-/* Metric-matched font fallbacks — prevents layout shift when web
-   fonts load. Arial adjusted to match Rajdhani (105%) and Inter
-   (96.5%) glyph widths and vertical metrics. */
-@font-face {
-  font-family: 'Rajdhani Fallback';
-  src: local('Arial');
-  size-adjust: 105%;
-  ascent-override: 90%;
-  descent-override: 20%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: 'Inter Fallback';
-  src: local('Arial');
-  size-adjust: 96.5%;
-  ascent-override: 96.9%;
-  descent-override: 24.1%;
-  line-gap-override: 0%;
-}
+@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:90%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:96.5%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%}
 
-:root {
-  --bg: #0a0a0a;
-  --bg-card: #111111;
-  --border: #1f1f1f;
-  --text: #e5e5e5;
-  --text-dim: #9ca3af;
-  --accent: #4ade80;
-  --won: #4ade80;
-  --lost: #f87171;
-  --void: #9ca3af;
-  --pending: #9ca3af;
-}
+:root{--bg:#0a0a0a;--bg-card:#111111;--border:#1f1f1f;--text:#e5e5e5;--text-dim:#9ca3af;--accent:#4ade80;--won:#4ade80;--lost:#f87171;--void:#9ca3af;--pending:#9ca3af}
+*{box-sizing:border-box}
 
-* { box-sizing: border-box; }
+body.harvest{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;line-height:1.65;font-size:16px}
 
-body.harvest {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.65;
-  font-size: 16px;
-}
+.harvest-wrap{max-width:780px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.harvest-header{border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2rem}
+.harvest-header h1{font-size:1.9rem;letter-spacing:-.01em;margin:0 0 .35rem;color:#fff}
+.harvest-header .harvest-date{color:var(--text-dim);font-size:.95rem;margin:0;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.harvest-lead{font-size:1.05rem;color:#d1d5db;margin:1.5rem 0 2rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.harvest-section-title{font-size:1.15rem;font-weight:600;color:#fff;border-bottom:1px solid var(--border);padding-bottom:.4rem;margin:2.5rem 0 1.25rem}
 
-.harvest-wrap {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
-}
+.pick{margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.pick:last-child{border-bottom:none}
+.pick-head{font-size:1.02rem;font-weight:600;color:#fff;margin-bottom:.35rem}
+.pick-odds{font-weight:400;color:var(--text-dim);font-size:.95rem;margin-left:.35rem}
+.pick-why{color:#d1d5db;margin:.4rem 0 .35rem}
+.pick-result{font-weight:600;margin:.35rem 0 0}
+.result-won{color:var(--won)}
+.result-lost{color:var(--lost)}
+.result-void{color:var(--void)}
+.result-pending{color:var(--pending);font-weight:500}
 
-.harvest-header {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
+.summary-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.92rem}
+.summary-table th,.summary-table td{text-align:left;padding:.55rem .75rem;border-bottom:1px solid var(--border)}
+.summary-table th{background:var(--bg-card);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim)}
 
-.harvest-header h1 {
-  font-size: 1.9rem;
-  letter-spacing: -.01em;
-  margin: 0 0 .35rem;
-  color: #fff;
-}
+.archive-list{list-style:none;padding:0;margin:1.5rem 0}
+.archive-list li{display:flex;align-items:center;gap:1.25rem;padding:.85rem 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.archive-list li:last-child{border-bottom:none}
+.archive-list a{color:var(--accent);text-decoration:none;font-weight:500;font-size:1rem}
+.archive-list a:hover{text-decoration:underline}
+.archive-list .archive-date{font-size:1rem;color:#e5e5e5;font-weight:500;line-height:1.2}
 
-.harvest-header .harvest-date {
-  color: var(--text-dim);
-  font-size: .95rem;
-  margin: 0;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
+.state-btns{display:inline-flex;gap:.5rem;flex-shrink:0}
+.state-btn{display:inline-block;padding:.4rem .9rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;transition:background .15s ease,color .15s ease;line-height:1.2;min-width:72px;text-align:center}
+.state-btn:hover{background:var(--accent);color:#0a0a0a;text-decoration:none}
+.state-btn.disabled{border-color:#2a2a2a;color:#4a4a4a;cursor:not-allowed;pointer-events:none;opacity:.5}
 
-.harvest-lead {
-  font-size: 1.05rem;
-  color: #d1d5db;
-  margin: 1.5rem 0 2rem;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
+.subscribe{margin-top:2.5rem;padding:1.25rem 1.5rem;background:var(--bg-card);border-left:3px solid var(--accent);color:#d1d5db;font-size:.95rem;border-radius:2px}
+.subscribe a{color:var(--accent);text-decoration:none;font-weight:600}
+.subscribe a:hover{text-decoration:underline}
 
-.harvest-section-title {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #fff;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: .4rem;
-  margin: 2.5rem 0 1.25rem;
-}
+.disclaimer{font-size:.8rem;color:var(--text-dim);margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--border);line-height:1.6;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 
-/* Pick cards */
-.pick {
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.pick:last-child { border-bottom: none; }
-
-.pick-head {
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: .35rem;
-}
-
-.pick-odds {
-  font-weight: 400;
-  color: var(--text-dim);
-  font-size: .95rem;
-  margin-left: .35rem;
-}
-
-.pick-why {
-  color: #d1d5db;
-  margin: .4rem 0 .35rem;
-}
-
-.pick-result {
-  font-weight: 600;
-  margin: .35rem 0 0;
-}
-
-.result-won { color: var(--won); }
-.result-lost { color: var(--lost); }
-.result-void { color: var(--void); }
-.result-pending { color: var(--pending); font-weight: 500; }
-
-/* Summary tables */
-.summary-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0 1.5rem;
-  font-size: .92rem;
-}
-
-.summary-table th,
-.summary-table td {
-  text-align: left;
-  padding: .55rem .75rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.summary-table th {
-  background: var(--bg-card);
-  font-weight: 600;
-  font-size: .82rem;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--text-dim);
-}
-
-/* Archive: one row per post — buttons on the left, date on the right */
-.archive-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.archive-list li {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: .85rem 0;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-}
-
-.archive-list li:last-child {
-  border-bottom: none;
-}
-
-.archive-list a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.archive-list a:hover {
-  text-decoration: underline;
-}
-
-.archive-list .archive-date {
-  font-size: 1rem;
-  color: #e5e5e5;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.state-btns {
-  display: inline-flex;
-  gap: .5rem;
-  flex-shrink: 0;
-}
-
-.state-btn {
-  display: inline-block;
-  padding: .4rem .9rem;
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 3px;
-  border: 1.5px solid var(--accent);
-  color: var(--accent);
-  background: transparent;
-  transition: background .15s ease, color .15s ease;
-  line-height: 1.2;
-  min-width: 72px;
-  text-align: center;
-}
-
-.state-btn:hover {
-  background: var(--accent);
-  color: #0a0a0a;
-  text-decoration: none;
-}
-
-.state-btn.disabled {
-  border-color: #2a2a2a;
-  color: #4a4a4a;
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: .5;
-}
-
-/* Subscribe block */
-.subscribe {
-  margin-top: 2.5rem;
-  padding: 1.25rem 1.5rem;
-  background: var(--bg-card);
-  border-left: 3px solid var(--accent);
-  color: #d1d5db;
-  font-size: .95rem;
-  border-radius: 2px;
-}
-
-.subscribe a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.subscribe a:hover { text-decoration: underline; }
-
-/* Disclaimer */
-.disclaimer {
-  font-size: .8rem;
-  color: var(--text-dim);
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-  line-height: 1.6;
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
-
-/* Site nav at top of harvest pages */
-.harvest-nav {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-size: .9rem;
-}
-
-.harvest-nav a {
-  color: var(--text-dim);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-weight: 500;
-  font-size: .82rem;
-}
-
-.harvest-nav a:hover,
-.harvest-nav a.active { color: var(--accent); }
+.harvest-nav{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1.5rem;font-size:.9rem}
+.harvest-nav a{color:var(--text-dim);text-decoration:none;text-transform:uppercase;letter-spacing:.06em;font-weight:500;font-size:.82rem}
+.harvest-nav a:hover,.harvest-nav a.active{color:var(--accent)}
