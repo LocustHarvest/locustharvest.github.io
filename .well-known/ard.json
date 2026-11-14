@@ -1,0 +1,26 @@
+{
+  "specVersion": "0.91",
+  "name": "Locust Harvest Agentic Resource Discovery Catalog",
+  "description": "Agentic resources published by Locust Harvest (Pty) Ltd for AI agents and crawlers.",
+  "updatedAt": "2026-11-14T00:00:00Z",
+  "publisher": {
+    "name": "Locust Harvest (Pty) Ltd",
+    "identifier": "did:web:locustharvest.com",
+    "url": "https://www.locustharvest.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:locustharvest.com:contact:form",
+      "displayName": "Contact Form",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.locustharvest.com/contact.html",
+      "description": "Send a message to Locust Harvest about general questions, NOVELTY, partnerships, or the Plague2Profit brand.",
+      "representativeQueries": [
+        "Send a message to Locust Harvest",
+        "Contact the sales team about NOVELTY",
+        "Ask a question about partnerships",
+        "Get in touch with Plague2Profit"
+      ]
+    }
+  ]
+}
