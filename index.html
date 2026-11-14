@@ -15,10 +15,13 @@
 <meta name="google-site-verification" content="o1-Eg9BfoNziduddiN-_Cv-nHghy8YcpCzjkYEd8Lyg">
 <link rel="canonical" href="https://www.locustharvest.com/">
 
-<!-- FONT_PRELOAD_2026_11_14 — preload Inter so it loads before first paint,
-     eliminating the swap-induced CLS. Safe and AdSense-compliant. -->
+<!-- FONT_PRELOAD_2026_11_14 — preload both font families so they load
+     before first paint, eliminating the fallback-visible flash on cold
+     cache. Safe and AdSense-compliant. -->
 <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-700.woff2" as="font" type="font/woff2" crossorigin>
 
 <script type="application/ld+json">
 {
@@ -86,7 +89,6 @@
 
 <style>
 
-/* CLS_FONT_FIX_2026_11_14 */
 @font-face {
   font-family: 'Rajdhani Fallback';
   src: local('Arial');
@@ -95,9 +97,6 @@
   descent-override: 20%;
   line-gap-override: 0%;
 }
-/* CLS_INTER_FALLBACK_2026_11_14 — tightened from 100% to 96.5% so Arial
-   renders at the same visual width as Inter, eliminating line-count
-   changes on swap. */
 @font-face {
   font-family: 'Inter Fallback';
   src: local('Arial');
@@ -107,7 +106,6 @@
   line-gap-override: 0%;
 }
 
-/* FONT_DISPLAY_OPTIONAL_2026_11_14 */
 @font-face {
   font-family: 'Rajdhani';
   font-style: normal;
@@ -151,7 +149,6 @@ h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;let
 a{color:inherit}
 img{max-width:100%;display:block}
 
-/* ===== NAV ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.9rem 3rem;background:linear-gradient(to bottom,rgba(8,9,11,.96) 0%,transparent 100%);transition:background .3s}
 nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
@@ -162,7 +159,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
-/* ===== TOP BANNER ===== */
 .top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:
   radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),
   linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);
@@ -175,7 +171,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .top-sub{margin-top:.5rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
-/* ===== DOORS / SECTIONS ===== */
 .doors{max-width:1180px;margin:0 auto;padding:3.5rem 2rem 5rem;display:flex;flex-direction:column;gap:1.5rem}
 .door{position:relative;border:1px solid var(--line);background:var(--panel);padding:2.8rem;overflow:hidden;transition:border-color .3s,transform .3s}
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
@@ -210,8 +205,12 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .value-card p{font-size:.85rem;color:var(--body);line-height:1.65;text-align:justify;text-align-last:left}
 .value-card h3{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 
-.p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
-.p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s;animation:social-glow 4s ease-in-out infinite alternate;position:relative;overflow:hidden}
+/* P2P_SOCIAL_EQUALIZE_2026_11_14 — grid-auto-rows:1fr forces all rows to
+   the same height as the tallest, so all 10 boxes are identical regardless
+   of which one has the longest text. min-height on each anchor provides a
+   floor so boxes don't collapse during font transitions. */
+.p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:1fr;gap:.7rem}
+.p2p-socials a{min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s;animation:social-glow 4s ease-in-out infinite alternate;position:relative;overflow:hidden}
 @keyframes social-glow {
   0% { box-shadow: 0 0 0 rgba(62,226,62,0); border-color: var(--line); }
   100% { box-shadow: 0 0 12px rgba(62,226,62,0.15); border-color: rgba(62,226,62,0.25); }
@@ -229,10 +228,9 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .p2p-socials a[aria-label="Bluesky"]:hover{background:#1185fe;border-color:#1185fe;color:#fff}
 .p2p-socials a[aria-label="NOVELTY"]:hover{background:#2563eb;border-color:#2563eb;color:#fff}
 .p2p-socials svg{width:20px;height:20px}
-.p2p-socials span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.p2p-socials span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;line-height:1.2}
 .p2p-handle{margin-top:1rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
 
-/* ===== FORMS ===== */
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
 .form-field{margin-bottom:1.1rem}
 .form-field label{display:block;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
@@ -245,7 +243,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .contact-info .ci-item p,.contact-info .ci-item a{font-size:.88rem;color:var(--body);text-decoration:none}
 .contact-info .ci-item a:hover{color:var(--green-bright)}
 
-/* ===== LEGAL ===== */
 .legal{max-width:820px;margin:0 auto;padding:3.5rem 2rem 5rem}
 .legal h2{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
@@ -255,7 +252,6 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .legal ul{padding-left:1.3rem;margin-bottom:.9rem}
 .legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.05em}
 
-/* ===== FOOTER ===== */
 footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}
 .footer-brand{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
 .footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani',sans-serif}
@@ -267,7 +263,6 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
 .footer-copy a{color:var(--green-bright);text-decoration:underline}
 .footer-copy a:hover{color:var(--green-bright)}
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
   .door-row{grid-template-columns:1fr}
   .door-row.thirds{grid-template-columns:1fr}
@@ -372,7 +367,6 @@ button,
 input[type="submit"] { text-align: center; justify-content: flex-start; align-items: center; }
 .hamburger { text-align: center; justify-content: flex-start; align-items: center; line-height: 1; }
 
-/* ===== LOGO EFFECTS ===== */
 .logo-wrap { position: relative; display: inline-block; overflow: hidden; }
 .logo-wrap img { position: relative; z-index: 1; animation: logo-glow 3s ease-in-out infinite alternate; }
 .logo-wrap::before {
@@ -389,7 +383,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 @keyframes logo-shimmer { 0% { left: -70%; } 70% { left: 130%; } 100% { left: 130%; } }
 @keyframes logo-glow { 0% { filter: drop-shadow(0 0 5px rgba(62,226,62,0.2)); } 100% { filter: drop-shadow(0 0 15px rgba(62,226,62,0.6)); } }
 
-/* ADVERT_ANIMATION_2026_10_27 */
 .tier-shimmer {
   position: absolute;
   top: -50%; left: -70%;
@@ -448,7 +441,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 }
 .advert-cta:hover { background:var(--green); color:#04140a; }
 
-/* DESKTOP_STRETCH_LOCKED_2026_10_27 */
 #tiers-grid .advert-card { padding: 0 !important; display: flex !important; flex-direction: column !important; }
 #tiers-grid .advert-card > .advert-headline { padding: 1.5rem 1.5rem 1rem 1.5rem !important; margin: 0 !important; }
 #tiers-grid .advert-card > div > div {
@@ -462,7 +454,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   box-sizing: border-box !important;
 }
 
-/* STRICT_MOBILE_3_LINE_CSS_2026_10_27 */
 @media(max-width:768px){
   #tiers-grid .advert-card > div > div > div:first-child { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.3rem !important; }
   #tiers-grid .advert-card > div > div > div:first-child > div:first-child { width: 100% !important; white-space: normal !important; }
@@ -471,7 +462,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   #tiers-grid .advert-card > div > div > div:last-child > div { white-space: nowrap !important; }
 }
 
-/* RESTORE_MOBILE_SOCIAL_LIFE_2026_10_28 */
 @media(max-width:768px){
   .p2p-socials a[aria-label="YouTube"]{background:#ff0000;border-color:#ff0000;color:#fff}
   .p2p-socials a[aria-label="Google Play"]{background:#FBBC05;border-color:#FBBC05;color:#000000}
@@ -504,20 +494,17 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   .p2p-socials a span { position: relative; z-index: 3; }
 }
 
-/* DESKTOP_TIER_UNIFORMITY_FINAL_2026_10_28 */
 @media(min-width: 769px){
   .doors { max-width: 1440px !important; }
   #tiers-grid { gap: 0.75rem !important; grid-template-columns: repeat(3, 1fr) !important; }
   #tiers-grid .advert-card span { font-size: 0.65rem !important; padding: 0.15rem 0.5rem !important; }
 }
 
-/* MOBILE_CENTER_MISSION_CORRECT_2026_10_28 */
 @media(max-width:768px){
   section[aria-labelledby="mission-heading"] .door-eyebrow,
   section[aria-labelledby="mission-heading"] .door-title { text-align: center !important; }
 }
 
-/* P2P_DESKTOP_JUSTIFY_LAST_LINE_2026_10_28 */
 @media(min-width: 769px){
   .door-body.p2p-lines { text-align: justify !important; text-align-last: left !important; }
 }
@@ -529,27 +516,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   .google-content img { height: 80px !important; max-width: 45% !important; }
 }
 
-/* FIX_MASSIVE_LOGOS_FOOTER */
-.compliance-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 0 auto 20px auto;
-  padding: 10px;
-  width: 100%;
-}
-.compliance-logo-grid img {
-  height: 64px !important;
-  width: auto !important;
-  max-width: 180px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
-}
-@media (max-width: 768px) { .compliance-logo-grid img { height: 48px !important; } }
-
-/* FIX_IO_LOGO_SIZE_RESET */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -579,47 +545,13 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   .compliance-logo-grid img[src*="mastercard-secure"] { height: 90px !important; max-width: 300px !important; width: auto !important; }
 }
 
-/* EQUAL_SOCIAL_ICON_SIZES */
 .p2p-socials a img { height: 20px !important; width: auto !important; object-fit: contain !important; }
 
-/* MOBILE_SOCIAL_GRID_FIX */
-@media (max-width: 768px) {
-  .p2p-socials { align-items: stretch !important; }
-  .p2p-socials a {
-    min-height: 110px !important;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 10px 5px !important;
-  }
-  .p2p-socials a span {
-    text-align: center !important;
-    width: 100% !important;
-    font-size: 0.65rem !important;
-    line-height: 1.2 !important;
-    margin-top: 8px !important;
-    display: block !important;
-  }
-  .p2p-socials a img,
-  .p2p-socials a svg {
-    height: 24px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    flex-shrink: 0 !important;
-  }
-}
-
-/* CLS_IMAGE_ASPECT_2026_11_14 */
 .web-content img { aspect-ratio: 1 / 1; }
 .google-content img { aspect-ratio: 180 / 53; }
 .p2p-socials a img[src*="novelty-icon"] { aspect-ratio: 1 / 1; }
 .p2p-socials a img[src*="google-play-badge"] { aspect-ratio: 180 / 53; }
 
-/* ===== COMPLIANT CLS FIX: RESERVE SPACE ===== */
 @media (max-width: 768px) {
   #latest-results { min-height: 2100px; }
   #tiers-grid { min-height: 1950px; }
@@ -651,7 +583,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 
 <main class="doors">
 
-<!-- DOOR 1: LOCUST HARVEST -->
 <section class="door" id="about-blurb" aria-labelledby="lh-heading">
 <div class="door-lh">
 <div class="lh-text">
@@ -662,8 +593,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 </div>
 </section>
 
-
-<!-- DOOR 0: NOVELTY — FLAGSHIP APP -->
 <section class="door" id="novelty" aria-labelledby="novelty-heading">
 <h2 class="door-title" id="novelty-heading">NOVELTY<sup>&trade;</sup></h2>
 <div class="door-row">
@@ -675,32 +604,20 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   <a href="https://app.novelty.locustharvest.com/register" rel="nofollow" class="advert-cta">Subscribe Now →</a>
 </div>
 
-
-
-
-<!-- Ad slot — reserve space for AdSense / partner ad. Replace inner
-     contents with your <ins class="adsbygoogle"> once ready. -->
 </div>
 
 <p class="door-body para-18plus" style="margin-top:0.5rem; margin-bottom:1rem; text-align:justify">Some users may choose to use NOVELTY&trade;'s content in connection with sports betting, which is restricted or prohibited in some countries — you are responsible for knowing and following your local laws before using NOVELTY&trade;. 18+ years only.</p>
 <style>
-        /* ONLY enforce sizing and alignment. Let .btn-hero handle all colors and hover states. */
         .novelty-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 15px; width: 100%; margin-top: 1.5rem; align-items: stretch; }
         .novelty-grid > a { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
-        
-        /* Force exact heights */
         .novelty-main-btn { height: 130px !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 0 15px !important; text-decoration: none; overflow: hidden; }
         .novelty-small-btn { height: 45px !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 0 10px !important; text-decoration: none; }
-        
-        /* Layout for the content inside the buttons */
         .web-content { display: flex; align-items: center; gap: 15px; white-space: nowrap; }
         .web-content img { height: 75px; width: auto; flex-shrink: 0; }
         .web-content span { font-size: 1.6rem !important; text-transform: uppercase; font-weight: 700; line-height: 1.1; }
-        
         .google-content { display: flex; align-items: center; justify-content: center; width: 100%; gap: 15px; }
         .google-content span { font-size: 1.6rem !important; text-transform: uppercase; font-weight: 700; line-height: 1.2; text-align: left; white-space: nowrap !important; flex-shrink: 0; }
         .google-content img { height: 95px; width: auto; max-width: 90%; object-fit: contain; flex-shrink: 0; }
-        
         @media (max-width: 768px) {
             .novelty-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
             .novelty-main-btn { height: 100px !important; }
@@ -709,141 +626,15 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
             .google-content span { font-size: 1.25rem !important; }
             .google-content img { height: 80px !important; }
         }
-        
-        /* MOBILE GOOGLE TEXT 2 LINES */
         .mobile-break { display: none; }
         @media (max-width: 768px) {
             .mobile-break { display: block !important; }
-            .google-content span { 
-                font-size: 1.1rem !important; 
-                line-height: 1.15 !important; 
-                white-space: normal !important; 
-            }
-            .google-content img {
-                height: 80px !important; 
-                max-width: 45% !important; 
-            }
+            .google-content span { font-size: 1.1rem !important; line-height: 1.15 !important; white-space: normal !important; }
+            .google-content img { height: 80px !important; max-width: 45% !important; }
         }
-
-/* FIX_MASSIVE_LOGOS_FOOTER */
-.compliance-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 0 auto 20px auto;
-  padding: 10px;
-  width: 100%;
-}
-.compliance-logo-grid img {
-  height: 64px !important;
-  width: auto !important;
-  max-width: 180px !important;
-  object-fit: contain !important;
-  display: inline-block !important;
-}
-@media (max-width: 768px) {
-  .compliance-logo-grid img {
-    height: 48px !important;
-  }
-}
-
-/* FIX_IO_LOGO_SIZE_RESET */
-.compliance-logo-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin: 0 auto 20px auto;
-  padding: 10px;
-  width: 100%;
-}
-.compliance-logo-grid img {
-  height: 54px !important; 
-  width: auto !important;
-  max-width: 160px !important;
-  object-fit: contain !important;
-  background: transparent !important;
-}
-.compliance-logo-grid img[src*="visa-verified"],
-.compliance-logo-grid img[src*="mastercard-secure"] {
-  height: 75px !important; 
-  max-width: 240px !important;
-}
-.compliance-logo-grid img[src*="dodo-payments"] {
-  max-width: none !important;
-}
-.footer-meta {
-  text-align: center !important;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-@media (max-width: 1200px) {
-  .compliance-logo-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  .compliance-logo-grid img {
-    height: 40px !important;
-    max-width: 140px !important;
-    width: auto !important;
-  }
-  .compliance-logo-grid img[src*="visa-verified"],
-  .compliance-logo-grid img[src*="mastercard-secure"] {
-    height: 90px !important;
-    max-width: 300px !important;
-    width: auto !important;
-  }
-}
-
-/* EQUAL_SOCIAL_ICON_SIZES */
-.p2p-socials a img {
-  height: 20px !important;
-  width: auto !important;
-  object-fit: contain !important;
-}
-
-/* MOBILE_SOCIAL_GRID_FIX */
-@media (max-width: 768px) {
-  .p2p-socials {
-    align-items: stretch !important;
-  }
-  .p2p-socials a {
-    min-height: 110px !important;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 10px 5px !important;
-  }
-  .p2p-socials a span {
-    text-align: center !important;
-    width: 100% !important;
-    font-size: 0.65rem !important;
-    line-height: 1.2 !important;
-    margin-top: 8px !important;
-    display: block !important;
-  }
-  .p2p-socials a img,
-  .p2p-socials a svg {
-    height: 24px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    flex-shrink: 0 !important;
-  }
-}
-
 </style>
 
         <div class="novelty-grid">
-          
           <a href="https://app.novelty.locustharvest.com" rel="nofollow" class="btn btn-hero novelty-main-btn">
             <div class="web-content">
               <img src="novelty-icon.png" alt="N" width="75" height="75" />
@@ -865,20 +656,14 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
           <a href="/harvest/index.html" class="btn btn-hero novelty-small-btn">
             THE DAILY HARVEST →
           </a>
-
         </div>
-
-        
     </section>
 
-
-<!-- NEW HORIZONTAL TIERS & ADVERTS LAYER -->
 <section class="door" id="latest-results" style="padding: 2.5rem 2rem;">
   <h2 class="door-title" style="text-align:center; margin-bottom: 0.5rem;">Latest Results</h2>
   <div id="tiers-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem; align-items:stretch; min-height: 400px;"></div>
 </section>
 
-<!-- DOOR 4: PLAGUE2PROFIT -->
 <section class="door" id="plague2profit" aria-labelledby="p2p-heading">
 <p class="door-eyebrow">The Philosophy &middot; Media &middot; Social Ecosystem</p>
 <h2 class="door-title" id="p2p-heading">Plague2Profit<sup>&trade;</sup></h2>
