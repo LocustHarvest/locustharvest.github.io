@@ -103,43 +103,41 @@
 
 <style>
 
-/* CLS_FONT_FIX_2026_11_14 — fallback metrics now match the actual
-   font metrics so the swap doesn't shift text. Inter's real line
-   metrics are ~96.9% ascent + 24.1% descent; the old fallback had
-   none of these overrides and inherited Arial's 90.5/21.2 + 3.3%
-   line-gap, so Inter text grew ~9% taller on swap → CLS.
-   Rajdhani's natural line gap is ~0%; Arial's is ~3.3%, so adding
-   line-gap-override: 0% removes ~3% of vertical shift on swap. */
+/* CLS_FONT_FIX_2026_11_14 */
 @font-face {
   font-family: 'Rajdhani Fallback';
   src: local('Arial');
-  size-adjust: 105%;      /* Arial to Rajdhani width */
+  size-adjust: 105%;
   ascent-override: 90%;
   descent-override: 20%;
-  line-gap-override: 0%;  /* NEW — removes Arial's natural gap */
+  line-gap-override: 0%;
 }
 @font-face {
   font-family: 'Inter Fallback';
   src: local('Arial');
   size-adjust: 100%;
-  ascent-override: 96.9%;   /* NEW — matches Inter's real ascent */
-  descent-override: 24.1%;  /* NEW — matches Inter's real descent */
-  line-gap-override: 0%;    /* NEW — Inter has no line gap */
+  ascent-override: 96.9%;
+  descent-override: 24.1%;
+  line-gap-override: 0%;
 }
 
 
+/* FONT_DISPLAY_OPTIONAL_2026_11_14 — Rajdhani is a display font; using
+   `optional` prevents the browser from swapping it in after first paint,
+   which is the primary cause of the residual 0.112 CLS on the hero and
+   section headings. Inter stays on `swap` with matched fallback metrics. */
 @font-face {
   font-family: 'Rajdhani';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/Rajdhani-600.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Rajdhani';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url('/fonts/Rajdhani-700.woff2') format('woff2');
 }
 @font-face {
@@ -633,23 +631,13 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
   }
 }
 
-/* ============================================================
-   CLS_IMAGE_ASPECT_2026_11_14 — reserve intrinsic aspect ratios
-   on the two above-the-fold images flagged by Lighthouse, plus
-   the two below-fold equivalents for completeness. Width/height
-   HTML attributes are also set on each <img>; this is backup.
-   ============================================================ */
+/* CLS_IMAGE_ASPECT_2026_11_14 */
 .web-content img { aspect-ratio: 1 / 1; }
 .google-content img { aspect-ratio: 180 / 53; }
 .p2p-socials a img[src*="novelty-icon"] { aspect-ratio: 1 / 1; }
 .p2p-socials a img[src*="google-play-badge"] { aspect-ratio: 180 / 53; }
 
-/* ============================================================
-   CLS_AD_RESERVE_2026_11_14 — AdSense auto-ads can inject
-   content above the fold. Reserve space for any injected unit
-   in the Latest Results area so its load doesn't shift content.
-   Adjust min-height to match the slot size you expect.
-   ============================================================ */
+/* CLS_AD_RESERVE_2026_11_14 */
 #latest-results { min-height: 400px; }
 ins.adsbygoogle { display: block; min-height: 280px; }
 
@@ -872,8 +860,7 @@ ins.adsbygoogle { display: block; min-height: 280px; }
 
         <div class="novelty-grid">
           
-          <!-- Main Buttons — CLS_2026_11_14: width/height added so the
-               browser reserves the icon and badge boxes before load. -->
+          <!-- Main Buttons — CLS_2026_11_14 -->
           <a href="https://app.novelty.locustharvest.com" rel="nofollow" class="btn btn-hero novelty-main-btn">
             <div class="web-content">
               <img src="novelty-icon.png" alt="N" width="75" height="75" />
