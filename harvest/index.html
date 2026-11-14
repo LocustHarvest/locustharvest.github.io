@@ -10,12 +10,35 @@
 <link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Rajdhani-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Rajdhani-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Mobile fallback: the expanded harvest nav has 7 items, which wraps
+   badly on phones. Force a single horizontally-scrollable row instead. */
+@media(max-width:768px){
+  .harvest-nav{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:.75rem 1rem;
+    gap:.85rem;
+  }
+  .harvest-nav::-webkit-scrollbar{display:none}
+  .harvest-nav a{
+    flex-shrink:0;
+    font-size:.72rem;
+    padding:.15rem 0;
+  }
+}
+</style>
 </head>
 <body class="harvest">
 
 <div class="harvest-nav">
   <a href="/">Locust Harvest</a>
+  <a href="/#novelty">NOVELTY&trade;</a>
+  <a href="/#latest-results">Latest Results</a>
   <a href="/harvest/" class="active">The Daily Harvest</a>
+  <a href="/#plague2profit">Plague2Profit&trade;</a>
   <a href="/about.html">About Us</a>
   <a href="/contact.html">Contact Us</a>
 </div>
