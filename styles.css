@@ -1,7 +1,8 @@
-/* FONT_FALLBACK_2026_11_14 — metric-matched fallbacks eliminate the
-   font-swap flash on cold cache. Rajdhani is display-only, so it uses
-   font-display: optional (never swaps after first paint). Inter stays
-   on swap with matched fallback metrics so line counts don't change. */
+/* Locust Harvest — global styles */
+
+/* Metric-matched font fallbacks — prevents layout shift when web
+   fonts load. Rajdhani is display-only (font-display: optional),
+   Inter is body text (font-display: swap with matched metrics). */
 @font-face {
   font-family: 'Rajdhani Fallback';
   src: local('Arial');
