@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="origin-trial" content="A+I2guewPuXY8te0s+TgmyKKi5/dbZTIdaqCvrClHlr6FvitaEdRd/6o2jLKuO626kxAONWKRXTaRV/n1AliuQYAAAB8eyJvcmlnaW4iOiJodHRwczovL3d3dy5sb2N1c3RoYXJ2ZXN0LmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxODA2MzY0ODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
 <script>
 (function(){
@@ -329,7 +330,9 @@ input[type="submit"] {
       <div>
         <h2 class="door-title">Send Us A Message</h2>
         <p class="door-body" style="margin-bottom:1.3rem">For general questions and partnerships &mdash; use form below.</p>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST"
+              toolname="send_contact_message"
+              tooldescription="Send a message to Locust Harvest (Pty) Ltd. Use this when a user wants to contact Locust Harvest about general questions, NOVELTY, partnerships, or the Plague2Profit brand.">
           <input type="hidden" name="access_key" value="76a5af30-521e-4ede-ae1c-83747158d1ec">
           <input type="hidden" name="subject" value="New message from locustharvest.com">
           <input type="hidden" name="redirect" value="https://www.locustharvest.com/thank-you.html">
@@ -337,19 +340,23 @@ input[type="submit"] {
 
           <div class="form-field">
             <label for="name">Name</label>
-            <input type="text" id="name" name="from_name" required>
+            <input type="text" id="name" name="from_name" required
+                   toolparamdescription="Full name of the person sending the message.">
           </div>
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required
+                   toolparamdescription="Reply-to email address of the person sending the message.">
           </div>
           <div class="form-field">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="Subject" required>
+            <input type="text" id="subject" name="user_subject" required
+                   toolparamdescription="Short subject line summarising the reason for the message.">
           </div>
           <div class="form-field">
             <label for="message">Message</label>
-            <textarea id="message" name="Message" required></textarea>
+            <textarea id="message" name="Message" required
+                      toolparamdescription="The body of the message to send to Locust Harvest."></textarea>
           </div>
           <button type="submit" class="btn" style="display:flex;margin-left:auto;margin-right:auto;width:fit-content">Send Message</button>
         </form>
