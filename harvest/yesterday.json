@@ -122,13 +122,13 @@
     },
     {
       "match": "Oxford United v Stockport County FC",
-      "market": "Home or Draw @ 1.70",
+      "market": "Double chance - Home or Draw @ 1.70",
       "score": "1-0",
       "date_time": "Tue 27 Oct \u00b7 21:45 SAST"
     },
     {
       "match": "Barnet v York City",
-      "market": "Home Win @ 2.10",
+      "market": "Match result - Home Win @ 2.10",
       "score": "3-1",
       "date_time": "Tue 27 Oct \u00b7 21:45 SAST"
     }
