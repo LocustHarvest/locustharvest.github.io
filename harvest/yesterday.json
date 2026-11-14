@@ -1,64 +1,28 @@
 {
   "winners": [
     {
-      "match": "Moldova v Faroe Islands",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-1",
-      "date_time": "Tue 29 Sep \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Spain v Croatia",
-      "market": "Over 2.5 @ 1.40",
-      "score": "4-1",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Slovenia v North Macedonia",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "2-0",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Luxembourg v Iceland",
+      "match": "AS Roma v Barcelona",
       "market": "Over 1.5 @ 1.30",
-      "score": "0-3",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+      "score": "0-6",
+      "date_time": "Wed 30 Sep \u00b7 18:45 SAST"
     },
     {
-      "match": "Scotland v Switzerland",
+      "match": "BK Hacken v Juventus",
+      "market": "Over 1.5 @ 1.50",
+      "score": "0-3",
+      "date_time": "Wed 30 Sep \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Paris FC v Arsenal",
       "market": "Over 1.5 @ 1.40",
+      "score": "2-2",
+      "date_time": "Wed 30 Sep \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Benfica v Bayern Munich",
+      "market": "Match result - Away Win @ 1.30",
       "score": "0-3",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Scotland v Switzerland",
-      "market": "Over 2.5 @ 2.16",
-      "score": "0-3",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Spain v Croatia",
-      "market": "Match result - Home Win @ 1.20",
-      "score": "4-1",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Slovakia v Kazakhstan",
-      "market": "Match result - Home Win @ 1.50",
-      "score": "2-1",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Luxembourg v Iceland",
-      "market": "Over 1.5 @ 1.30",
-      "score": "0-3",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Bulgaria v Estonia",
-      "market": "Double chance - Home or Draw @ 1.20",
-      "score": "0-0",
-      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+      "date_time": "Wed 30 Sep \u00b7 21:00 SAST"
     }
   ]
 }
