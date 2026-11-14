@@ -14,10 +14,19 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="application-name" content="LocustHarvest">
 <meta name="apple-mobile-web-app-title" content="LocustHarvest">
+
+<!-- FONT_PRELOAD_2026_11_14 -->
+<link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Rajdhani-700.woff2" as="font" type="font/woff2" crossorigin>
+
 <noscript></noscript>
 <style>
-@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
-@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
+@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:105%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:96.5%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Inter-400.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/Inter-500.woff2') format('woff2')}
 
@@ -30,8 +39,8 @@
 --body:#c6cdd2;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--body);font-family:'Inter',sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
-h1,h2,h3,.brand-font{font-family:'Rajdhani',sans-serif;letter-spacing:.03em}
+body{background:var(--bg);color:var(--body);font-family:'Inter', 'Inter Fallback', sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
+h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.03em}
 a{color:inherit}
 img{max-width:100%;display:block}
 
@@ -40,7 +49,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
 .nav-logo img{height:38px;width:auto}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
+.nav-links a{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
@@ -49,43 +58,41 @@ radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 6
 linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);
 border-bottom:1px solid var(--line);
 }
-.top-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+.top-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
 .top-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--silver-bright);letter-spacing:.06em}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
 .legal{max-width:820px;margin:0 auto;padding:3.5rem 2rem 5rem}
-.legal h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
+.legal h2{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
-.legal h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
+.legal h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
 .legal p{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem;text-align:justify}
 .legal a{color:var(--green-bright);text-decoration:underline;text-underline-offset:2px}
 .legal li{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem}
 .legal ul{padding-left:1.3rem;margin-bottom:.9rem}
-.legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani',sans-serif;letter-spacing:.05em}
+.legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.05em}
 
 footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}
-.footer-brand{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
-.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani',sans-serif}
-.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani',sans-serif}
+.footer-brand{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
+.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
+.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
 .footer-links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;font-size:.72rem}
 .footer-links a{color:var(--ash);text-decoration:none;transition:color .25s}
 .footer-links a:hover{color:var(--green-bright)}
-.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:left}  /* FOOTER_COPY_DESKTOP_LEFT_2026_10_14 */
+.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:left}
 .footer-copy a{color:var(--green-bright);text-decoration:underline}
 .footer-copy a:hover{color:var(--green-bright)}
 
 @media(max-width:768px){
-  .footer-copy{text-align:center}  /* FOOTER_COPY_MOBILE_CENTER_2026_10_14 */
-
-nav{padding:.7rem 1.25rem}
-.hamburger{display:block}
-.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
-.nav-links.open{display:flex}
-.top-banner{padding:7rem 1.25rem 2rem}
-.legal{padding:2.5rem 1.25rem 3.5rem}
+  .footer-copy{text-align:center}
+  nav{padding:.7rem 1.25rem}
+  .hamburger{display:block}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .top-banner{padding:7rem 1.25rem 2rem}
+  .legal{padding:2.5rem 1.25rem 3.5rem}
 }
 
-/* COSMETIC_JUSTIFY_2026_10_13 — justify all paragraph-level text */
 .door-body,
 .value-card p,
 .legal p,
@@ -119,8 +126,6 @@ footer div,
   }
 }
 
-/* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
-   and every <button> centres its text horizontally and vertically. */
 .btn,
 .btn-hero,
 .btn.primary,
@@ -197,7 +202,7 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
 document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => {
-  document.getElementById('navLinks').classList.remove('open');
+document.getElementById('navLinks').classList.remove('open');
 }));
 </script>
 </body>
