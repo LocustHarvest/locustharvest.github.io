@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="origin-trial" content="A+I2guewPuXY8te0s+TgmyKKi5/dbZTIdaqCvrClHlr6FvitaEdRd/6o2jLKuO626kxAONWKRXTaRV/n1AliuQYAAAB8eyJvcmlnaW4iOiJodHRwczovL3d3dy5sb2N1c3RoYXJ2ZXN0LmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxODA2MzY0ODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
-<!-- Standard AdSense async snippet – do not modify -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2066193942477897" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Locust Harvest — Digital Platforms, Technology &amp; Innovation</title>
@@ -16,6 +15,10 @@
 <meta name="google-site-verification" content="o1-Eg9BfoNziduddiN-_Cv-nHghy8YcpCzjkYEd8Lyg">
 <link rel="canonical" href="https://www.locustharvest.com/">
 
+<!-- FONT_PRELOAD_2026_11_14 — preload Inter so it loads before first paint,
+     eliminating the swap-induced CLS. Safe and AdSense-compliant. -->
+<link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
 
 <script type="application/ld+json">
 {
@@ -79,7 +82,6 @@
 <meta name="twitter:image" content="https://www.locustharvest.com/social-1080.jpg">
 <meta name="twitter:site" content="@Plague2Profit">
 
-
 <noscript></noscript>
 
 <style>
@@ -93,10 +95,13 @@
   descent-override: 20%;
   line-gap-override: 0%;
 }
+/* CLS_INTER_FALLBACK_2026_11_14 — tightened from 100% to 96.5% so Arial
+   renders at the same visual width as Inter, eliminating line-count
+   changes on swap. */
 @font-face {
   font-family: 'Inter Fallback';
   src: local('Arial');
-  size-adjust: 100%;
+  size-adjust: 96.5%;
   ascent-override: 96.9%;
   descent-override: 24.1%;
   line-gap-override: 0%;
@@ -616,8 +621,8 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 
 /* ===== COMPLIANT CLS FIX: RESERVE SPACE ===== */
 @media (max-width: 768px) {
-  #latest-results { min-height: 1400px; }
-  #tiers-grid { min-height: 1300px; }
+  #latest-results { min-height: 2100px; }
+  #tiers-grid { min-height: 1950px; }
 }
 
 </style>
@@ -839,7 +844,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 
         <div class="novelty-grid">
           
-          <!-- Main Buttons — CLS_2026_11_14 -->
           <a href="https://app.novelty.locustharvest.com" rel="nofollow" class="btn btn-hero novelty-main-btn">
             <div class="web-content">
               <img src="novelty-icon.png" alt="N" width="75" height="75" />
@@ -854,7 +858,6 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
             </div>
           </a>
 
-          <!-- Secondary Buttons -->
           <a href="/novelty-legal.html" class="btn btn-hero novelty-small-btn">
             TERMS &amp; RESPONSIBLE USE →
           </a>
