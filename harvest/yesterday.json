@@ -1,130 +1,88 @@
 {
   "winners": [
     {
-      "match": "Sint Truiden v Leuven",
-      "market": "Over 2.5 @ 1.68",
-      "score": "1-2",
-      "date_time": "Sun 1 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Real Racing Club de Santander v Real Madrid",
-      "market": "Over 2.5 @ 1.25",
-      "score": "0-3",
-      "date_time": "Sun 1 Nov \u00b7 17:15 SAST"
-    },
-    {
-      "match": "FC Lugano v FC Basel",
-      "market": "Home Win @ 1.45",
-      "score": "2-1",
-      "date_time": "Sun 1 Nov \u00b7 17:30 SAST"
-    },
-    {
-      "match": "IF Elfsborg v \u00d6rgryte IS",
-      "market": "Over 2.5 @ 1.55",
-      "score": "2-1",
-      "date_time": "Sun 1 Nov \u00b7 17:30 SAST"
-    },
-    {
-      "match": "FC Lausanne-Sport v FC Thun",
-      "market": "Over 2.5 @ 1.63",
-      "score": "4-5",
-      "date_time": "Sun 1 Nov \u00b7 17:30 SAST"
-    },
-    {
-      "match": "Groningen v Sparta Rotterdam",
-      "market": "Over 2.5 @ 1.40",
-      "score": "2-3",
-      "date_time": "Sun 1 Nov \u00b7 17:45 SAST"
-    },
-    {
-      "match": "Kasimpasa SK v Besiktas JK",
-      "market": "Over 2.5 @ 1.62",
-      "score": "2-2",
-      "date_time": "Sun 1 Nov \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Eintracht Frankfurt v Hamburger SV",
-      "market": "Over 2.5 @ 1.40",
-      "score": "3-1",
-      "date_time": "Sun 1 Nov \u00b7 18:30 SAST"
-    },
-    {
-      "match": "PAOK Thessaloniki v Asteras Tripolis",
-      "market": "Over 1.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Sun 1 Nov \u00b7 19:00 SAST"
-    },
-    {
-      "match": "Lommel SK v Gent",
-      "market": "Over 1.5 @ 1.20",
-      "score": "2-0",
-      "date_time": "Sun 1 Nov \u00b7 19:30 SAST"
-    },
-    {
-      "match": "Panathinaikos v AEK Athens",
-      "market": "Over 1.5 @ 1.20",
-      "score": "2-0",
-      "date_time": "Sun 1 Nov \u00b7 19:30 SAST"
-    },
-    {
-      "match": "Elche CF v Valencia",
-      "market": "Under 2.5 @ 1.36",
-      "score": "0-1",
-      "date_time": "Sun 1 Nov \u00b7 19:30 SAST"
-    },
-    {
-      "match": "Burgos CF v CD Castell\u00f3n",
-      "market": "Under 2.5 @ 1.30",
+      "match": "Defensa y Justicia v Independiente",
+      "market": "Home or Draw @ 1.30",
       "score": "1-1",
-      "date_time": "Sun 1 Nov \u00b7 19:30 SAST"
+      "date_time": "Tue 3 Nov \u00b7 00:00 SAST"
     },
     {
-      "match": "Cobresal v Everton de Vi\u00f1a del Mar",
-      "market": "Over 2.5 @ 1.68",
-      "score": "2-2",
-      "date_time": "Sun 1 Nov \u00b7 20:00 SAST"
-    },
-    {
-      "match": "Acad\u00e9mico de Viseu v Rio Ave FC",
-      "market": "Home or Draw @ 1.20",
+      "match": "Goi\u00e1s v Clube de Regatas Brasil",
+      "market": "Over 1.5 @ 1.20",
       "score": "2-1",
-      "date_time": "Sun 1 Nov \u00b7 20:00 SAST"
+      "date_time": "Tue 3 Nov \u00b7 01:30 SAST"
     },
     {
-      "match": "Boca Juniors v River Plate",
-      "market": "Home or Draw @ 1.20",
-      "score": "1-0",
-      "date_time": "Sun 1 Nov \u00b7 20:00 SAST"
+      "match": "IK Sirius v Halmstads BK",
+      "market": "Home Win @ 1.25",
+      "score": "2-0",
+      "date_time": "Tue 3 Nov \u00b7 20:00 SAST"
     },
     {
-      "match": "V\u00e5lerenga v Tromso",
-      "market": "Over 2.5 @ 1.50",
-      "score": "4-0",
-      "date_time": "Sun 1 Nov \u00b7 20:15 SAST"
+      "match": "Queens Park Rangers v Burnley",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Tue 3 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Charleroi v RAAL La Louvi\u00e8re",
-      "market": "Over 1.5 @ 1.25",
-      "score": "5-2",
-      "date_time": "Sun 1 Nov \u00b7 20:15 SAST"
+      "match": "Derby County v Norwich City",
+      "market": "Away or Draw @ 1.25",
+      "score": "0-4",
+      "date_time": "Tue 3 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Palermo v Vicenza",
-      "market": "Home Win @ 1.45",
-      "score": "3-1",
-      "date_time": "Sun 1 Nov \u00b7 20:30 SAST"
-    },
-    {
-      "match": "Braga v Famalic\u00e3o",
+      "match": "Blackburn Rovers v Stoke City",
       "market": "Over 1.5 @ 1.30",
-      "score": "3-0",
-      "date_time": "Sun 1 Nov \u00b7 22:30 SAST"
+      "score": "1-2",
+      "date_time": "Tue 3 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Gr\u00eamio Novorizontino v Operario PR",
+      "match": "Portsmouth v Swansea City",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-1",
+      "date_time": "Tue 3 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Preston North End v Sheffield United",
+      "market": "Away or Draw @ 1.20",
+      "score": "2-3",
+      "date_time": "Tue 3 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "LASK v \u0160K Slovan Bratislava",
+      "market": "Over 2.5 @ 1.33",
+      "score": "4-0",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Villarreal v Paris Saint Germain",
+      "market": "Over 2.5 @ 1.36",
+      "score": "0-6",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Atl\u00e9tico Madrid v Bayern Munich",
+      "market": "Under 4.5 @ 1.30",
+      "score": "0-2",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Manchester United v AS Roma",
+      "market": "Over 2.5 @ 1.44",
+      "score": "3-2",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "West Bromwich Albion v Southampton",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Birmingham City v Millwall",
       "market": "Home or Draw @ 1.20",
-      "score": "2-1",
-      "date_time": "Sun 1 Nov \u00b7 23:30 SAST"
+      "score": "3-0",
+      "date_time": "Tue 3 Nov \u00b7 22:00 SAST"
     }
   ]
 }
