@@ -1,52 +1,28 @@
 {
   "winners": [
     {
-      "match": "LASK v Liverpool",
-      "market": "Away Win @ 1.20",
-      "score": "3-6",
-      "date_time": "Wed 14 Oct \u00b7 18:45 SAST"
+      "match": "Monterrey v Pachuca",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Mon 19 Oct \u00b7 03:00 SAST"
     },
     {
-      "match": "Feyenoord v Como",
-      "market": "BTTS \u2014 Yes @ 1.39",
-      "score": "3-2",
-      "date_time": "Wed 14 Oct \u00b7 18:45 SAST"
+      "match": "Parma v Torino",
+      "market": "Away or Draw @ 1.35",
+      "score": "0-3",
+      "date_time": "Mon 19 Oct \u00b7 20:45 SAST"
     },
     {
-      "match": "LASK v Liverpool",
-      "market": "BTTS Yes & Over 2.5 (YES) @ 1.83",
-      "score": "3-6",
-      "date_time": "Wed 14 Oct \u00b7 18:45 SAST"
+      "match": "Getafe v Rayo Vallecano",
+      "market": "Home or Draw @ 1.50",
+      "score": "1-1",
+      "date_time": "Mon 19 Oct \u00b7 21:00 SAST"
     },
     {
-      "match": "Stabaek IF v Sandnes Ulf",
-      "market": "BTTS Yes & Over 2.5 (YES) @ 1.60",
-      "score": "4-1",
-      "date_time": "Wed 14 Oct \u00b7 19:00 SAST"
-    },
-    {
-      "match": "Manchester City v Paris Saint Germain",
-      "market": "BTTS \u2014 Yes @ 1.34",
-      "score": "2-4",
-      "date_time": "Wed 14 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Real Betis v Porto",
-      "market": "Over 1.5 @ 1.18",
-      "score": "3-2",
-      "date_time": "Wed 14 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Shakhtar Donetsk v AEK Athens",
-      "market": "Over 1.5 @ 1.24",
-      "score": "3-1",
-      "date_time": "Wed 14 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Stroemmen IF v Aasane Fotball",
-      "market": "BTTS Yes & Over 2.5 (YES) @ 1.57",
-      "score": "6-1",
-      "date_time": "Wed 14 Oct \u00b7 21:00 SAST"
+      "match": "Braga v Gil Vicente",
+      "market": "Away or Draw @ 2.20",
+      "score": "1-2",
+      "date_time": "Mon 19 Oct \u00b7 21:15 SAST"
     }
   ]
 }
