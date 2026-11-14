@@ -289,6 +289,39 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
     min-height:auto !important;
   }
 }
+
+/* ENLARGE_GOOGLE_PLAY_BADGE_2026_11_15 — the Google Play badge image is
+   a wide banner (~180×53 ratio). At the same 20px height as the square
+   social icons it looks tiny. Enlarge only this badge in the three
+   places it appears. Other social icons untouched. */
+
+/* Desktop (and tablet) — p2p-socials Google Play badge, next to YouTube */
+.p2p-socials a[aria-label="Google Play"] img{
+  height:40px !important;
+  max-width:140px !important;
+  width:auto !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:768px){
+  /* Mobile — p2p-socials Google Play badge (same grid) */
+  .p2p-socials a[aria-label="Google Play"] img{
+    height:44px !important;
+    max-width:150px !important;
+    width:auto !important;
+    object-fit:contain !important;
+  }
+
+  /* Mobile — main "GET NOVELTY APP ON GOOGLE PLAY" button badge */
+  .google-content img{
+    height:80px !important;
+    max-width:50% !important;
+    width:auto !important;
+    object-fit:contain !important;
+    flex-shrink:0 !important;
+    margin:0 !important;
+  }
+}
 </style>
 </head>
 <body>
