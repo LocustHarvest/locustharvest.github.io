@@ -1,148 +1,112 @@
 {
   "winners": [
     {
-      "match": "Independiente v Deportivo Riestra",
-      "market": "Under 3.5 @ 1.15",
-      "score": "2-1",
-      "date_time": "Sat 7 Nov \u00b7 00:15 SAST"
-    },
-    {
-      "match": "Operario PR v Sport Recife",
-      "market": "Over 1.5 @ 1.30",
-      "score": "3-2",
-      "date_time": "Sat 7 Nov \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Vitoria v Fluminense",
-      "market": "Under 3.5 @ 1.21",
-      "score": "0-3",
-      "date_time": "Sat 7 Nov \u00b7 01:00 SAST"
-    },
-    {
-      "match": "Atl\u00e9tico San Luis v FC Ju\u00e1rez",
-      "market": "Under 4.5 @ 1.15",
-      "score": "0-1",
-      "date_time": "Sat 7 Nov \u00b7 03:00 SAST"
-    },
-    {
-      "match": "Banfield v Atl\u00e9tico Tucuman",
-      "market": "Under 4.5 @ 1.30",
-      "score": "2-2",
-      "date_time": "Sat 7 Nov \u00b7 03:00 SAST"
-    },
-    {
-      "match": "CA Tigre BA v Sarmiento de Junin",
-      "market": "Under 3.5 @ 1.30",
-      "score": "1-0",
-      "date_time": "Sat 7 Nov \u00b7 03:00 SAST"
-    },
-    {
-      "match": "Portsmouth v Stoke City",
-      "market": "Over 1.5 @ 1.30",
+      "match": "Cuiab\u00e1 v Juventude",
+      "market": "Away Over 0.5 @ 1.35",
       "score": "1-2",
-      "date_time": "Sat 7 Nov \u00b7 14:30 SAST"
+      "date_time": "Sun 8 Nov \u00b7 01:00 SAST"
     },
     {
-      "match": "Pisa v S\u00fcdtirol",
-      "market": "Over 1.5 @ 1.22",
+      "match": "Atlas v Pachuca",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-4",
+      "date_time": "Sun 8 Nov \u00b7 01:00 SAST"
+    },
+    {
+      "match": "Tigres v Cruz Azul",
+      "market": "Away Over 0.5 @ 1.15",
+      "score": "2-3",
+      "date_time": "Sun 8 Nov \u00b7 03:00 SAST"
+    },
+    {
+      "match": "Pumas v Am\u00e9rica",
+      "market": "Over 1.5 @ 1.15",
       "score": "2-2",
-      "date_time": "Sat 7 Nov \u00b7 16:00 SAST"
+      "date_time": "Sun 8 Nov \u00b7 05:10 SAST"
     },
     {
-      "match": "RB Leipzig v Augsburg",
-      "market": "Over 2.5 @ 1.25",
-      "score": "5-2",
-      "date_time": "Sat 7 Nov \u00b7 16:30 SAST"
-    },
-    {
-      "match": "Borussia Dortmund v Elversberg",
-      "market": "Over 1.5 @ 1.11",
-      "score": "2-1",
-      "date_time": "Sat 7 Nov \u00b7 16:30 SAST"
-    },
-    {
-      "match": "Plymouth Argyle v Alvechurch FC",
-      "market": "Over 2.5 @ 1.41",
-      "score": "4-0",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Boreham Wood FC v Wigan Athletic",
+      "match": "FC St Gallen v FC Lugano",
       "market": "Over 2.5 @ 1.44",
-      "score": "0-3",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
+      "score": "5-0",
+      "date_time": "Sun 8 Nov \u00b7 15:00 SAST"
     },
     {
-      "match": "Birmingham City v Swansea City",
-      "market": "Under 4.5 @ 1.16",
+      "match": "IFK Goteborg v Malmo FF",
+      "market": "Under 2.5 @ 2.18",
+      "score": "0-0",
+      "date_time": "Sun 8 Nov \u00b7 15:00 SAST"
+    },
+    {
+      "match": "HJK Helsinki v AC Oulu",
+      "market": "Over 2.5 @ 1.30",
+      "score": "3-3",
+      "date_time": "Sun 8 Nov \u00b7 15:00 SAST"
+    },
+    {
+      "match": "AGF Aarhus v AC Horsens",
+      "market": "Under 2.5 @ 2.44",
+      "score": "2-0",
+      "date_time": "Sun 8 Nov \u00b7 15:00 SAST"
+    },
+    {
+      "match": "Halmstads BK v Djurgardens IF",
+      "market": "Over 2.5 @ 1.73",
       "score": "2-1",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
+      "date_time": "Sun 8 Nov \u00b7 15:00 SAST"
     },
     {
-      "match": "Salisbury FC v Sholing FC",
-      "market": "Over 1.5 @ 1.19",
-      "score": "6-0",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
+      "match": "WSG Tirol v Austria Wien",
+      "market": "Under 2.5 @ 2.16",
+      "score": "1-1",
+      "date_time": "Sun 8 Nov \u00b7 15:30 SAST"
     },
     {
-      "match": "Dover Athletic FC v Wealdstone FC",
-      "market": "Over 1.5 @ 1.12",
-      "score": "2-0",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Cardiff City v Burnley",
-      "market": "Over 1.5 @ 1.11",
-      "score": "5-4",
-      "date_time": "Sat 7 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "SC Preu\u00dfen M\u00fcnster v MSV Duisburg",
-      "market": "Over 1.5 @ 1.17",
+      "match": "Rennes v Lille",
+      "market": "Over 2.5 @ 1.72",
       "score": "1-2",
-      "date_time": "Sat 7 Nov \u00b7 17:30 SAST"
+      "date_time": "Sun 8 Nov \u00b7 16:00 SAST"
     },
     {
-      "match": "Fortuna Sittard v SC Telstar",
-      "market": "Over 1.5 @ 1.18",
-      "score": "2-2",
-      "date_time": "Sat 7 Nov \u00b7 17:30 SAST"
+      "match": "Genoa v AC Milan",
+      "market": "Over 2.5 @ 2.28",
+      "score": "1-2",
+      "date_time": "Sun 8 Nov \u00b7 16:00 SAST"
     },
     {
-      "match": "Nacional v Acad\u00e9mico de Viseu",
-      "market": "Under 4.5 @ 1.20",
-      "score": "1-0",
-      "date_time": "Sat 7 Nov \u00b7 17:30 SAST"
-    },
-    {
-      "match": "Leuven v KV Mechelen",
-      "market": "Over 1.5 @ 1.21",
+      "match": "Brighton and Hove Albion v Brentford",
+      "market": "Under 2.5 @ 2.38",
       "score": "2-0",
-      "date_time": "Sat 7 Nov \u00b7 19:15 SAST"
+      "date_time": "Sun 8 Nov \u00b7 16:00 SAST"
     },
     {
-      "match": "Nottingham Forest v Manchester City",
-      "market": "Over 1.5 @ 1.17",
-      "score": "3-1",
-      "date_time": "Sat 7 Nov \u00b7 19:30 SAST"
+      "match": "1. FC K\u00f6ln v Bayer Leverkusen",
+      "market": "Under 3.5 @ 1.72",
+      "score": "1-2",
+      "date_time": "Sun 8 Nov \u00b7 16:30 SAST"
     },
     {
-      "match": "Aberdeen v Hibernian",
-      "market": "Under 4.5 @ 1.11",
-      "score": "0-4",
-      "date_time": "Sat 7 Nov \u00b7 19:45 SAST"
+      "match": "Gent v KV Kortrijk",
+      "market": "Under 2.5 @ 2.24",
+      "score": "1-0",
+      "date_time": "Sun 8 Nov \u00b7 17:00 SAST"
     },
     {
-      "match": "Ried v LASK",
-      "market": "Over 2.5 @ 1.40",
-      "score": "2-4",
-      "date_time": "Sat 7 Nov \u00b7 20:30 SAST"
+      "match": "FC Thun v FC Basel",
+      "market": "Over 2.5 @ 1.36",
+      "score": "3-3",
+      "date_time": "Sun 8 Nov \u00b7 17:30 SAST"
     },
     {
-      "match": "Valencia v Real Madrid",
-      "market": "Away Win @ 1.26",
-      "score": "0-3",
-      "date_time": "Sat 7 Nov \u00b7 22:00 SAST"
+      "match": "VfB Stuttgart II v SC Verl",
+      "market": "Under 3.5 @ 1.95",
+      "score": "1-0",
+      "date_time": "Sun 8 Nov \u00b7 17:30 SAST"
+    },
+    {
+      "match": "Servette v FC Zurich",
+      "market": "Under 3.5 @ 1.63",
+      "score": "0-0",
+      "date_time": "Sun 8 Nov \u00b7 17:30 SAST"
     }
   ]
 }
