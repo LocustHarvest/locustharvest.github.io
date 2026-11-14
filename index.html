@@ -782,7 +782,6 @@ input[type="submit"] {
 
 
 
-
 /* FIX_IO_LOGO_SIZE_RESET */
 .compliance-logo-grid {
   display: flex;
@@ -1023,7 +1022,6 @@ input[type="submit"] {
 
 
 
-
 /* FIX_IO_LOGO_SIZE_RESET */
 .compliance-logo-grid {
   display: flex;
@@ -1238,7 +1236,16 @@ document.getElementById('navLinks').classList.remove('open');
 
 <script>
 (function loadYesterdayTiers() {
-  var API = 'https://www.locustharvest.com/harvest/yesterday.json';
+  // CACHE_BUST_2026_11_14 — append a 15-minute time bucket to the fetch
+  // URL so Cloudflare treats each bucket as a distinct cache key. GitHub
+  // is already serving fresh data (yesterday.json updated on every
+  // publish_harvest_report --state after), but Cloudflare was serving a
+  // stale cached copy of the un-parameterised URL — which is why the
+  // Latest Results panel stayed on Oct 27 instead of updating when the
+  // Nov 13 after-publish landed. Adding ?t=<bucket> forces fresh fetches
+  // within 15 minutes of every publish, forever. No other behaviour
+  // changed — same 5-per-block rule, same 3 advert cards, same rotation.
+  var API = 'https://www.locustharvest.com/harvest/yesterday.json?t=' + Math.floor(Date.now() / 900000);
   var grid = document.getElementById('tiers-grid');
   if (!grid) return;
 
