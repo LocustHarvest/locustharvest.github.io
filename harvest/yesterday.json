@@ -1,58 +1,106 @@
 {
   "winners": [
     {
-      "match": "Santos v Flamengo",
+      "match": "Genoa v Fiorentina",
+      "market": "Over 1.5 @ 1.35",
+      "score": "2-1",
+      "date_time": "Sat 10 Oct \u00b7 15:00 SAST"
+    },
+    {
+      "match": "TSG Hoffenheim v Hamburger SV",
+      "market": "Over 2.5 @ 1.36",
+      "score": "2-3",
+      "date_time": "Sat 10 Oct \u00b7 15:30 SAST"
+    },
+    {
+      "match": "FSV Mainz 05 v Bayer Leverkusen",
+      "market": "Over 2.5 @ 1.44",
+      "score": "3-4",
+      "date_time": "Sat 10 Oct \u00b7 15:30 SAST"
+    },
+    {
+      "match": "Chelsea v Bournemouth",
+      "market": "Over 2.5 @ 1.44",
+      "score": "5-1",
+      "date_time": "Sat 10 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Aston Villa v Brentford",
       "market": "Over 1.5 @ 1.20",
       "score": "2-2",
-      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
+      "date_time": "Sat 10 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Cear\u00e1 v Criciuma",
-      "market": "Under 2.5 @ 1.71",
-      "score": "1-0",
-      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Nautico PE v Gr\u00eamio Novorizontino",
-      "market": "Under 2.5 @ 2.08",
+      "match": "Sunderland v Brighton and Hove Albion",
+      "market": "Over 1.5 @ 1.23",
       "score": "0-2",
-      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
+      "date_time": "Sat 10 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Nautico PE v Gr\u00eamio Novorizontino",
+      "match": "Sheffield United v Lincoln City",
       "market": "Over 1.5 @ 1.30",
-      "score": "0-2",
-      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
+      "score": "3-0",
+      "date_time": "Sat 10 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Atletico Paranaense v Atletico Mineiro",
-      "market": "Over 1.5 @ 1.31",
-      "score": "2-2",
-      "date_time": "Fri 9 Oct \u00b7 01:00 SAST"
+      "match": "Go Ahead Eagles v Sparta Rotterdam",
+      "market": "Over 2.5 @ 1.36",
+      "score": "3-3",
+      "date_time": "Sat 10 Oct \u00b7 16:30 SAST"
     },
     {
-      "match": "Fluminense v Coritiba",
-      "market": "Over 1.5 @ 1.25",
+      "match": "FC Lugano v FC Luzern",
+      "market": "Over 2.5 @ 1.33",
       "score": "4-0",
-      "date_time": "Fri 9 Oct \u00b7 02:30 SAST"
+      "date_time": "Sat 10 Oct \u00b7 18:00 SAST"
     },
     {
-      "match": "Palmeiras v Bahia",
-      "market": "Under 2.5 @ 2.30",
-      "score": "1-0",
-      "date_time": "Fri 9 Oct \u00b7 02:30 SAST"
+      "match": "Servette v FC Sion",
+      "market": "Over 2.5 @ 1.44",
+      "score": "3-0",
+      "date_time": "Sat 10 Oct \u00b7 18:00 SAST"
     },
     {
-      "match": "Borussia Dortmund v Werder Bremen",
+      "match": "Inter Milan v Parma",
       "market": "Over 2.5 @ 1.35",
-      "score": "2-2",
-      "date_time": "Fri 9 Oct \u00b7 20:30 SAST"
+      "score": "3-0",
+      "date_time": "Sat 10 Oct \u00b7 18:00 SAST"
     },
     {
-      "match": "RC Lens v Lyon",
-      "market": "Over 2.5 @ 1.53",
+      "match": "RB Leipzig v Eintracht Frankfurt",
+      "market": "Over 2.5 @ 1.29",
+      "score": "6-0",
+      "date_time": "Sat 10 Oct \u00b7 18:30 SAST"
+    },
+    {
+      "match": "Toronto FC v CF Montreal",
+      "market": "Over 2.5 @ 1.44",
       "score": "2-1",
-      "date_time": "Fri 9 Oct \u00b7 20:45 SAST"
+      "date_time": "Sat 10 Oct \u00b7 19:00 SAST"
+    },
+    {
+      "match": "Chicago Fire v New York City FC",
+      "market": "Over 2.5 @ 1.60",
+      "score": "2-1",
+      "date_time": "Sat 10 Oct \u00b7 20:30 SAST"
+    },
+    {
+      "match": "Chicago Fire v New York City FC",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Sat 10 Oct \u00b7 20:30 SAST"
+    },
+    {
+      "match": "Paris Saint Germain v Le Mans FC",
+      "market": "Over 2.5 @ 1.20",
+      "score": "3-1",
+      "date_time": "Sat 10 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Napoli v Frosinone",
+      "market": "Over 2.5 @ 1.44",
+      "score": "3-0",
+      "date_time": "Sat 10 Oct \u00b7 20:45 SAST"
     }
   ]
 }
