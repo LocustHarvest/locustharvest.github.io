@@ -1,58 +1,28 @@
 {
   "winners": [
     {
-      "match": "Kazakhstan v Faroe Islands",
-      "market": "Over 2.5 @ 2.45",
-      "score": "2-2",
-      "date_time": "Tue 6 Oct \u00b7 16:00 SAST"
-    },
-    {
-      "match": "Kazakhstan v Faroe Islands",
-      "market": "Over 1.5 @ 1.55",
-      "score": "2-2",
-      "date_time": "Tue 6 Oct \u00b7 16:02 SAST"
-    },
-    {
-      "match": "Croatia v Spain",
-      "market": "Over 2.5 @ 1.40",
-      "score": "1-2",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Albania v San Marino",
-      "market": "Over 2.5 @ 1.17",
+      "match": "Sport Recife v S\u00e3o Bernardo",
+      "market": "Over 2.5 @ 2.04",
       "score": "2-1",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+      "date_time": "Wed 7 Oct \u00b7 00:30 SAST"
     },
     {
-      "match": "England v Czech Republic",
-      "market": "Under 3.5 @ 1.97",
-      "score": "3-0",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+      "match": "Goi\u00e1s v Athletic Club (MG)",
+      "market": "Over 2.5 @ 2.46",
+      "score": "2-1",
+      "date_time": "Wed 7 Oct \u00b7 01:30 SAST"
     },
     {
-      "match": "Scotland v Slovenia",
-      "market": "Over 2.5 @ 2.23",
-      "score": "1-2",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+      "match": "Chicago Fire v Vancouver Whitecaps FC",
+      "market": "Over 3.5 @ 2.24",
+      "score": "3-1",
+      "date_time": "Wed 7 Oct \u00b7 02:30 SAST"
     },
     {
-      "match": "Moldova v Slovakia",
-      "market": "Over 2.5 @ 1.82",
-      "score": "0-4",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Switzerland v North Macedonia",
-      "market": "Match result - Switzerland @ 1.12",
-      "score": "3-0",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Scarborough Athletic FC v Macclesfield Town",
-      "market": "Match result - Macclesfield Town @ 2.38",
-      "score": "1-2",
-      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+      "match": "Ponte Preta v Juventude",
+      "market": "Under 2.5 @ 2.06",
+      "score": "0-2",
+      "date_time": "Wed 7 Oct \u00b7 02:35 SAST"
     }
   ]
 }
