@@ -277,10 +277,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   .google-content img{height:80px !important;max-width:50% !important;width:auto !important;object-fit:contain !important;flex-shrink:0 !important;margin:0 !important}
 }
 
-/* P2P_PARAGRAPH_FIX_2026_11_15 — fixes the two issues only:
-   (1) last line must be left-aligned (not justified),
-   (2) widen on desktop to 2 lines instead of 4.
-   Nothing else touched. */
+/* P2P_PARAGRAPH_FIX_2026_11_15 */
 @media(min-width:769px){
   .door-body.p2p-lines{
     text-align: justify !important;
@@ -293,6 +290,17 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
     text-align: left !important;
     text-align-last: left !important;
     max-width: 100% !important;
+  }
+}
+
+/* FIX_2_LINES_2026_11_15 — letter-spacing: normal removes the .2em
+   inherited from .btn, which was widening each line by ~48px and
+   forcing "GET NOVELTY APP" and "ON GOOGLE PLAY" to each wrap into
+   2 lines (4 total). With normal letter-spacing each segment fits on
+   one line → exactly 2 lines. Font size and badge size unchanged. */
+@media(max-width:768px){
+  .google-content span{
+    letter-spacing: normal !important;
   }
 }
 </style>
