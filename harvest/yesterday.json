@@ -1,100 +1,58 @@
 {
   "winners": [
     {
-      "match": "Operario PR v Botafogo-SP",
-      "market": "Over 1.5 @ 1.30",
-      "score": "1-2",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Bragantino-SP v Mirassol",
-      "market": "Under 4.5 @ 1.15",
-      "score": "1-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Internacional v Corinthians",
-      "market": "Over 2.5 @ 2.18",
-      "score": "2-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Avai v Londrina",
-      "market": "Under 4.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Avai v Londrina",
-      "market": "Over 1.5 @ 1.30",
-      "score": "2-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Internacional v Corinthians",
-      "market": "Over 1.5 @ 1.30",
-      "score": "2-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Remo v Gr\u00eamio",
-      "market": "Remo to Score @ 1.20",
-      "score": "1-1",
-      "date_time": "Thu 8 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Vitoria v Chapecoense",
-      "market": "Over 1.5 @ 1.30",
-      "score": "4-0",
-      "date_time": "Thu 8 Oct \u00b7 01:00 SAST"
-    },
-    {
-      "match": "Vitoria v Chapecoense",
-      "market": "Over 2.5 @ 1.91",
-      "score": "4-0",
-      "date_time": "Thu 8 Oct \u00b7 01:00 SAST"
-    },
-    {
-      "match": "Clube de Regatas Brasil v Atletico Goianiense",
+      "match": "Santos v Flamengo",
       "market": "Over 1.5 @ 1.20",
-      "score": "3-1",
-      "date_time": "Thu 8 Oct \u00b7 01:30 SAST"
+      "score": "2-2",
+      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
     },
     {
-      "match": "Vila Nova v Cuiab\u00e1",
-      "market": "Under 3.5 @ 1.20",
-      "score": "0-0",
-      "date_time": "Thu 8 Oct \u00b7 01:30 SAST"
+      "match": "Cear\u00e1 v Criciuma",
+      "market": "Under 2.5 @ 1.71",
+      "score": "1-0",
+      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
     },
     {
-      "match": "Botafogo v Vasco da Gama",
-      "market": "Over 2.5 @ 1.83",
-      "score": "1-2",
-      "date_time": "Thu 8 Oct \u00b7 01:30 SAST"
+      "match": "Nautico PE v Gr\u00eamio Novorizontino",
+      "market": "Under 2.5 @ 2.08",
+      "score": "0-2",
+      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
     },
     {
-      "match": "Botafogo v Vasco da Gama",
-      "market": "Under 3.5 @ 1.25",
-      "score": "1-2",
-      "date_time": "Thu 8 Oct \u00b7 01:30 SAST"
-    },
-    {
-      "match": "Cruzeiro v Sao Paulo",
-      "market": "Under 4.5 @ 1.20",
-      "score": "2-0",
-      "date_time": "Thu 8 Oct \u00b7 02:30 SAST"
-    },
-    {
-      "match": "Cruzeiro v Sao Paulo",
+      "match": "Nautico PE v Gr\u00eamio Novorizontino",
       "market": "Over 1.5 @ 1.30",
-      "score": "2-0",
-      "date_time": "Thu 8 Oct \u00b7 02:30 SAST"
+      "score": "0-2",
+      "date_time": "Fri 9 Oct \u00b7 00:30 SAST"
     },
     {
-      "match": "HJK Helsinki v VPS Vaasa",
-      "market": "Over 2.5 @ 1.74",
-      "score": "6-0",
-      "date_time": "Thu 8 Oct \u00b7 17:00 SAST"
+      "match": "Atletico Paranaense v Atletico Mineiro",
+      "market": "Over 1.5 @ 1.31",
+      "score": "2-2",
+      "date_time": "Fri 9 Oct \u00b7 01:00 SAST"
+    },
+    {
+      "match": "Fluminense v Coritiba",
+      "market": "Over 1.5 @ 1.25",
+      "score": "4-0",
+      "date_time": "Fri 9 Oct \u00b7 02:30 SAST"
+    },
+    {
+      "match": "Palmeiras v Bahia",
+      "market": "Under 2.5 @ 2.30",
+      "score": "1-0",
+      "date_time": "Fri 9 Oct \u00b7 02:30 SAST"
+    },
+    {
+      "match": "Borussia Dortmund v Werder Bremen",
+      "market": "Over 2.5 @ 1.35",
+      "score": "2-2",
+      "date_time": "Fri 9 Oct \u00b7 20:30 SAST"
+    },
+    {
+      "match": "RC Lens v Lyon",
+      "market": "Over 2.5 @ 1.53",
+      "score": "2-1",
+      "date_time": "Fri 9 Oct \u00b7 20:45 SAST"
     }
   ]
 }
