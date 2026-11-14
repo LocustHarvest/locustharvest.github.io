@@ -1,3 +1,28 @@
+/* FONT_FALLBACK_2026_11_14 — metric-matched fallbacks eliminate the
+   font-swap flash on cold cache. Rajdhani is display-only, so it uses
+   font-display: optional (never swaps after first paint). Inter stays
+   on swap with matched fallback metrics so line counts don't change. */
+@font-face {
+  font-family: 'Rajdhani Fallback';
+  src: local('Arial');
+  size-adjust: 105%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 96.5%;
+  ascent-override: 96.9%;
+  descent-override: 24.1%;
+  line-gap-override: 0%;
+}
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 600; font-display: optional; src: url('/fonts/Rajdhani-600.woff2') format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 700; font-display: optional; src: url('/fonts/Rajdhani-700.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500.woff2') format('woff2'); }
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}
 :root{
   --bg:#08090b; --bg2:#0d1013; --panel:#12161a; --panel2:#161b20;
@@ -7,8 +32,8 @@
   --body:#c6cdd2;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--body);font-family:'Inter',sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
-h1,h2,h3,.brand-font{font-family:'Rajdhani',sans-serif;letter-spacing:.03em}
+body{background:var(--bg);color:var(--body);font-family:'Inter', 'Inter Fallback', sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
+h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.03em}
 a{color:inherit}
 img{max-width:100%;display:block}
 
@@ -17,9 +42,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
 .nav-logo img{height:38px;width:auto}
-.nav-logo span{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:.08em;color:var(--silver-bright)}
+.nav-logo span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:.08em;color:var(--silver-bright)}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
+.nav-links a{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:1rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color .25s}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
@@ -30,9 +55,9 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
   border-bottom:1px solid var(--line);
 }
 .top-banner img.hero-mark{height:420px;margin:0 auto 1rem;filter:drop-shadow(0 0 24px rgba(62,226,62,.25))}
-.top-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+.top-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
 .top-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--silver-bright);letter-spacing:.06em}
-.top-sub{margin-top:.5rem;font-family:'Rajdhani',sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
+.top-sub{margin-top:.5rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:500;font-size:.95rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ash)}
 .top-banner.small{padding:7rem 3rem 2.2rem}
 
 /* ===== DOORS / SECTIONS ===== */
@@ -41,17 +66,17 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .door::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--green) 0%,var(--green-dim) 100%);transform:scaleY(0);transform-origin:top;transition:transform .4s}
 .door:hover{border-color:var(--line-bright);transform:translateY(-2px)}
 .door:hover::before{transform:scaleY(1)}
-.door-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
-.door-title{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
+.door-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:.7rem}
+.door-title{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.05em;color:var(--silver-bright);margin-bottom:1rem}
 .door-title sup{font-size:.5em;color:var(--green)}
-.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}  /* COSMETIC_JUSTIFY_2026_10_13 */
+.door-body{font-size:.92rem;line-height:1.75;color:var(--body);max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 .door-body a{color:var(--green-bright);text-decoration:underline;text-decoration-color:var(--green-dim)}
 .door-body a:hover{color:var(--silver-bright)}
 .door-body + .door-body{margin-top:.9rem}
 .door-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .door-row.thirds{grid-template-columns:repeat(3,1fr)}
 
-.btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--green-bright);border:1px solid var(--green-dim);padding:.85rem 1.9rem;text-decoration:none;transition:background .25s,color .25s,border-color .25s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--green-bright);border:1px solid var(--green-dim);padding:.85rem 1.9rem;text-decoration:none;transition:background .25s,color .25s,border-color .25s;cursor:pointer}
 .btn-hero{min-width:300px;justify-content:center}
 .btn:hover{background:var(--green);color:#04140a;border-color:var(--green)}
 .btn.soon{color:var(--ash);border-color:var(--line);cursor:default}
@@ -66,50 +91,49 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 
 .value-grid{margin-top:.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .value-card{border:1px solid var(--line);background:var(--panel2);padding:1.5rem}
-.value-card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
+.value-card h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;color:var(--green-bright);margin-bottom:.5rem}
 .value-card p{font-size:.85rem;color:var(--body);line-height:1.65}
 
-/* FIX_SOCIALS_5x2_2026_10_11 — 10 socials want 5 per line × 2 lines */
 .p2p-socials{margin-top:1.8rem;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
 .p2p-socials a{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:1rem .5rem;border:1px solid var(--line);background:var(--panel2);text-decoration:none;color:var(--ash);transition:background .25s,border-color .25s,color .25s,transform .25s}
 .p2p-socials a:hover{background:var(--green);border-color:var(--green);color:#04140a;transform:translateY(-2px)}
 .p2p-socials svg{width:20px;height:20px}
-.p2p-socials span{font-family:'Rajdhani',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
-.p2p-handle{margin-top:1rem;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
+.p2p-socials span{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.p2p-handle{margin-top:1rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;letter-spacing:.15em;color:var(--green-bright);font-size:.9rem}
 
-/* ===== FORMS (Contact) ===== */
+/* ===== FORMS ===== */
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
 .form-field{margin-bottom:1.1rem}
-.form-field label{display:block;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
-.form-field input,.form-field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--silver-bright);padding:.75rem .9rem;font-family:'Inter',sans-serif;font-size:.9rem;transition:border-color .25s}
+.form-field label{display:block;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:.4rem}
+.form-field input,.form-field textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--silver-bright);padding:.75rem .9rem;font-family:'Inter', 'Inter Fallback', sans-serif;font-size:.9rem;transition:border-color .25s}
 .form-field input:focus,.form-field textarea:focus{outline:none;border-color:var(--green-dim)}
 .form-field textarea{resize:vertical;min-height:120px}
 .contact-info{display:flex;flex-direction:column;gap:1.1rem}
 .contact-info .ci-item{border:1px solid var(--line);background:var(--panel2);padding:1.1rem 1.3rem}
-.contact-info .ci-item h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
+.contact-info .ci-item h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:.35rem}
 .contact-info .ci-item p,.contact-info .ci-item a{font-size:.88rem;color:var(--body);text-decoration:none}
 .contact-info .ci-item a:hover{color:var(--green-bright)}
 
-/* ===== LEGAL (Terms) ===== */
+/* ===== LEGAL ===== */
 .legal{max-width:820px;margin:0 auto;padding:7rem 2rem 5rem}
-.legal h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
+.legal h2{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.04em;color:var(--silver-bright);margin:2.2rem 0 .8rem}
 .legal h2:first-child{margin-top:0}
-.legal h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
+.legal h3{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:1.05rem;color:var(--green-bright);margin:1.3rem 0 .5rem}
 .legal p{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem;text-align:justify}
 .legal a{color:var(--green-bright);text-decoration:underline;text-underline-offset:2px}
 .legal li{font-size:.88rem;line-height:1.75;color:var(--body);margin-bottom:.7rem}
 .legal ul{padding-left:1.3rem;margin-bottom:.9rem}
-.legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani',sans-serif;letter-spacing:.05em}
+.legal .legal-meta{font-size:.78rem;color:var(--ash);margin-bottom:2rem;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.05em}
 
 /* ===== FOOTER ===== */
 footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center}
-.footer-brand{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
-.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani',sans-serif}
-.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani',sans-serif}
+.footer-brand{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:700;letter-spacing:.1em;color:var(--silver-bright);font-size:1rem}
+.footer-tagline{font-size:.72rem;letter-spacing:.1em;color:var(--ash);text-transform:uppercase;font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
+.footer-brands{font-size:.72rem;letter-spacing:.1em;color:var(--green-bright);font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif}
 .footer-links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;font-size:.72rem}
 .footer-links a{color:var(--ash);text-decoration:none;transition:color .25s}
 .footer-links a:hover{color:var(--green-bright)}
-.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:left}  /* FOOTER_COPY_DESKTOP_LEFT_2026_10_14 */
+.footer-copy{font-size:.7rem;color:var(--ash);margin-top:.4rem;text-align:left}
 .footer-copy a{color:var(--green-bright);text-decoration:underline}
 .footer-copy a:hover{color:var(--green-bright)}
 
@@ -122,35 +146,24 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
-  .footer-copy{text-align:center}  /* FOOTER_COPY_MOBILE_CENTER_2026_10_14 */
-
+  .footer-copy{text-align:center}
   nav{padding:.7rem 1.25rem}
   .hamburger{display:block}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem 1.5rem;gap:.8rem;border-bottom:1px solid var(--line)}
   .nav-links.open{display:flex}
   .top-banner{padding:7rem 1.25rem 2rem}
-.top-banner img.hero-mark{height:260px}
+  .top-banner img.hero-mark{height:260px}
   .doors{padding:2.5rem 1.25rem 3.5rem}
   .legal{padding:2.5rem 1.25rem 3.5rem}
   .door{padding:1.8rem}
-  /* FIX_MOBILE_NOVELTY_PANEL_2026_10_08 — on mobile the .door-body
-     paragraph was justified (huge word gaps) and its 640px max-width
-     was wider than the viewport (content clipped on the right edge).
-     Cap to 100% and left-align. */
   .door-body{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;text-align-last:left}
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:1fr}
-  /* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 — on about.html the .door-lh
-     flex-column layout kept min-width:260px on .lh-text, forcing the
-     text block wider than the viewport and shifting it right. Cap the
-     text block, neutralise the reserved mark slot. */
   .door-lh{gap:0}
   .door-lh .lh-text{min-width:0;width:100%;flex:1 1 auto}
   .door-lh .lh-mark{flex:0 0 auto;width:auto}
 }
 
-/* ===== ABOUT PAGE: justify all text (Sydney request 2026-09-13) ===== */
-/* 2026-10-04: About Us header block centered (top-eyebrow + top-title removed) */
 body.about-page .door-eyebrow,
 body.about-page .door-title,
 body.about-page .value-card h3,
@@ -159,30 +172,12 @@ body.about-page .footer-brand,
 body.about-page .footer-tagline,
 body.about-page .footer-brands{text-align:justify}
 
-/* ── Fixed-header anchor offset ──────────────────────────────────
-   The nav uses position:fixed, so anchor jumps to sections like
-   #novelty and #plague2profit land underneath the header. This tells
-   the browser to leave space at the top so the section heading clears
-   the fixed nav. */
 html { scroll-padding-top: 260px; }
 section[id], div[id], article[id] { scroll-margin-top: 260px; }
 
-/* Push content down on every page except index. The fixed nav otherwise
-   clips the first heading on pages that don't have the .doors wrapper. */
 body.page-offset { padding-top: 4rem; }
 body.page-offset .top-banner { padding-top: 10rem; }
-/* BLOG_MOBILE_FIX_2026_10_08 */
-/* FIX_MOBILE_NOVELTY_PANEL_2026_10_08 */
-/* FIX_DOOR_BODY_ALWAYS_2026_10_08 */
-/* FIX_MOBILE_ABOUT_ALIGN_2026_10_11 */
-/* FIX_SOCIALS_5x2_2026_10_11 */
-/* FIX_FONT_BUMP_2026_10_12 */
 
-/* COSMETIC_JUSTIFY_2026_10_13 — justify paragraph-level text across
-   every page that loads this stylesheet. Covers footers, legal blocks,
-   the shared NOVELTY disclaimer, and any prose containers.
-   Scoped to paragraphs and copy blocks only — headings, buttons,
-   tables and nav keep their existing alignment. */
 footer p,
 footer div.footer-brands,
 footer div.footer-links,
@@ -199,8 +194,6 @@ p.body-copy {
   -webkit-hyphens: auto;
   overflow-wrap: break-word;
 }
-
-/* Narrow screens: keep hyphens on so justify doesn't produce rivers. */
 @media(max-width:768px){
   footer p,
   footer div.footer-brands,
@@ -217,9 +210,7 @@ p.body-copy {
     overflow-wrap: break-word;
   }
 }
-/* TEXT_ALIGN_LAST_LEFT_MOBILE_2026_10_13 */
-/* BUTTONS_CENTERED_IO_2026_10_13 — every .btn / .btn-hero / .btn.primary
-   and every <button> centres its text horizontally and vertically. */
+
 .btn,
 .btn-hero,
 .btn.primary,
@@ -236,42 +227,6 @@ input[type="submit"] {
   line-height: 1;
 }
 
-/* COMPLIANCE_LOGO_GRID_2026_11_04 — 8-logo row for PayFast / Dodo / Google Play / NOVELTY */
-.compliance-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-  margin: 1.5rem 0 0;
-  padding: 1.25rem;
-  border: 1px solid var(--line);
-  background: var(--panel2);
-}
-.compliance-logo-grid img {
-  max-height: 40px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.05);
-}
-.compliance-logo-grid a { display: inline-flex; }
-.footer-meta {
-  font-size: .7rem;
-  color: var(--ash);
-  letter-spacing: .04em;
-  margin-top: .2rem;
-  font-family: 'Rajdhani', sans-serif;
-}
-@media (max-width: 768px) {
-  .compliance-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 768px) {
-  .compliance-logo-grid img { max-height: 30px; }
-  .compliance-logo-grid { gap: 1rem; }
-}
-
-/* FIX_IO_LOGO_SIZING_STRICT */
 .compliance-logo-grid {
   display: flex;
   flex-wrap: wrap;
@@ -291,14 +246,15 @@ input[type="submit"] {
   object-fit: contain !important;
   display: inline-block !important;
 }
-.compliance-logo-grid a {
-  display: inline-flex;
-  align-items: center;
+.compliance-logo-grid a { display: inline-flex; align-items: center; }
+.footer-meta {
+  font-size: .7rem;
+  color: var(--ash);
+  letter-spacing: .04em;
+  margin-top: .2rem;
+  font-family: 'Rajdhani', 'Rajdhani Fallback', sans-serif;
 }
 @media (max-width: 768px) {
-  .compliance-logo-grid img {
-    height: 24px !important;
-    max-height: 24px !important;
-  }
+  .compliance-logo-grid img { height: 24px !important; max-height: 24px !important; }
   .compliance-logo-grid { gap: 1rem; }
 }
