@@ -1,52 +1,130 @@
 {
   "winners": [
     {
-      "match": "Leicester v Walsall",
-      "market": "BTTS + Over 2.5 @ 1.55",
-      "score": "2-1",
-      "date_time": "Tue 10 Nov \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Crewe v Wigan",
-      "market": "Over 2.5 @ 1.60",
-      "score": "1-2",
-      "date_time": "Tue 10 Nov \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Barnet v Leyton Orient",
+      "match": "Flamengo v Internacional",
       "market": "Over 2.5 @ 1.40",
-      "score": "4-2",
-      "date_time": "Tue 10 Nov \u00b7 21:00 SAST"
+      "score": "1-3",
+      "date_time": "Wed 11 Nov \u00b7 02:30 SAST"
     },
     {
-      "match": "Boston River v City Torque",
-      "market": "Away Over 1.5 @ 1.50",
-      "score": "1-2",
-      "date_time": "Tue 10 Nov \u00b7 21:30 SAST"
+      "match": "Am\u00e9rica v Toluca",
+      "market": "Over 2.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Wed 11 Nov \u00b7 03:00 SAST"
     },
     {
-      "match": "Quorn v Stockton",
-      "market": "Over 2.5 @ 1.50",
-      "score": "2-3",
-      "date_time": "Tue 10 Nov \u00b7 21:45 SAST"
+      "match": "Once Caldas v Atl. Nacional",
+      "market": "BTTS \u2014 Yes @ 1.80",
+      "score": "1-1",
+      "date_time": "Wed 11 Nov \u00b7 03:30 SAST"
     },
     {
-      "match": "Leiston v Real Bedford",
-      "market": "Over 2.5 @ 1.30",
-      "score": "1-4",
-      "date_time": "Tue 10 Nov \u00b7 21:45 SAST"
+      "match": "Podbrezov\u00e1 v Zlat\u00e9 Moravce",
+      "market": "Away Under 1.5 @ 1.20",
+      "score": "2-0",
+      "date_time": "Wed 11 Nov \u00b7 17:00 SAST"
     },
     {
-      "match": "Whitehawk v Welling Utd",
-      "market": "Away Over 1.5 @ 1.45",
-      "score": "2-2",
-      "date_time": "Tue 10 Nov \u00b7 21:45 SAST"
+      "match": "Ibiza Pitiusas v Arenal",
+      "market": "Under 5.5 @ 1.20",
+      "score": "2-0",
+      "date_time": "Wed 11 Nov \u00b7 17:00 SAST"
     },
     {
-      "match": "Chertsey v Chichester",
-      "market": "BTTS + Over 2.5 @ 1.50",
+      "match": "Silifke BS v Yeni Mersin",
+      "market": "Home Under 1.5 @ 1.35",
+      "score": "0-1",
+      "date_time": "Wed 11 Nov \u00b7 18:00 SAST"
+    },
+    {
+      "match": "Manacor v Inter Ibiza",
+      "market": "Under 4.5 @ 1.23",
+      "score": "3-0",
+      "date_time": "Wed 11 Nov \u00b7 18:30 SAST"
+    },
+    {
+      "match": "Colombe v Victoria Utd",
+      "market": "Under 3.5 @ 1.20",
       "score": "2-1",
-      "date_time": "Tue 10 Nov \u00b7 21:45 SAST"
+      "date_time": "Wed 11 Nov \u00b7 19:00 SAST"
+    },
+    {
+      "match": "L\u00ed\u0161e\u0148 v Jablonec",
+      "market": "Away Under 2.5 @ 1.26",
+      "score": "2-1",
+      "date_time": "Wed 11 Nov \u00b7 19:00 SAST"
+    },
+    {
+      "match": "Castell\u00f3n II v Minera",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Wed 11 Nov \u00b7 20:00 SAST"
+    },
+    {
+      "match": "Barnsley v Oldham",
+      "market": "Over 2.5 @ 1.20",
+      "score": "5-2",
+      "date_time": "Wed 11 Nov \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Sheff Wed v Accrington",
+      "market": "Under 4.5 @ 1.31",
+      "score": "0-4",
+      "date_time": "Wed 11 Nov \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Everton v Durham",
+      "market": "Over 2.5 @ 1.20",
+      "score": "6-0",
+      "date_time": "Wed 11 Nov \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Hesperingen v ERBRSL",
+      "market": "Over 2.5 @ 1.30",
+      "score": "14-0",
+      "date_time": "Wed 11 Nov \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Charlton v Ipswich",
+      "market": "Home Under 1.5 @ 1.21",
+      "score": "1-0",
+      "date_time": "Wed 11 Nov \u00b7 21:30 SAST"
+    },
+    {
+      "match": "Cieza v Valencia II",
+      "market": "Under 3.5 @ 1.40",
+      "score": "1-0",
+      "date_time": "Wed 11 Nov \u00b7 21:30 SAST"
+    },
+    {
+      "match": "La Luz v F\u00e9nix",
+      "market": "Under 3.5 @ 1.22",
+      "score": "1-0",
+      "date_time": "Wed 11 Nov \u00b7 21:30 SAST"
+    },
+    {
+      "match": "Hearts v Montrose",
+      "market": "Over 2.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Wed 11 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Juventus v Lyon",
+      "market": "Over 2.5 @ 1.22",
+      "score": "0-6",
+      "date_time": "Wed 11 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Benfica v Austria Wien",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-1",
+      "date_time": "Wed 11 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Fuerte v Alianza",
+      "market": "Home Over 0.5 @ 1.42",
+      "score": "1-0",
+      "date_time": "Wed 11 Nov \u00b7 23:30 SAST"
     }
   ]
 }
