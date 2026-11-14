@@ -290,38 +290,28 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   }
 }
 
-@media(max-width:768px){
-  .google-content span{
-    letter-spacing: normal !important;
-  }
-}
-
-/* FIX_GP_BUTTON_2_LINES_FINAL — the button still showed 4 lines because
-   the badge (max-width:50%) + span padding (6px each side) + gap (8px)
-   consumed more space than 'GET NOVELTY APP' / 'ON GOOGLE PLAY' need at
-   1.05rem, so each <br>-segment wrapped into 2 lines. This block:
-   - shrinks font from 1.05rem to 0.88rem (required — text can't fit otherwise)
-   - removes span padding (recovers 12px)
-   - reduces gap to 6px
-   - switch button to height:auto / min-height:100px so 2-line text fits
-   - keeps badge at max-width:50% (visual size preserved via aspect-ratio)
-   Extra rule for very narrow screens (≤360px) shrinks font/badge further. */
+/* FIX_GP_USE_GAPS — recovers ~12px from button horizontal padding
+   (20px → 8px) and ~2px from the flex gap (6px → 4px), then spends
+   the recovered space to grow both the font (0.88 → 0.95rem, +8%)
+   and the badge (50% of a larger content width, so ~128 → ~134px,
+   +4.7%). Text at 0.95rem needs ~118px; available is ~131px → still
+   2 lines with ~13px margin. */
 @media(max-width:768px){
   .novelty-main-btn{
     height:auto !important;
     min-height:100px !important;
-    padding:8px 10px !important;
+    padding:8px 4px !important;
   }
   .google-content{
     display:flex !important;
     align-items:center !important;
     justify-content:space-between !important;
-    gap:6px !important;
+    gap:4px !important;
     width:100% !important;
     padding:0 !important;
   }
   .google-content span{
-    font-size:0.88rem !important;
+    font-size:0.95rem !important;
     line-height:1.2 !important;
     text-align:left !important;
     letter-spacing:normal !important;
@@ -341,8 +331,8 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   }
 }
 @media(max-width:360px){
-  .google-content span{font-size:0.82rem !important}
-  .google-content img{max-width:42% !important}
+  .google-content span{font-size:0.88rem !important}
+  .google-content img{max-width:48% !important}
 }
 </style>
 </head>
