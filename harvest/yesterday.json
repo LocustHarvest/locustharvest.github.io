@@ -1,3 +1,46 @@
 {
-  "winners": []
+  "winners": [
+    {
+      "match": "Athletic Club (MG) v Sport Recife",
+      "market": "BTTS + Over 2.5 @ 2.50",
+      "score": "1-2",
+      "date_time": "Fri 2 Oct \u00b7 01:30 SAST"
+    },
+    {
+      "match": "Gr\u00eamio Novorizontino v Goi\u00e1s",
+      "market": "Match result - Gr\u00eamio Novorizontino @ 1.70",
+      "score": "3-0",
+      "date_time": "Fri 2 Oct \u00b7 02:00 SAST"
+    },
+    {
+      "match": "Seattle Sounders FC v Sporting Kansas City",
+      "market": "BTTS \u2014 Yes @ 1.45",
+      "score": "2-1",
+      "date_time": "Fri 2 Oct \u00b7 03:30 SAST"
+    },
+    {
+      "match": "Kazakhstan v Moldova",
+      "market": "Under 3.5 @ 1.30",
+      "score": "1-2",
+      "date_time": "Fri 2 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Cyprus v Armenia",
+      "market": "Over 1.5 @ 1.30",
+      "score": "2-0",
+      "date_time": "Fri 2 Oct \u00b7 18:00 SAST"
+    },
+    {
+      "match": "France v Italy",
+      "market": "Over 1.5 @ 1.15",
+      "score": "1-1",
+      "date_time": "Fri 2 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Poland v Romania",
+      "market": "Over 1.5 @ 1.15",
+      "score": "6-0",
+      "date_time": "Fri 2 Oct \u00b7 20:45 SAST"
+    }
+  ]
 }
