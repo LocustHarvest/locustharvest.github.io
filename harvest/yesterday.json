@@ -1,58 +1,112 @@
 {
   "winners": [
     {
-      "match": "Aston Villa v Viking FK",
-      "market": "Over 2.5 @ 1.25",
-      "score": "3-1",
-      "date_time": "Wed 21 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Sporting Lisbon v LASK",
-      "market": "Over 2.5 @ 1.29",
+      "match": "FSV Mainz 05 v Werder Bremen",
+      "market": "BTTS \u2014 Yes @ 1.50",
       "score": "2-3",
-      "date_time": "Wed 21 Oct \u00b7 21:00 SAST"
+      "date_time": "Sat 24 Oct \u00b7 15:30 SAST"
     },
     {
-      "match": "Club Brugge v RC Lens",
-      "market": "Over 2.5 @ 1.40",
-      "score": "3-0",
-      "date_time": "Wed 21 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Bayern Munich v Arsenal",
-      "market": "BTTS \u2014 Yes @ 1.45",
-      "score": "2-2",
-      "date_time": "Wed 21 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "FC Cincinnati v D.C. United",
-      "market": "Over 2.5 @ 1.25",
-      "score": "2-1",
-      "date_time": "Thu 22 Oct \u00b7 01:00 SAST"
-    },
-    {
-      "match": "Toluca v Tijuana",
-      "market": "Over 2.5 @ 1.36",
-      "score": "2-2",
-      "date_time": "Thu 22 Oct \u00b7 03:00 SAST"
-    },
-    {
-      "match": "Santos Laguna v Pumas",
-      "market": "Over 1.5 @ 1.20",
+      "match": "Arsenal v Everton",
+      "market": "Home Over 1.5 @ 1.50",
       "score": "2-0",
-      "date_time": "Thu 22 Oct \u00b7 05:10 SAST"
+      "date_time": "Sat 24 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Pachuca v Cruz Azul",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-2",
-      "date_time": "Thu 22 Oct \u00b7 05:10 SAST"
+      "match": "Lincoln City v Burnley",
+      "market": "Over 1.5 @ 1.25",
+      "score": "4-1",
+      "date_time": "Sat 24 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Pafos FC v Riga FC",
-      "market": "Over 1.5 @ 1.21",
+      "match": "Blackburn Rovers v Wrexham AFC",
+      "market": "Over 1.5 @ 1.30",
+      "score": "2-0",
+      "date_time": "Sat 24 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Queens Park Rangers v Swansea City",
+      "market": "Over 1.5 @ 1.25",
+      "score": "5-0",
+      "date_time": "Sat 24 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "West Ham United v Southampton",
+      "market": "Home Over 1.5 @ 1.40",
+      "score": "2-3",
+      "date_time": "Sat 24 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "FC Utrecht v FC Zwolle",
+      "market": "BTTS \u2014 Yes @ 1.55",
       "score": "1-1",
-      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+      "date_time": "Sat 24 Oct \u00b7 16:30 SAST"
+    },
+    {
+      "match": "WSG Tirol v Grazer AK",
+      "market": "Over 1.5 @ 1.25",
+      "score": "1-1",
+      "date_time": "Sat 24 Oct \u00b7 17:00 SAST"
+    },
+    {
+      "match": "Servette v FC Vaduz",
+      "market": "Over 2.5 @ 1.44",
+      "score": "2-1",
+      "date_time": "Sat 24 Oct \u00b7 18:00 SAST"
+    },
+    {
+      "match": "Valencia v Villarreal",
+      "market": "Away Over 0.5 @ 1.15",
+      "score": "1-2",
+      "date_time": "Sat 24 Oct \u00b7 18:30 SAST"
+    },
+    {
+      "match": "Rapid Wien v Austria Lustenau",
+      "market": "Over 2.5 @ 1.30",
+      "score": "5-1",
+      "date_time": "Sat 24 Oct \u00b7 19:30 SAST"
+    },
+    {
+      "match": "RC Lens v Paris FC",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Sat 24 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Lazio v Parma",
+      "market": "Over 1.5 @ 1.30",
+      "score": "2-1",
+      "date_time": "Sat 24 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "ADO Den Haag v Heerenveen",
+      "market": "Over 2.5 @ 1.44",
+      "score": "2-3",
+      "date_time": "Sat 24 Oct \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Columbus Crew SC v Toronto FC",
+      "market": "Over 2.5 @ 1.44",
+      "score": "4-2",
+      "date_time": "Sat 24 Oct \u00b7 21:30 SAST"
+    },
+    {
+      "match": "Philadelphia Union v New England Revolution",
+      "market": "Over 2.5 @ 1.40",
+      "score": "1-2",
+      "date_time": "Sun 25 Oct \u00b7 01:30 SAST"
+    },
+    {
+      "match": "Sporting Kansas City v Austin FC",
+      "market": "Over 2.5 @ 1.44",
+      "score": "1-2",
+      "date_time": "Sun 25 Oct \u00b7 02:30 SAST"
+    },
+    {
+      "match": "San Diego FC v Seattle Sounders FC",
+      "market": "Over 2.5 @ 1.40",
+      "score": "2-2",
+      "date_time": "Sun 25 Oct \u00b7 04:30 SAST"
     }
   ]
 }
