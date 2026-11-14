@@ -290,15 +290,13 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   }
 }
 
-/* FIX_GP_BADGE_1_75X_ONLY — This doubles the visual size of the badge by using
-   a CSS transform. Because transform doesn't affect layout flow, the text
-   is guaranteed to stay perfectly on 2 lines. It scales outwards from the
-   right edge, filling the empty space between the text and the badge. */
+/* FIX_GP_BADGE_1_5X_LOWERED — Scales the badge to 1.5x using transform.
+   translateY(6px) lowers it slightly for visual centering. Text stays 2 lines. */
 @media(max-width:768px){
   .google-content img{
-    transform: scale(1.75) !important;
+    transform: translateY(6px) scale(1.5) !important;
     transform-origin: right center !important;
-    margin-left: -20px !important; /* Prevent overlapping the text */
+    margin-left: -15px !important; /* Prevent overlapping the text */
     z-index: 2 !important;
   }
 }
