@@ -1,58 +1,64 @@
 {
   "winners": [
     {
-      "match": "Latvia v Cyprus",
-      "market": "Double chance - Away or Draw @ 1.50",
+      "match": "Moldova v Faroe Islands",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Tue 29 Sep \u00b7 18:00 SAST"
+    },
+    {
+      "match": "Spain v Croatia",
+      "market": "Over 2.5 @ 1.40",
+      "score": "4-1",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Slovenia v North Macedonia",
+      "market": "Match result - Home Win @ 1.30",
+      "score": "2-0",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Luxembourg v Iceland",
+      "market": "Over 1.5 @ 1.30",
+      "score": "0-3",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Scotland v Switzerland",
+      "market": "Over 1.5 @ 1.40",
+      "score": "0-3",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Scotland v Switzerland",
+      "market": "Over 2.5 @ 2.16",
+      "score": "0-3",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Spain v Croatia",
+      "market": "Match result - Home Win @ 1.20",
+      "score": "4-1",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Slovakia v Kazakhstan",
+      "market": "Match result - Home Win @ 1.50",
+      "score": "2-1",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Luxembourg v Iceland",
+      "market": "Over 1.5 @ 1.30",
+      "score": "0-3",
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Bulgaria v Estonia",
+      "market": "Double chance - Home or Draw @ 1.20",
       "score": "0-0",
-      "date_time": "Mon 28 Sep \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Legan\u00e9s v CD Castell\u00f3n",
-      "market": "Under 3.5 @ 1.40",
-      "score": "0-2",
-      "date_time": "Mon 28 Sep \u00b7 20:30 SAST"
-    },
-    {
-      "match": "Sweden v Poland",
-      "market": "Yes @ 1.50",
-      "score": "3-1",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Romania v Bosnia & Herzegovina",
-      "market": "Match result - Bosnia & Herzegovina @ 3.55",
-      "score": "2-4",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Sweden v Poland",
-      "market": "BTTS \u2014 Yes @ 1.50",
-      "score": "3-1",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Belgium v France",
-      "market": "Match result - France @ 1.94",
-      "score": "0-1",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Turkey v Italy",
-      "market": "Over 2.5 @ 1.50",
-      "score": "1-4",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Northern Ireland v Hungary",
-      "market": "Double chance - Home or Draw @ 1.50",
-      "score": "0-0",
-      "date_time": "Mon 28 Sep \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Am\u00e9rica Mineiro v Juventude",
-      "market": "Match result - Juventude @ 2.18",
-      "score": "0-1",
-      "date_time": "Tue 29 Sep \u00b7 00:30 SAST"
+      "date_time": "Tue 29 Sep \u00b7 20:45 SAST"
     }
   ]
 }
