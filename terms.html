@@ -14,30 +14,21 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="application-name" content="LocustHarvest">
 <meta name="apple-mobile-web-app-title" content="LocustHarvest">
-
-<!-- FONT_PRELOAD_2026_11_14 -->
 <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Rajdhani-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Rajdhani-700.woff2" as="font" type="font/woff2" crossorigin>
-
 <noscript></noscript>
 <style>
-@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:105%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:'Rajdhani Fallback';src:local('Arial');size-adjust:90%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
 @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:96.5%;ascent-override:96.9%;descent-override:24.1%;line-gap-override:0%}
-@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
-@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/Rajdhani-600.woff2') format('woff2')}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/Rajdhani-700.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Inter-400.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/Inter-500.woff2') format('woff2')}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;font-display:swap}
-:root{
---bg:#08090b; --bg2:#0d1013; --panel:#12161a; --panel2:#161b20;
---line:rgba(150,255,150,.10); --line-bright:rgba(80,220,80,.35);
---silver:#cfd6db; --silver-bright:#f2f4f6; --ash:#a3adb4; --mist:#b0b8be;
---green:#3ee23e; --green-bright:#7bff5c; --green-dim:#1d7a28;
---body:#c6cdd2;
-}
+:root{--bg:#08090b;--bg2:#0d1013;--panel:#12161a;--panel2:#161b20;--line:rgba(150,255,150,.10);--line-bright:rgba(80,220,80,.35);--silver:#cfd6db;--silver-bright:#f2f4f6;--ash:#a3adb4;--mist:#b0b8be;--green:#3ee23e;--green-bright:#7bff5c;--green-dim:#1d7a28;--body:#c6cdd2}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--body);font-family:'Inter', 'Inter Fallback', sans-serif;font-weight:300;font-size:15px;overflow-x:hidden;line-height:1.6}
 h1,h2,h3,.brand-font{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;letter-spacing:.03em}
@@ -53,11 +44,7 @@ nav.scrolled{background:rgba(8,9,11,.97);border-bottom:1px solid var(--line)}
 .nav-links a:hover,.nav-links a.active{color:var(--green-bright)}
 .hamburger{display:none;background:0 0;border:none;color:var(--green);font-size:1.8rem;cursor:pointer;padding:.3rem}
 
-.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:
-radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),
-linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);
-border-bottom:1px solid var(--line);
-}
+.top-banner{padding:8.5rem 3rem 2.5rem;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(62,226,62,.08) 0%, transparent 60%),linear-gradient(180deg,#0a0c0e 0%,var(--bg) 100%);border-bottom:1px solid var(--line)}
 .top-eyebrow{font-family:'Rajdhani', 'Rajdhani Fallback', sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
 .top-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:var(--silver-bright);letter-spacing:.06em}
 .top-banner.small{padding:7rem 3rem 2.2rem}
@@ -93,61 +80,18 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .legal{padding:2.5rem 1.25rem 3.5rem}
 }
 
-.door-body,
-.value-card p,
-.legal p,
-.legal li,
-footer p,
-footer div,
-.footer-brands,
-.footer-links,
-.contact-info p,
-.about-page p{
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: break-word;
-}
-@media(max-width:768px){
-  .door-body,
-  .value-card p,
-  .legal p,
-  .legal li,
-  footer p,
-  footer div,
-  .footer-brands,
-  .footer-links,
-  .contact-info p,
-  .about-page p{
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    overflow-wrap: break-word;
-  }
-}
+.door-body,.value-card p,.legal p,.legal li,footer p,footer div,.footer-brands,.footer-links,.contact-info p,.about-page p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+@media(max-width:768px){.door-body,.value-card p,.legal p,.legal li,footer p,footer div,.footer-brands,.footer-links,.contact-info p,.about-page p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
 
-.btn,
-.btn-hero,
-.btn.primary,
-button,
-input[type="submit"] {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.hamburger {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-}
+.btn,.btn-hero,.btn.primary,button,input[type="submit"]{text-align:center;justify-content:center;align-items:center}
+.hamburger{text-align:center;justify-content:center;align-items:center;line-height:1}
 </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Locust Harvest home">
-    <img src="nav-lockup-89.webp" srcset="nav-lockup-89.webp 89w, nav-lockup-178.webp 178w" sizes="89px" width="89" height="38" alt="Locust Harvest — Digital Platforms, Technology, Innovation, Apps" decoding="async">
+    <img src="nav-lockup-89.webp" srcset="nav-lockup-89.webp 89w, nav-lockup-178.webp 178w" sizes="89px" width="89" height="38" alt="Locust Harvest" decoding="async">
   </a>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
   <ul class="nav-links" id="navLinks">
@@ -167,29 +111,29 @@ input[type="submit"] {
 <main class="legal">
 <p class="legal-meta">Last updated: 30 August 2026 &middot; This page covers www.locustharvest.com itself (the marketing website) &mdash; general browsing, this site's own data collection, and cookies/advertising. Each app has its own dedicated Terms of Service and Privacy Policy covering subscriptions, payments, and how that app specifically handles your data &mdash; see the Linked Platforms section in our Terms for direct links.</p>
 
-  <h2>Terms &amp; Conditions</h2>
-  <p>By accessing and using www.locustharvest.com, you agree to the following terms.</p>
+<h2>Terms &amp; Conditions</h2>
+<p>By accessing and using www.locustharvest.com, you agree to the following terms.</p>
 
-  <h3>Use of This Site</h3>
-  <p>This website is provided as an informational gateway to Locust Harvest (Pty) Ltd and its platforms. Content is provided "as is" without warranties of any kind. Locust Harvest&trade; reserves the right to update, modify, or discontinue any part of this site or its linked platforms at any time.</p>
+<h3>Use of This Site</h3>
+<p>This website is provided as an informational gateway to Locust Harvest (Pty) Ltd and its platforms. Content is provided "as is" without warranties of any kind. Locust Harvest&trade; reserves the right to update, modify, or discontinue any part of this site or its linked platforms at any time.</p>
 
-  <h3>Linked Platforms</h3>
-  <p>NOVELTY&trade; is Locust Harvest (Pty) Ltd's flagship app, with its own Terms of Service and Privacy Policy governing its subscription, payment, and data-handling terms specifically. Use of NOVELTY&trade; is governed by its own terms, not solely by this page:</p>
-  <ul>
-    <li><strong>NOVELTY&trade;</strong> &mdash; <a href="/novelty-legal.html#terms">Terms</a> &middot; <a href="/novelty-legal.html#privacy">Privacy</a></li>
-  </ul>
+<h3>Linked Platforms</h3>
+<p>NOVELTY&trade; is Locust Harvest (Pty) Ltd's flagship app, with its own Terms of Service and Privacy Policy governing its subscription, payment, and data-handling terms specifically. Use of NOVELTY&trade; is governed by its own terms, not solely by this page:</p>
+<ul>
+<li><strong>NOVELTY&trade;</strong> &mdash; <a href="/novelty-legal.html#terms">Terms</a> &middot; <a href="/novelty-legal.html#privacy">Privacy</a></li>
+</ul>
 
-  <h3>Intellectual Property</h3>
-  <p>Locust Harvest&trade;, NOVELTY&trade;, Plague2Profit&trade;, and associated logos are trademarks of Locust Harvest (Pty) Ltd. All content on this site, unless otherwise noted, is the property of Locust Harvest (Pty) Ltd and may not be reproduced without permission.</p>
+<h3>Intellectual Property</h3>
+<p>Locust Harvest&trade;, NOVELTY&trade;, Plague2Profit&trade;, and associated logos are trademarks of Locust Harvest (Pty) Ltd. All content on this site, unless otherwise noted, is the property of Locust Harvest (Pty) Ltd and may not be reproduced without permission.</p>
 
-  <h3>Limitation of Liability</h3>
-  <p>To the fullest extent permitted by law, Locust Harvest (Pty) Ltd shall not be liable for any indirect, incidental, or consequential damages arising from use of this website.</p>
+<h3>Limitation of Liability</h3>
+<p>To the fullest extent permitted by law, Locust Harvest (Pty) Ltd shall not be liable for any indirect, incidental, or consequential damages arising from use of this website.</p>
 
-  <h3>Governing Law</h3>
-  <p>These terms are governed by the laws of the Republic of South Africa.</p>
+<h3>Governing Law</h3>
+<p>These terms are governed by the laws of the Republic of South Africa.</p>
 
-  <h3>Questions</h3>
-  <p>For any question about these Terms &amp; Conditions, contact us at <a href="mailto:support@locustharvest.com">support@locustharvest.com</a> or visit our <a href="/contact.html">Contact page</a>.</p>
+<h3>Questions</h3>
+<p>For any question about these Terms &amp; Conditions, contact us at <a href="mailto:support@locustharvest.com">support@locustharvest.com</a> or visit our <a href="/contact.html">Contact page</a>.</p>
 </main>
 
 <footer>
@@ -197,12 +141,9 @@ input[type="submit"] {
   <div class="footer-tagline">Technology &bull; Innovation &bull; Digital Platforms</div>
   <div class="footer-brands">NOVELTY&trade; | PLAGUE2PROFIT&trade;</div>
   <div class="footer-links">
-    <a href="/privacy.html">Privacy Policy</a>
-    <span>|</span>
-    <a href="/terms.html">Terms &amp; Conditions</a>
-    <span>|</span>
-    <a href="/cookies.html">Cookie Policy</a>
-    <span>|</span>
+    <a href="/privacy.html">Privacy Policy</a><span>|</span>
+    <a href="/terms.html">Terms &amp; Conditions</a><span>|</span>
+    <a href="/cookies.html">Cookie Policy</a><span>|</span>
     <a href="/contact.html">Contact</a>
   </div>
   <div class="footer-copy">&copy; 2026 Locust Harvest (Pty) Ltd. All rights reserved. Follow <a href="https://x.com/Plague2Profit" target="_blank" rel="noopener">@Plague2Profit</a> on all social handles.</div>
