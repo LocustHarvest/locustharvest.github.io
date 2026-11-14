@@ -1,94 +1,148 @@
 {
   "winners": [
     {
-      "match": "Goi\u00e1s v Nautico PE",
-      "market": "Away or Draw @ 1.90",
-      "score": "0-0",
-      "date_time": "Tue 20 Oct \u00b7 00:30 SAST"
-    },
-    {
-      "match": "Corinthians v Vitoria",
-      "market": "BTTS \u2014 Yes @ 2.10",
-      "score": "1-1",
-      "date_time": "Tue 20 Oct \u00b7 01:00 SAST"
-    },
-    {
-      "match": "Sabah FK v Borussia Dortmund",
-      "market": "BTTS + Over 2.5 @ 1.80",
-      "score": "1-2",
-      "date_time": "Tue 20 Oct \u00b7 18:45 SAST"
-    },
-    {
-      "match": "Fenerbahce v Slavia Praha",
-      "market": "Home or Draw @ 1.20",
-      "score": "2-2",
-      "date_time": "Tue 20 Oct \u00b7 18:45 SAST"
-    },
-    {
-      "match": "Fenerbahce v Slavia Praha",
-      "market": "Over 2.5 @ 1.60",
-      "score": "2-2",
-      "date_time": "Tue 20 Oct \u00b7 18:45 SAST"
-    },
-    {
-      "match": "Sabah FK v Borussia Dortmund",
-      "market": "Over 2.5 @ 1.44",
-      "score": "1-2",
-      "date_time": "Tue 20 Oct \u00b7 18:45 SAST"
-    },
-    {
-      "match": "Wolverhampton Wanderers v Portsmouth",
-      "market": "Away or Draw @ 2.10",
-      "score": "1-1",
-      "date_time": "Tue 20 Oct \u00b7 20:45 SAST"
-    },
-    {
-      "match": "Paris Saint Germain v Barcelona",
-      "market": "Over 4.5 @ 2.00",
-      "score": "4-2",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Manchester City v AEK Athens",
+      "match": "FC Cincinnati v D.C. United",
       "market": "Over 2.5 @ 1.25",
-      "score": "5-1",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "score": "2-1",
+      "date_time": "Thu 22 Oct \u00b7 01:00 SAST"
     },
     {
-      "match": "VfB Stuttgart v Atl\u00e9tico Madrid",
-      "market": "Away or Draw @ 1.30",
-      "score": "1-1",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "match": "Toluca v Tijuana",
+      "market": "Over 2.5 @ 1.36",
+      "score": "2-2",
+      "date_time": "Thu 22 Oct \u00b7 03:00 SAST"
     },
     {
-      "match": "Liverpool v Villarreal",
-      "market": "BTTS \u2014 Yes @ 1.70",
-      "score": "4-3",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "match": "Santos Laguna v Pumas",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-0",
+      "date_time": "Thu 22 Oct \u00b7 05:10 SAST"
     },
     {
-      "match": "AS Roma v \u0160K Slovan Bratislava",
-      "market": "Over 2.5 @ 1.25",
+      "match": "Pachuca v Cruz Azul",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-2",
+      "date_time": "Thu 22 Oct \u00b7 05:10 SAST"
+    },
+    {
+      "match": "FC Kairat v Panathinaikos FC",
+      "market": "Over 2.5 @ 1.90",
+      "score": "1-5",
+      "date_time": "Thu 22 Oct \u00b7 16:30 SAST"
+    },
+    {
+      "match": "Union Saint-Gilloise v Hapoel Be'er Sheva",
+      "market": "Over 2.5 @ 1.50",
       "score": "4-0",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Liverpool v Villarreal",
-      "market": "Over 2.5 @ 1.44",
-      "score": "4-3",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "match": "Dinamo Zagreb v NEC Nijmegen",
+      "market": "Over 2.5 @ 1.53",
+      "score": "2-4",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Paris Saint Germain v Barcelona",
-      "market": "Over 2.5 @ 1.20",
-      "score": "4-2",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "match": "FC Ararat-Armenia v AZ Alkmaar",
+      "market": "Over 2.5 @ 1.53",
+      "score": "0-4",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Napoli v Bod\u00f8/Glimt",
+      "match": "Ferencv\u00e1ros TC v Torreense",
       "market": "Over 2.5 @ 1.57",
-      "score": "4-3",
-      "date_time": "Tue 20 Oct \u00b7 21:00 SAST"
+      "score": "4-1",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Juventus v Rennes",
+      "market": "Over 2.5 @ 1.67",
+      "score": "2-2",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Lech Pozna\u0144 v Sunderland",
+      "market": "Under 2.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "SK Sturm Graz v Marseille",
+      "market": "Under 2.5 @ 1.20",
+      "score": "1-0",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "FC Nordsjaelland v PFC CSKA Sofia",
+      "market": "Over 2.5 @ 1.50",
+      "score": "2-2",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Red Star Belgrade v FC Copenhagen",
+      "market": "Over 2.5 @ 1.70",
+      "score": "2-2",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "FK Kauno \u017dalgiris v SK Brann",
+      "market": "Over 2.5 @ 1.70",
+      "score": "1-4",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Pafos FC v Riga FC",
+      "market": "Over 1.5 @ 1.21",
+      "score": "1-1",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "FK Jablonec v Brighton and Hove Albion",
+      "market": "Under 3.5 @ 1.73",
+      "score": "0-0",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Inter Club d'Escaldes v Universitatea Craiova",
+      "market": "Over 2.5 @ 1.96",
+      "score": "1-3",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Getafe v FC Lugano",
+      "market": "Over 2.5 @ 2.30",
+      "score": "2-5",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Pafos FC v Riga FC",
+      "market": "Under 2.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "FC Iberia 1999 v Mj\u00e4llby AIF",
+      "market": "Under 2.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Thu 22 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "TSG Hoffenheim v Lyon",
+      "market": "Over 2.5 @ 1.50",
+      "score": "3-0",
+      "date_time": "Thu 22 Oct \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Besiktas JK v Crystal Palace",
+      "market": "Over 2.5 @ 1.53",
+      "score": "2-2",
+      "date_time": "Thu 22 Oct \u00b7 21:00 SAST"
+    },
+    {
+      "match": "Omonoia FC v Benfica",
+      "market": "Over 2.5 @ 1.50",
+      "score": "1-4",
+      "date_time": "Thu 22 Oct \u00b7 21:00 SAST"
     }
   ]
 }
