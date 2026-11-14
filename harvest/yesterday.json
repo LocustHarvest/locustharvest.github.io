@@ -1,22 +1,58 @@
 {
   "winners": [
     {
-      "match": "Argentinos Juniors v CA Tigre BA",
-      "market": "Match result - Argentinos Juniors @ 1.85",
-      "score": "2-1",
-      "date_time": "Mon 5 Oct \u00b7 00:15 SAST"
+      "match": "Kazakhstan v Faroe Islands",
+      "market": "Over 2.5 @ 2.45",
+      "score": "2-2",
+      "date_time": "Tue 6 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Bosnia & Herzegovina v Poland",
-      "market": "Under 2.5 @ 2.05",
-      "score": "1-0",
-      "date_time": "Mon 5 Oct \u00b7 20:45 SAST"
+      "match": "Kazakhstan v Faroe Islands",
+      "market": "Over 1.5 @ 1.55",
+      "score": "2-2",
+      "date_time": "Tue 6 Oct \u00b7 16:02 SAST"
     },
     {
-      "match": "Ukraine v Hungary",
-      "market": "Over 2.5 @ 2.39",
+      "match": "Croatia v Spain",
+      "market": "Over 2.5 @ 1.40",
       "score": "1-2",
-      "date_time": "Mon 5 Oct \u00b7 20:45 SAST"
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Albania v San Marino",
+      "market": "Over 2.5 @ 1.17",
+      "score": "2-1",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "England v Czech Republic",
+      "market": "Under 3.5 @ 1.97",
+      "score": "3-0",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Scotland v Slovenia",
+      "market": "Over 2.5 @ 2.23",
+      "score": "1-2",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Moldova v Slovakia",
+      "market": "Over 2.5 @ 1.82",
+      "score": "0-4",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Switzerland v North Macedonia",
+      "market": "Match result - Switzerland @ 1.12",
+      "score": "3-0",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Scarborough Athletic FC v Macclesfield Town",
+      "market": "Match result - Macclesfield Town @ 2.38",
+      "score": "1-2",
+      "date_time": "Tue 6 Oct \u00b7 20:45 SAST"
     }
   ]
 }
