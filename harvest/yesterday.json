@@ -1,130 +1,148 @@
 {
   "winners": [
     {
-      "match": "St. Louis City SC v LA Galaxy",
-      "market": "Over 2.5 @ 1.36",
-      "score": "6-2",
-      "date_time": "Mon 12 Oct \u00b7 01:00 SAST"
+      "match": "Sarmiento de Junin v River Plate",
+      "market": "Over 1.5 @ 1.37",
+      "score": "1-1",
+      "date_time": "Thu 15 Oct \u00b7 00:00 SAST"
     },
     {
-      "match": "Burgos CF v Granada CF",
-      "market": "Under 3.5 @ 1.30",
-      "score": "0-1",
-      "date_time": "Mon 12 Oct \u00b7 16:15 SAST"
-    },
-    {
-      "match": "VPS Vaasa v IF Gnistan",
-      "market": "Under 3.5 @ 1.40",
-      "score": "1-0",
-      "date_time": "Mon 12 Oct \u00b7 17:00 SAST"
-    },
-    {
-      "match": "PAOK Thessaloniki v Kalamata FC",
-      "market": "Under 4.5 @ 1.25",
-      "score": "1-3",
-      "date_time": "Mon 12 Oct \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Radomiak Radom v Motor Lublin",
-      "market": "Over 2.5 @ 1.60",
+      "match": "FC Cincinnati v New England Revolution",
+      "market": "BTTS \u2014 Yes @ 1.37",
       "score": "2-3",
-      "date_time": "Mon 12 Oct \u00b7 18:00 SAST"
+      "date_time": "Thu 15 Oct \u00b7 01:30 SAST"
     },
     {
-      "match": "Oviedo v SD Eibar",
-      "market": "Over 1.5 @ 1.30",
+      "match": "Toronto FC v Orlando City SC",
+      "market": "BTTS \u2014 Yes @ 1.34",
+      "score": "3-3",
+      "date_time": "Thu 15 Oct \u00b7 01:30 SAST"
+    },
+    {
+      "match": "Columbus Crew SC v Charlotte FC",
+      "market": "BTTS \u2014 Yes @ 1.41",
       "score": "3-1",
-      "date_time": "Mon 12 Oct \u00b7 18:30 SAST"
+      "date_time": "Thu 15 Oct \u00b7 01:30 SAST"
     },
     {
-      "match": "Atalanta BC v Venezia",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-1",
-      "date_time": "Mon 12 Oct \u00b7 18:30 SAST"
-    },
-    {
-      "match": "AGF Aarhus v SonderjyskE",
-      "market": "Over 2.5 @ 1.50",
-      "score": "3-0",
-      "date_time": "Mon 12 Oct \u00b7 19:00 SAST"
-    },
-    {
-      "match": "KFUM v V\u00e5lerenga",
-      "market": "Over 1.5 @ 1.13",
-      "score": "2-1",
-      "date_time": "Mon 12 Oct \u00b7 19:00 SAST"
-    },
-    {
-      "match": "IF Elfsborg v Halmstads BK",
+      "match": "D.C. United v New York Red Bulls",
       "market": "Under 4.5 @ 1.25",
-      "score": "4-0",
-      "date_time": "Mon 12 Oct \u00b7 19:00 SAST"
-    },
-    {
-      "match": "GKS Katowice v Wieczysta Krak\u00f3w",
-      "market": "Over 2.5 @ 1.40",
       "score": "2-1",
-      "date_time": "Mon 12 Oct \u00b7 20:30 SAST"
+      "date_time": "Thu 15 Oct \u00b7 01:30 SAST"
     },
     {
-      "match": "Torino v Udinese",
-      "market": "Over 1.5 @ 1.30",
-      "score": "2-1",
-      "date_time": "Mon 12 Oct \u00b7 20:45 SAST"
+      "match": "Chicago Fire v Philadelphia Union",
+      "market": "BTTS \u2014 Yes @ 1.35",
+      "score": "1-3",
+      "date_time": "Thu 15 Oct \u00b7 02:30 SAST"
     },
     {
-      "match": "Dijon v Metz",
+      "match": "Real Salt Lake v San Jose Earthquakes",
+      "market": "BTTS \u2014 Yes @ 1.42",
+      "score": "1-1",
+      "date_time": "Thu 15 Oct \u00b7 03:30 SAST"
+    },
+    {
+      "match": "Colorado Rapids v Minnesota United FC",
+      "market": "BTTS \u2014 Yes @ 1.50",
+      "score": "2-2",
+      "date_time": "Thu 15 Oct \u00b7 03:30 SAST"
+    },
+    {
+      "match": "Los Angeles FC v Austin FC",
+      "market": "DC/Over 1.5 @ 1.30",
+      "score": "3-1",
+      "date_time": "Thu 15 Oct \u00b7 04:30 SAST"
+    },
+    {
+      "match": "San Diego FC v Houston Dynamo",
       "market": "Over 1.5 @ 1.18",
-      "score": "4-2",
-      "date_time": "Mon 12 Oct \u00b7 20:45 SAST"
+      "score": "3-3",
+      "date_time": "Thu 15 Oct \u00b7 04:30 SAST"
     },
     {
-      "match": "Coritiba v Botafogo",
+      "match": "PFC CSKA Sofia v AS Monaco",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-2",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Riga FC v FC Kairat",
       "market": "Over 1.5 @ 1.20",
       "score": "1-1",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Levante v Sevilla",
-      "market": "Over 1.5 @ 1.35",
-      "score": "3-3",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Coventry City v Newcastle United",
-      "market": "Over 1.5 @ 1.20",
-      "score": "4-1",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Lanus v Velez Sarsfield BA",
-      "market": "Under 3.5 @ 1.20",
+      "match": "Mj\u00e4llby AIF v Inter Club d'Escaldes",
+      "market": "Home Win @ 1.37",
       "score": "2-0",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Fortaleza v Clube de Regatas Brasil",
-      "market": "Over 1.5 @ 1.30",
-      "score": "2-2",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
-    },
-    {
-      "match": "Shamrock Rovers v Bohemians",
+      "match": "Hajduk Split v Ajax",
       "market": "Over 1.5 @ 1.20",
       "score": "2-1",
-      "date_time": "Mon 12 Oct \u00b7 21:00 SAST"
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Famalic\u00e3o v Alverca",
-      "market": "Over 1.5 @ 1.30",
-      "score": "1-4",
-      "date_time": "Mon 12 Oct \u00b7 21:15 SAST"
+      "match": "FC Lugano v Red Star Belgrade",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-2",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
     },
     {
-      "match": "Al-Nassr v Neftchi Fergana",
-      "market": "Over 2.5 @ 1.35",
-      "score": "3-1",
-      "date_time": "Mon 12 Oct \u00b7 21:15 SAST"
+      "match": "KF Egnatia v FC Midtjylland",
+      "market": "Over 1.5 @ 1.50",
+      "score": "1-1",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Panathinaikos FC v FK Borac Banja Luka",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Lech Pozna\u0144 v Bayer Leverkusen",
+      "market": "Over 2.5 @ 1.40",
+      "score": "0-4",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Salzburg v AC Milan",
+      "market": "Over 1.5 @ 1.20",
+      "score": "0-4",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Union Saint-Gilloise v Real Sociedad",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Sparta Prague v Lillestrom",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "Lyon v Crystal Palace",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-2",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "AZ Alkmaar v Hapoel Be'er Sheva",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Thu 15 Oct \u00b7 18:45 SAST"
+    },
+    {
+      "match": "FC Twente Enschede v FC Thun",
+      "market": "Home Win @ 1.35",
+      "score": "1-0",
+      "date_time": "Thu 15 Oct \u00b7 21:00 SAST"
     }
   ]
 }
