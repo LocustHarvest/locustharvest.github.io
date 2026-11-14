@@ -1,3 +1,22 @@
 {
-  "winners": []
+  "winners": [
+    {
+      "match": "Austria v Israel",
+      "market": "Over 2.5 @ 1.88",
+      "score": "3-1",
+      "date_time": "Thu 24 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Norway v Denmark",
+      "market": "Over 2.5 @ 1.50",
+      "score": "3-2",
+      "date_time": "Thu 24 Sep \u00b7 20:45 SAST"
+    },
+    {
+      "match": "Liechtenstein v Lithuania",
+      "market": "Under 2.5 @ 1.21",
+      "score": "0-2",
+      "date_time": "Thu 24 Sep \u00b7 20:45 SAST"
+    }
+  ]
 }
