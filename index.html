@@ -163,8 +163,6 @@ footer{background:var(--bg);padding:2.5rem 3rem;border-top:1px solid var(--line)
   .door-lh{flex-direction:column;text-align:center}
   .p2p-socials{grid-template-columns:repeat(2,1fr)}
   .door-body{max-width:100%;text-align:left;font-size:.86rem;line-height:1.7}
-  .door-body.p2p-lines{max-width:100%;text-align-last:auto}
-  .door-body.p2p-lines br{display:none}
   .door-row{gap:1rem}
   .value-card{padding:1.2rem}
   .btn-hero{min-width:0;width:100%;padding:.75rem 1rem;font-size:.78rem;letter-spacing:.08em;gap:.4rem}
@@ -254,9 +252,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   .google-content img{height:80px !important}
 }
 
-/* FIX_MOBILE_2026_11_15 — three mobile fixes */
-
-/* 1. Google Play button: text must not touch left edge */
+/* FIX_MOBILE_2026_11_15 */
 @media(max-width:768px){
   .novelty-main-btn{padding:0 12px !important}
   .google-content{display:flex !important;align-items:center !important;justify-content:space-between !important;gap:8px !important;width:100% !important;padding:0 4px !important}
@@ -264,62 +260,39 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   .google-content img{height:62px !important;max-width:38% !important;width:auto !important;flex-shrink:0 !important;margin:0 !important}
 }
 
-/* 2. Latest Results: stack cards vertically (one per row, full width) */
 @media(max-width:768px){
-  #tiers-grid{
-    grid-template-columns:1fr !important;
-    gap:0.75rem !important;
-    min-height:1200px !important;
-  }
-  #tiers-grid .advert-card > .advert-headline{
-    font-size:1rem !important;
-    padding:1rem 1rem 0.5rem 1rem !important;
-    line-height:1.2 !important;
-  }
-  #tiers-grid .advert-card > div > div{
-    padding:0.75rem 1rem !important;
-    font-size:0.8rem !important;
-  }
-}
-
-/* 3. Remove excessive gap between Latest Results and Plague2Profit */
-@media(max-width:768px){
-  #latest-results{
-    padding:1.25rem 0.75rem !important;
-    min-height:auto !important;
-  }
-}
-
-/* ENLARGE_GOOGLE_PLAY_BADGE_2026_11_15 — the Google Play badge image is
-   a wide banner (~180×53 ratio). At the same 20px height as the square
-   social icons it looks tiny. Enlarge only this badge in the three
-   places it appears. Other social icons untouched. */
-
-/* Desktop (and tablet) — p2p-socials Google Play badge, next to YouTube */
-.p2p-socials a[aria-label="Google Play"] img{
-  height:40px !important;
-  max-width:140px !important;
-  width:auto !important;
-  object-fit:contain !important;
+  #tiers-grid{grid-template-columns:1fr !important;gap:0.75rem !important;min-height:1200px !important}
+  #tiers-grid .advert-card > .advert-headline{font-size:1rem !important;padding:1rem 1rem 0.5rem 1rem !important;line-height:1.2 !important}
+  #tiers-grid .advert-card > div > div{padding:0.75rem 1rem !important;font-size:0.8rem !important}
 }
 
 @media(max-width:768px){
-  /* Mobile — p2p-socials Google Play badge (same grid) */
-  .p2p-socials a[aria-label="Google Play"] img{
-    height:44px !important;
-    max-width:150px !important;
-    width:auto !important;
-    object-fit:contain !important;
-  }
+  #latest-results{padding:1.25rem 0.75rem !important;min-height:auto !important}
+}
 
-  /* Mobile — main "GET NOVELTY APP ON GOOGLE PLAY" button badge */
-  .google-content img{
-    height:80px !important;
-    max-width:50% !important;
-    width:auto !important;
-    object-fit:contain !important;
-    flex-shrink:0 !important;
-    margin:0 !important;
+/* ENLARGE_GOOGLE_PLAY_BADGE_2026_11_15 */
+.p2p-socials a[aria-label="Google Play"] img{height:40px !important;max-width:140px !important;width:auto !important;object-fit:contain !important}
+@media(max-width:768px){
+  .p2p-socials a[aria-label="Google Play"] img{height:44px !important;max-width:150px !important;width:auto !important;object-fit:contain !important}
+  .google-content img{height:80px !important;max-width:50% !important;width:auto !important;object-fit:contain !important;flex-shrink:0 !important;margin:0 !important}
+}
+
+/* P2P_PARAGRAPH_FIX_2026_11_15 — fixes the two issues only:
+   (1) last line must be left-aligned (not justified),
+   (2) widen on desktop to 2 lines instead of 4.
+   Nothing else touched. */
+@media(min-width:769px){
+  .door-body.p2p-lines{
+    text-align: justify !important;
+    text-align-last: left !important;
+    max-width: 640px !important;
+  }
+}
+@media(max-width:768px){
+  .door-body.p2p-lines{
+    text-align: left !important;
+    text-align-last: left !important;
+    max-width: 100% !important;
   }
 }
 </style>
@@ -398,7 +371,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
 <section class="door" id="plague2profit" aria-labelledby="p2p-heading">
 <p class="door-eyebrow">The Philosophy &middot; Media &middot; Social Ecosystem</p>
 <h2 class="door-title" id="p2p-heading">Plague2Profit<sup>&trade;</sup></h2>
-<p class="door-body p2p-lines" style="text-align:justify;text-align-last:justify">From Plague to Profit. We turn challenges into opportunities, ideas into solutions and problems into productive ventures.</p>
+<p class="door-body p2p-lines">From Plague to Profit. We turn challenges into opportunities, ideas into solutions and problems into productive ventures.</p>
 <p class="p2p-handle">@Plague2Profit — on all social handles</p>
 
 <div class="p2p-socials">
