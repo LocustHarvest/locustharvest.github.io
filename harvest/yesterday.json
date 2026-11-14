@@ -1,46 +1,22 @@
 {
   "winners": [
     {
-      "match": "Dijon v Orl\u00e9ans",
-      "market": "BTTS \u2014 Yes @ 1.80",
-      "score": "1-2",
-      "date_time": "Fri 13 Nov \u00b7 21:00 SAST"
+      "match": "Faroe Islands v Kazakhstan",
+      "market": "Under 3.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Sat 26 Sep \u00b7 18:00 SAST"
     },
     {
-      "match": "Legan\u00e9s v Burgos CF",
-      "market": "BTTS \u2014 Yes @ 1.80",
-      "score": "3-1",
-      "date_time": "Fri 13 Nov \u00b7 21:30 SAST"
+      "match": "San Marino v Finland",
+      "market": "Over 2.5 @ 1.42",
+      "score": "0-7",
+      "date_time": "Sat 26 Sep \u00b7 18:00 SAST"
     },
     {
-      "match": "Luxembourg v Estonia",
-      "market": "BTTS \u2014 No @ 1.72",
-      "score": "0-1",
-      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Liechtenstein v Azerbaijan",
-      "market": "BTTS \u2014 No @ 1.25",
-      "score": "0-1",
-      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Slovakia v Faroe Islands",
-      "market": "BTTS \u2014 Yes @ 2.15",
-      "score": "2-2",
-      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Netherlands v Greece",
-      "market": "Home Over 1.5 @ 1.46",
-      "score": "7-0",
-      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Salamanca CF UDS v Celta Vigo",
-      "market": "BTTS \u2014 No @ 1.81",
-      "score": "0-5",
-      "date_time": "Fri 13 Nov \u00b7 22:00 SAST"
+      "match": "England v Spain",
+      "market": "BTTS + Over 2.5 @ 1.75",
+      "score": "2-3",
+      "date_time": "Sat 26 Sep \u00b7 20:45 SAST"
     }
   ]
 }
