@@ -264,19 +264,30 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   .google-content img{height:62px !important;max-width:38% !important;width:auto !important;flex-shrink:0 !important;margin:0 !important}
 }
 
-/* 2. Latest Results: force horizontal 3-column grid on mobile */
+/* 2. Latest Results: stack cards vertically (one per row, full width) */
 @media(max-width:768px){
-  #tiers-grid{grid-template-columns:repeat(3, 1fr) !important;gap:0.4rem !important;min-height:400px !important}
-  #tiers-grid .advert-card > .advert-headline{font-size:0.78rem !important;padding:0.5rem 0.2rem !important;margin:0 !important;line-height:1.15 !important}
-  #tiers-grid .advert-card > div > div{padding:0.45rem 0.35rem !important;font-size:0.62rem !important}
-  #tiers-grid .advert-body{font-size:0.6rem !important;line-height:1.35 !important;margin-bottom:0.5rem !important}
-  #tiers-grid .advert-cta{font-size:0.6rem !important;padding:0.35rem 0.4rem !important;letter-spacing:0.02em !important;white-space:normal !important}
+  #tiers-grid{
+    grid-template-columns:1fr !important;
+    gap:0.75rem !important;
+    min-height:1200px !important;
+  }
+  #tiers-grid .advert-card > .advert-headline{
+    font-size:1rem !important;
+    padding:1rem 1rem 0.5rem 1rem !important;
+    line-height:1.2 !important;
+  }
+  #tiers-grid .advert-card > div > div{
+    padding:0.75rem 1rem !important;
+    font-size:0.8rem !important;
+  }
 }
 
-/* 3. Remove unnecessary gap between Latest Results and Plague2Profit */
+/* 3. Remove excessive gap between Latest Results and Plague2Profit */
 @media(max-width:768px){
-  #latest-results{padding:1.25rem 0.75rem !important;min-height:auto !important}
-  #tiers-grid{min-height:400px !important}
+  #latest-results{
+    padding:1.25rem 0.75rem !important;
+    min-height:auto !important;
+  }
 }
 </style>
 </head>
