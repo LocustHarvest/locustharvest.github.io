@@ -1,0 +1,21 @@
+# Locust Harvest
+
+> Locust Harvest (Pty) Ltd is a technology and innovation company building digital platforms for real-world problems — home to NOVELTY — daily statistical sports picks — and the Plague2Profit philosophy.
+
+## Platforms
+
+- [NOVELTY](https://www.locustharvest.com/#novelty): Daily statistical sports predictions and analysis for football, across dozens of leading leagues.
+- [Plague2Profit](https://www.locustharvest.com/#plague2profit): Our philosophy, media and social ecosystem — turning challenges into opportunities.
+- [The Daily Harvest](https://www.locustharvest.com/harvest/): Transparent public archive of every prediction.
+
+## Company
+
+- [About Locust Harvest](https://www.locustharvest.com/about.html): Who we are and what we build.
+- [Contact](https://www.locustharvest.com/contact.html): Send a message to the Locust Harvest team.
+- [Terms & Conditions](https://www.locustharvest.com/terms.html): Terms governing use of our platforms.
+- [Privacy Policy](https://www.locustharvest.com/privacy.html): How we handle your data.
+
+## Agent Resources
+
+- [ARD Manifest](https://www.locustharvest.com/.well-known/ard.json): Agentic Resource Discovery catalog.
+- [Contact Form Tool](https://www.locustharvest.com/contact.html): WebMCP tool `send_contact_message`.
