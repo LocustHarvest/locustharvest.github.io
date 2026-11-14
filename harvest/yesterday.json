@@ -1,82 +1,46 @@
 {
   "winners": [
     {
-      "match": "Chamb\u00e9ry v Grenoble",
-      "market": "Both teams to score @ 1.90",
-      "score": "0-2",
-      "date_time": "Thu 12 Nov \u00b7 20:00 SAST"
-    },
-    {
-      "match": "CDA Navalcarnero v Real Betis",
-      "market": "BTTS + Over 2.5 @ 1.30",
-      "score": "2-3",
-      "date_time": "Thu 12 Nov \u00b7 20:00 SAST"
-    },
-    {
-      "match": "Taranc\u00f3n v Levante",
-      "market": "Over 2.5 @ 1.30",
+      "match": "Dijon v Orl\u00e9ans",
+      "market": "Both teams to score @ 1.80",
       "score": "1-2",
-      "date_time": "Thu 12 Nov \u00b7 20:00 SAST"
+      "date_time": "Fri 13 Nov \u00b7 21:00 SAST"
     },
     {
-      "match": "San Marino v Belarus",
-      "market": "Away Over 0.5 @ 1.20",
-      "score": "0-2",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Czech Republic v Spain",
-      "market": "Away Over 0.5 @ 1.20",
-      "score": "0-2",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "England v Croatia",
-      "market": "Over 2.5 @ 1.45",
-      "score": "2-1",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Italy v France",
-      "market": "Both teams to score @ 1.60",
+      "match": "Legan\u00e9s v Burgos CF",
+      "market": "Both teams to score @ 1.80",
       "score": "3-1",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
+      "date_time": "Fri 13 Nov \u00b7 21:30 SAST"
     },
     {
-      "match": "Albania v Finland",
-      "market": "Home or Draw @ 1.25",
-      "score": "2-0",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
+      "match": "Luxembourg v Estonia",
+      "market": "Both teams to score @ 1.72",
+      "score": "0-1",
+      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Montenegro v Latvia",
-      "market": "Home Win @ 1.23",
-      "score": "2-1",
-      "date_time": "Thu 12 Nov \u00b7 21:45 SAST"
+      "match": "Liechtenstein v Azerbaijan",
+      "market": "Both teams to score @ 1.25",
+      "score": "0-1",
+      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Benfica v Austria Wien",
-      "market": "Over 2.5 @ 1.70",
-      "score": "3-1",
-      "date_time": "Thu 12 Nov \u00b7 22:00 SAST"
+      "match": "Slovakia v Faroe Islands",
+      "market": "Both teams to score @ 2.15",
+      "score": "2-2",
+      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "\u00c1guila v Lime\u00f1o",
-      "market": "Home Over 0.5 @ 1.20",
-      "score": "1-1",
-      "date_time": "Thu 12 Nov \u00b7 23:30 SAST"
+      "match": "Netherlands v Greece",
+      "market": "Home Over 1.5 @ 1.46",
+      "score": "7-0",
+      "date_time": "Fri 13 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Atl. Balboa v INCA-Aruba",
-      "market": "Home Over 0.5 @ 1.20",
-      "score": "4-1",
-      "date_time": "Thu 12 Nov \u00b7 23:30 SAST"
-    },
-    {
-      "match": "Ponte Preta v Operario PR",
-      "market": "Both teams to score @ 1.95",
-      "score": "0-2",
-      "date_time": "Fri 13 Nov \u00b7 00:00 SAST"
+      "match": "Salamanca CF UDS v Celta Vigo",
+      "market": "Both teams to score @ 1.81",
+      "score": "0-5",
+      "date_time": "Fri 13 Nov \u00b7 22:00 SAST"
     }
   ]
 }
