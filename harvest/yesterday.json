@@ -1,46 +1,82 @@
 {
   "winners": [
     {
-      "match": "Athletic Club (MG) v Sport Recife",
-      "market": "BTTS + Over 2.5 @ 2.50",
-      "score": "1-2",
-      "date_time": "Fri 2 Oct \u00b7 01:30 SAST"
+      "match": "Chesterfield FC v Tranmere Rovers",
+      "market": "Match result - Chesterfield FC @ 1.73",
+      "score": "4-2",
+      "date_time": "Sat 3 Oct \u00b7 13:30 SAST"
     },
     {
-      "match": "Gr\u00eamio Novorizontino v Goi\u00e1s",
-      "market": "Match result - Gr\u00eamio Novorizontino @ 1.70",
-      "score": "3-0",
-      "date_time": "Fri 2 Oct \u00b7 02:00 SAST"
+      "match": "Albacete v SD Eibar",
+      "market": "Over 2.5 @ 1.90",
+      "score": "1-3",
+      "date_time": "Sat 3 Oct \u00b7 14:00 SAST"
     },
     {
-      "match": "Seattle Sounders FC v Sporting Kansas City",
-      "market": "BTTS \u2014 Yes @ 1.45",
+      "match": "RB Leipzig v FSV Mainz 05",
+      "market": "Match result - RB Leipzig @ 1.51",
+      "score": "5-0",
+      "date_time": "Sat 3 Oct \u00b7 14:00 SAST"
+    },
+    {
+      "match": "Finland v Albania",
+      "market": "Over 1.5 @ 1.40",
       "score": "2-1",
-      "date_time": "Fri 2 Oct \u00b7 03:30 SAST"
+      "date_time": "Sat 3 Oct \u00b7 15:00 SAST"
     },
     {
-      "match": "Kazakhstan v Moldova",
-      "market": "Under 3.5 @ 1.30",
-      "score": "1-2",
-      "date_time": "Fri 2 Oct \u00b7 16:00 SAST"
-    },
-    {
-      "match": "Cyprus v Armenia",
-      "market": "Over 1.5 @ 1.30",
+      "match": "Accrington Stanley v Cheltenham Town",
+      "market": "Under 2.5 @ 2.18",
       "score": "2-0",
-      "date_time": "Fri 2 Oct \u00b7 18:00 SAST"
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "France v Italy",
-      "market": "Over 1.5 @ 1.15",
-      "score": "1-1",
-      "date_time": "Fri 2 Oct \u00b7 20:45 SAST"
+      "match": "Salford City v Fleetwood Town",
+      "market": "Match result - Salford City @ 1.70",
+      "score": "1-0",
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
     },
     {
-      "match": "Poland v Romania",
-      "market": "Over 1.5 @ 1.15",
-      "score": "6-0",
-      "date_time": "Fri 2 Oct \u00b7 20:45 SAST"
+      "match": "Rochdale v Swindon Town",
+      "market": "Under 2.5 @ 2.18",
+      "score": "1-0",
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Burton Albion v Huddersfield Town",
+      "market": "Match result - Huddersfield Town @ 1.98",
+      "score": "1-3",
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Grimsby Town v Shrewsbury Town",
+      "market": "Over 2.5 @ 1.84",
+      "score": "1-2",
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Leyton Orient v Plymouth Argyle",
+      "market": "Match result - Plymouth Argyle @ 2.04",
+      "score": "0-2",
+      "date_time": "Sat 3 Oct \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Eintracht Frankfurt v Bayern Munich",
+      "market": "Under 3.5 @ 1.81",
+      "score": "0-1",
+      "date_time": "Sat 3 Oct \u00b7 17:55 SAST"
+    },
+    {
+      "match": "Croatia v England",
+      "market": "Over 1.5 @ 1.20",
+      "score": "0-7",
+      "date_time": "Sat 3 Oct \u00b7 18:00 SAST"
+    },
+    {
+      "match": "C\u00e1diz CF v Legan\u00e9s",
+      "market": "Over 2.5 @ 2.44",
+      "score": "4-0",
+      "date_time": "Sat 3 Oct \u00b7 18:30 SAST"
     }
   ]
 }
