@@ -4,26 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="origin-trial" content="A+I2guewPuXY8te0s+TgmyKKi5/dbZTIdaqCvrClHlr6FvitaEdRd/6o2jLKuO626kxAONWKRXTaRV/n1AliuQYAAAB8eyJvcmlnaW4iOiJodHRwczovL3d3dy5sb2N1c3RoYXJ2ZXN0LmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxODA2MzY0ODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 <meta name="google-adsense-account" content="ca-pub-2066193942477897">
-<script>
-/* ADSENSE_INTERACTION_GATE_2026_11_14 — load AdSense on first user
-   interaction only. Lighthouse never scrolls or clicks, so the script
-   never loads during the audit → mobile CLS stays below 0.05.
-   Real users trigger it on their first scroll/tap within milliseconds. */
-(function(){
-  function loadAds(){
-    if (window.__adsLoaded) return;
-    window.__adsLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2066193942477897';
-    s.crossOrigin = 'anonymous';
-    document.head.appendChild(s);
-  }
-  ['scroll','touchstart','mousemove','keydown'].forEach(function(evt){
-    window.addEventListener(evt, loadAds, {once:true, passive:true});
-  });
-})();
-</script>
+<!-- Standard AdSense async snippet – do not modify -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2066193942477897" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Locust Harvest — Digital Platforms, Technology &amp; Innovation</title>
 <meta name="description" content="Locust Harvest (Pty) Ltd is a technology and innovation company building digital platforms for real-world problems — home to NOVELTY — daily statistical sports picks — and the Plague2Profit philosophy.">
@@ -632,9 +614,11 @@ input[type="submit"] { text-align: center; justify-content: flex-start; align-it
 .p2p-socials a img[src*="novelty-icon"] { aspect-ratio: 1 / 1; }
 .p2p-socials a img[src*="google-play-badge"] { aspect-ratio: 180 / 53; }
 
-/* CLS_AD_RESERVE_2026_11_14 */
-#latest-results { min-height: 400px; }
-ins.adsbygoogle { display: block; min-height: 280px; }
+/* ===== COMPLIANT CLS FIX: RESERVE SPACE ===== */
+@media (max-width: 768px) {
+  #latest-results { min-height: 1400px; }
+  #tiers-grid { min-height: 1300px; }
+}
 
 </style>
 </head>
