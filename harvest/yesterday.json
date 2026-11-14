@@ -1,82 +1,88 @@
 {
   "winners": [
     {
-      "match": "New England Revolution v Inter Miami CF",
-      "market": "Over 2.5 @ 1.40",
+      "match": "Chapecoense v Mirassol",
+      "market": "Over 1.5 @ 1.20",
       "score": "1-2",
-      "date_time": "Mon 2 Nov \u00b7 02:00 SAST"
+      "date_time": "Wed 4 Nov \u00b7 00:30 SAST"
     },
     {
-      "match": "Cruz Azul v Le\u00f3n",
-      "market": "Over 2.5 @ 1.50",
-      "score": "2-1",
-      "date_time": "Mon 2 Nov \u00b7 03:10 SAST"
-    },
-    {
-      "match": "VPS Vaasa v HJK Helsinki",
-      "market": "Over 2.5 @ 1.40",
-      "score": "0-4",
-      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Atromitos Athens v Volos FC",
-      "market": "Home Win @ 1.70",
-      "score": "3-0",
-      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
-    },
-    {
-      "match": "FC Inter Turku v IF Gnistan",
-      "market": "Home Win @ 1.30",
-      "score": "4-3",
-      "date_time": "Mon 2 Nov \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Zag\u0142\u0119bie Lubin v Korona Kielce",
-      "market": "Under 3.5 @ 1.35",
+      "match": "Internacional v Coritiba",
+      "market": "Home Win @ 1.50",
       "score": "1-0",
-      "date_time": "Mon 2 Nov \u00b7 19:00 SAST"
+      "date_time": "Wed 4 Nov \u00b7 02:30 SAST"
     },
     {
-      "match": "Real Valladolid CF v Legan\u00e9s",
-      "market": "BTTS + Over 2.5 @ 2.20",
-      "score": "4-3",
-      "date_time": "Mon 2 Nov \u00b7 19:30 SAST"
+      "match": "AEK Athens v Real Madrid",
+      "market": "Away Win @ 1.20",
+      "score": "2-3",
+      "date_time": "Wed 4 Nov \u00b7 19:45 SAST"
     },
     {
-      "match": "\u00d6sters IF v Helsingborgs IF",
-      "market": "Home or Draw @ 1.40",
-      "score": "3-0",
-      "date_time": "Mon 2 Nov \u00b7 20:00 SAST"
-    },
-    {
-      "match": "Landskrona BoIS v \u00d6rebro SK",
-      "market": "Under 3.5 @ 1.50",
-      "score": "2-1",
-      "date_time": "Mon 2 Nov \u00b7 20:05 SAST"
-    },
-    {
-      "match": "Stade de Reims v Sochaux",
+      "match": "KV Kortrijk v KV Mechelen",
       "market": "Over 1.5 @ 1.20",
+      "score": "1-3",
+      "date_time": "Wed 4 Nov \u00b7 21:30 SAST"
+    },
+    {
+      "match": "Cardiff City v West Ham United",
+      "market": "Over 2.5 @ 1.36",
+      "score": "3-3",
+      "date_time": "Wed 4 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Oxford United v Reading",
+      "market": "Under 3.5 @ 1.40",
       "score": "2-0",
-      "date_time": "Mon 2 Nov \u00b7 21:45 SAST"
+      "date_time": "Wed 4 Nov \u00b7 21:45 SAST"
     },
     {
-      "match": "Atalanta BC v Parma",
-      "market": "Over 1.5 @ 1.20",
-      "score": "0-3",
-      "date_time": "Mon 2 Nov \u00b7 21:45 SAST"
+      "match": "PSV Eindhoven v Club Brugge",
+      "market": "Over 2.5 @ 1.33",
+      "score": "1-2",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
     },
     {
-      "match": "Mallorca v C\u00e1diz CF",
-      "market": "Under 3.5 @ 1.45",
+      "match": "Borussia Dortmund v Real Betis",
+      "market": "Over 2.5 @ 1.44",
       "score": "2-1",
-      "date_time": "Mon 2 Nov \u00b7 22:00 SAST"
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
     },
     {
-      "match": "Deportes Limache v Audax Italiano",
-      "market": "Over 1.5 @ 1.20",
-      "score": "2-0",
-      "date_time": "Mon 2 Nov \u00b7 23:00 SAST"
+      "match": "Viking FK v Sabah FK",
+      "market": "Over 2.5 @ 1.30",
+      "score": "4-1",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Slavia Praha v Arsenal",
+      "market": "Over 2.5 @ 1.76",
+      "score": "1-2",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "RB Leipzig v Manchester City",
+      "market": "Over 2.5 @ 1.30",
+      "score": "2-3",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Porto v Napoli",
+      "market": "BTTS + Over 2.5 @ 1.90",
+      "score": "4-1",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Bristol City v Wolverhampton Wanderers",
+      "market": "Over 1.5 @ 1.25",
+      "score": "1-2",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "RC Lens v Como",
+      "market": "Away or Draw @ 1.20",
+      "score": "1-9",
+      "date_time": "Wed 4 Nov \u00b7 22:00 SAST"
     }
   ]
 }
