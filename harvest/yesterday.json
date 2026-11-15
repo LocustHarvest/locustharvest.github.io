@@ -73,6 +73,12 @@
       "date_time": "Sat 14 Nov \u00b7 18:00 SAST"
     },
     {
+      "match": "Stade B\u00e9thunois v Nancy",
+      "market": "Match result - Nancy @ 1.16",
+      "score": "0-2",
+      "date_time": "Sat 14 Nov \u00b7 19:00 SAST"
+    },
+    {
       "match": "Norway v Wales",
       "market": "Under 4.5 @ 1.36",
       "score": "3-1",
@@ -81,6 +87,12 @@
     {
       "match": "Georgia v Hungary",
       "market": "Under 3.5 @ 1.21",
+      "score": "0-2",
+      "date_time": "Sat 14 Nov \u00b7 19:00 SAST"
+    },
+    {
+      "match": "Stade B\u00e9thunois v Nancy",
+      "market": "Match result - Away Win @ 1.22",
       "score": "0-2",
       "date_time": "Sat 14 Nov \u00b7 19:00 SAST"
     },
