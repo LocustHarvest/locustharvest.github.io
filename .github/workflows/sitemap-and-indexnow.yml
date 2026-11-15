@@ -49,4 +49,4 @@ jobs:
 
       - name: Ping IndexNow
         run: |
-          curl -sS -f "https://api.indexnow.org/indexnow?url=https://www.locustharvest.com/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}" || true
+          curl -sS -f "https://api.indexnow.org/indexnow?url=https://www.locustharvest.com/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}"
