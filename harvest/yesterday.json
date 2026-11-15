@@ -1,15 +1,39 @@
 {
   "winners": [
     {
+      "match": "Real Valladolid CF v CD Castell\u00f3n",
+      "market": "Under 2.5 @ 2.21",
+      "score": "0-1",
+      "date_time": "Sat 14 Nov \u00b7 15:00 SAST"
+    },
+    {
       "match": "Kosovo v Israel",
       "market": "Under 4.5 @ 1.15",
       "score": "0-0",
       "date_time": "Sat 14 Nov \u00b7 16:00 SAST"
     },
     {
+      "match": "Sheffield Wednesday v Plymouth Argyle",
+      "market": "Match result - Sheffield Wednesday @ 2.42",
+      "score": "3-0",
+      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
+    },
+    {
+      "match": "Vend\u00e9e Fontenay v Clermont",
+      "market": "Over 3.5 @ 1.91",
+      "score": "0-5",
+      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
+    },
+    {
       "match": "Wigan Athletic v Barnsley",
       "market": "BTTS + Over 2.5 @ 1.54",
       "score": "2-1",
+      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
+    },
+    {
+      "match": "Milton Keynes Dons v Burton Albion",
+      "market": "Match result - Home Win @ 1.53",
+      "score": "6-2",
       "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
     },
     {
@@ -34,6 +58,12 @@
       "match": "Port Vale v Accrington Stanley",
       "market": "Over 1.5 @ 1.28",
       "score": "4-2",
+      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
+    },
+    {
+      "match": "Vend\u00e9e Fontenay v Clermont",
+      "market": "Over 1.5 @ 1.35",
+      "score": "0-5",
       "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
     },
     {
@@ -77,6 +107,18 @@
       "market": "Home Over 0.5 @ 1.25",
       "score": "1-2",
       "date_time": "Sat 14 Nov \u00b7 22:00 SAST"
+    },
+    {
+      "match": "Mirassol v Atletico Mineiro",
+      "market": "Under 2.5 @ 2.04",
+      "score": "0-0",
+      "date_time": "Sat 14 Nov \u00b7 23:30 SAST"
+    },
+    {
+      "match": "Mirassol v Atletico Mineiro",
+      "market": "Under 3.5 @ 1.35",
+      "score": "0-0",
+      "date_time": "Sat 14 Nov \u00b7 23:30 SAST"
     }
   ]
 }
