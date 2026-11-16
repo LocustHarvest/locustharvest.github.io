@@ -591,33 +591,30 @@ document.getElementById('navLinks').classList.remove('open');
     return null;
   }
 
-  async function urlLooksLikeAfterPage(url) {
+  async function urlExists(url) {
     try {
-      var r = await fetch(url, { cache: 'no-store', redirect: 'follow' });
-      if (!r.ok) return false;
-      var html = await r.text();
-      if (html.length < 2000) return false;
-      if (!/Daily\s+Harvest/i.test(html) && !/NOVELTY\s+Daily/i.test(html)) return false;
-      var hasFullTime = /Full\s*time\s*:/i.test(html);
-      var hasResultSummary = /That one came in|Not to be this time|\bwon\b|\blost\b/i.test(html);
-      return hasFullTime && hasResultSummary;
+      var r = await fetch(url, { method: 'HEAD', cache: 'no-store', redirect: 'follow' });
+      return r.ok;
     } catch (e) { return false; }
   }
 
   async function findAfterUrl(data, settledPicks) {
+    // Priority 1: JSON explicitly provides an after URL
     if (data) {
       var keys = ['after_url', 'harvest_after_url', 'after_list_url', 'afterUrl'];
       for (var i = 0; i < keys.length; i++) {
         if (typeof data[keys[i]] === 'string' && data[keys[i]]) {
-          console.info('[Latest Results] after URL from JSON.' + keys[i] + ':', data[keys[i]]);
+          console.info('[Latest Results] after URL from JSON:', data[keys[i]]);
           return data[keys[i]];
         }
       }
     }
 
+    // Priority 2: date derived from the picks themselves
     var pickDate = dateFromPicks(settledPicks);
     if (pickDate) console.info('[Latest Results] date derived from picks:', pickDate);
 
+    // Priority 3: JSON date field
     var jsonDate = pickJsonDate(data);
     if (jsonDate) console.info('[Latest Results] date from JSON:', jsonDate);
 
@@ -627,6 +624,17 @@ document.getElementById('navLinks').classList.remove('open');
     var fallbacks = [sastDate(-1), sastDate(-2), sastDate(0)];
     fallbacks.forEach(function (d) { if (datesToTry.indexOf(d) === -1) datesToTry.push(d); });
 
+    // Priority 4: PRIMARY PATTERN — /harvest/{date}/results/
+    // Confirmed by cron output: "PUT harvest/2026-11-15/results/index.html"
+    for (var d1 = 0; d1 < datesToTry.length; d1++) {
+      var primaryUrl = '/harvest/' + datesToTry[d1] + '/results/';
+      if (await urlExists(primaryUrl)) {
+        console.info('[Latest Results] after URL (primary pattern):', primaryUrl);
+        return primaryUrl;
+      }
+    }
+
+    // Priority 5: scan the harvest index for date + results/after links
     var idxUrls = ['/harvest/index.html', '/harvest/'];
     for (var u = 0; u < idxUrls.length; u++) {
       try {
@@ -634,44 +642,41 @@ document.getElementById('navLinks').classList.remove('open');
         if (!r.ok) continue;
         var html = await r.text();
         var re = /href=["']([^"'#]+)["']/g;
-        var m, dateLinks = [];
+        var m, resultsLinks = [];
         while ((m = re.exec(html)) !== null) {
           var href = m[1];
           var hrefLower = href.toLowerCase();
           if (hrefLower.indexOf('before') !== -1) continue;
           for (var di = 0; di < datesToTry.length; di++) {
-            if (href.indexOf(datesToTry[di]) !== -1) { dateLinks.push(href); break; }
+            if (href.indexOf(datesToTry[di]) !== -1 &&
+                (hrefLower.indexOf('results') !== -1 || hrefLower.indexOf('after') !== -1)) {
+              resultsLinks.push(href);
+              break;
+            }
           }
         }
-        for (var j = 0; j < dateLinks.length; j++) {
-          if (dateLinks[j].toLowerCase().indexOf('after') !== -1) {
-            console.info('[Latest Results] after URL from index (after-labelled):', dateLinks[j]);
-            return dateLinks[j];
-          }
-        }
-        for (var k = 0; k < dateLinks.length; k++) {
-          if (await urlLooksLikeAfterPage(dateLinks[k])) {
-            console.info('[Latest Results] after URL from index (verified):', dateLinks[k]);
-            return dateLinks[k];
+        for (var j = 0; j < resultsLinks.length; j++) {
+          if (await urlExists(resultsLinks[j])) {
+            console.info('[Latest Results] after URL from index:', resultsLinks[j]);
+            return resultsLinks[j];
           }
         }
       } catch (e) {}
     }
 
-    var patterns = [
+    // Priority 6: alternate patterns (older-day shapes) — only if primary failed
+    var altPatterns = [
+      '/harvest/{d}/results/index.html',
       '/harvest/{d}-after.html',
       '/harvest/{d}.html',
-      '/harvest/{d}/index.html',
-      '/harvest/{d}/',
-      '/harvest/after/{d}.html',
-      '/harvest/after/{d}/index.html'
+      '/harvest/after/{d}/'
     ];
-    for (var d1 = 0; d1 < datesToTry.length; d1++) {
-      for (var p = 0; p < patterns.length; p++) {
-        var url = patterns[p].replace(/\{d\}/g, datesToTry[d1]);
-        if (await urlLooksLikeAfterPage(url)) {
-          console.info('[Latest Results] after URL from pattern:', url);
-          return url;
+    for (var d2 = 0; d2 < datesToTry.length; d2++) {
+      for (var p = 0; p < altPatterns.length; p++) {
+        var altUrl = altPatterns[p].replace(/\{d\}/g, datesToTry[d2]);
+        if (await urlExists(altUrl)) {
+          console.info('[Latest Results] after URL from fallback pattern:', altUrl);
+          return altUrl;
         }
       }
     }
@@ -853,6 +858,9 @@ document.getElementById('navLinks').classList.remove('open');
   });
 
   var afterListUrl = await findAfterUrl(data, settled);
+  if (afterListUrl) {
+    console.info('[Latest Results] all batches link to: ' + afterListUrl);
+  }
 
   var usable = Math.floor(settled.length / BATCH_SIZE) * BATCH_SIZE;
   var pool   = settled.slice(0, usable);
