@@ -57,7 +57,7 @@ jobs:
 
       - name: Submit changed harvest pages to IndexNow (non-fatal)
         env:
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_KEY: "24e68de1e9b6428a870d0711f7fb1e03"
         run: |
           if [ -z "$INDEXNOW_KEY" ]; then
             echo "INDEXNOW_KEY not configured — skipping IndexNow submission"
