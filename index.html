@@ -296,35 +296,35 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
 @media(max-width:768px){
   .novelty-main-btn{
     height:auto !important;
-    min-height:140px !important; /* Increased to fit stacked content */
+    min-height:140px !important;
     padding:12px 8px !important;
   }
   .google-content{
     display:flex !important;
-    flex-direction:column !important; /* Stack text and badge vertically */
-    align-items:center !important;    /* Centralise horizontally */
+    flex-direction:column !important;
+    align-items:center !important;
     justify-content:center !important;
-    gap:2px !important;               /* REDUCED FROM 10PX TO 2PX */
+    gap:2px !important;
     width:100% !important;
     padding:0 !important;
   }
   .google-content span{
-    font-size:1.05rem !important; /* RESTORED TO ORIGINAL SIZE */
+    font-size:1.05rem !important;
     line-height:1.2 !important;
     text-align:center !important;
     letter-spacing:normal !important;
-    white-space:nowrap !important; /* Force 1 line */
+    white-space:nowrap !important;
     flex:none !important;
     padding:0 !important;
     margin:0 !important;
   }
   .google-content span br{
-    display:none !important; /* Remove the line break */
+    display:none !important;
   }
   .google-content img{
-    transform: scale(1.5) translateY(8px) !important; /* 1.5x scale, lowered */
+    transform: scale(1.5) translateY(8px) !important;
     transform-origin: center center !important;
-    margin:0 auto !important; /* Centralise */
+    margin:0 auto !important;
     z-index:2 !important;
     flex:none !important;
   }
@@ -438,6 +438,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
 
 <section class="door" id="latest-results" style="padding: 2.5rem 2rem;">
   <h2 class="door-title" style="text-align:center; margin-bottom: 0.5rem;">Latest Results</h2>
+  <p style="text-align:center; color:var(--ash); font-size:.82rem; margin-bottom:1rem;">Every pick published as graded — wins and losses side by side.</p>
   <div id="tiers-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem; align-items:stretch; min-height: 400px;"></div>
 </section>
 
@@ -498,74 +499,150 @@ document.getElementById('navLinks').classList.remove('open');
 </script>
 
 <script>
-(function loadYesterdayTiers() {
+(function loadLatestResults() {
+  // ============================================================
+  // CONFIG — POOL_SIZE must be one of: 5, 10, 15, 20, 25, 30
+  // ============================================================
+  var POOL_SIZE  = 15;    // total after-results to include in the pool
+  var BATCH_SIZE = 5;     // matches per result block
+  var ROTATE_MS  = 14000; // rotation interval (ms)
+
   var API = 'https://www.locustharvest.com/harvest/yesterday.json?t=' + Math.floor(Date.now() / 900000);
   var grid = document.getElementById('tiers-grid');
   if (!grid) return;
-  function renderTierBlock(winners, tierIndex) {
+
+  // ---- Normalise a single pick's outcome: 'win' | 'loss' | 'unknown' ----
+  function outcomeOf(p) {
+    if (typeof p.won === 'boolean')    return p.won    ? 'win' : 'loss';
+    if (typeof p.win === 'boolean')    return p.win    ? 'win' : 'loss';
+    if (typeof p.is_win === 'boolean') return p.is_win ? 'win' : 'loss';
+    var s = String(p.status || p.result || p.outcome || p.grade || '').trim().toLowerCase();
+    if (s === 'won' || s === 'win' || s === 'w' || s === 'true'  || s === '1') return 'win';
+    if (s === 'lost'|| s === 'loss'|| s === 'l' || s === 'false' || s === '0') return 'loss';
+    if (typeof p.payout   === 'number') return p.payout   > 0 ? 'win' : 'loss';
+    if (typeof p.winnings === 'number') return p.winnings > 0 ? 'win' : 'loss';
+    return 'unknown';
+  }
+
+  // ---- Extract ALL after-results (wins AND losses), as-is, source order ----
+  // Tries the common full-results keys first, then falls back to combining
+  // data.winners + data.losers if those are the only fields present.
+  function extractAllResults(data) {
+    if (!data) return [];
+    var candidates = ['after', 'results', 'all_results', 'all', 'picks', 'selections', 'matches'];
+    for (var i = 0; i < candidates.length; i++) {
+      var arr = data[candidates[i]];
+      if (Array.isArray(arr) && arr.length) return arr.slice();
+    }
+    var w = Array.isArray(data.winners) ? data.winners.slice() : [];
+    var l = Array.isArray(data.losers)  ? data.losers.slice()  : [];
+    w.forEach(function (x) { if (outcomeOf(x) === 'unknown') x.won = true;  });
+    l.forEach(function (x) { if (outcomeOf(x) === 'unknown') x.won = false; });
+    if (w.length || l.length) {
+      if (!l.length && w.length) {
+        console.warn('[Latest Results] JSON only contains "winners" — no losses available to display. Add a full results array (e.g. "after" or "results") to yesterday.json to surface losses here.');
+      }
+      return w.concat(l);
+    }
+    return [];
+  }
+
+  function renderResultBlock(matches, blockIndex, wins, losses) {
     var col = document.createElement('div');
     col.className = 'advert-card';
     col.style.transform = 'none';
     col.style.justifyContent = 'flex-start';
     col.style.textAlign = 'left';
-    var blockTitles = ['Prime Selections', 'Top Tier Selections', 'Elite Selections'];
+
     var header = document.createElement('h3');
     header.className = 'advert-headline';
     header.style.fontSize = '1.2rem';
     header.style.marginBottom = '1rem';
     header.style.textAlign = 'center';
-    header.innerText = blockTitles[tierIndex] || 'Premium Selections';
+    var summary = '';
+    if (typeof wins === 'number' && typeof losses === 'number') {
+      summary = ' <span style="font-size:.72rem;color:var(--ash);letter-spacing:.05em;display:block;margin-top:.2rem;">' + wins + 'W &middot; ' + losses + 'L</span>';
+    }
+    header.innerHTML = 'Batch ' + (blockIndex + 1) + summary;
     col.appendChild(header);
+
     var list = document.createElement('div');
-    winners.forEach(function (p) {
-      var badge = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.3)';
-      var row = document.createElement('div');
-      row.style.cssText = 'padding: 1rem 1.2rem !important; font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;border-bottom:1px solid rgba(150,255,150,.1);';
-      var isMobile = window.innerWidth <= 768;
-      var teamDiv = '<div style="font-weight:600;color:var(--silver-bright); ' + (isMobile ? 'width:100%; margin-bottom:0.2rem;' : '') + '">' + (p.match || '—') + '</div>';
-      var badgeDiv = '<div><span style="' + badge + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">WON</span>' + (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>';
-      var oddsDiv = '<div style="color:var(--mist);font-size:.75rem;">' + (p.market || '') + '</div>';
-      var dateDiv = (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;text-align:right;">' + p.date_time + '</div>' : '');
-      if (isMobile) {
-        row.innerHTML = '<div class="tier-shimmer"></div><div style="display:flex; flex-direction:column; align-items:flex-start; width:100%;">' + teamDiv + badgeDiv + '</div><div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-top:0.3rem;">' + oddsDiv + dateDiv + '</div>';
+    matches.forEach(function (p) {
+      var outcome = outcomeOf(p);
+      var badgeStyle, badgeText;
+      if (outcome === 'win') {
+        badgeStyle = 'background:rgba(62,226,62,.15);color:#7bff5c;border:1px solid rgba(62,226,62,.35)';
+        badgeText  = 'WON';
+      } else if (outcome === 'loss') {
+        badgeStyle = 'background:rgba(226,62,62,.15);color:#ff6b6b;border:1px solid rgba(226,62,62,.35)';
+        badgeText  = 'LOST';
       } else {
-        row.innerHTML = '<div class="tier-shimmer"></div><div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem;">' + teamDiv + badgeDiv + '</div><div style="display:flex; justify-content:space-between; align-items:baseline; gap:.5rem; margin-top:.2rem;">' + oddsDiv + dateDiv + '</div>';
+        badgeStyle = 'background:rgba(150,150,150,.15);color:#b0b8be;border:1px solid rgba(150,150,150,.3)';
+        badgeText  = '&mdash;';
+      }
+      var row = document.createElement('div');
+      row.style.cssText = 'padding:1rem 1.2rem !important;font-size:.78rem;line-height:1.4;position:relative;overflow:hidden;border-bottom:1px solid rgba(150,255,150,.1);';
+      var isMobile = window.innerWidth <= 768;
+      var teamDiv  = '<div style="font-weight:600;color:var(--silver-bright);' + (isMobile ? 'width:100%;margin-bottom:0.2rem;' : '') + '">' + (p.match || '&mdash;') + '</div>';
+      var badgeDiv = '<div><span style="' + badgeStyle + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">' + badgeText + '</span>' + (p.score ? ' <span style="color:var(--ash);font-size:.75rem;">' + p.score + '</span>' : '') + '</div>';
+      var oddsDiv  = '<div style="color:var(--mist);font-size:.75rem;">' + (p.market || '') + '</div>';
+      var dateDiv  = (p.date_time ? '<div style="color:var(--ash);font-size:.65rem;text-align:right;">' + p.date_time + '</div>' : '');
+      if (isMobile) {
+        row.innerHTML = '<div class="tier-shimmer"></div><div style="display:flex;flex-direction:column;align-items:flex-start;width:100%;">' + teamDiv + badgeDiv + '</div><div style="display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:0.3rem;">' + oddsDiv + dateDiv + '</div>';
+      } else {
+        row.innerHTML = '<div class="tier-shimmer"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;">' + teamDiv + badgeDiv + '</div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;margin-top:.2rem;">' + oddsDiv + dateDiv + '</div>';
       }
       list.appendChild(row);
     });
     col.appendChild(list);
     return col;
   }
+
   function renderAdvertCard(variant) {
     var tz = 'UTC';
-    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; } catch(e) {}
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; } catch (e) {}
     var price = '$12';
     if (tz.includes('Johannesburg')) price = 'R199';
-    else if (tz.includes('London')) price = '£9';
+    else if (tz.includes('London'))   price = '£9';
     else if (tz.startsWith('Europe/')) price = '€11';
     var configs = {
-      offer: { headline: 'Driven by Data.', body: 'Deep market analysis and top-tier statistical selections are generated daily by our proprietary engine. We scan dozens of leagues and thousands of data points to find the sharpest edges.', cta: 'View Today\'s Picks →', href: 'https://app.novelty.locustharvest.com/login' },
-      proof: { headline: 'The Truth is on the Board.', body: 'We aren\'t afraid to show you the losses right next to the wins. Every selection is graded against the official scoreboard and published instantly. Total transparency and absolute proof of our performance.', cta: 'See The Results →', href: 'https://www.locustharvest.com/harvest/' },
-      access: { headline: 'Your All-Access Pass.', body: 'Step inside the vault and unlock our highly guarded daily selections. You get full, unrestricted access to the exclusive picks our proprietary engine generates every single day.', cta: 'Subscribe — ' + price + ' / MONTH →', href: 'https://app.novelty.locustharvest.com/register' }
+      offer:  { headline: 'Driven by Data.',            body: 'Deep market analysis and top-tier statistical selections are generated daily by our proprietary engine. We scan dozens of leagues and thousands of data points to find the sharpest edges.', cta: 'View Today\'s Picks →', href: 'https://app.novelty.locustharvest.com/login' },
+      proof:  { headline: 'The Truth is on the Board.', body: 'We aren\'t afraid to show you the losses right next to the wins. Every selection is graded against the official scoreboard and published instantly. Total transparency and absolute proof of our performance.', cta: 'See The Results →', href: 'https://www.locustharvest.com/harvest/' },
+      access: { headline: 'Your All-Access Pass.',      body: 'Step inside the vault and unlock our highly guarded daily selections. You get full, unrestricted access to the exclusive picks our proprietary engine generates every single day.', cta: 'Subscribe — ' + price + ' / MONTH →', href: 'https://app.novelty.locustharvest.com/register' }
     };
     var v = configs[variant];
     var col = document.createElement('div');
     col.className = 'advert-card';
-    col.innerHTML = '<div style="display:flex; flex-direction:column; height:100%; width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0; margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex: 1; display: flex; align-items: center; justify-content: center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="display:flex; justify-content:center; width:100%; margin-top:auto;"><a href="' + v.href + '" rel="nofollow" class="advert-cta" style="margin-bottom:0; margin-top:0;">' + v.cta + '</a></div></div>';
+    col.innerHTML = '<div style="display:flex;flex-direction:column;height:100%;width:100%;"><div style="text-align:center;"><h3 class="advert-headline" style="margin-top:0;margin-bottom:2rem;">' + v.headline + '</h3></div><div style="flex:1;display:flex;align-items:center;justify-content:center;"><p class="advert-body" style="margin:0 0 1.5rem 0;">' + v.body + '</p></div><div style="display:flex;justify-content:center;width:100%;margin-top:auto;"><a href="' + v.href + '" rel="nofollow" class="advert-cta" style="margin-bottom:0;margin-top:0;">' + v.cta + '</a></div></div>';
     return col;
   }
+
   fetch(API)
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
-      var winners = (data && data.winners) ? data.winners : [];
-      var totalTiers = Math.floor(winners.length / 5);
-      var tiers = [];
-      for (var i = 0; i < totalTiers; i++) {
-        var chunk = winners.slice(i * 5, (i * 5) + 5);
-        tiers.push(renderTierBlock(chunk, i));
+      var all = extractAllResults(data);
+
+      // Clamp POOL_SIZE to one of the allowed values; default 15
+      var allowed  = [5, 10, 15, 20, 25, 30];
+      var poolSize = allowed.indexOf(POOL_SIZE) >= 0 ? POOL_SIZE : 15;
+
+      // Take the first N results — source order preserved ("as is")
+      var pool = all.slice(0, Math.min(poolSize, all.length));
+
+      // Strict 5-match batches — trim any remainder
+      var batchCount = Math.floor(pool.length / BATCH_SIZE);
+      var resultBlocks = [];
+      for (var i = 0; i < batchCount; i++) {
+        var chunk  = pool.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
+        var wins   = chunk.filter(function (x) { return outcomeOf(x) === 'win';  }).length;
+        var losses = chunk.filter(function (x) { return outcomeOf(x) === 'loss'; }).length;
+        resultBlocks.push(renderResultBlock(chunk, i, wins, losses));
       }
-      var adverts = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
-      var fullPool = tiers.concat(adverts);
+
+      // 3 adverts rotate alongside the result blocks
+      var adverts  = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
+      var fullPool = resultBlocks.concat(adverts);
+
       function renderGrid() {
         grid.innerHTML = '';
         for (var j = 0; j < 3; j++) {
@@ -573,12 +650,16 @@ document.getElementById('navLinks').classList.remove('open');
         }
       }
       renderGrid();
-      setInterval(function() { var first = fullPool.shift(); fullPool.push(first); renderGrid(); }, 14000);
+      setInterval(function () {
+        if (fullPool.length === 0) return;
+        fullPool.push(fullPool.shift());
+        renderGrid();
+      }, ROTATE_MS);
     })
     .catch(function (error) {
-      console.error("API failed, falling back to adverts.", error);
+      console.error('API failed, falling back to adverts.', error);
       var fallback = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
-      fallback.forEach(function(block) { grid.appendChild(block); });
+      fallback.forEach(function (block) { grid.appendChild(block); });
     });
 })();
 </script>
