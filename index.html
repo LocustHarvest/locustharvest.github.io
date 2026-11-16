@@ -438,7 +438,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
 
 <section class="door" id="latest-results" style="padding: 2.5rem 2rem;">
   <h2 class="door-title" style="text-align:center; margin-bottom: 0.5rem;">Latest Results</h2>
-  <p style="text-align:center; color:var(--ash); font-size:.82rem; margin-bottom:1rem;">Every pick published as graded — wins and losses side by side.</p>
+  <p id="results-subtitle" style="text-align:center; color:var(--ash); font-size:.82rem; margin-bottom:1rem;">Loading settled results…</p>
   <div id="tiers-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem; align-items:stretch; min-height: 400px;"></div>
 </section>
 
@@ -500,33 +500,33 @@ document.getElementById('navLinks').classList.remove('open');
 
 <script>
 (function loadLatestResults() {
-  // ============================================================
-  // CONFIG — POOL_SIZE must be one of: 5, 10, 15, 20, 25, 30
-  // ============================================================
-  var POOL_SIZE  = 15;    // total after-results to include in the pool
-  var BATCH_SIZE = 5;     // matches per result block
-  var ROTATE_MS  = 14000; // rotation interval (ms)
+  var BATCH_SIZE = 5;
+  var ROTATE_MS  = 14000;
+
+  // After-list URL pattern. Change '{date}' if your day pages use a
+  // different filename (e.g. '/harvest/2026-11-14/index.html').
+  var AFTER_LIST_PATTERN  = '/harvest/{date}.html';
+  var AFTER_LIST_FALLBACK = '/harvest/';
 
   var API = 'https://www.locustharvest.com/harvest/yesterday.json?t=' + Math.floor(Date.now() / 900000);
   var grid = document.getElementById('tiers-grid');
+  var sub  = document.getElementById('results-subtitle');
   if (!grid) return;
 
-  // ---- Normalise a single pick's outcome: 'win' | 'loss' | 'unknown' ----
+  // Normalise a single pick's outcome: 'win' | 'loss' | 'unknown'
   function outcomeOf(p) {
     if (typeof p.won === 'boolean')    return p.won    ? 'win' : 'loss';
     if (typeof p.win === 'boolean')    return p.win    ? 'win' : 'loss';
     if (typeof p.is_win === 'boolean') return p.is_win ? 'win' : 'loss';
     var s = String(p.status || p.result || p.outcome || p.grade || '').trim().toLowerCase();
-    if (s === 'won' || s === 'win' || s === 'w' || s === 'true'  || s === '1') return 'win';
-    if (s === 'lost'|| s === 'loss'|| s === 'l' || s === 'false' || s === '0') return 'loss';
+    if (s === 'won' || s === 'win'  || s === 'w' || s === 'true'  || s === '1') return 'win';
+    if (s === 'lost'|| s === 'loss' || s === 'l' || s === 'false' || s === '0') return 'loss';
     if (typeof p.payout   === 'number') return p.payout   > 0 ? 'win' : 'loss';
     if (typeof p.winnings === 'number') return p.winnings > 0 ? 'win' : 'loss';
     return 'unknown';
   }
 
-  // ---- Extract ALL after-results (wins AND losses), as-is, source order ----
-  // Tries the common full-results keys first, then falls back to combining
-  // data.winners + data.losers if those are the only fields present.
+  // Extract ALL after-results (wins AND losses), source order preserved
   function extractAllResults(data) {
     if (!data) return [];
     var candidates = ['after', 'results', 'all_results', 'all', 'picks', 'selections', 'matches'];
@@ -540,31 +540,47 @@ document.getElementById('navLinks').classList.remove('open');
     l.forEach(function (x) { if (outcomeOf(x) === 'unknown') x.won = false; });
     if (w.length || l.length) {
       if (!l.length && w.length) {
-        console.warn('[Latest Results] JSON only contains "winners" — no losses available to display. Add a full results array (e.g. "after" or "results") to yesterday.json to surface losses here.');
+        console.warn('[Latest Results] yesterday.json contains only "winners" — no losses available. The batch tally will read all wins until the JSON carries a full results array (e.g. "after", "results", "all_results") or a "losers" array.');
       }
       return w.concat(l);
     }
     return [];
   }
 
-  function renderResultBlock(matches, blockIndex, wins, losses) {
-    var col = document.createElement('div');
-    col.className = 'advert-card';
-    col.style.transform = 'none';
-    col.style.justifyContent = 'flex-start';
-    col.style.textAlign = 'left';
+  function resolveAfterListUrl(data) {
+    if (data) {
+      if (typeof data.harvest_url === 'string' && data.harvest_url) return data.harvest_url;
+      if (typeof data.after_url   === 'string' && data.after_url)   return data.after_url;
+      if (typeof data.url         === 'string' && data.url)         return data.url;
+      var d = data.date || data.publish_date || data.published || data.for_date;
+      if (typeof d === 'string') {
+        var m = d.match(/\d{4}-\d{2}-\d{2}/);
+        if (m) return AFTER_LIST_PATTERN.replace('{date}', m[0]);
+      }
+    }
+    return AFTER_LIST_FALLBACK;
+  }
+
+  function renderResultBlock(matches, blockIndex, wins, losses, href) {
+    var a = document.createElement('a');
+    a.className = 'advert-card';
+    a.href = href;
+    a.style.textDecoration = 'none';
+    a.style.color = 'inherit';
+    a.style.cursor = 'pointer';
+    a.style.transform = 'none';
+    a.style.justifyContent = 'flex-start';
+    a.style.textAlign = 'left';
 
     var header = document.createElement('h3');
     header.className = 'advert-headline';
     header.style.fontSize = '1.2rem';
     header.style.marginBottom = '1rem';
     header.style.textAlign = 'center';
-    var summary = '';
-    if (typeof wins === 'number' && typeof losses === 'number') {
-      summary = ' <span style="font-size:.72rem;color:var(--ash);letter-spacing:.05em;display:block;margin-top:.2rem;">' + wins + 'W &middot; ' + losses + 'L</span>';
-    }
-    header.innerHTML = 'Batch ' + (blockIndex + 1) + summary;
-    col.appendChild(header);
+    header.innerHTML = 'Batch ' + (blockIndex + 1) +
+      ' <span style="font-size:.72rem;color:var(--ash);letter-spacing:.05em;display:block;margin-top:.2rem;">' +
+      wins + 'W &middot; ' + losses + 'L</span>';
+    a.appendChild(header);
 
     var list = document.createElement('div');
     matches.forEach(function (p) {
@@ -594,8 +610,14 @@ document.getElementById('navLinks').classList.remove('open');
       }
       list.appendChild(row);
     });
-    col.appendChild(list);
-    return col;
+    a.appendChild(list);
+
+    var hint = document.createElement('div');
+    hint.style.cssText = 'margin-top:.75rem;font-size:.7rem;color:var(--ash);text-align:center;letter-spacing:.05em;';
+    hint.textContent = 'View full after-list →';
+    a.appendChild(hint);
+
+    return a;
   }
 
   function renderAdvertCard(variant) {
@@ -620,26 +642,46 @@ document.getElementById('navLinks').classList.remove('open');
   fetch(API)
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
+      var afterListUrl = resolveAfterListUrl(data);
       var all = extractAllResults(data);
 
-      // Clamp POOL_SIZE to one of the allowed values; default 15
-      var allowed  = [5, 10, 15, 20, 25, 30];
-      var poolSize = allowed.indexOf(POOL_SIZE) >= 0 ? POOL_SIZE : 15;
+      // Only settled picks — pending / void / unknown are excluded
+      var settled = all.filter(function (p) {
+        var o = outcomeOf(p);
+        return o === 'win' || o === 'loss';
+      });
 
-      // Take the first N results — source order preserved ("as is")
-      var pool = all.slice(0, Math.min(poolSize, all.length));
+      // Strictly 5 per block. No partial batches. Floor to multiple of 5.
+      var usable = Math.floor(settled.length / BATCH_SIZE) * BATCH_SIZE;
+      var pool   = settled.slice(0, usable);
 
-      // Strict 5-match batches — trim any remainder
-      var batchCount = Math.floor(pool.length / BATCH_SIZE);
+      if (settled.length > usable) {
+        console.info('[Latest Results] ' + (settled.length - usable) +
+          ' settled pick(s) not shown — batches are strictly ' + BATCH_SIZE +
+          ' per block. Settled total: ' + settled.length +
+          ', shown: ' + usable + '.');
+      }
+
       var resultBlocks = [];
-      for (var i = 0; i < batchCount; i++) {
+      var totalW = 0, totalL = 0;
+      for (var i = 0; i < pool.length / BATCH_SIZE; i++) {
         var chunk  = pool.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
         var wins   = chunk.filter(function (x) { return outcomeOf(x) === 'win';  }).length;
         var losses = chunk.filter(function (x) { return outcomeOf(x) === 'loss'; }).length;
-        resultBlocks.push(renderResultBlock(chunk, i, wins, losses));
+        totalW += wins;
+        totalL += losses;
+        resultBlocks.push(renderResultBlock(chunk, i, wins, losses, afterListUrl));
       }
 
-      // 3 adverts rotate alongside the result blocks
+      if (sub) {
+        if (pool.length > 0) {
+          sub.textContent = pool.length + ' settled picks shown — ' +
+            totalW + ' won · ' + totalL + ' lost';
+        } else {
+          sub.textContent = 'No settled picks available yet.';
+        }
+      }
+
       var adverts  = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
       var fullPool = resultBlocks.concat(adverts);
 
@@ -658,6 +700,7 @@ document.getElementById('navLinks').classList.remove('open');
     })
     .catch(function (error) {
       console.error('API failed, falling back to adverts.', error);
+      if (sub) sub.textContent = 'Results temporarily unavailable.';
       var fallback = [renderAdvertCard('offer'), renderAdvertCard('proof'), renderAdvertCard('access')];
       fallback.forEach(function (block) { grid.appendChild(block); });
     });
