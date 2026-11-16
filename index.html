@@ -368,6 +368,63 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
   }
 }
 */
+
+/* =====================================================================
+   BRAND_SOLID_SOCIALS_2026_11_16
+   Mobile: solid brand fill at rest.
+   Desktop: solid brand fill + glow on hover.
+   Layered over MOBILE_SOCIAL_PERSISTENT_GLOW — does not remove it.
+   ===================================================================== */
+
+.p2p-socials a {
+  border-radius: 4px;
+  transition: background .25s, border-color .25s, color .25s,
+              transform .25s, box-shadow .25s;
+}
+
+/* ---- Mobile: solid brand fill at rest ---- */
+@media(max-width:768px){
+  .p2p-socials a { color:#ffffff; }
+
+  .p2p-socials a[aria-label="YouTube"]      { background:#ff0000; border-color:#ff0000; }
+  .p2p-socials a[aria-label="Google Play"]  { background:#000000; border-color:#000000; }
+  .p2p-socials a[aria-label="Telegram"]     { background:#229ed9; border-color:#229ed9; }
+  .p2p-socials a[aria-label="WhatsApp"]     { background:#25d366; border-color:#25d366; }
+  .p2p-socials a[aria-label="Instagram"]    { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color:#cc2366; }
+  .p2p-socials a[aria-label="Bluesky"]      { background:#1185fe; border-color:#1185fe; }
+  .p2p-socials a[aria-label="Facebook"]     { background:#1877f2; border-color:#1877f2; }
+  .p2p-socials a[aria-label="Rumble"]       { background:#85c742; border-color:#85c742; }
+  .p2p-socials a[aria-label="X"]            { background:#000000; border-color:#000000; }
+  .p2p-socials a[aria-label="NOVELTY"]      { background:#3ee23e; border-color:#3ee23e; color:#04140a; }
+
+  .p2p-socials a[aria-label="Google Play"] span { color:#ffffff; }
+  .p2p-socials a { box-shadow: 0 0 10px rgba(255,255,255,0.12); }
+  .p2p-socials a:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(255,255,255,0.35);
+  }
+}
+
+/* ---- Desktop: solid brand fill on hover ---- */
+@media(min-width:769px){
+  .p2p-socials a:hover { color:#ffffff; }
+
+  .p2p-socials a[aria-label="YouTube"]:hover     { background:#ff0000; border-color:#ff0000; box-shadow:0 0 14px rgba(255,0,0,.45); }
+  .p2p-socials a[aria-label="Google Play"]:hover { background:#000000; border-color:#000000; box-shadow:0 0 14px rgba(255,255,255,.25); }
+  .p2p-socials a[aria-label="Telegram"]:hover    { background:#229ed9; border-color:#229ed9; box-shadow:0 0 14px rgba(34,158,217,.45); }
+  .p2p-socials a[aria-label="WhatsApp"]:hover    { background:#25d366; border-color:#25d366; box-shadow:0 0 14px rgba(37,211,102,.45); }
+  .p2p-socials a[aria-label="Instagram"]:hover   { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color:#cc2366; box-shadow:0 0 14px rgba(225,48,108,.45); }
+  .p2p-socials a[aria-label="Bluesky"]:hover     { background:#1185fe; border-color:#1185fe; box-shadow:0 0 14px rgba(17,133,254,.45); }
+  .p2p-socials a[aria-label="Facebook"]:hover    { background:#1877f2; border-color:#1877f2; box-shadow:0 0 14px rgba(24,119,242,.45); }
+  .p2p-socials a[aria-label="Rumble"]:hover      { background:#85c742; border-color:#85c742; box-shadow:0 0 14px rgba(133,199,66,.45); }
+  .p2p-socials a[aria-label="X"]:hover           { background:#000000; border-color:#000000; box-shadow:0 0 14px rgba(255,255,255,.25); }
+  .p2p-socials a[aria-label="NOVELTY"]:hover     { background:#3ee23e; border-color:#3ee23e; color:#04140a; box-shadow:0 0 14px rgba(62,226,62,.5); }
+
+  .p2p-socials a:hover { transform: translateY(-2px); }
+}
+
+.p2p-socials svg { width:22px; height:22px; }
+.p2p-socials a span { font-weight:600; }
 </style>
 </head>
 <body>
@@ -599,7 +656,6 @@ document.getElementById('navLinks').classList.remove('open');
   }
 
   async function findAfterUrl(data, settledPicks) {
-    // Priority 1: JSON explicitly provides an after URL
     if (data) {
       var keys = ['after_url', 'harvest_after_url', 'after_list_url', 'afterUrl'];
       for (var i = 0; i < keys.length; i++) {
@@ -610,11 +666,9 @@ document.getElementById('navLinks').classList.remove('open');
       }
     }
 
-    // Priority 2: date derived from the picks themselves
     var pickDate = dateFromPicks(settledPicks);
     if (pickDate) console.info('[Latest Results] date derived from picks:', pickDate);
 
-    // Priority 3: JSON date field
     var jsonDate = pickJsonDate(data);
     if (jsonDate) console.info('[Latest Results] date from JSON:', jsonDate);
 
@@ -624,8 +678,6 @@ document.getElementById('navLinks').classList.remove('open');
     var fallbacks = [sastDate(-1), sastDate(-2), sastDate(0)];
     fallbacks.forEach(function (d) { if (datesToTry.indexOf(d) === -1) datesToTry.push(d); });
 
-    // Priority 4: PRIMARY PATTERN — /harvest/{date}/results/
-    // Confirmed by cron output: "PUT harvest/2026-11-15/results/index.html"
     for (var d1 = 0; d1 < datesToTry.length; d1++) {
       var primaryUrl = '/harvest/' + datesToTry[d1] + '/results/';
       if (await urlExists(primaryUrl)) {
@@ -634,7 +686,6 @@ document.getElementById('navLinks').classList.remove('open');
       }
     }
 
-    // Priority 5: scan the harvest index for date + results/after links
     var idxUrls = ['/harvest/index.html', '/harvest/'];
     for (var u = 0; u < idxUrls.length; u++) {
       try {
@@ -664,7 +715,6 @@ document.getElementById('navLinks').classList.remove('open');
       } catch (e) {}
     }
 
-    // Priority 6: alternate patterns (older-day shapes) — only if primary failed
     var altPatterns = [
       '/harvest/{d}/results/index.html',
       '/harvest/{d}-after.html',
