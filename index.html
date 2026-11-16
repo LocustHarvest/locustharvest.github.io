@@ -499,24 +499,6 @@ document.getElementById('navLinks').classList.remove('open');
 </script>
 
 <script>
-(function () {
-  var styleEl = document.createElement('style');
-  styleEl.id = 'lh-batch-overrides';
-  styleEl.textContent = [
-    '#tiers-grid .lh-batch .lh-batch-row{padding:1rem 1.2rem !important;border-bottom:1px solid rgba(150,255,150,.1) !important;position:relative;overflow:hidden;box-sizing:border-box !important}',
-    '@media(max-width:768px){#tiers-grid .lh-batch .lh-batch-row{padding:0.75rem 1rem !important}}',
-    '#tiers-grid .lh-batch .lh-line{display:flex !important;flex-wrap:wrap !important;gap:.3rem .5rem !important;align-items:baseline !important;width:100% !important;justify-content:flex-start !important}',
-    '#tiers-grid .lh-batch .lh-line-2{margin-top:.4rem !important}',
-    '#tiers-grid .lh-batch .lh-match{font-weight:600 !important;color:var(--silver-bright) !important;flex:1 1 auto !important;min-width:0 !important;overflow-wrap:anywhere !important;white-space:normal !important;font-size:.8rem !important;line-height:1.35 !important}',
-    '#tiers-grid .lh-batch .lh-badge-wrap{flex:0 0 auto !important;white-space:nowrap !important}',
-    '#tiers-grid .lh-batch .lh-market{color:var(--mist) !important;flex:1 1 auto !important;min-width:0 !important;overflow-wrap:anywhere !important;white-space:normal !important;font-size:.72rem !important;line-height:1.35 !important}',
-    '#tiers-grid .lh-batch .lh-date{color:var(--ash) !important;flex:0 0 auto !important;margin-left:auto !important;white-space:nowrap !important;font-size:.65rem !important}'
-  ].join('\n');
-  document.head.appendChild(styleEl);
-})();
-</script>
-
-<script>
 (async function loadLatestResults() {
   var BATCH_SIZE = 5;
   var ROTATE_MS  = 14000;
@@ -581,107 +563,66 @@ document.getElementById('navLinks').classList.remove('open');
     return null;
   }
 
-  function checkUrl(url) {
-    return new Promise(function (resolve) {
-      var done = false;
-      var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
-      var timer = setTimeout(function () {
-        if (done) return; done = true;
-        if (controller) { try { controller.abort(); } catch (e) {} }
-        resolve(null);
-      }, 2500);
-      var opts = { method: 'HEAD', cache: 'no-store' };
-      if (controller) opts.signal = controller.signal;
-      fetch(url, opts).then(function (r) {
-        if (done) return; done = true; clearTimeout(timer);
-        resolve(r.ok ? url : null);
-      }).catch(function () {
-        if (done) return; done = true; clearTimeout(timer);
-        resolve(null);
-      });
-    });
+  async function urlIsRealHarvestPage(url) {
+    try {
+      var r = await fetch(url, { cache: 'no-store', redirect: 'follow' });
+      if (!r.ok) return false;
+      var html = await r.text();
+      if (html.length < 2000) return false;
+      if (!/Daily\s+Harvest/i.test(html) && !/NOVELTY\s+Daily/i.test(html)) return false;
+      return true;
+    } catch (e) { return false; }
   }
 
-  function findFirst(candidates) {
-    return Promise.all(candidates.map(function (c) { return checkUrl(c); }))
-      .then(function (results) {
-        for (var i = 0; i < results.length; i++) {
-          if (results[i]) return results[i];
-        }
-        return null;
-      });
-  }
+  async function findAfterUrl(data) {
+    // 1. Check JSON-provided URL fields first — trust these as-is
+    if (data) {
+      var keys = ['after_url', 'harvest_after_url', 'after_list_url'];
+      for (var i = 0; i < keys.length; i++) {
+        if (typeof data[keys[i]] === 'string' && data[keys[i]]) return data[keys[i]];
+      }
+    }
 
-  async function findFromIndex(date) {
+    var date = pickDate(data) || sastDate(-1);
+
+    // 2. Scan the harvest index for links with the date — prefer "after" URLs
     var idxUrls = ['/harvest/index.html', '/harvest/'];
     for (var u = 0; u < idxUrls.length; u++) {
       try {
         var r = await fetch(idxUrls[u], { cache: 'no-store' });
         if (!r.ok) continue;
         var html = await r.text();
-        var re = /href="([^"]+)"/g, m;
+        var re = /href=["']([^"'#]+)["']/g;
+        var m;
+        var dateLinks = [];
         while ((m = re.exec(html)) !== null) {
           var href = m[1];
-          if (href.indexOf('harvest') !== -1 && href.indexOf(date) !== -1) return href;
+          if (href.indexOf(date) !== -1) dateLinks.push(href);
         }
+        for (var j = 0; j < dateLinks.length; j++) {
+          if (dateLinks[j].toLowerCase().indexOf('after') !== -1) return dateLinks[j];
+        }
+        if (dateLinks.length > 0) return dateLinks[0];
       } catch (e) {}
     }
-    return null;
-  }
 
-  async function resolveAfterListUrl(data) {
-    var candidates = [];
-    if (data) {
-      ['harvest_url', 'after_url', 'url'].forEach(function (k) {
-        if (typeof data[k] === 'string' && data[k]) candidates.push(data[k]);
-      });
-    }
-    var dates = [];
-    var jd = pickDate(data);
-    if (jd) dates.push(jd);
-    [-1, -2].forEach(function (off) {
-      var d = sastDate(off);
-      if (dates.indexOf(d) === -1) dates.push(d);
-    });
+    // 3. Try common patterns — after-flavoured first
+    var dates = [date];
+    var altDate = sastDate(-2);
+    if (altDate !== date) dates.push(altDate);
     var patterns = [
-      '/harvest/{date}.html',
-      '/harvest/{date}/index.html',
-      '/harvest/{date}/',
-      '/harvest/daily-{date}.html',
-      '/harvest/daily-harvest-{date}.html'
+      '/harvest/{d}-after.html',
+      '/harvest/{d}.html#after',
+      '/harvest/{d}.html',
+      '/harvest/{d}/index.html',
+      '/harvest/{d}/'
     ];
-    for (var d = 0; d < dates.length; d++) {
-      for (var p = 0; p < patterns.length; p++) {
-        candidates.push(patterns[p].replace(/\{date\}/g, dates[d]));
+    for (var di = 0; di < dates.length; di++) {
+      for (var pi = 0; pi < patterns.length; pi++) {
+        var url = patterns[pi].replace(/\{d\}/g, dates[di]);
+        if (await urlIsRealHarvestPage(url)) return url;
       }
     }
-
-    var cacheKey = 'lh_after_url';
-    try {
-      var cached = sessionStorage.getItem(cacheKey);
-      if (cached) {
-        var ok = await checkUrl(cached);
-        if (ok) { console.info('[Latest Results] batch link (cached) →', cached); return cached; }
-      }
-    } catch (e) {}
-
-    var found = await findFirst(candidates);
-    if (found) {
-      try { sessionStorage.setItem(cacheKey, found); } catch (e) {}
-      console.info('[Latest Results] batch link →', found);
-      return found;
-    }
-
-    for (var i = 0; i < dates.length; i++) {
-      var fromIdx = await findFromIndex(dates[i]);
-      if (fromIdx) {
-        try { sessionStorage.setItem(cacheKey, fromIdx); } catch (e) {}
-        console.info('[Latest Results] batch link (from index) →', fromIdx);
-        return fromIdx;
-      }
-    }
-
-    console.warn('[Latest Results] no valid after-list URL found. Blocks will not be clickable. Open the Network tab to see the HEAD probes; then tell me the real filename pattern in /harvest/.');
     return null;
   }
 
@@ -696,22 +637,22 @@ document.getElementById('navLinks').classList.remove('open');
     } else {
       a.style.cursor = 'default';
     }
-    a.style.transform = 'none';
-    a.style.justifyContent = 'flex-start';
-    a.style.textAlign = 'left';
+    a.style.setProperty('transform', 'none', 'important');
+    a.style.setProperty('justify-content', 'flex-start', 'important');
+    a.style.setProperty('text-align', 'left', 'important');
 
     var header = document.createElement('h3');
     header.className = 'advert-headline';
-    header.style.fontSize = '1.2rem';
-    header.style.marginBottom = '1rem';
-    header.style.textAlign = 'center';
+    header.style.setProperty('font-size', '1.2rem', 'important');
+    header.style.setProperty('margin-bottom', '1rem', 'important');
+    header.style.setProperty('text-align', 'center', 'important');
     header.innerHTML = 'Batch ' + (blockIndex + 1) +
       ' <span style="font-size:.72rem;color:var(--ash);letter-spacing:.05em;display:block;margin-top:.2rem;">' +
       wins + 'W &middot; ' + losses + 'L</span>';
     a.appendChild(header);
 
     var list = document.createElement('div');
-    list.style.width = '100%';
+    list.style.setProperty('width', '100%', 'important');
 
     matches.forEach(function (p) {
       var outcome = outcomeOf(p);
@@ -726,23 +667,93 @@ document.getElementById('navLinks').classList.remove('open');
         badgeStyle = 'background:rgba(150,150,150,.15);color:#b0b8be;border:1px solid rgba(150,150,150,.3)';
         badgeText  = '&mdash;';
       }
+
       var row = document.createElement('div');
       row.className = 'lh-batch-row';
-      row.innerHTML =
-        '<div class="tier-shimmer"></div>' +
-        '<div class="lh-line lh-line-1">' +
-          '<div class="lh-match">' + (p.match || '&mdash;') + '</div>' +
-          '<div class="lh-badge-wrap">' +
-            '<span style="' + badgeStyle + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">' + badgeText + '</span>' +
-            (p.score ? ' <span style="color:var(--ash);font-size:.72rem;">' + p.score + '</span>' : '') +
-          '</div>' +
-        '</div>' +
-        '<div class="lh-line lh-line-2">' +
-          '<div class="lh-market">' + (p.market || '') + '</div>' +
-          (p.date_time ? '<div class="lh-date">' + p.date_time + '</div>' : '') +
-        '</div>';
+      row.style.setProperty('padding', '1rem 1.2rem', 'important');
+      row.style.setProperty('border-bottom', '1px solid rgba(150,255,150,.1)', 'important');
+      row.style.setProperty('position', 'relative', 'important');
+      row.style.setProperty('overflow', 'hidden', 'important');
+      row.style.setProperty('box-sizing', 'border-box', 'important');
+
+      // Line 1: match + badge — locked to row, badge cannot drop
+      var line1 = document.createElement('div');
+      line1.className = 'lh-line lh-line-1';
+      line1.style.setProperty('display', 'flex', 'important');
+      line1.style.setProperty('flex-direction', 'row', 'important');
+      line1.style.setProperty('flex-wrap', 'nowrap', 'important');
+      line1.style.setProperty('align-items', 'flex-start', 'important');
+      line1.style.setProperty('gap', '0.4rem', 'important');
+      line1.style.setProperty('width', '100%', 'important');
+
+      var matchEl = document.createElement('div');
+      matchEl.className = 'lh-match';
+      matchEl.style.setProperty('flex', '1 1 auto', 'important');
+      matchEl.style.setProperty('min-width', '0', 'important');
+      matchEl.style.setProperty('width', 'auto', 'important');
+      matchEl.style.setProperty('white-space', 'normal', 'important');
+      matchEl.style.setProperty('overflow-wrap', 'anywhere', 'important');
+      matchEl.style.setProperty('word-break', 'break-word', 'important');
+      matchEl.style.setProperty('font-weight', '600', 'important');
+      matchEl.style.setProperty('color', 'var(--silver-bright)', 'important');
+      matchEl.style.setProperty('font-size', '0.8rem', 'important');
+      matchEl.style.setProperty('line-height', '1.35', 'important');
+      matchEl.textContent = p.match || '—';
+
+      var badgeWrap = document.createElement('div');
+      badgeWrap.className = 'lh-badge-wrap';
+      badgeWrap.style.setProperty('flex', '0 0 auto', 'important');
+      badgeWrap.style.setProperty('width', 'auto', 'important');
+      badgeWrap.style.setProperty('align-self', 'flex-start', 'important');
+      badgeWrap.style.setProperty('white-space', 'nowrap', 'important');
+      badgeWrap.innerHTML =
+        '<span style="' + badgeStyle + ';padding:.15rem .5rem;border-radius:999px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600">' + badgeText + '</span>' +
+        (p.score ? ' <span style="color:var(--ash);font-size:.72rem;">' + p.score + '</span>' : '');
+
+      line1.appendChild(matchEl);
+      line1.appendChild(badgeWrap);
+
+      // Line 2: market + date
+      var line2 = document.createElement('div');
+      line2.className = 'lh-line lh-line-2';
+      line2.style.setProperty('display', 'flex', 'important');
+      line2.style.setProperty('flex-direction', 'row', 'important');
+      line2.style.setProperty('flex-wrap', 'wrap', 'important');
+      line2.style.setProperty('align-items', 'baseline', 'important');
+      line2.style.setProperty('gap', '0.3rem 0.5rem', 'important');
+      line2.style.setProperty('width', '100%', 'important');
+      line2.style.setProperty('margin-top', '0.4rem', 'important');
+
+      var marketEl = document.createElement('div');
+      marketEl.className = 'lh-market';
+      marketEl.style.setProperty('flex', '1 1 auto', 'important');
+      marketEl.style.setProperty('min-width', '0', 'important');
+      marketEl.style.setProperty('white-space', 'normal', 'important');
+      marketEl.style.setProperty('overflow-wrap', 'anywhere', 'important');
+      marketEl.style.setProperty('color', 'var(--mist)', 'important');
+      marketEl.style.setProperty('font-size', '0.72rem', 'important');
+      marketEl.style.setProperty('line-height', '1.35', 'important');
+      marketEl.textContent = p.market || '';
+
+      line2.appendChild(marketEl);
+
+      if (p.date_time) {
+        var dateEl = document.createElement('div');
+        dateEl.className = 'lh-date';
+        dateEl.style.setProperty('flex', '0 0 auto', 'important');
+        dateEl.style.setProperty('margin-left', 'auto', 'important');
+        dateEl.style.setProperty('white-space', 'nowrap', 'important');
+        dateEl.style.setProperty('color', 'var(--ash)', 'important');
+        dateEl.style.setProperty('font-size', '0.65rem', 'important');
+        dateEl.textContent = p.date_time;
+        line2.appendChild(dateEl);
+      }
+
+      row.appendChild(line1);
+      row.appendChild(line2);
       list.appendChild(row);
     });
+
     a.appendChild(list);
 
     if (href) {
@@ -785,7 +796,12 @@ document.getElementById('navLinks').classList.remove('open');
     return;
   }
 
-  var afterListUrl = await resolveAfterListUrl(data);
+  var afterListUrl = await findAfterUrl(data);
+  if (afterListUrl) {
+    console.info('[Latest Results] batch link → ' + afterListUrl);
+  } else {
+    console.warn('[Latest Results] no after-list URL found — blocks will not be clickable (avoids 404). Tell me the pattern.');
+  }
 
   var all = extractAllResults(data);
   var settled = all.filter(function (p) {
