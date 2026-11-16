@@ -1,124 +1,64 @@
 {
   "winners": [
     {
-      "match": "Real Valladolid CF v CD Castell\u00f3n",
-      "market": "Under 2.5 @ 2.21",
+      "match": "Quer\u00e9taro v Monterrey",
+      "market": "Home Under 1.5 @ 1.40",
       "score": "0-1",
-      "date_time": "Sat 14 Nov \u00b7 15:00 SAST"
+      "date_time": "Sun 15 Nov \u00b7 01:00 SAST"
     },
     {
-      "match": "Kosovo v Israel",
-      "market": "Under 4.5 @ 1.15",
-      "score": "0-0",
-      "date_time": "Sat 14 Nov \u00b7 16:00 SAST"
-    },
-    {
-      "match": "Sheffield Wednesday v Plymouth Argyle",
-      "market": "Match result - Sheffield Wednesday @ 2.42",
-      "score": "3-0",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Vend\u00e9e Fontenay v Clermont",
-      "market": "Over 3.5 @ 1.91",
-      "score": "0-5",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Wigan Athletic v Barnsley",
-      "market": "BTTS + Over 2.5 @ 1.54",
-      "score": "2-1",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Milton Keynes Dons v Burton Albion",
-      "market": "Match result - Home Win @ 1.53",
-      "score": "6-2",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Shrewsbury Town v Oldham Athletic",
-      "market": "Home Over 0.5 @ 1.23",
-      "score": "2-1",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Wimbledon v Blackpool",
-      "market": "Home Under 1.5 @ 1.55",
-      "score": "1-0",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Crewe Alexandra v Newport County",
-      "market": "Over 1.5 @ 1.25",
-      "score": "2-2",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Port Vale v Accrington Stanley",
-      "market": "Over 1.5 @ 1.28",
-      "score": "4-2",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "Vend\u00e9e Fontenay v Clermont",
-      "market": "Over 1.5 @ 1.35",
-      "score": "0-5",
-      "date_time": "Sat 14 Nov \u00b7 17:00 SAST"
-    },
-    {
-      "match": "IC Croix v Thaon",
-      "market": "Over 1.5 @ 1.23",
-      "score": "1-2",
-      "date_time": "Sat 14 Nov \u00b7 18:00 SAST"
-    },
-    {
-      "match": "Norway v Wales",
-      "market": "Under 4.5 @ 1.36",
-      "score": "3-1",
-      "date_time": "Sat 14 Nov \u00b7 19:00 SAST"
-    },
-    {
-      "match": "Georgia v Hungary",
-      "market": "Under 3.5 @ 1.21",
+      "match": "Paris 13 Atletico v Red Star",
+      "market": "BTTS \u2014 No @ 2.00",
       "score": "0-2",
-      "date_time": "Sat 14 Nov \u00b7 19:00 SAST"
+      "date_time": "Sun 15 Nov \u00b7 15:00 SAST"
     },
     {
-      "match": "Mallorca v C\u00f3rdoba",
-      "market": "BTTS \u2014 Yes @ 1.53",
-      "score": "3-3",
-      "date_time": "Sat 14 Nov \u00b7 19:30 SAST"
-    },
-    {
-      "match": "Juventude v Botafogo-SP",
-      "market": "Over 1.5 @ 1.27",
-      "score": "2-0",
-      "date_time": "Sat 14 Nov \u00b7 21:30 SAST"
-    },
-    {
-      "match": "Portugal v Denmark",
-      "market": "BTTS \u2014 Yes @ 1.54",
-      "score": "1-4",
-      "date_time": "Sat 14 Nov \u00b7 21:45 SAST"
-    },
-    {
-      "match": "Oviedo v Girona FC",
-      "market": "Home Over 0.5 @ 1.25",
+      "match": "GFA Rumilly Valli\u00e8res v Saint Etienne",
+      "market": "BTTS + Over 2.5 @ 1.85",
       "score": "1-2",
-      "date_time": "Sat 14 Nov \u00b7 22:00 SAST"
+      "date_time": "Sun 15 Nov \u00b7 16:00 SAST"
     },
     {
-      "match": "Mirassol v Atletico Mineiro",
-      "market": "Under 2.5 @ 2.04",
-      "score": "0-0",
-      "date_time": "Sat 14 Nov \u00b7 23:30 SAST"
+      "match": "Cyprus v Montenegro",
+      "market": "BTTS + Over 2.5 @ 1.70",
+      "score": "1-4",
+      "date_time": "Sun 15 Nov \u00b7 16:00 SAST"
     },
     {
-      "match": "Mirassol v Atletico Mineiro",
-      "market": "Under 3.5 @ 1.35",
+      "match": "Latvia v Armenia",
+      "market": "BTTS \u2014 No @ 1.80",
       "score": "0-0",
-      "date_time": "Sat 14 Nov \u00b7 23:30 SAST"
+      "date_time": "Sun 15 Nov \u00b7 16:00 SAST"
+    },
+    {
+      "match": "Finland v San Marino",
+      "market": "Over 4.5 @ 2.00",
+      "score": "7-2",
+      "date_time": "Sun 15 Nov \u00b7 19:00 SAST"
+    },
+    {
+      "match": "CD Eldense v Sabadell FC",
+      "market": "BTTS \u2014 No @ 1.65",
+      "score": "2-0",
+      "date_time": "Sun 15 Nov \u00b7 19:30 SAST"
+    },
+    {
+      "match": "Spain v England",
+      "market": "Over 3.5 @ 2.10",
+      "score": "2-3",
+      "date_time": "Sun 15 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Belgium v Italy",
+      "market": "BTTS + Over 2.5 @ 1.70",
+      "score": "4-1",
+      "date_time": "Sun 15 Nov \u00b7 21:45 SAST"
+    },
+    {
+      "match": "Croatia v Czech Republic",
+      "market": "Match result - Home Win @ 1.50",
+      "score": "2-1",
+      "date_time": "Sun 15 Nov \u00b7 21:45 SAST"
     }
   ]
 }
