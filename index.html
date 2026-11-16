@@ -502,6 +502,7 @@ document.getElementById('navLinks').classList.remove('open');
 (async function loadLatestResults() {
   var BATCH_SIZE = 5;
   var ROTATE_MS  = 14000;
+  var GENERAL_HARVEST_FALLBACK = '/harvest/index.html';
 
   var API = 'https://www.locustharvest.com/harvest/yesterday.json?t=' + Math.floor(Date.now() / 900000);
   var grid = document.getElementById('tiers-grid');
@@ -540,6 +541,33 @@ document.getElementById('navLinks').classList.remove('open');
     return [];
   }
 
+  function dateFromPicks(picks) {
+    if (!picks || !picks.length) return null;
+    var counts = {};
+    var monthMap = {jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};
+    var now = new Date();
+    var currentYear = now.getUTCFullYear();
+    for (var i = 0; i < picks.length; i++) {
+      var dt = picks[i].date_time || picks[i].date || picks[i].kickoff || '';
+      if (!dt) continue;
+      var m = String(dt).match(/(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i);
+      if (!m) continue;
+      var day = String(m[1]).padStart(2, '0');
+      var mon = monthMap[m[2].toLowerCase()];
+      if (!mon) continue;
+      var year = currentYear;
+      var candidate = new Date(year + '-' + mon + '-' + day + 'T00:00:00Z');
+      if ((candidate.getTime() - now.getTime()) > 1000 * 60 * 60 * 24 * 183) year = currentYear - 1;
+      var ymd = year + '-' + mon + '-' + day;
+      counts[ymd] = (counts[ymd] || 0) + 1;
+    }
+    var best = null, bestCount = 0;
+    for (var k in counts) {
+      if (counts[k] > bestCount) { best = k; bestCount = counts[k]; }
+    }
+    return best;
+  }
+
   function sastDate(offsetDays) {
     var now = new Date();
     var sast = new Date(now.getTime() + 2 * 60 * 60 * 1000);
@@ -550,7 +578,7 @@ document.getElementById('navLinks').classList.remove('open');
     return y + '-' + m + '-' + d;
   }
 
-  function pickDate(data) {
+  function pickJsonDate(data) {
     if (!data) return null;
     var keys = ['date', 'publish_date', 'published', 'for_date', 'match_date', 'settled_date'];
     for (var i = 0; i < keys.length; i++) {
@@ -563,29 +591,42 @@ document.getElementById('navLinks').classList.remove('open');
     return null;
   }
 
-  async function urlIsRealHarvestPage(url) {
+  async function urlLooksLikeAfterPage(url) {
     try {
       var r = await fetch(url, { cache: 'no-store', redirect: 'follow' });
       if (!r.ok) return false;
       var html = await r.text();
       if (html.length < 2000) return false;
       if (!/Daily\s+Harvest/i.test(html) && !/NOVELTY\s+Daily/i.test(html)) return false;
-      return true;
+      var hasFullTime = /Full\s*time\s*:/i.test(html);
+      var hasResultSummary = /That one came in|Not to be this time|\bwon\b|\blost\b/i.test(html);
+      return hasFullTime && hasResultSummary;
     } catch (e) { return false; }
   }
 
-  async function findAfterUrl(data) {
-    // 1. Check JSON-provided URL fields first — trust these as-is
+  async function findAfterUrl(data, settledPicks) {
     if (data) {
-      var keys = ['after_url', 'harvest_after_url', 'after_list_url'];
+      var keys = ['after_url', 'harvest_after_url', 'after_list_url', 'afterUrl'];
       for (var i = 0; i < keys.length; i++) {
-        if (typeof data[keys[i]] === 'string' && data[keys[i]]) return data[keys[i]];
+        if (typeof data[keys[i]] === 'string' && data[keys[i]]) {
+          console.info('[Latest Results] after URL from JSON.' + keys[i] + ':', data[keys[i]]);
+          return data[keys[i]];
+        }
       }
     }
 
-    var date = pickDate(data) || sastDate(-1);
+    var pickDate = dateFromPicks(settledPicks);
+    if (pickDate) console.info('[Latest Results] date derived from picks:', pickDate);
 
-    // 2. Scan the harvest index for links with the date — prefer "after" URLs
+    var jsonDate = pickJsonDate(data);
+    if (jsonDate) console.info('[Latest Results] date from JSON:', jsonDate);
+
+    var datesToTry = [];
+    if (pickDate) datesToTry.push(pickDate);
+    if (jsonDate && jsonDate !== pickDate) datesToTry.push(jsonDate);
+    var fallbacks = [sastDate(-1), sastDate(-2), sastDate(0)];
+    fallbacks.forEach(function (d) { if (datesToTry.indexOf(d) === -1) datesToTry.push(d); });
+
     var idxUrls = ['/harvest/index.html', '/harvest/'];
     for (var u = 0; u < idxUrls.length; u++) {
       try {
@@ -593,37 +634,50 @@ document.getElementById('navLinks').classList.remove('open');
         if (!r.ok) continue;
         var html = await r.text();
         var re = /href=["']([^"'#]+)["']/g;
-        var m;
-        var dateLinks = [];
+        var m, dateLinks = [];
         while ((m = re.exec(html)) !== null) {
           var href = m[1];
-          if (href.indexOf(date) !== -1) dateLinks.push(href);
+          var hrefLower = href.toLowerCase();
+          if (hrefLower.indexOf('before') !== -1) continue;
+          for (var di = 0; di < datesToTry.length; di++) {
+            if (href.indexOf(datesToTry[di]) !== -1) { dateLinks.push(href); break; }
+          }
         }
         for (var j = 0; j < dateLinks.length; j++) {
-          if (dateLinks[j].toLowerCase().indexOf('after') !== -1) return dateLinks[j];
+          if (dateLinks[j].toLowerCase().indexOf('after') !== -1) {
+            console.info('[Latest Results] after URL from index (after-labelled):', dateLinks[j]);
+            return dateLinks[j];
+          }
         }
-        if (dateLinks.length > 0) return dateLinks[0];
+        for (var k = 0; k < dateLinks.length; k++) {
+          if (await urlLooksLikeAfterPage(dateLinks[k])) {
+            console.info('[Latest Results] after URL from index (verified):', dateLinks[k]);
+            return dateLinks[k];
+          }
+        }
       } catch (e) {}
     }
 
-    // 3. Try common patterns — after-flavoured first
-    var dates = [date];
-    var altDate = sastDate(-2);
-    if (altDate !== date) dates.push(altDate);
     var patterns = [
       '/harvest/{d}-after.html',
-      '/harvest/{d}.html#after',
       '/harvest/{d}.html',
       '/harvest/{d}/index.html',
-      '/harvest/{d}/'
+      '/harvest/{d}/',
+      '/harvest/after/{d}.html',
+      '/harvest/after/{d}/index.html'
     ];
-    for (var di = 0; di < dates.length; di++) {
-      for (var pi = 0; pi < patterns.length; pi++) {
-        var url = patterns[pi].replace(/\{d\}/g, dates[di]);
-        if (await urlIsRealHarvestPage(url)) return url;
+    for (var d1 = 0; d1 < datesToTry.length; d1++) {
+      for (var p = 0; p < patterns.length; p++) {
+        var url = patterns[p].replace(/\{d\}/g, datesToTry[d1]);
+        if (await urlLooksLikeAfterPage(url)) {
+          console.info('[Latest Results] after URL from pattern:', url);
+          return url;
+        }
       }
     }
-    return null;
+
+    console.warn('[Latest Results] no specific after page found for date(s): ' + datesToTry.join(', ') + '. Falling back to the general harvest page.');
+    return GENERAL_HARVEST_FALLBACK;
   }
 
   function renderResultBlock(matches, blockIndex, wins, losses, href) {
@@ -676,7 +730,6 @@ document.getElementById('navLinks').classList.remove('open');
       row.style.setProperty('overflow', 'hidden', 'important');
       row.style.setProperty('box-sizing', 'border-box', 'important');
 
-      // Line 1: match + badge — locked to row, badge cannot drop
       var line1 = document.createElement('div');
       line1.className = 'lh-line lh-line-1';
       line1.style.setProperty('display', 'flex', 'important');
@@ -713,7 +766,6 @@ document.getElementById('navLinks').classList.remove('open');
       line1.appendChild(matchEl);
       line1.appendChild(badgeWrap);
 
-      // Line 2: market + date
       var line2 = document.createElement('div');
       line2.className = 'lh-line lh-line-2';
       line2.style.setProperty('display', 'flex', 'important');
@@ -756,12 +808,10 @@ document.getElementById('navLinks').classList.remove('open');
 
     a.appendChild(list);
 
-    if (href) {
-      var hint = document.createElement('div');
-      hint.style.cssText = 'margin-top:.75rem;font-size:.7rem;color:var(--ash);text-align:center;letter-spacing:.05em;';
-      hint.textContent = 'View full after-list →';
-      a.appendChild(hint);
-    }
+    var hint = document.createElement('div');
+    hint.style.cssText = 'margin-top:.75rem;font-size:.7rem;color:var(--ash);text-align:center;letter-spacing:.05em;';
+    hint.textContent = 'View full after-list →';
+    a.appendChild(hint);
 
     return a;
   }
@@ -796,18 +846,13 @@ document.getElementById('navLinks').classList.remove('open');
     return;
   }
 
-  var afterListUrl = await findAfterUrl(data);
-  if (afterListUrl) {
-    console.info('[Latest Results] batch link → ' + afterListUrl);
-  } else {
-    console.warn('[Latest Results] no after-list URL found — blocks will not be clickable (avoids 404). Tell me the pattern.');
-  }
-
   var all = extractAllResults(data);
   var settled = all.filter(function (p) {
     var o = outcomeOf(p);
     return o === 'win' || o === 'loss';
   });
+
+  var afterListUrl = await findAfterUrl(data, settled);
 
   var usable = Math.floor(settled.length / BATCH_SIZE) * BATCH_SIZE;
   var pool   = settled.slice(0, usable);
