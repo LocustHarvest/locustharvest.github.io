@@ -503,17 +503,18 @@ document.getElementById('navLinks').classList.remove('open');
   var BATCH_SIZE = 5;
   var ROTATE_MS  = 14000;
 
-  // After-list URL pattern. Change '{date}' if your day pages use a
-  // different filename (e.g. '/harvest/2026-11-14/index.html').
-  var AFTER_LIST_PATTERN  = '/harvest/{date}.html';
-  var AFTER_LIST_FALLBACK = '/harvest/';
+  // ============================================================
+  // After-list URL pattern. Only change {date} if your day pages
+  // use a different path shape, e.g. '/harvest/{date}/index.html'
+  // or '/harvest/daily-{date}.html'. Default: '/harvest/2026-11-14.html'
+  // ============================================================
+  var AFTER_LIST_PATTERN = '/harvest/{date}.html';
 
   var API = 'https://www.locustharvest.com/harvest/yesterday.json?t=' + Math.floor(Date.now() / 900000);
   var grid = document.getElementById('tiers-grid');
   var sub  = document.getElementById('results-subtitle');
   if (!grid) return;
 
-  // Normalise a single pick's outcome: 'win' | 'loss' | 'unknown'
   function outcomeOf(p) {
     if (typeof p.won === 'boolean')    return p.won    ? 'win' : 'loss';
     if (typeof p.win === 'boolean')    return p.win    ? 'win' : 'loss';
@@ -526,7 +527,6 @@ document.getElementById('navLinks').classList.remove('open');
     return 'unknown';
   }
 
-  // Extract ALL after-results (wins AND losses), source order preserved
   function extractAllResults(data) {
     if (!data) return [];
     var candidates = ['after', 'results', 'all_results', 'all', 'picks', 'selections', 'matches'];
@@ -540,34 +540,61 @@ document.getElementById('navLinks').classList.remove('open');
     l.forEach(function (x) { if (outcomeOf(x) === 'unknown') x.won = false; });
     if (w.length || l.length) {
       if (!l.length && w.length) {
-        console.warn('[Latest Results] yesterday.json contains only "winners" — no losses available. The batch tally will read all wins until the JSON carries a full results array (e.g. "after", "results", "all_results") or a "losers" array.');
+        console.warn('[Latest Results] yesterday.json contains only "winners" — no losses available. Add a full results array (e.g. "after", "results", "all_results") or a "losers" array to yesterday.json to surface losses.');
       }
       return w.concat(l);
     }
     return [];
   }
 
+  // Compute yesterday's date in SAST (UTC+2) as YYYY-MM-DD.
+  function sastYesterday() {
+    var now = new Date();
+    var sast = new Date(now.getTime() + 2 * 60 * 60 * 1000);
+    sast.setUTCDate(sast.getUTCDate() - 1);
+    var y = sast.getUTCFullYear();
+    var m = String(sast.getUTCMonth() + 1).padStart(2, '0');
+    var d = String(sast.getUTCDate()).padStart(2, '0');
+    return y + '-' + m + '-' + d;
+  }
+
+  function pickDate(data) {
+    if (!data) return null;
+    var keys = ['date', 'publish_date', 'published', 'for_date', 'match_date', 'settled_date'];
+    for (var i = 0; i < keys.length; i++) {
+      var v = data[keys[i]];
+      if (typeof v === 'string') {
+        var m = v.match(/\d{4}-\d{2}-\d{2}/);
+        if (m) return m[0];
+      }
+    }
+    return null;
+  }
+
+  // Resolve the SPECIFIC after-results page URL. Never returns the
+  // general /harvest/ page. Returns null if it genuinely cannot build one.
   function resolveAfterListUrl(data) {
     if (data) {
       if (typeof data.harvest_url === 'string' && data.harvest_url) return data.harvest_url;
       if (typeof data.after_url   === 'string' && data.after_url)   return data.after_url;
       if (typeof data.url         === 'string' && data.url)         return data.url;
-      var d = data.date || data.publish_date || data.published || data.for_date;
-      if (typeof d === 'string') {
-        var m = d.match(/\d{4}-\d{2}-\d{2}/);
-        if (m) return AFTER_LIST_PATTERN.replace('{date}', m[0]);
-      }
     }
-    return AFTER_LIST_FALLBACK;
+    var date = pickDate(data) || sastYesterday();
+    if (!date) return null;
+    return AFTER_LIST_PATTERN.replace('{date}', date);
   }
 
   function renderResultBlock(matches, blockIndex, wins, losses, href) {
-    var a = document.createElement('a');
+    var a = document.createElement(href ? 'a' : 'div');
     a.className = 'advert-card';
-    a.href = href;
-    a.style.textDecoration = 'none';
-    a.style.color = 'inherit';
-    a.style.cursor = 'pointer';
+    if (href) {
+      a.href = href;
+      a.style.cursor = 'pointer';
+      a.style.textDecoration = 'none';
+      a.style.color = 'inherit';
+    } else {
+      a.style.cursor = 'default';
+    }
     a.style.transform = 'none';
     a.style.justifyContent = 'flex-start';
     a.style.textAlign = 'left';
@@ -612,10 +639,12 @@ document.getElementById('navLinks').classList.remove('open');
     });
     a.appendChild(list);
 
-    var hint = document.createElement('div');
-    hint.style.cssText = 'margin-top:.75rem;font-size:.7rem;color:var(--ash);text-align:center;letter-spacing:.05em;';
-    hint.textContent = 'View full after-list →';
-    a.appendChild(hint);
+    if (href) {
+      var hint = document.createElement('div');
+      hint.style.cssText = 'margin-top:.75rem;font-size:.7rem;color:var(--ash);text-align:center;letter-spacing:.05em;';
+      hint.textContent = 'View full after-list →';
+      a.appendChild(hint);
+    }
 
     return a;
   }
@@ -643,15 +672,18 @@ document.getElementById('navLinks').classList.remove('open');
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
       var afterListUrl = resolveAfterListUrl(data);
-      var all = extractAllResults(data);
+      if (afterListUrl) {
+        console.info('[Latest Results] batch link → ' + afterListUrl);
+      } else {
+        console.warn('[Latest Results] could not resolve a specific after-list URL — blocks will not be clickable.');
+      }
 
-      // Only settled picks — pending / void / unknown are excluded
+      var all = extractAllResults(data);
       var settled = all.filter(function (p) {
         var o = outcomeOf(p);
         return o === 'win' || o === 'loss';
       });
 
-      // Strictly 5 per block. No partial batches. Floor to multiple of 5.
       var usable = Math.floor(settled.length / BATCH_SIZE) * BATCH_SIZE;
       var pool   = settled.slice(0, usable);
 
