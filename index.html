@@ -374,6 +374,7 @@ section#novelty,section#plague2profit,section#about-blurb{scroll-margin-top:100p
    Mobile: solid brand fill at rest.
    Desktop: solid brand fill + glow on hover.
    Layered over MOBILE_SOCIAL_PERSISTENT_GLOW — does not remove it.
+   NOVELTY is blue (#1f6feb) per 2026-11-17 change.
    ===================================================================== */
 
 .p2p-socials a {
@@ -912,21 +913,21 @@ document.getElementById('navLinks').classList.remove('open');
     console.info('[Latest Results] all batches link to: ' + afterListUrl);
   }
 
-  var usable = Math.floor(settled.length / BATCH_SIZE) * BATCH_SIZE;
-  var pool   = settled.slice(0, usable);
-
-  if (settled.length > usable) {
-    console.info('[Latest Results] ' + (settled.length - usable) + ' settled pick(s) hidden — batches are strictly ' + BATCH_SIZE + ' per block. Settled: ' + settled.length + ', shown: ' + usable + '.');
-  }
+  // BATCHING_FIX_2026_11_17 — never truncate. Every settled pick is shown.
+  // Last batch may be shorter than BATCH_SIZE (e.g. 7 picks → Batch 1 with 5,
+  // Batch 2 with 2). The carousel rotates through all batches + advert cards.
+  // Previous Math.floor truncation silently dropped 2 winning picks on
+  // 2026-11-17 (North Macedonia 0-3, Switzerland 4-0).
+  var pool = settled.slice();
 
   var resultBlocks = [];
   var totalW = 0, totalL = 0;
-  for (var i = 0; i < pool.length / BATCH_SIZE; i++) {
-    var chunk  = pool.slice(i * BATCH_SIZE, (i + 1) * BATCH_SIZE);
+  for (var i = 0; i < pool.length; i += BATCH_SIZE) {
+    var chunk  = pool.slice(i, i + BATCH_SIZE);
     var w = chunk.filter(function (x) { return outcomeOf(x) === 'win';  }).length;
     var l = chunk.filter(function (x) { return outcomeOf(x) === 'loss'; }).length;
     totalW += w; totalL += l;
-    resultBlocks.push(renderResultBlock(chunk, i, w, l, afterListUrl));
+    resultBlocks.push(renderResultBlock(chunk, resultBlocks.length, w, l, afterListUrl));
   }
 
   if (sub) {
