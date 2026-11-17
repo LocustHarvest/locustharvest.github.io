@@ -1,189 +1,84 @@
 {
-  "date": "2026-11-15",
-  "after_url": "/harvest/2026-11-15/results/",
+  "date": "2026-11-16",
+  "after_url": "/harvest/2026-11-16/results/",
   "after": [
     {
-      "match": "Quer\u00e9taro v Monterrey",
-      "market": "Home Under 1.5 @ 1.40",
-      "score": "0-1",
-      "date_time": "Sun 15 Nov \u00b7 01:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "CS Sedan v Bourges FC",
-      "market": "BTTS + Over 2.5 @ 1.80",
-      "score": "2-0",
-      "date_time": "Sun 15 Nov \u00b7 15:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Tenerife v AD Ceuta FC",
-      "market": "Over 2.5 @ 1.75",
-      "score": "2-0",
-      "date_time": "Sun 15 Nov \u00b7 15:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Paris 13 Atletico v Red Star",
-      "market": "BTTS \u2014 No @ 2.00",
-      "score": "0-2",
-      "date_time": "Sun 15 Nov \u00b7 15:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "GFA Rumilly Valli\u00e8res v Saint Etienne",
-      "market": "BTTS + Over 2.5 @ 1.85",
-      "score": "1-2",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Cyprus v Montenegro",
-      "market": "BTTS + Over 2.5 @ 1.70",
-      "score": "1-4",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "AS Atlas Paillade v Cannes",
-      "market": "BTTS + Over 2.5 @ 1.90",
-      "score": "0-2",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Latvia v Armenia",
-      "market": "BTTS \u2014 No @ 1.80",
-      "score": "0-0",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Granada CF v Las Palmas",
-      "market": "BTTS + Over 2.5 @ 1.90",
+      "match": "Faroe Islands v Moldova",
+      "market": "Double chance - Home or Draw @ 1.20",
       "score": "1-0",
-      "date_time": "Sun 15 Nov \u00b7 17:15 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Finland v San Marino",
-      "market": "Over 4.5 @ 2.00",
-      "score": "7-2",
-      "date_time": "Sun 15 Nov \u00b7 19:00 SAST",
+      "date_time": "Mon 16 Nov \u00b7 17:00 SAST",
       "status": "won"
     },
     {
-      "match": "Belarus v Albania",
-      "market": "BTTS + Over 2.5 @ 2.40",
-      "score": "0-2",
-      "date_time": "Sun 15 Nov \u00b7 19:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "CD Eldense v Sabadell FC",
-      "market": "BTTS \u2014 No @ 1.65",
-      "score": "2-0",
-      "date_time": "Sun 15 Nov \u00b7 19:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "SD Eibar v C\u00e1diz CF",
-      "market": "BTTS + Over 2.5 @ 2.00",
-      "score": "1-1",
-      "date_time": "Sun 15 Nov \u00b7 19:30 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Spain v England",
-      "market": "Over 3.5 @ 2.10",
-      "score": "2-3",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Belgium v Italy",
-      "market": "BTTS + Over 2.5 @ 1.70",
-      "score": "4-1",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Croatia v Czech Republic",
-      "market": "Match result - Home Win @ 1.50",
+      "match": "Lithuania v Liechtenstein",
+      "market": "BTTS \u2014 No @ 1.25",
       "score": "2-1",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
+      "date_time": "Mon 16 Nov \u00b7 19:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Germany v Netherlands",
+      "market": "BTTS + Over 2.5 @ 1.50",
+      "score": "5-0",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Gibraltar v Malta",
+      "market": "Under 3.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Greece v Serbia",
+      "market": "BTTS + Over 2.5 @ 2.00",
+      "score": "1-0",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "North Macedonia v Slovenia",
+      "market": "Match result - Away Win @ 1.50",
+      "score": "0-3",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Switzerland v Scotland",
+      "market": "Match result - Home Win @ 1.65",
+      "score": "4-0",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
       "status": "won"
     }
   ],
   "winners": [
     {
-      "match": "Quer\u00e9taro v Monterrey",
-      "market": "Home Under 1.5 @ 1.40",
-      "score": "0-1",
-      "date_time": "Sun 15 Nov \u00b7 01:00 SAST",
+      "match": "Faroe Islands v Moldova",
+      "market": "Double chance - Home or Draw @ 1.20",
+      "score": "1-0",
+      "date_time": "Mon 16 Nov \u00b7 17:00 SAST",
       "status": "won"
     },
     {
-      "match": "Paris 13 Atletico v Red Star",
-      "market": "BTTS \u2014 No @ 2.00",
-      "score": "0-2",
-      "date_time": "Sun 15 Nov \u00b7 15:00 SAST",
+      "match": "Gibraltar v Malta",
+      "market": "Under 3.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "GFA Rumilly Valli\u00e8res v Saint Etienne",
-      "market": "BTTS + Over 2.5 @ 1.85",
-      "score": "1-2",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
+      "match": "North Macedonia v Slovenia",
+      "market": "Match result - Away Win @ 1.50",
+      "score": "0-3",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "Cyprus v Montenegro",
-      "market": "BTTS + Over 2.5 @ 1.70",
-      "score": "1-4",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Latvia v Armenia",
-      "market": "BTTS \u2014 No @ 1.80",
-      "score": "0-0",
-      "date_time": "Sun 15 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Finland v San Marino",
-      "market": "Over 4.5 @ 2.00",
-      "score": "7-2",
-      "date_time": "Sun 15 Nov \u00b7 19:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "CD Eldense v Sabadell FC",
-      "market": "BTTS \u2014 No @ 1.65",
-      "score": "2-0",
-      "date_time": "Sun 15 Nov \u00b7 19:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Spain v England",
-      "market": "Over 3.5 @ 2.10",
-      "score": "2-3",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Belgium v Italy",
-      "market": "BTTS + Over 2.5 @ 1.70",
-      "score": "4-1",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Croatia v Czech Republic",
-      "market": "Match result - Home Win @ 1.50",
-      "score": "2-1",
-      "date_time": "Sun 15 Nov \u00b7 21:45 SAST",
+      "match": "Switzerland v Scotland",
+      "market": "Match result - Home Win @ 1.65",
+      "score": "4-0",
+      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
       "status": "won"
     }
   ]
