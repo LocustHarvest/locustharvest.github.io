@@ -1,84 +1,329 @@
 {
-  "date": "2026-11-16",
-  "after_url": "/harvest/2026-11-16/results/",
+  "date": "2026-11-17",
+  "after_url": "/harvest/2026-11-17/results/",
   "after": [
     {
-      "match": "Faroe Islands v Moldova",
-      "market": "Double chance - Home or Draw @ 1.20",
-      "score": "1-0",
-      "date_time": "Mon 16 Nov \u00b7 17:00 SAST",
+      "match": "Luton v Peterborough",
+      "market": "Home or Draw & Over 1.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:00 SAST",
       "status": "won"
     },
     {
-      "match": "Lithuania v Liechtenstein",
-      "market": "BTTS \u2014 No @ 1.25",
-      "score": "2-1",
-      "date_time": "Mon 16 Nov \u00b7 19:00 SAST",
-      "status": "lost"
+      "match": "Denmark v Norway",
+      "market": "BTTS \u2014 Yes @ 1.35",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
     },
     {
-      "match": "Germany v Netherlands",
-      "market": "BTTS + Over 2.5 @ 1.50",
-      "score": "5-0",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Gibraltar v Malta",
-      "market": "Under 3.5 @ 1.20",
+      "match": "Hungary v Northern Ireland",
+      "market": "Under 3.5 @ 1.21",
       "score": "1-1",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "Greece v Serbia",
-      "market": "BTTS + Over 2.5 @ 2.00",
-      "score": "1-0",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "match": "Republic of Ireland v Kosovo",
+      "market": "Under 3.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Poland v Sweden",
+      "market": "Away Over 0.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Wales v Portugal",
+      "market": "Away Over 0.5 @ 1.20",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Bosnia & Herzegovina v Romania",
+      "market": "BTTS \u2014 Yes @ 1.59",
+      "score": "2-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Oxford City v Macclesfield",
+      "market": "Home or Draw & Over 1.5 @ 1.53",
+      "score": "1-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "lost"
     },
     {
-      "match": "North Macedonia v Slovenia",
-      "market": "Match result - Away Win @ 1.50",
-      "score": "0-3",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "match": "Tonbridge v Chesham Utd",
+      "market": "Home or Draw & Over 1.5 @ 1.41",
+      "score": "2-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "Switzerland v Scotland",
-      "market": "Match result - Home Win @ 1.65",
-      "score": "4-0",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "match": "Hyde Utd. v Rylands",
+      "market": "Over 2.5 @ 1.48",
+      "score": "1-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Quorn v Bury",
+      "market": "Home Over 0.5 @ 1.26",
+      "score": "5-4",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Havant&Waterl v Bracknell",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Dartford v Three Bridges",
+      "market": "Over 2.5 @ 1.36",
+      "score": "1-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Spalding Utd v Hebburn",
+      "market": "Away Over 0.5 @ 1.27",
+      "score": "0-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Chippenham v Sholing",
+      "market": "Home Over 0.5 @ 1.24",
+      "score": "2-2",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Leatherhead v Wingate",
+      "market": "BTTS \u2014 Yes @ 1.42",
+      "score": "0-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Ukraine v Georgia",
+      "market": "Under 3.5 @ 1.22",
+      "score": "1-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Bedford Town v Chorley",
+      "market": "Double chance - Home or Draw @ 1.32",
+      "score": "1-2",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Truro v Billericay",
+      "market": "Under 3.5 @ 1.40",
+      "score": "0-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Leamington v Halesowen",
+      "market": "Over 2.5 @ 1.50",
+      "score": "0-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Leiston v Stratford",
+      "market": "BTTS + Over 2.5 @ 1.64",
+      "score": "1-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Worcester v Kettering",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Ramsgate v Cray Wanderers",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Spennymoor v Chester",
+      "market": "Under 3.5 @ 1.40",
+      "score": "0-5",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Cleethorpes v Utd Of Manch.",
+      "market": "Under 3.5 @ 1.35",
+      "score": "3-2",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Burgess Hill v Brentwood",
+      "market": "Under 3.5 @ 1.20",
+      "score": "0-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Israel v Austria",
+      "market": "Under 3.5 @ 1.35",
+      "score": "1-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     }
   ],
   "winners": [
     {
-      "match": "Faroe Islands v Moldova",
-      "market": "Double chance - Home or Draw @ 1.20",
-      "score": "1-0",
-      "date_time": "Mon 16 Nov \u00b7 17:00 SAST",
+      "match": "Luton v Peterborough",
+      "market": "Home or Draw & Over 1.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:00 SAST",
       "status": "won"
     },
     {
-      "match": "Gibraltar v Malta",
-      "market": "Under 3.5 @ 1.20",
+      "match": "Denmark v Norway",
+      "market": "BTTS \u2014 Yes @ 1.35",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Hungary v Northern Ireland",
+      "market": "Under 3.5 @ 1.21",
       "score": "1-1",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "North Macedonia v Slovenia",
-      "market": "Match result - Away Win @ 1.50",
+      "match": "Republic of Ireland v Kosovo",
+      "market": "Under 3.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Poland v Sweden",
+      "market": "Away Over 0.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Wales v Portugal",
+      "market": "Away Over 0.5 @ 1.20",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Bosnia & Herzegovina v Romania",
+      "market": "BTTS \u2014 Yes @ 1.59",
+      "score": "2-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Tonbridge v Chesham Utd",
+      "market": "Home or Draw & Over 1.5 @ 1.41",
+      "score": "2-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Hyde Utd. v Rylands",
+      "market": "Over 2.5 @ 1.48",
+      "score": "1-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Quorn v Bury",
+      "market": "Home Over 0.5 @ 1.26",
+      "score": "5-4",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Havant&Waterl v Bracknell",
+      "market": "Over 1.5 @ 1.20",
+      "score": "3-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Chippenham v Sholing",
+      "market": "Home Over 0.5 @ 1.24",
+      "score": "2-2",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Ukraine v Georgia",
+      "market": "Under 3.5 @ 1.22",
+      "score": "1-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Truro v Billericay",
+      "market": "Under 3.5 @ 1.40",
+      "score": "0-0",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Leamington v Halesowen",
+      "market": "Over 2.5 @ 1.50",
       "score": "0-3",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "Switzerland v Scotland",
-      "market": "Match result - Home Win @ 1.65",
-      "score": "4-0",
-      "date_time": "Mon 16 Nov \u00b7 21:45 SAST",
+      "match": "Worcester v Kettering",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Ramsgate v Cray Wanderers",
+      "market": "Over 1.5 @ 1.20",
+      "score": "2-3",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Burgess Hill v Brentwood",
+      "market": "Under 3.5 @ 1.20",
+      "score": "0-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Israel v Austria",
+      "market": "Under 3.5 @ 1.35",
+      "score": "1-1",
+      "date_time": "Tue 17 Nov \u00b7 21:45 SAST",
       "status": "won"
     }
   ]
