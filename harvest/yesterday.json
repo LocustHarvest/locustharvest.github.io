@@ -1,161 +1,203 @@
 {
-  "date": "2026-11-18",
-  "after_url": "/harvest/2026-11-18/results/",
+  "date": "2026-11-19",
+  "after_url": "/harvest/2026-11-19/results/",
   "after": [
     {
-      "match": "Real Madrid v Inter Milan",
-      "market": "Home or Draw & Over 2.5 @ 1.35",
-      "score": "3-1",
-      "date_time": "Wed 18 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "West Ham v Wolves",
-      "market": "BTTS + Over 2.5 @ 1.90",
-      "score": "3-0",
-      "date_time": "Wed 18 Nov \u00b7 21:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "London City v Brighton",
-      "market": "BTTS + Over 2.5 @ 1.80",
-      "score": "0-1",
-      "date_time": "Wed 18 Nov \u00b7 21:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Forest v Liverpool",
-      "market": "Home or Draw & Over 1.5 @ 3.00",
-      "score": "1-4",
-      "date_time": "Wed 18 Nov \u00b7 21:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Tottenham v Leicester WFC",
-      "market": "Match result - Home Win @ 1.10",
-      "score": "7-0",
-      "date_time": "Wed 18 Nov \u00b7 21:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Alcantarilla v SFC Minerva",
-      "market": "Double chance - Home or Draw @ 1.24",
-      "score": "2-0",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "\u00c1guilas II v UCAM Murcia II",
-      "market": "Double chance - Home or Draw @ 1.31",
-      "score": "2-0",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Atenas v F\u00e9nix",
-      "market": "Double chance - Home or Draw @ 1.29",
-      "score": "3-1",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Frome v Gloucester",
-      "market": "Home or Draw & Over 1.5 @ 1.71",
-      "score": "0-1",
-      "date_time": "Wed 18 Nov \u00b7 21:45 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Chelsea v Paris Saint Germain",
-      "market": "Match result - Home Win @ 1.28",
-      "score": "1-0",
-      "date_time": "Wed 18 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Col\u00f3n v Oriental",
-      "market": "Double chance - Home or Draw @ 1.31",
+      "match": "Zvolen v Ko\u0161ice",
+      "market": "BTTS \u2014 Yes @ 1.65",
       "score": "2-2",
-      "date_time": "Thu 19 Nov \u00b7 00:30 SAST",
+      "date_time": "Thu 19 Nov \u00b7 14:00 SAST",
       "status": "won"
     },
     {
-      "match": "Flamengo v Atletico Paranaense",
-      "market": "Home Over 1.5 @ 1.23",
-      "score": "2-1",
-      "date_time": "Thu 19 Nov \u00b7 01:30 SAST",
+      "match": "Nevesinje v Rudar",
+      "market": "Away Win & Over 1.5 @ 1.50",
+      "score": "1-4",
+      "date_time": "Thu 19 Nov \u00b7 14:00 SAST",
       "status": "won"
     },
     {
-      "match": "Cruzeiro v Palmeiras",
-      "market": "Over 1.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Thu 19 Nov \u00b7 01:30 SAST",
+      "match": "Aigle Royal v Colombe",
+      "market": "BTTS \u2014 No @ 1.50",
+      "score": "0-0",
+      "date_time": "Thu 19 Nov \u00b7 16:00 SAST",
       "status": "won"
+    },
+    {
+      "match": "Masry v Asyut Petrol",
+      "market": "BTTS \u2014 No @ 1.55",
+      "score": "3-0",
+      "date_time": "Thu 19 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Mokawloon v El Qanah",
+      "market": "BTTS \u2014 No @ 1.60",
+      "score": "1-1",
+      "date_time": "Thu 19 Nov \u00b7 17:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Paris FC v HB K\u00f8ge",
+      "market": "BTTS \u2014 Yes @ 1.60",
+      "score": "2-1",
+      "date_time": "Thu 19 Nov \u00b7 19:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Austria Wien v Bayern Munich",
+      "market": "BTTS + Over 2.5 @ 2.05",
+      "score": "0-4",
+      "date_time": "Thu 19 Nov \u00b7 19:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "ZED v Smouha",
+      "market": "Under 2.5 @ 1.40",
+      "score": "1-0",
+      "date_time": "Thu 19 Nov \u00b7 20:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Barcelona v Servette FC",
+      "market": "BTTS \u2014 Yes @ 3.35",
+      "score": "6-0",
+      "date_time": "Thu 19 Nov \u00b7 22:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Benfica v AS Roma",
+      "market": "Over 3.5 @ 2.15",
+      "score": "2-3",
+      "date_time": "Thu 19 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Arsenal v Lyon",
+      "market": "BTTS + Over 2.5 @ 1.75",
+      "score": "0-2",
+      "date_time": "Thu 19 Nov \u00b7 22:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Independiente v Envigado",
+      "market": "Under 2.5 @ 1.50",
+      "score": "1-1",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Magdalena v Boca",
+      "market": "Under 3.5 @ 1.30",
+      "score": "1-2",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Vasco da Gama v Internacional",
+      "market": "Over 2.5 @ 1.60",
+      "score": "2-1",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Vitoria v Bragantino-SP",
+      "market": "BTTS \u2014 No @ 2.20",
+      "score": "2-1",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Orlando City SC v FC Cincinnati",
+      "market": "Under 4.5 @ 1.40",
+      "score": "1-3",
+      "date_time": "Fri 20 Nov \u00b7 02:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Sao Paulo v Fluminense",
+      "market": "Over 2.5 @ 2.00",
+      "score": "0-1",
+      "date_time": "Fri 20 Nov \u00b7 02:30 SAST",
+      "status": "lost"
     }
   ],
   "winners": [
     {
-      "match": "Real Madrid v Inter Milan",
-      "market": "Home or Draw & Over 2.5 @ 1.35",
-      "score": "3-1",
-      "date_time": "Wed 18 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Tottenham v Leicester WFC",
-      "market": "Match result - Home Win @ 1.10",
-      "score": "7-0",
-      "date_time": "Wed 18 Nov \u00b7 21:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Alcantarilla v SFC Minerva",
-      "market": "Double chance - Home or Draw @ 1.24",
-      "score": "2-0",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "\u00c1guilas II v UCAM Murcia II",
-      "market": "Double chance - Home or Draw @ 1.31",
-      "score": "2-0",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Atenas v F\u00e9nix",
-      "market": "Double chance - Home or Draw @ 1.29",
-      "score": "3-1",
-      "date_time": "Wed 18 Nov \u00b7 21:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Chelsea v Paris Saint Germain",
-      "market": "Match result - Home Win @ 1.28",
-      "score": "1-0",
-      "date_time": "Wed 18 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Col\u00f3n v Oriental",
-      "market": "Double chance - Home or Draw @ 1.31",
+      "match": "Zvolen v Ko\u0161ice",
+      "market": "BTTS \u2014 Yes @ 1.65",
       "score": "2-2",
-      "date_time": "Thu 19 Nov \u00b7 00:30 SAST",
+      "date_time": "Thu 19 Nov \u00b7 14:00 SAST",
       "status": "won"
     },
     {
-      "match": "Flamengo v Atletico Paranaense",
-      "market": "Home Over 1.5 @ 1.23",
-      "score": "2-1",
-      "date_time": "Thu 19 Nov \u00b7 01:30 SAST",
+      "match": "Nevesinje v Rudar",
+      "market": "Away Win & Over 1.5 @ 1.50",
+      "score": "1-4",
+      "date_time": "Thu 19 Nov \u00b7 14:00 SAST",
       "status": "won"
     },
     {
-      "match": "Cruzeiro v Palmeiras",
-      "market": "Over 1.5 @ 1.20",
+      "match": "Aigle Royal v Colombe",
+      "market": "BTTS \u2014 No @ 1.50",
+      "score": "0-0",
+      "date_time": "Thu 19 Nov \u00b7 16:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Masry v Asyut Petrol",
+      "market": "BTTS \u2014 No @ 1.55",
+      "score": "3-0",
+      "date_time": "Thu 19 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Paris FC v HB K\u00f8ge",
+      "market": "BTTS \u2014 Yes @ 1.60",
       "score": "2-1",
-      "date_time": "Thu 19 Nov \u00b7 01:30 SAST",
+      "date_time": "Thu 19 Nov \u00b7 19:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "ZED v Smouha",
+      "market": "Under 2.5 @ 1.40",
+      "score": "1-0",
+      "date_time": "Thu 19 Nov \u00b7 20:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Benfica v AS Roma",
+      "market": "Over 3.5 @ 2.15",
+      "score": "2-3",
+      "date_time": "Thu 19 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Independiente v Envigado",
+      "market": "Under 2.5 @ 1.50",
+      "score": "1-1",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Magdalena v Boca",
+      "market": "Under 3.5 @ 1.30",
+      "score": "1-2",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Vasco da Gama v Internacional",
+      "market": "Over 2.5 @ 1.60",
+      "score": "2-1",
+      "date_time": "Fri 20 Nov \u00b7 00:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Orlando City SC v FC Cincinnati",
+      "market": "Under 4.5 @ 1.40",
+      "score": "1-3",
+      "date_time": "Fri 20 Nov \u00b7 02:30 SAST",
       "status": "won"
     }
   ]
