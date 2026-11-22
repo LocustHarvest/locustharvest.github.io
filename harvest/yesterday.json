@@ -1,266 +1,308 @@
 {
-  "date": "2026-11-20",
-  "after_url": "/harvest/2026-11-20/results/",
+  "date": "2026-11-21",
+  "after_url": "/harvest/2026-11-21/results/",
   "after": [
     {
-      "match": "Western Sydney Wanderers v Adelaide United",
-      "market": "Home Over 1.5 @ 1.30",
-      "score": "4-2",
-      "date_time": "Fri 20 Nov \u00b7 10:40 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Kashiwa Reysol v JEF United Chiba",
-      "market": "Over 1.5 @ 1.18",
-      "score": "0-1",
-      "date_time": "Fri 20 Nov \u00b7 12:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Kashima Antlers v Shimizu S Pulse",
-      "market": "Over 1.5 @ 1.26",
-      "score": "1-1",
-      "date_time": "Fri 20 Nov \u00b7 12:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Vissel Kobe v Mito HollyHock",
-      "market": "Match result - Home Win @ 1.41",
+      "match": "1. FC N\u00fcrnberg v Eintracht Braunschweig",
+      "market": "Over 1.5 @ 1.12",
       "score": "1-2",
-      "date_time": "Fri 20 Nov \u00b7 12:00 SAST",
-      "status": "lost"
+      "date_time": "Sat 21 Nov \u00b7 14:00 SAST",
+      "status": "won"
     },
     {
-      "match": "Bayadh v JRBT",
-      "market": "Away Under 1.5 @ 1.10",
+      "match": "Norwich City v Cardiff City",
+      "market": "Over 2.5 @ 1.30",
       "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
+      "date_time": "Sat 21 Nov \u00b7 14:30 SAST",
       "status": "won"
     },
     {
-      "match": "ES Mostaganem v ASM Oran",
-      "market": "Away Under 1.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "IRBSBM v Mostaganem",
-      "market": "Away Under 1.5 @ 1.15",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Mascara v MC Sa\u00efda",
-      "market": "Home Over 0.5 @ 1.20",
-      "score": "3-0",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Piast Gliwice v Korona Kielce",
-      "market": "Away Under 2.5 @ 1.17",
-      "score": "2-0",
-      "date_time": "Fri 20 Nov \u00b7 19:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Nordsj\u00e6lland v Fortuna",
-      "market": "Away Over 0.5 @ 1.35",
-      "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 19:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Arminia Bielefeld v 1. FC Magdeburg",
-      "market": "Over 1.5 @ 1.18",
-      "score": "1-2",
-      "date_time": "Fri 20 Nov \u00b7 19:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Al Ahli v Al Nassr",
-      "market": "Over 2.5 @ 1.34",
-      "score": "3-1",
-      "date_time": "Fri 20 Nov \u00b7 19:30 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Molde v Bod\u00f8/Glimt",
-      "market": "Home Over 0.5 @ 1.16",
-      "score": "2-4",
-      "date_time": "Fri 20 Nov \u00b7 20:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "TSV Havelse v FC Viktoria K\u00f6ln 1904",
-      "market": "Over 2.5 @ 1.32",
-      "score": "1-6",
-      "date_time": "Fri 20 Nov \u00b7 20:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Nancy v Dijon",
-      "market": "Home Over 0.5 @ 1.12",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 21:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Bayern Munich v 1. FC K\u00f6ln",
-      "market": "Home Over 2.5 @ 1.24",
-      "score": "1-1",
-      "date_time": "Fri 20 Nov \u00b7 21:30 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Cercle Brugge KSV v Westerlo",
-      "market": "Home Over 0.5 @ 1.11",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Athletic Bilbao v Espanyol",
+      "match": "Stade Lavallois v Montpellier",
       "market": "Over 1.5 @ 1.20",
-      "score": "0-1",
-      "date_time": "Fri 20 Nov \u00b7 22:00 SAST",
+      "score": "1-0",
+      "date_time": "Sat 21 Nov \u00b7 15:00 SAST",
       "status": "lost"
     },
     {
-      "match": "Barnsley v Sheffield Wednesday",
-      "market": "Over 1.5 @ 1.11",
-      "score": "1-2",
-      "date_time": "Fri 20 Nov \u00b7 22:00 SAST",
+      "match": "SC Verl v Rot-Weiss Essen",
+      "market": "Over 1.5 @ 1.12",
+      "score": "0-3",
+      "date_time": "Sat 21 Nov \u00b7 15:00 SAST",
       "status": "won"
     },
     {
-      "match": "Sportivo Amel. v Luque\u00f1o",
-      "market": "Over 1.5 @ 1.31",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 22:30 SAST",
+      "match": "Modena v Juve Stabia",
+      "market": "Over 1.5 @ 1.22",
+      "score": "2-0",
+      "date_time": "Sat 21 Nov \u00b7 16:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Elversberg v SC Freiburg",
+      "market": "Over 1.5 @ 1.14",
+      "score": "0-1",
+      "date_time": "Sat 21 Nov \u00b7 16:30 SAST",
       "status": "lost"
     },
     {
-      "match": "Cobresal v Audax Italiano",
-      "market": "Away Under 2.5 @ 1.11",
-      "score": "3-2",
-      "date_time": "Fri 20 Nov \u00b7 23:00 SAST",
+      "match": "Plymouth Argyle v Peterborough United",
+      "market": "Over 1.5 @ 1.13",
+      "score": "0-2",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Accrington Stanley v Salford City",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Barnet v Port Vale",
+      "market": "Over 1.5 @ 1.21",
+      "score": "2-1",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Chesterfield FC v Shrewsbury Town",
+      "market": "BTTS + Over 2.5 @ 2.06",
+      "score": "4-1",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "York City v Walsall",
+      "market": "Over 1.5 @ 1.15",
+      "score": "0-0",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Charleroi v Sint Truiden",
+      "market": "Over 1.5 @ 1.18",
+      "score": "2-2",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Grimsby Town v Rotherham United",
+      "market": "BTTS + Over 2.5 @ 1.81",
+      "score": "0-0",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Tottenham Hotspur v Ipswich Town",
+      "market": "Over 1.5 @ 1.15",
+      "score": "2-0",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "NEC Nijmegen v PSV Eindhoven",
+      "market": "Over 2.5 @ 1.25",
+      "score": "1-4",
+      "date_time": "Sat 21 Nov \u00b7 17:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "WSG Tirol v Austria Lustenau",
+      "market": "Over 1.5 @ 1.15",
+      "score": "0-1",
+      "date_time": "Sat 21 Nov \u00b7 18:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "US Catanzaro 1929 v Palermo",
+      "market": "Over 1.5 @ 1.15",
+      "score": "3-1",
+      "date_time": "Sat 21 Nov \u00b7 18:15 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Nice v Paris Saint Germain",
+      "market": "BTTS + Over 2.5 @ 1.58",
+      "score": "2-3",
+      "date_time": "Sat 21 Nov \u00b7 18:15 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Genk v RAAL La Louvi\u00e8re",
+      "market": "Over 1.5 @ 1.37",
+      "score": "3-0",
+      "date_time": "Sat 21 Nov \u00b7 19:15 SAST",
+      "status": "won"
+    },
+    {
+      "match": "FC Schalke 04 v VfB Stuttgart",
+      "market": "Over 1.5 @ 1.13",
+      "score": "0-0",
+      "date_time": "Sat 21 Nov \u00b7 19:30 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "FC St. Pauli v VfL Bochum",
+      "market": "Over 1.5 @ 1.19",
+      "score": "2-0",
+      "date_time": "Sat 21 Nov \u00b7 21:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Napoli v Torino",
+      "market": "Over 1.5 @ 1.48",
+      "score": "1-0",
+      "date_time": "Sat 21 Nov \u00b7 21:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "SV Zulte-Waregem v Royal Antwerp",
+      "market": "Over 1.5 @ 1.19",
+      "score": "2-2",
+      "date_time": "Sat 21 Nov \u00b7 21:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Bahia v Coritiba",
+      "market": "Over 1.5 @ 1.50",
+      "score": "0-1",
+      "date_time": "Sat 21 Nov \u00b7 22:30 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "O'Higgins v Universidad de Chile",
+      "market": "Over 1.5 @ 1.21",
+      "score": "0-1",
+      "date_time": "Sat 21 Nov \u00b7 23:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Santos Laguna v Le\u00f3n",
+      "market": "Over 1.5 @ 1.15",
+      "score": "1-2",
+      "date_time": "Sun 22 Nov \u00b7 01:00 SAST",
       "status": "won"
     }
   ],
   "winners": [
     {
-      "match": "Western Sydney Wanderers v Adelaide United",
-      "market": "Home Over 1.5 @ 1.30",
-      "score": "4-2",
-      "date_time": "Fri 20 Nov \u00b7 10:40 SAST",
+      "match": "1. FC N\u00fcrnberg v Eintracht Braunschweig",
+      "market": "Over 1.5 @ 1.12",
+      "score": "1-2",
+      "date_time": "Sat 21 Nov \u00b7 14:00 SAST",
       "status": "won"
     },
     {
-      "match": "Kashima Antlers v Shimizu S Pulse",
-      "market": "Over 1.5 @ 1.26",
-      "score": "1-1",
-      "date_time": "Fri 20 Nov \u00b7 12:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Bayadh v JRBT",
-      "market": "Away Under 1.5 @ 1.10",
+      "match": "Norwich City v Cardiff City",
+      "market": "Over 2.5 @ 1.30",
       "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
+      "date_time": "Sat 21 Nov \u00b7 14:30 SAST",
       "status": "won"
     },
     {
-      "match": "ES Mostaganem v ASM Oran",
-      "market": "Away Under 1.5 @ 1.20",
-      "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
+      "match": "SC Verl v Rot-Weiss Essen",
+      "market": "Over 1.5 @ 1.12",
+      "score": "0-3",
+      "date_time": "Sat 21 Nov \u00b7 15:00 SAST",
       "status": "won"
     },
     {
-      "match": "IRBSBM v Mostaganem",
-      "market": "Away Under 1.5 @ 1.15",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Mascara v MC Sa\u00efda",
-      "market": "Home Over 0.5 @ 1.20",
-      "score": "3-0",
-      "date_time": "Fri 20 Nov \u00b7 16:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Piast Gliwice v Korona Kielce",
-      "market": "Away Under 2.5 @ 1.17",
+      "match": "Modena v Juve Stabia",
+      "market": "Over 1.5 @ 1.22",
       "score": "2-0",
-      "date_time": "Fri 20 Nov \u00b7 19:00 SAST",
+      "date_time": "Sat 21 Nov \u00b7 16:00 SAST",
       "status": "won"
     },
     {
-      "match": "Nordsj\u00e6lland v Fortuna",
-      "market": "Away Over 0.5 @ 1.35",
+      "match": "Plymouth Argyle v Peterborough United",
+      "market": "Over 1.5 @ 1.13",
+      "score": "0-2",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Accrington Stanley v Salford City",
+      "market": "Over 1.5 @ 1.20",
+      "score": "1-1",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Barnet v Port Vale",
+      "market": "Over 1.5 @ 1.21",
       "score": "2-1",
-      "date_time": "Fri 20 Nov \u00b7 19:00 SAST",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
       "status": "won"
     },
     {
-      "match": "Arminia Bielefeld v 1. FC Magdeburg",
+      "match": "Chesterfield FC v Shrewsbury Town",
+      "market": "BTTS + Over 2.5 @ 2.06",
+      "score": "4-1",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Charleroi v Sint Truiden",
       "market": "Over 1.5 @ 1.18",
-      "score": "1-2",
-      "date_time": "Fri 20 Nov \u00b7 19:30 SAST",
+      "score": "2-2",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
       "status": "won"
     },
     {
-      "match": "Al Ahli v Al Nassr",
-      "market": "Over 2.5 @ 1.34",
+      "match": "Tottenham Hotspur v Ipswich Town",
+      "market": "Over 1.5 @ 1.15",
+      "score": "2-0",
+      "date_time": "Sat 21 Nov \u00b7 17:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "NEC Nijmegen v PSV Eindhoven",
+      "market": "Over 2.5 @ 1.25",
+      "score": "1-4",
+      "date_time": "Sat 21 Nov \u00b7 17:30 SAST",
+      "status": "won"
+    },
+    {
+      "match": "US Catanzaro 1929 v Palermo",
+      "market": "Over 1.5 @ 1.15",
       "score": "3-1",
-      "date_time": "Fri 20 Nov \u00b7 19:30 SAST",
+      "date_time": "Sat 21 Nov \u00b7 18:15 SAST",
       "status": "won"
     },
     {
-      "match": "Molde v Bod\u00f8/Glimt",
-      "market": "Home Over 0.5 @ 1.16",
-      "score": "2-4",
-      "date_time": "Fri 20 Nov \u00b7 20:00 SAST",
+      "match": "Nice v Paris Saint Germain",
+      "market": "BTTS + Over 2.5 @ 1.58",
+      "score": "2-3",
+      "date_time": "Sat 21 Nov \u00b7 18:15 SAST",
       "status": "won"
     },
     {
-      "match": "TSV Havelse v FC Viktoria K\u00f6ln 1904",
-      "market": "Over 2.5 @ 1.32",
-      "score": "1-6",
-      "date_time": "Fri 20 Nov \u00b7 20:00 SAST",
+      "match": "Genk v RAAL La Louvi\u00e8re",
+      "market": "Over 1.5 @ 1.37",
+      "score": "3-0",
+      "date_time": "Sat 21 Nov \u00b7 19:15 SAST",
       "status": "won"
     },
     {
-      "match": "Nancy v Dijon",
-      "market": "Home Over 0.5 @ 1.12",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 21:00 SAST",
+      "match": "FC St. Pauli v VfL Bochum",
+      "market": "Over 1.5 @ 1.19",
+      "score": "2-0",
+      "date_time": "Sat 21 Nov \u00b7 21:30 SAST",
       "status": "won"
     },
     {
-      "match": "Cercle Brugge KSV v Westerlo",
-      "market": "Home Over 0.5 @ 1.11",
-      "score": "1-0",
-      "date_time": "Fri 20 Nov \u00b7 21:45 SAST",
+      "match": "SV Zulte-Waregem v Royal Antwerp",
+      "market": "Over 1.5 @ 1.19",
+      "score": "2-2",
+      "date_time": "Sat 21 Nov \u00b7 21:45 SAST",
       "status": "won"
     },
     {
-      "match": "Barnsley v Sheffield Wednesday",
-      "market": "Over 1.5 @ 1.11",
+      "match": "Santos Laguna v Le\u00f3n",
+      "market": "Over 1.5 @ 1.15",
       "score": "1-2",
-      "date_time": "Fri 20 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Cobresal v Audax Italiano",
-      "market": "Away Under 2.5 @ 1.11",
-      "score": "3-2",
-      "date_time": "Fri 20 Nov \u00b7 23:00 SAST",
+      "date_time": "Sun 22 Nov \u00b7 01:00 SAST",
       "status": "won"
     }
   ]
