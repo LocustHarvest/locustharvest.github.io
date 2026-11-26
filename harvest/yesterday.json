@@ -1,231 +1,182 @@
 {
-  "date": "2026-11-24",
-  "after_url": "/harvest/2026-11-24/results/",
+  "date": "2026-11-25",
+  "after_url": "/harvest/2026-11-25/results/",
   "after": [
     {
-      "match": "Galatasaray v Aston Villa",
-      "market": "Over 1.5 @ 1.10",
-      "score": "1-0",
-      "date_time": "Tue 24 Nov \u00b7 19:45 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Bod\u00f8/Glimt v LASK",
-      "market": "BTTS \u2014 Yes @ 1.36",
-      "score": "1-0",
-      "date_time": "Tue 24 Nov \u00b7 19:45 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Virtus Entella v Hellas Verona",
-      "market": "Under 3.5 @ 1.24",
-      "score": "2-1",
-      "date_time": "Tue 24 Nov \u00b7 21:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Middlesbrough v Swansea City",
-      "market": "Match result - Home Win @ 1.38",
-      "score": "2-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Salisbury v Totton",
-      "market": "Over 1.5 @ 1.15",
-      "score": "1-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Malvern Town v Hanworth",
-      "market": "Over 1.5 @ 1.13",
-      "score": "3-2",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Cardiff City v Preston North End",
-      "market": "Match result - Home Win @ 1.43",
-      "score": "0-4",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Eastbourne B. v Aveley",
-      "market": "Over 1.5 @ 1.12",
+      "match": "Victoria Utd v Aigle Royal",
+      "market": "Aigle Royal Win @ 1.55",
       "score": "3-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Norwich City v Queens Park Rangers",
-      "market": "Over 1.5 @ 1.14",
-      "score": "1-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Bradford City v Barnsley",
-      "market": "Over 1.5 @ 1.12",
-      "score": "3-0",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Telford Utd v Buxton",
-      "market": "Over 1.5 @ 1.20",
-      "score": "1-0",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
+      "date_time": "Wed 25 Nov \u00b7 16:30 SAST",
       "status": "lost"
     },
     {
-      "match": "Wolverhampton Wanderers v Derby County",
-      "market": "Match result - Home Win @ 1.28",
+      "match": "Sevilla II v Huelva",
+      "market": "Over 1.5 @ 1.27",
+      "score": "1-2",
+      "date_time": "Wed 25 Nov \u00b7 19:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Slavia Praha v Villarreal",
+      "market": "BTTS \u2014 Yes @ 1.44",
+      "score": "0-1",
+      "date_time": "Wed 25 Nov \u00b7 19:45 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Sabah FK v Barcelona",
+      "market": "Over 3.5 @ 1.30",
+      "score": "1-4",
+      "date_time": "Wed 25 Nov \u00b7 19:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "M Beer Sheva v Ironi Ashkelon",
+      "market": "Match result - Away Win @ 1.30",
+      "score": "1-3",
+      "date_time": "Wed 25 Nov \u00b7 20:45 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Mantova v Arezzo",
+      "market": "Under 3.5 @ 1.34",
       "score": "3-0",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "date_time": "Wed 25 Nov \u00b7 21:00 SAST",
       "status": "won"
     },
     {
-      "match": "Rangers v Aberdeen",
-      "market": "Match result - Home Win @ 1.22",
-      "score": "3-2",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Manchester City v Napoli",
-      "market": "Match result - Home Win @ 1.30",
+      "match": "Sporting Lisbon v Manchester United",
+      "market": "BTTS \u2014 Yes @ 1.38",
       "score": "2-2",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Paris Saint Germain v AS Roma",
+      "market": "Over 2.5 @ 1.25",
+      "score": "2-2",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Atl\u00e9tico Madrid v Viking FK",
+      "market": "Match result - Home Win @ 1.15",
+      "score": "2-0",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Club Brugge v Liverpool",
+      "market": "Over 2.5 @ 1.26",
+      "score": "0-3",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Inter Milan v VfB Stuttgart",
+      "market": "BTTS \u2014 Yes @ 1.50",
+      "score": "2-0",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
       "status": "lost"
     },
     {
-      "match": "Real Madrid v PSV Eindhoven",
-      "market": "Home Win & Over 2.5 @ 1.24",
-      "score": "5-1",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "match": "Atletico Mineiro v Corinthians",
+      "market": "Match result - Draw @ 3.65",
+      "score": "1-1",
+      "date_time": "Thu 26 Nov \u00b7 01:00 SAST",
       "status": "won"
     },
     {
-      "match": "RB Leipzig v RC Lens",
-      "market": "BTTS \u2014 Yes @ 1.47",
-      "score": "3-1",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "match": "Santa Fe v Once Caldas",
+      "market": "Under 3.5 @ 1.35",
+      "score": "3-0",
+      "date_time": "Thu 26 Nov \u00b7 01:20 SAST",
       "status": "won"
     },
     {
-      "match": "\u0160K Slovan Bratislava v Real Betis",
-      "market": "Match result - Away Win @ 1.25",
-      "score": "0-2",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "match": "Toluca v Atlas",
+      "market": "BTTS \u2014 Yes @ 1.49",
+      "score": "2-0",
+      "date_time": "Thu 26 Nov \u00b7 03:00 SAST",
       "status": "won"
-    },
-    {
-      "match": "Como v AEK Athens",
-      "market": "Match result - Home Win @ 1.24",
-      "score": "1-0",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Millonarios v Bucaramanga",
-      "market": "Match result - Draw @ 3.45",
-      "score": "4-1",
-      "date_time": "Wed 25 Nov \u00b7 01:20 SAST",
-      "status": "lost"
     }
   ],
   "winners": [
     {
-      "match": "Virtus Entella v Hellas Verona",
-      "market": "Under 3.5 @ 1.24",
-      "score": "2-1",
-      "date_time": "Tue 24 Nov \u00b7 21:00 SAST",
+      "match": "Sevilla II v Huelva",
+      "market": "Over 1.5 @ 1.27",
+      "score": "1-2",
+      "date_time": "Wed 25 Nov \u00b7 19:00 SAST",
       "status": "won"
     },
     {
-      "match": "Middlesbrough v Swansea City",
-      "market": "Match result - Home Win @ 1.38",
-      "score": "2-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
+      "match": "Sabah FK v Barcelona",
+      "market": "Over 3.5 @ 1.30",
+      "score": "1-4",
+      "date_time": "Wed 25 Nov \u00b7 19:45 SAST",
       "status": "won"
     },
     {
-      "match": "Salisbury v Totton",
-      "market": "Over 1.5 @ 1.15",
-      "score": "1-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
+      "match": "M Beer Sheva v Ironi Ashkelon",
+      "market": "Match result - Away Win @ 1.30",
+      "score": "1-3",
+      "date_time": "Wed 25 Nov \u00b7 20:45 SAST",
       "status": "won"
     },
     {
-      "match": "Malvern Town v Hanworth",
-      "market": "Over 1.5 @ 1.13",
-      "score": "3-2",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Eastbourne B. v Aveley",
-      "market": "Over 1.5 @ 1.12",
-      "score": "3-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Norwich City v Queens Park Rangers",
-      "market": "Over 1.5 @ 1.14",
-      "score": "1-1",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Bradford City v Barnsley",
-      "market": "Over 1.5 @ 1.12",
+      "match": "Mantova v Arezzo",
+      "market": "Under 3.5 @ 1.34",
       "score": "3-0",
-      "date_time": "Tue 24 Nov \u00b7 21:45 SAST",
+      "date_time": "Wed 25 Nov \u00b7 21:00 SAST",
       "status": "won"
     },
     {
-      "match": "Wolverhampton Wanderers v Derby County",
-      "market": "Match result - Home Win @ 1.28",
+      "match": "Sporting Lisbon v Manchester United",
+      "market": "BTTS \u2014 Yes @ 1.38",
+      "score": "2-2",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Paris Saint Germain v AS Roma",
+      "market": "Over 2.5 @ 1.25",
+      "score": "2-2",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Atl\u00e9tico Madrid v Viking FK",
+      "market": "Match result - Home Win @ 1.15",
+      "score": "2-0",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Club Brugge v Liverpool",
+      "market": "Over 2.5 @ 1.26",
+      "score": "0-3",
+      "date_time": "Wed 25 Nov \u00b7 22:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Atletico Mineiro v Corinthians",
+      "market": "Match result - Draw @ 3.65",
+      "score": "1-1",
+      "date_time": "Thu 26 Nov \u00b7 01:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Santa Fe v Once Caldas",
+      "market": "Under 3.5 @ 1.35",
       "score": "3-0",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "date_time": "Thu 26 Nov \u00b7 01:20 SAST",
       "status": "won"
     },
     {
-      "match": "Rangers v Aberdeen",
-      "market": "Match result - Home Win @ 1.22",
-      "score": "3-2",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Real Madrid v PSV Eindhoven",
-      "market": "Home Win & Over 2.5 @ 1.24",
-      "score": "5-1",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "RB Leipzig v RC Lens",
-      "market": "BTTS \u2014 Yes @ 1.47",
-      "score": "3-1",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "\u0160K Slovan Bratislava v Real Betis",
-      "market": "Match result - Away Win @ 1.25",
-      "score": "0-2",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Como v AEK Athens",
-      "market": "Match result - Home Win @ 1.24",
-      "score": "1-0",
-      "date_time": "Tue 24 Nov \u00b7 22:00 SAST",
+      "match": "Toluca v Atlas",
+      "market": "BTTS \u2014 Yes @ 1.49",
+      "score": "2-0",
+      "date_time": "Thu 26 Nov \u00b7 03:00 SAST",
       "status": "won"
     }
   ]
