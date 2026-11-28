@@ -1,145 +1,19 @@
 {
-  "date": "2026-11-26",
-  "after_url": "/harvest/2026-11-26/results/",
+  "date": "2026-11-27",
+  "after_url": "/harvest/2026-11-27/results/",
   "after": [
-    {
-      "match": "FC Kairat v Mj\u00e4llby AIF",
-      "market": "Match result - Draw @ 3.65",
-      "score": "1-0",
-      "date_time": "Thu 26 Nov \u00b7 17:30 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Dinamo Zagreb v Bayer Leverkusen",
-      "market": "Over 1.5 @ 1.15",
-      "score": "0-2",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Salzburg v FC Ararat-Armenia",
-      "market": "Match result - Home Win @ 1.15",
-      "score": "2-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Marseille v PFC Levski Sofia",
-      "market": "Match result - Home Win @ 1.33",
-      "score": "1-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Brighton and Hove Albion v Universitatea Craiova",
-      "market": "Match result - Home Win @ 1.15",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "SK Brann v AGF Aarhus",
-      "market": "Over 1.5 @ 1.50",
-      "score": "1-4",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Hearts v AS Monaco",
-      "market": "Over 1.5 @ 1.15",
-      "score": "2-3",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Ajax v FC Thun",
-      "market": "Match result - Home Win @ 1.20",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Pafos FC v FC Midtjylland",
-      "market": "Over 1.5 @ 1.15",
-      "score": "0-2",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Sparta Prague v AZ Alkmaar",
-      "market": "Over 1.5 @ 1.21",
-      "score": "2-4",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Lyon v Lillestrom",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "0-0",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Ferencv\u00e1ros TC v NK Celje",
-      "market": "Over 1.5 @ 1.15",
-      "score": "0-0",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Sunderland v Jagiellonia Bia\u0142ystok",
-      "market": "Sunderland Win @ 1.40",
-      "score": "1-1",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "Juventus v Omonoia FC",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "4-1",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Inter Club d'Escaldes v FC Copenhagen",
-      "market": "FC Copenhagen Win @ 1.40",
-      "score": "2-0",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "lost"
-    },
-    {
-      "match": "FC Nordsjaelland v Panathinaikos FC",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-2",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "SC Braga v KuPS Kuopio",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "FK Borac Banja Luka v Atalanta BC",
-      "market": "Over 2.5 @ 1.47",
-      "score": "2-3",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Millonarios v Am\u00e9rica",
-      "market": "Match result - Draw @ 3.20",
-      "score": "0-0",
-      "date_time": "Fri 27 Nov \u00b7 03:40 SAST",
-      "status": "won"
-    },
     {
       "match": "Ye\u015filyurt BS v A\u011fr\u0131 1970",
       "market": "Over 1.5 @ 1.21",
       "score": "4-3",
       "date_time": "Fri 27 Nov \u00b7 12:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Beitar Haifa v Tzofi Haifa",
+      "market": "Over 1.5 @ 1.21",
+      "score": "5-1",
+      "date_time": "Fri 27 Nov \u00b7 13:30 SAST",
       "status": "won"
     },
     {
@@ -150,117 +24,47 @@
       "status": "won"
     },
     {
-      "match": "Beitar Haifa v Tzofi Haifa",
-      "market": "Over 1.5 @ 1.21",
-      "score": "5-1",
-      "date_time": "Fri 27 Nov \u00b7 13:30 SAST",
+      "match": "Hansa Rostock v TSV Havelse",
+      "market": "Match result - Home Win @ 1.30",
+      "score": "2-0",
+      "date_time": "Fri 27 Nov \u00b7 20:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Groningen v Willem II",
+      "market": "Match result - Home Win @ 1.33",
+      "score": "1-1",
+      "date_time": "Fri 27 Nov \u00b7 21:00 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Revilla v Velarde",
+      "market": "Revilla Win @ 1.40",
+      "score": "0-2",
+      "date_time": "Fri 27 Nov \u00b7 21:30 SAST",
+      "status": "lost"
+    },
+    {
+      "match": "Cali v Bucaramanga",
+      "market": "Match result - Draw @ 3.20",
+      "score": "1-1",
+      "date_time": "Sat 28 Nov \u00b7 01:35 SAST",
       "status": "won"
     }
   ],
   "winners": [
     {
-      "match": "Dinamo Zagreb v Bayer Leverkusen",
-      "market": "Over 1.5 @ 1.15",
-      "score": "0-2",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Salzburg v FC Ararat-Armenia",
-      "market": "Match result - Home Win @ 1.15",
-      "score": "2-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Marseille v PFC Levski Sofia",
-      "market": "Match result - Home Win @ 1.33",
-      "score": "1-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Brighton and Hove Albion v Universitatea Craiova",
-      "market": "Match result - Home Win @ 1.15",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "SK Brann v AGF Aarhus",
-      "market": "Over 1.5 @ 1.50",
-      "score": "1-4",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Hearts v AS Monaco",
-      "market": "Over 1.5 @ 1.15",
-      "score": "2-3",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Ajax v FC Thun",
-      "market": "Match result - Home Win @ 1.20",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Pafos FC v FC Midtjylland",
-      "market": "Over 1.5 @ 1.15",
-      "score": "0-2",
-      "date_time": "Thu 26 Nov \u00b7 19:45 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Sparta Prague v AZ Alkmaar",
-      "market": "Over 1.5 @ 1.21",
-      "score": "2-4",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Juventus v Omonoia FC",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "4-1",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "FC Nordsjaelland v Panathinaikos FC",
-      "market": "Over 1.5 @ 1.20",
-      "score": "3-2",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "SC Braga v KuPS Kuopio",
-      "market": "Match result - Home Win @ 1.30",
-      "score": "4-0",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "FK Borac Banja Luka v Atalanta BC",
-      "market": "Over 2.5 @ 1.47",
-      "score": "2-3",
-      "date_time": "Thu 26 Nov \u00b7 22:00 SAST",
-      "status": "won"
-    },
-    {
-      "match": "Millonarios v Am\u00e9rica",
-      "market": "Match result - Draw @ 3.20",
-      "score": "0-0",
-      "date_time": "Fri 27 Nov \u00b7 03:40 SAST",
-      "status": "won"
-    },
-    {
       "match": "Ye\u015filyurt BS v A\u011fr\u0131 1970",
       "market": "Over 1.5 @ 1.21",
       "score": "4-3",
       "date_time": "Fri 27 Nov \u00b7 12:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Beitar Haifa v Tzofi Haifa",
+      "market": "Over 1.5 @ 1.21",
+      "score": "5-1",
+      "date_time": "Fri 27 Nov \u00b7 13:30 SAST",
       "status": "won"
     },
     {
@@ -271,10 +75,17 @@
       "status": "won"
     },
     {
-      "match": "Beitar Haifa v Tzofi Haifa",
-      "market": "Over 1.5 @ 1.21",
-      "score": "5-1",
-      "date_time": "Fri 27 Nov \u00b7 13:30 SAST",
+      "match": "Hansa Rostock v TSV Havelse",
+      "market": "Match result - Home Win @ 1.30",
+      "score": "2-0",
+      "date_time": "Fri 27 Nov \u00b7 20:00 SAST",
+      "status": "won"
+    },
+    {
+      "match": "Cali v Bucaramanga",
+      "market": "Match result - Draw @ 3.20",
+      "score": "1-1",
+      "date_time": "Sat 28 Nov \u00b7 01:35 SAST",
       "status": "won"
     }
   ]
